@@ -27,6 +27,7 @@ class Solution(object):
 
         return int(initial_guess)
 
+
 # Test cases with assertions
 sol = Solution()
 

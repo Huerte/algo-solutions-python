@@ -12,12 +12,17 @@
 #
 # Status: ✅ SOLVED
 
+# def percentageString(s, c):
+#     if not s:
+#         return 0
+        
+#     count = s.count(c)
+#     return int((count / len(s)) * 100)
+
 def percentageString(s, c):
     if not s:
         return 0
-        
-    count = s.count(c)
-    return int((count / len(s)) * 100)
+    return int(s.count(c)/len(s) * 100)
 
 # Test cases with assertions
 # Example 1

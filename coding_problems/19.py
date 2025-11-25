@@ -14,20 +14,23 @@
 
 import math
 
-def evenNumberDigits(numbers):
-    if not numbers:
-        return 0
+# def evenNumberDigits(numbers):
+#     if not numbers:
+#         return 0
         
-    count = 0
-    for num in numbers:
-        if num == 0:
-            num_count = 1  # 0 has 1 digit
-        else:
-            num_count = math.floor(math.log10(abs(num))) + 1
+#     count = 0
+#     for num in numbers:
+#         if num == 0:
+#             num_count = 1  # 0 has 1 digit
+#         else:
+#             num_count = math.floor(math.log10(abs(num))) + 1
             
-        if num_count % 2 == 0:
-            count += 1
-    return count
+#         if num_count % 2 == 0:
+#             count += 1
+#     return count
+
+def evenNumberDigits(n):
+    return sum(1 for num in n if len(str(num)) % 2 == 0)
 
 # Test cases with assertions
 # Example 1
@@ -43,7 +46,7 @@ numbers3 = [1, 2, 3, 4, 5]
 assert evenNumberDigits(numbers3) == 0  # All have odd digits
 
 # Example 4
-numbers4 = [10, 100, 1000]
+numbers4 = [10, 1000, 100000]
 assert evenNumberDigits(numbers4) == 3  # All have even digits
 
 # Edge cases

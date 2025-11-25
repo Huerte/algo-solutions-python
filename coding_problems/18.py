@@ -12,23 +12,34 @@
 #
 # Status: ✅ SOLVED
 
-def clearDigits(s):
-    if not s:
-        return ""
+# def clearDigits(s):
+#     if not s:
+#         return ""
         
-    result = []
-    for char in s:
-        if char.isdigit():
-            if result:  # Only pop if there's something to pop
-                result.pop()
-        else:
-            result.append(char)
+#     result = []
+#     for char in s:
+#         if char.isdigit():
+#             if result:  # Only pop if there's something to pop
+#                 result.pop()
+#         else:
+#             result.append(char)
 
-    return ''.join(result)
+#     return ''.join(result)
+
+def clearDigits(s):
+    arr = []
+
+    for c in s:
+        if arr and c.isdigit():
+            arr.pop()
+        elif not c.isdigit():
+            arr.append(c)
+            
+    return ''.join(arr)
 
 # Test cases with assertions
 # Example 1
-assert clearDigits("a1bc2d3") == ""
+assert clearDigits("a1bc2d3") == "b"
 
 # Example 2
 assert clearDigits("abc123") == ""
@@ -37,7 +48,7 @@ assert clearDigits("abc123") == ""
 assert clearDigits("a1b2c3") == ""
 
 # Example 4
-assert clearDigits("1a2b3c") == ""
+assert clearDigits("1a2b3c") == "c"
 
 # Example 5
 assert clearDigits("abc") == "abc"
