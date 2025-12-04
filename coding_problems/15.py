@@ -14,25 +14,38 @@
 
 import math
 
-def sumAlternatingDigit(n):
-    if n == 0:
-        return 0
+# def sumAlternatingDigit(n):
+#     if n == 0:
+#         return 0
         
-    digitNum = math.floor(math.log10(abs(n))) + 1
-    sign = 1
+#     digitNum = math.floor(math.log10(abs(n))) + 1
+#     sign = 1
 
-    if digitNum % 2 == 0:
-       sign = -1
+#     if digitNum % 2 == 0:
+#        sign = -1
 
-    totalSum = []
+#     totalSum = []
 
+#     while n > 0:
+#         m = n % 10 * sign
+#         totalSum.append(m)
+#         n //= 10
+#         sign *= -1
+
+#     return sum(totalSum)
+
+def sumAlternatingDigit(n):
+    sign = -1
+    if len(str(n)) % 2 != 0:
+        sign *= -1
+    total = []
+    
     while n > 0:
-        m = n % 10 * sign
-        totalSum.append(m)
+        total.append((n % 10) * sign)
         n //= 10
         sign *= -1
-
-    return sum(totalSum)
+    
+    return sum(total)
 
 # Test cases with assertions
 # Example 1

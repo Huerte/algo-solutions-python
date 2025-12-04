@@ -11,15 +11,18 @@
 #
 # Status: ✅ SOLVED
 
-def countCapitalLetters(s):
-    if not s:
-        return 1
+# def countCapitalLetters(s):
+#     if not s:
+#         return 1
         
-    count = 1
-    for char in s:
-        if char.isupper():
-            count += 1
-    return count
+#     count = 1
+#     for char in s:
+#         if char.isupper():
+#             count += 1
+#     return count
+
+def countCapitalLetters(s):
+    return sum(1 for c in s if c.isupper()) + 1
 
 # Test cases with assertions
 # Example 1
@@ -32,7 +35,7 @@ assert countCapitalLetters("hello") == 1  # No capitals
 assert countCapitalLetters("HELLO") == 6  # All capitals
 
 # Example 4
-assert countCapitalLetters("hElLo") == 2  # E, L are capital
+assert countCapitalLetters("hElLo") == 3  # E, L are capital
 
 # Example 5
 assert countCapitalLetters("A") == 2  # A is capital

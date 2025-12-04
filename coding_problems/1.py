@@ -24,6 +24,22 @@ def longestCommonPrefix(strs):
             sample_word = sample_word[:-1]
     return sample_word
 
+# def longestCommonPrefix(lst):
+#     common = ""
+
+#     for i in range(len(min(lst))):
+#         w = min(lst)[i]
+#         add = False
+#         for word in lst:
+#             if word[i] != w:
+#                 add = False
+#                 break
+#             add = True
+#         if add:
+#             common += w
+
+#     return common
+
 # Test cases with assertions
 # Example 1
 assert longestCommonPrefix(["flower","flow","flight"]) == "fl"
