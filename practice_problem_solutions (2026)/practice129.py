@@ -1,4 +1,4 @@
-# Simple Encryption #1 - Alternating Split
+# CodeWars - Simple Encryption #1 - Alternating Split
 
 def encrypt(encrypted_text, n):
     res = encrypted_text
