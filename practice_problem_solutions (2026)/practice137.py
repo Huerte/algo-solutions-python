@@ -1,4 +1,5 @@
 # CodeWars - Playing with Passphrases
+# TODO
 
 def play_pass(s, n):
     res = []
