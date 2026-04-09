@@ -1,4 +1,4 @@
-# Take a Number And Sum Its Digits Raised To The Consecutive Powers And ....¡Eureka!!
+# CodeWars - Take a Number And Sum Its Digits Raised To The Consecutive Powers And ....¡Eureka!!
 
 def sum_dig_pow(a, b):
     res = []
