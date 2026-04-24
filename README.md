@@ -17,8 +17,6 @@ algo-solutions-python/
 │   └── ...
 ```
 
-Each file usually includes the problem source and a short note at the top as a comment.
-
 ## Platforms
 
 - [LeetCode](https://leetcode.com)
