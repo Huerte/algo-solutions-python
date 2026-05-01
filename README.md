@@ -1,6 +1,6 @@
 <div align="center">
 
-# algo-solutions-python
+# Programming Problem Solving (Python Edition)
 
 [![Platform](https://img.shields.io/badge/platform-Python-blueviolet.svg)](#)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](#)
