@@ -17,3 +17,7 @@ def pyramid(n):
     res.append('/' + '_' * mid + '\\')
     
     return '\n'.join(res) + '\n'
+
+print(pyramid(1)) # '/\\\n'
+print(pyramid(2)) # ' /\\\n/__\\\n'
+print(pyramid(3)) # '  /\\\n /  \\\n/____\\\n'
