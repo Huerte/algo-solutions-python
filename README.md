@@ -11,7 +11,7 @@
 [![CheckiO](https://img.shields.io/badge/CheckiO-3E7DA1?logo=checkio&logoColor=white)](https://py.checkio.org/)
 [![GeeksforGeeks](https://img.shields.io/badge/GeeksforGeeks-298D46?logo=geeksforgeeks&logoColor=white)](https://www.geeksforgeeks.org)
 
-**A personal collection of my Python solutions to algorithm problems from LeetCode, Codewars, HackerRank, and GeeksforGeeks.**
+**A personal collection of my Python solutions to algorithm problems**
 
 </div>
 
