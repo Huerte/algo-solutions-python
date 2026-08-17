@@ -2,6 +2,10 @@
 
 # algo-solutions-python
 
+<p align="center">
+    <img src="assets/solution.png" alt="Solution Image">
+</p>
+
 [![Platform](https://img.shields.io/badge/platform-Python-blueviolet.svg)](#)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](#)
 
@@ -13,10 +17,6 @@
 **A personal collection of my Python solutions to algorithm problems from LeetCode, Codewars, HackerRank, and GeeksforGeeks.**
 
 </div>
-
----
-
-It is intended for learning, practice, and reference.
 
 ## Structure
 
