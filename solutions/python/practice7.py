@@ -15,7 +15,8 @@
 #
 # Status: ✅ SOLVED
 
-def merge(intervals):
+def merge(intervals: list[list[int]]) -> list[list[int]]:
+    """Return the intervals merged into non-overlapping ranges."""
     if not intervals:
         return []
     

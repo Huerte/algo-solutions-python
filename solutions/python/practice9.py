@@ -14,7 +14,8 @@
 #
 # Status: ✅ SOLVED
 
-def lengthOfLastWord(s):
+def lengthOfLastWord(s: str) -> int:
+    """Return the length of the final word in the string."""
     # Remove trailing spaces and split by spaces
     words = s.strip().split()
     
