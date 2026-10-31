@@ -1,4 +1,5 @@
 # 📜 Problem — Maximum Subarray
+# Time: O(n), Space: O(n) because nums[1:] creates a copy
 # Topic: arrays, dp
 # Description:
 # Given an integer array nums, find the subarray with the largest sum, and return its sum.

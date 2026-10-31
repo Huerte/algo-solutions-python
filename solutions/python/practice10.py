@@ -1,4 +1,5 @@
 # 📜 Problem — First Letter to Appear Twice
+# Time: O(n), Space: O(n)
 # Topic: strings, hash map
 # Description:
 # Given a string, find the first letter that appears twice. Return the first letter that has
