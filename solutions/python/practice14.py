@@ -1,4 +1,5 @@
 # 📜 Problem — Rotate List
+# Time: O(n), Space: O(1)
 # Description:
 # Given the head of a linked list, rotate the list to the right by k places.
 # A rotation involves moving the last k nodes to the front of the list.

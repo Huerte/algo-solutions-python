@@ -1,4 +1,5 @@
 # 📜 Problem — Reverse String II
+# Time: O(n), Space: O(n)
 # Description:
 # Given a string s and an integer k, reverse the first k characters for every 2k characters 
 # counting from the beginning of the string. If there are fewer than k characters left, 

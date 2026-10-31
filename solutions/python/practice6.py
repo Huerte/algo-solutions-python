@@ -1,4 +1,5 @@
 # 📜 Problem — Jump Game
+# Time: O(n), Space: O(1)
 # Topic: arrays, greedy
 # Description:
 # You are given an integer array nums. You are initially positioned at the array's first index,
