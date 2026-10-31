@@ -14,7 +14,8 @@
 #
 # Status: ✅ SOLVED
 
-def spiralOrder(matrix):
+def spiralOrder(matrix: list[list[int]]) -> list[int]:
+    """Return the matrix elements in clockwise spiral order."""
     if not matrix or not matrix[0]:
         return []
     

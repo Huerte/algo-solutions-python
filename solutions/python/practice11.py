@@ -12,7 +12,8 @@
 #
 # Status: ✅ SOLVED
 
-def generateMatrix(n):
+def generateMatrix(n: int) -> list[list[int]]:
+    """Return an n-by-n matrix filled in clockwise spiral order."""
     if n <= 0:
         return []
     
