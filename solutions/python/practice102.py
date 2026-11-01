@@ -1,4 +1,7 @@
 # Calculate Alternating Digit Sum
+# Read the digits from left to right, adding the first, subtracting the next,
+# and continuing to alternate. For example, 521 becomes 5 - 2 + 1 = 4.
+# Time: O(d), where d is the number of digits.
 
 n = int(input('Enter a positive integer: '))
 
