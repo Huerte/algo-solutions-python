@@ -1,0 +1,30 @@
+name: Validate solution headers
+
+on:
+  pull_request:
+    paths:
+      - "solutions/**"
+
+permissions:
+  contents: read
+
+jobs:
+  validate-headers:
+    name: Validate solution headers
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Validate changed solution headers
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: python scripts/check_solution_headers.py --base "$BASE_SHA" --head "$HEAD_SHA"
