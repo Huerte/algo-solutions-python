@@ -1,3 +1,7 @@
+# Problem: Digit Power Sum
+# Source: https://projecteuler.net/problem=119
+# Note: Finds numbers equal to a power of their own digit sum and returns the nth number in sorted order.
+
 def pow_sum_dig_term(n):
     arr = []
     
