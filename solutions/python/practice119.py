@@ -1,4 +1,6 @@
 # Is Prime Number
+# Source: https://www.geeksforgeeks.org/problems/prime-number2314/1
+
 
 def is_prime(n):
     if n <= 1:
