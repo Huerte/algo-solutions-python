@@ -1,5 +1,7 @@
 # HackerRank - Decorators 2 - Name Directory
-
+# Problem: Decorators 2 - Name Directory
+# Source: https://www.hackerrank.com/challenges/decorators-2-name-directory/problem
+# Note: Sorts people by age and formats their names with Mr. or Ms. using a decorator.
 def person_lister(f):
     def inner(people):
         people.sort(key=lambda x: int(x[2]))
