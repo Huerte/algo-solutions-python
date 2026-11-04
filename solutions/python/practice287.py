@@ -1,5 +1,7 @@
 # HackerRank - Migratory Birds
-
+# Problem: Migratory Birds
+# Source: https://www.hackerrank.com/challenges/migratory-birds/problem
+# Note: Finds the most frequently occurring bird type, choosing the smallest ID in case of a tie.
 from collections import Counter
 def migratoryBirds(arr):
     c = Counter(arr)
