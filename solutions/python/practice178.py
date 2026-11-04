@@ -1,5 +1,7 @@
 # Water Bottles
-
+# Problem: Water Bottles
+# Source: https://leetcode.com/problems/water-bottles/
+# Note: Calculates the maximum number of water bottles that can be consumed through repeated exchanges of empty bottles.
 class Solution(object):
     def numWaterBottles(self, numBottles, numExchange):
         res = 0
