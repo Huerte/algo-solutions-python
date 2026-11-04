@@ -1,5 +1,7 @@
 # CodeWars - Multiplication Table
-
+# Problem: Multiplication table
+# Source: https://www.codewars.com/kata/534d2f5b5371ecf8d2000a08
+# Note: Generates an N x N multiplication table using the multiples of each row number.
 def multiplication_table(size):
     adder = 1
     arr = []
