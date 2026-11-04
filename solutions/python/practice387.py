@@ -1,5 +1,7 @@
 # CodeWars - Currying functions: multiply all elements in an array
-
+# Problem: Currying functions: multiply all elements in an array
+# Source: https://www.codewars.com/kata/586909e4c66d18dd1800009b
+# Note: Returns a function that multiplies every element of the original array by a given integer.
 def multiply_all(arr):
     return lambda n: [x * n for x in arr]
 
