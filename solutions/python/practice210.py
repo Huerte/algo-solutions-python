@@ -1,3 +1,6 @@
+# Problem: WeIrD StRiNg CaSe
+# Source: https://www.codewars.com/kata/52b757663a95b11b3d00062d
+# Note: Converts characters at even indices to uppercase and odd indices to lowercase, restarting the pattern for each word.
 def to_weird_case(words):
     res = []
     for word in words.split():
