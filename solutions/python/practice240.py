@@ -1,5 +1,7 @@
 # Decode XORed Array
-
+# Problem: Decode XORed Array
+# Source: https://leetcode.com/problems/decode-xored-array/
+# Note: Reconstructs the original array by XORing each encoded element with the previously decoded element.
 class Solution(object):
     def decode(self, encoded, first):
         decoded = [first]
