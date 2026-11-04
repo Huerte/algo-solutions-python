@@ -1,5 +1,7 @@
 # GeeksforGeeks - Longest Palindrome in a String
-
+# Problem: Longest Palindrome in a String
+# Source: https://www.geeksforgeeks.org/problems/longest-palindrome-in-a-string3411/1
+# Note: Finds the longest palindromic substring, returning the first occurrence when multiple answers have the same length.
 # My Sol;
 class Solution:
     def longestPalindrome(self, s):
