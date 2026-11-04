@@ -1,3 +1,7 @@
+# Problem: Merge Two Sorted Lists
+# Source: https://leetcode.com/problems/merge-two-sorted-lists/
+# Note: Merges two sorted linked lists into one sorted linked list.
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
