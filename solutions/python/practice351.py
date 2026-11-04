@@ -1,5 +1,7 @@
 # Geeksforgeeks - Rotate Array
-
+# Problem: Rotate Array
+# Source: https://www.geeksforgeeks.org/problems/rotate-array-by-n-elements-1587115621/1
+# Note: Rotates an array to the left by d positions in-place using slicing.
 class Solution:
     def rotateArr(self, arr, d):
         n = d % len(arr)
