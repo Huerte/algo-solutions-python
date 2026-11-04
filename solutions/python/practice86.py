@@ -1,4 +1,5 @@
-# Maximum Area of Longest Diagonal Rectangle
+# Problem: Maximum Area of Longest Diagonal Rectangle
+# Source: https://leetcode.com/problems/maximum-area-of-longest-diagonal-rectangle/
 
 n = int(input("Enter the number of rectangles: "))
 

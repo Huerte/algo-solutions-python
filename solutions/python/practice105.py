@@ -1,4 +1,5 @@
-# Multiply Two Strings
+# Problem: Multiply Two Strings
+# Source: https://leetcode.com/problems/multiply-strings/
 
 # Given two non-negative integers num1 and num2 represented as strings, return their product also as a string.
 # You must NOT use any built-in BigInteger library or int() conversion directly on the full input strings — simulate multiplication digit by digit.

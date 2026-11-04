@@ -1,4 +1,5 @@
-# HackerRank - Counting Sort 1
+# Problem: Counting Sort 1
+# Source: https://www.hackerrank.com/challenges/countingsort1/problem
 
 from collections import Counter
 def countingSort(arr):

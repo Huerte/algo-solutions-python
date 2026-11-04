@@ -1,4 +1,5 @@
-# Max Consecutive Ones
+# Problem: Max Consecutive Ones
+# Source: https://leetcode.com/problems/max-consecutive-ones/
 
 class Solution:
     def findMaxConsecutiveOnes(self, nums) -> int:

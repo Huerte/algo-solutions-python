@@ -1,4 +1,5 @@
-# CodeWars - Count IP Addresses
+# Problem: Count IP Addresses
+# Source: https://www.codewars.com/kata/count-ip-addresses
 
 def ips_between(start, end):
     return sum([int(num) * (256 ** (3 - i)) for i, num in enumerate(end.split('.'))]) - sum([int(num) * (256 ** (3-i)) for i, num in enumerate(start.split('.'))])

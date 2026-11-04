@@ -1,4 +1,5 @@
-# Merge Intervals
+# Problem: Merge Intervals
+# Source: https://leetcode.com/problems/merge-intervals/
 
 class Solution:
     def merge(self, intervals):

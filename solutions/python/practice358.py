@@ -1,4 +1,5 @@
-# HackerRank - Fair Rations
+# Problem: Fair Rations
+# Source: https://www.hackerrank.com/challenges/fair-rations/problem
 
 def fairRations(B):
     count = 0

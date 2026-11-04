@@ -1,4 +1,5 @@
-# Minimum Operations to Make Integers Divisible by 3
+# Problem: Minimum Operations to Make Integers Divisible by 3
+# Source: https://leetcode.com/problems/find-minimum-operations-to-make-all-elements-divisible-by-three/
 
 n = int(input('Enter the number of integers (N): '))
 print(f'Enter {n} integers:')

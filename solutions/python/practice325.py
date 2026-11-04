@@ -1,4 +1,5 @@
-# Sum of Values at Indices With K Set Bits
+# Problem: Sum of Values at Indices With K Set Bits
+# Source: https://leetcode.com/problems/sum-of-values-at-indices-with-k-set-bits/
 
 class Solution:
     def sumIndicesWithKSetBits(self, nums, k) -> int:

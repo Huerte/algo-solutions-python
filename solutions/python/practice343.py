@@ -1,4 +1,5 @@
-# Rank Transform of an Array
+# Problem: Rank Transform of an Array
+# Source: https://leetcode.com/problems/rank-transform-of-an-array/
 
 class Solution(object):
     def arrayRankTransform(self, arr):

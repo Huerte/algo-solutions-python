@@ -1,4 +1,5 @@
-# Buddy Strings Challenge
+# Problem: Buddy Strings Challenge
+# Source: https://leetcode.com/problems/buddy-strings/
 
 a = input('Enter string A: ')
 b = input('Enter string B: ')

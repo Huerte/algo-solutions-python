@@ -1,4 +1,5 @@
-# 1000-digit Fibonacci Number
+# Problem: 1000-digit Fibonacci Number
+# Source: https://projecteuler.net/problem=25
 # Return the first 1000-digit fibonacci number index
 
 a, b = 0, 1

@@ -1,4 +1,5 @@
-# Count CamelCase Words
+# Problem: Count CamelCase Words
+# Source: https://www.hackerrank.com/challenges/camelcase/problem
 
 s = input('Enter the CamelCase string: ')
 

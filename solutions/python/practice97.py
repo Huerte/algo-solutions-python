@@ -1,4 +1,5 @@
-# Count Elements Smaller Than Current Element
+# Problem: Count Elements Smaller Than Current Element
+# Source: https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/
 
 n = int(input('Enter the number of elements: '))
 print(f'Enter {n} integers:')

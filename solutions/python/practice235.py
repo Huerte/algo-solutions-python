@@ -1,14 +1,3 @@
-<<<<<<< HEAD:practice_problem_solutions (2026)/practice235.py
-# Remove Trailing Zeros From a String
-
-class Solution:
-    def removeTrailingZeros(self, num: str) -> str:
-        return num.strip('0')
-    
-s = Solution()
-print(s.removeTrailingZeros("51230100")) # "512301"
-print(s.removeTrailingZeros("123"))      # "123"
-=======
 # Find Common Characters
 
 # My solution
@@ -55,4 +44,3 @@ s = Solution()
 print(s.commonChars(["bella","label","roller"])) # ["e","l","l"]
 print(s.commonChars(["cool","lock","cook"]))     # ["c","o"]
 print(s.commonChars(["abc","bcd","cde"]))        # ["c"]
->>>>>>> 96c2367 (chore: refactor the project structure):solutions/python/practice235.py

@@ -1,4 +1,5 @@
-# Combination Sum
+# Problem: Combination Sum
+# Source: https://leetcode.com/problems/combination-sum/
 
 class Solution(object):
     def combinationSum(self, candidates, target):

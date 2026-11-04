@@ -1,14 +1,3 @@
-<<<<<<< HEAD:practice_problem_solutions (2026)/practice317.py
-# CodeWars - Area of a Square
-
-from math import pi
-def square_area(A):
-    return round((4 * A ** 2) / pi ** 2, 2)
-
-print(square_area(14.05)) # 80.0
-print(square_area(2))     # 1.62
-print(square_area(0))     # 0.0
-=======
 # Wildcard Matching
 
 # Other sol
@@ -32,4 +21,3 @@ class Solution:
                     ar[i][j] = ar[i - 1][j - 1]
         
         return ar[m][n]
->>>>>>> 96c2367 (chore: refactor the project structure):solutions/python/practice317.py

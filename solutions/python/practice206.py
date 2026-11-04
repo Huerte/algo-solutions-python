@@ -1,10 +1,3 @@
-<<<<<<< HEAD:practice_problem_solutions (2026)/practice206.py
-# HackerRank - Find the Median
-
-import statistics
-def findMedian(arr):
-    return statistics.median(arr)
-=======
 # HackerRank - Word Score
 
 def is_vowel(letter):
@@ -27,4 +20,3 @@ def score_words(words):
 n = int(input())
 words = input().split()
 print(score_words(words))
->>>>>>> 96c2367 (chore: refactor the project structure):solutions/python/practice206.py

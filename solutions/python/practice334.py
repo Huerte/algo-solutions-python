@@ -1,4 +1,5 @@
-# HackerRank - Bigger is Greater
+# Problem: Bigger is Greater
+# Source: https://www.hackerrank.com/challenges/bigger-is-greater/problem
 
 # Not my Sol;
 def biggerIsGreater(w):

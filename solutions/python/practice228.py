@@ -1,11 +1,3 @@
-<<<<<<< HEAD:practice_problem_solutions (2026)/practice228.py
-# Sort Colors
-
-class Solution:
-    def sortColors(self, nums) -> None:
-        nums.sort()
-        return nums
-=======
 # py.checkio - Subject is Stressful
 
 def is_stressful(subj: str) -> bool:
@@ -32,4 +24,3 @@ def is_stressful(subj: str) -> bool:
 print(is_stressful("Hi"))           # False
 print(is_stressful("I need HELP"))  # True
 print(is_stressful("I neeed HLEP")) # False
->>>>>>> 96c2367 (chore: refactor the project structure):solutions/python/practice228.py

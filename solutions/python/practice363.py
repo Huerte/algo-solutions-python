@@ -1,4 +1,5 @@
-# Valid Sudoku
+# Problem: Valid Sudoku
+# Source: https://leetcode.com/problems/valid-sudoku/
 
 class Solution(object):
     def isValidSudoku(self, board):

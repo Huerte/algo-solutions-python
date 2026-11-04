@@ -1,4 +1,5 @@
-# Sort Array by Increasing Frequency
+# Problem: Sort Array by Increasing Frequency
+# Source: https://leetcode.com/problems/sort-array-by-increasing-frequency/
 
 from collections import Counter
 class Solution(object):

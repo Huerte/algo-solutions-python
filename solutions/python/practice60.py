@@ -1,4 +1,5 @@
 # 📜 Problem — Buddy Strings
+# Source: https://leetcode.com/problems/buddy-strings/
 # Description:
 # Given two strings a and b, return true if you can swap two letters in a so the result is equal to b,
 # and false otherwise. Swapping letters is defined as taking two indices i and j (0-indexed) such that

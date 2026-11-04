@@ -1,4 +1,5 @@
-# Count Valid Pairs with Equal Values and Divisible Product of Indices
+# Problem: Count Valid Pairs with Equal Values and Divisible Product of Indices
+# Source: https://leetcode.com/problems/count-equal-and-divisible-pairs-in-an-array/
 
 n = int(input('Enter the number of integers (N): '))
 print(f'Enter {n} integers:')

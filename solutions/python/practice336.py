@@ -1,4 +1,5 @@
-# Sort an array of 0s, 1s and 2s without using any sorting algorithm.
+# Problem: Sort an array of 0s, 1s and 2s without using any sorting algorithm.
+# Source: https://leetcode.com/problems/sort-colors/
 
 class Solution:
     def sort012(self, arr):

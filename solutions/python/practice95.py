@@ -1,4 +1,5 @@
-# Running Sum of 1D Array
+# Problem: Running Sum of 1D Array
+# Source: https://leetcode.com/problems/running-sum-of-1d-array/
 
 n = int(input('Enter the number of integers (N): '))
 print(f"Enter {n} integers:")

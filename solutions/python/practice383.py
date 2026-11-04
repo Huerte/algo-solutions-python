@@ -1,4 +1,5 @@
-# HackerRank - CamelCase
+# Problem: CamelCase
+# Source: https://www.hackerrank.com/challenges/camelcase/problem
 
 def camelcase(s):
     return sum(1 for c in s if c.isupper()) + 1 if s else 0

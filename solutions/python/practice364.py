@@ -1,4 +1,5 @@
-# Combinations
+# Problem: Combinations
+# Source: https://leetcode.com/problems/combinations/
 
 from itertools import combinations
 class Solution(object):

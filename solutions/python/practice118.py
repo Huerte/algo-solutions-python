@@ -1,4 +1,5 @@
-# Smallest Even Multiple
+# Problem: Smallest Even Multiple
+# Source: https://leetcode.com/problems/smallest-even-multiple/
 
 n = int(input("Enter a positive integer: "))
 

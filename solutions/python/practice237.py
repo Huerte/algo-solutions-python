@@ -1,17 +1,3 @@
-<<<<<<< HEAD:practice_problem_solutions (2026)/practice237.py
-from collections import Counter
-class Solution:
-    def isPossibleToSplit(self, nums) -> bool:
-        num = Counter(nums)
-        for n in num.values():
-            if n > 2:
-                return False
-        return True
-
-s = Solution()
-print(s.isPossibleToSplit([1,1,2,2,3,4]))     # True
-print(s.isPossibleToSplit([1,1,2,2,2,2,3,4])) # False
-=======
 # Clear Digits
 
 class Solution(object):
@@ -33,4 +19,3 @@ s = Solution()
 print(s.clearDigits("abc")) # "abc"
 print(s.clearDigits("cb34")) # ""
 print(s.clearDigits("1234")) # ""
->>>>>>> 96c2367 (chore: refactor the project structure):solutions/python/practice237.py

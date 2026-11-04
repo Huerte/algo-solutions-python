@@ -1,19 +1,3 @@
-<<<<<<< HEAD:practice_problem_solutions (2026)/practice222.py
-# Find Missing Elements
-
-class Solution:
-    def findMissingElements(self, nums):
-        complete = list(range(min(nums), max(nums) + 1))
-        arr = []
-        for num in complete:
-            if num not in nums:
-                arr.append(num)
-        return arr
-
-s = Solution()
-print(s.findMissingElements([1,4,2,5])) # [3]
-print(s.findMissingElements([5,1]))     # [2,3,4]
-=======
 # CodeWars - Playing with Passphrases
 # TODO
 
@@ -52,4 +36,3 @@ def play_pass(s, n):
 print(play_pass("I LOVE YOU!!!", 1)) # "!!!vPz fWpM J"
 # print(play_pass("MY GRANMA CAME FROM NY ON THE 23RD OF APRIL 2015", 2)) # "4897 NkTrC Hq fT67 GjV Pq aP OqTh gOcE CoPcTi aO"
 # print(play_pass("BOY! YOU WANTED TO SEE HIM? IT'S YOUR FATHER:-)", 15)) # ")-:gTwIpU GjDn h'iX ?bXw tTh dI StIcPl jDn !NdQ"
->>>>>>> 96c2367 (chore: refactor the project structure):solutions/python/practice222.py

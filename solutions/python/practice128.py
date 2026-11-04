@@ -1,4 +1,5 @@
-# Permutation Sequence
+# Problem: Permutation Sequence
+# Source: https://leetcode.com/problems/permutation-sequence/
 
 from itertools import permutations
 def kth_permutation(n, k):

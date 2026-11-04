@@ -1,4 +1,5 @@
-# Minimum Absolute Difference
+# Problem: Minimum Absolute Difference
+# Source: https://leetcode.com/problems/minimum-absolute-difference/
 
 class Solution(object):
     def minimumAbsDifference(self, arr):

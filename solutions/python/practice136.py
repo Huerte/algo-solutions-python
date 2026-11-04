@@ -1,4 +1,5 @@
-# Remove Duplicates from Sorted Array
+# Problem: Remove Duplicates from Sorted Array
+# Source: https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 
 def remove_duplicates(arr):
     return len(set(arr))

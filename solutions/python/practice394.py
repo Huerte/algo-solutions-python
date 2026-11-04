@@ -1,4 +1,5 @@
-# CodeWars - Tic-Tac-Toe Checker
+# Problem: Tic-Tac-Toe Checker
+# Source: https://www.codewars.com/kata/tic-tac-toe-checker
 
 def is_solved(board):
     if len(set(board[0])) == 1 and board[0][0] != 0:

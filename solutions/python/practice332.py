@@ -1,4 +1,5 @@
-# HackerRank - Circular Array Rotation
+# Problem: Circular Array Rotation
+# Source: https://www.hackerrank.com/challenges/circular-array-rotation/problem
 
 def circularArrayRotation(a, k, queries):
     k %= len(a)

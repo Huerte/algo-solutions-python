@@ -1,24 +1,3 @@
-<<<<<<< HEAD:practice_problem_solutions (2026)/practice308.py
-# CodeWars - Convert PascalCase string into snake_case
-
-def to_underscore(strng: str) -> str:
-    words = []
-    temp = ""
-    for c in str(strng):
-        if c.isupper() and temp:
-            words.append(temp)
-            temp = c
-        else:
-            temp += c
-    if temp:
-        words.append(temp)
-    
-    return '_'.join(w.lower() for w in words)
-
-print(to_underscore('MoviesAndBooks')) # 'movies_and_books'
-print(to_underscore('TestController')) # 'test_controller'
-print(to_underscore('App7Test'))       # 'app7_test'
-=======
 # HackerRank - Drawing Book
 
 def pageCount(n, p):
@@ -38,4 +17,3 @@ def pageCount(n, p):
 print(pageCount(5, 3)) # 1
 print(pageCount(6, 2)) # 1
 print(pageCount(5, 4)) # 0
->>>>>>> 96c2367 (chore: refactor the project structure):solutions/python/practice308.py

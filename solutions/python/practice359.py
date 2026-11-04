@@ -1,4 +1,5 @@
-# HackerRank - ACM ICPC Team
+# Problem: ACM ICPC Team
+# Source: https://www.hackerrank.com/challenges/acm-icpc-team/problem
 
 def acmTeam(topic):
     n = len(topic)

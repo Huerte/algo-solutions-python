@@ -1,4 +1,5 @@
-# Number of Steps to Reduce a Number to Zero
+# Problem: Number of Steps to Reduce a Number to Zero
+# Source: https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/
 
 n = int(input('Enter an integer: '))
 

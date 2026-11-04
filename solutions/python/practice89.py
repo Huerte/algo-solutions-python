@@ -1,4 +1,5 @@
-# Sum of Multiples of 3, 5, or 7
+# Problem: Sum of Multiples of 3, 5, or 7
+# Source: https://leetcode.com/problems/sum-multiples/
 
 n = int(input('Enter a positive integer n: '))
 sums = 0

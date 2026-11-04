@@ -1,4 +1,5 @@
 # 📜 Problem — Sqrt(x)
+# Source: https://leetcode.com/problems/sqrtx/
 # Description:
 # Given a non-negative integer x, return the square root of x rounded down to the nearest integer.
 # Since the return type is an integer, the decimal digits are truncated, and only the integer part of the result is returned.

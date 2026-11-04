@@ -1,4 +1,5 @@
-# HackerRank - Two Characters
+# Problem: Two Characters
+# Source: https://www.hackerrank.com/challenges/two-characters/problem
 
 def alternate(s):
     ln = []

@@ -1,4 +1,5 @@
-# HackerRank - Jumping on the Clouds
+# Problem: Jumping on the Clouds
+# Source: https://www.hackerrank.com/challenges/jumping-on-the-clouds/problem
 
 def jumpingOnClouds(c):
     jumps = 0

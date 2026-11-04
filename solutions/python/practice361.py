@@ -1,4 +1,5 @@
-# HackerRank - Alternating Characters
+# Problem: Alternating Characters
+# Source: https://www.hackerrank.com/challenges/alternating-characters/problem
 
 def alternatingCharacters(s):
     seen = []

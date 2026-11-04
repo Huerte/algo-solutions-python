@@ -1,3 +1,6 @@
+# Problem: A Number After a Double Reversal
+# Source: https://leetcode.com/problems/a-number-after-a-double-reversal/
+
 #Checks whether an integer remains the same after reversing its digits twice.
 
 #Returns False when reversing twice changes the original number, such as 120 -> 021(12) -> 12.

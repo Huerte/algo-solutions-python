@@ -1,4 +1,5 @@
-# HackerRank - Minimum Distances
+# Problem: Minimum Distances
+# Source: https://www.hackerrank.com/challenges/minimum-distances/problem
 
 def minimumDistances(a):
     if len(set(a)) == len(a):

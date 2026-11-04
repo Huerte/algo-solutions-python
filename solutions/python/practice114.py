@@ -1,4 +1,5 @@
-# Rank Elements in an Array
+# Problem: Rank Elements in an Array
+# Source: https://leetcode.com/problems/rank-transform-of-an-array/
 
 n = int(input('Enter the number of elements: '))
 print('Enter the elements: ', end='')

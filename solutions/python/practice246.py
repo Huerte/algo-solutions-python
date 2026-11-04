@@ -1,15 +1,3 @@
-<<<<<<< HEAD:practice_problem_solutions (2026)/practice246.py
-# Find the Difference of Two Arrays
-
-class Solution:
-    def findDifference(self, nums1, nums2):
-        return [[num for num in set(nums1) if num not in nums2], [num for num in set(nums2) if num not in nums1]]
-    
-s = Solution()
-print(s.findDifference([1,2,3], [2,4,6])) # [[1,3], [4,6]]
-print(s.findDifference([1,2,3,3], [1,1,2,2])) # [[3], []]
-print(s.findDifference([1,2,3], [1,2,3])) # [[], []]
-=======
 # CodeWars - String incrementer
 
 
@@ -41,4 +29,3 @@ print(increment_string("foobar099"))  # "foobar100"
 print(increment_string("fo99obar99")) # "fo99obar100"
 print(increment_string(""))           # "1"
 print(increment_string("foo"))           # "foo1"
->>>>>>> 96c2367 (chore: refactor the project structure):solutions/python/practice246.py

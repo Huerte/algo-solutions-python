@@ -1,4 +1,5 @@
-# CodeWars - Next bigger number with the same digits
+# Problem: Next bigger number with the same digits
+# Source: https://www.codewars.com/kata/next-bigger-number-with-the-same-digits
 
 def next_bigger(n):
     digits = list(str(n))

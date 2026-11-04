@@ -1,4 +1,5 @@
-# HackerRank - Counting Valleys
+# Problem: Counting Valleys
+# Source: https://www.hackerrank.com/challenges/counting-valleys/problem
 
 def countingValleys(steps, path):
     

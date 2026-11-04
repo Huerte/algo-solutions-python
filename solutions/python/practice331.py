@@ -1,4 +1,5 @@
-# Find the Difference of Two Arrays
+# Problem: Find the Difference of Two Arrays
+# Source: https://leetcode.com/problems/find-the-difference-of-two-arrays/
 
 class Solution:
     def findDifference(self, nums1, nums2):

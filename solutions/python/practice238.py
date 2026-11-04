@@ -1,14 +1,3 @@
-<<<<<<< HEAD:practice_problem_solutions (2026)/practice238.py
-# Difference Between Element Sum and Digit Sum of an Array
-
-class Solution:
-    def differenceOfSum(self, nums) -> int:
-        return abs(sum(nums) - sum(map(int, ''.join(map(str, nums)))))
-
-s = Solution()
-print(s.differenceOfSum([1,15,6,3])) # 9
-print(s.differenceOfSum([1,2,3,4]))  # 0
-=======
 n = int(input())
 c = {}
 alpha = list(range(2005, 2023)) + [2003, 2004]
@@ -25,4 +14,3 @@ for key, val in sor:
     res.append(f"{key} {val}")
 
 print('\n'.join(res))
->>>>>>> 96c2367 (chore: refactor the project structure):solutions/python/practice238.py

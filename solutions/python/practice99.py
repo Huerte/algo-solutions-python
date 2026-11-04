@@ -1,4 +1,5 @@
-# Days to Wait for a Luckier Day
+# Problem: Days to Wait for a Luckier Day
+# Source: https://leetcode.com/problems/daily-temperatures/
 
 n = int(input('Enter the number of days: '))
 odd = list(map(int, input('Enter the odds of luck for each day:\n').split()))

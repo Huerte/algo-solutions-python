@@ -1,4 +1,5 @@
-# Product of Array Except Self
+# Problem: Product of Array Except Self
+# Source: https://leetcode.com/problems/product-of-array-except-self/
 
 n = int(input('Enter the number of elements: '))
 print(f"Enter {n} elements:")

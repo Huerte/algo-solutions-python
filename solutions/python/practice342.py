@@ -1,4 +1,5 @@
-# Generate Parentheses
+# Problem: Generate Parentheses
+# Source: https://leetcode.com/problems/generate-parentheses/
 
 class Solution(object):
     def generateParenthesis(self, n):

@@ -1,23 +1,3 @@
-<<<<<<< HEAD:practice_problem_solutions (2026)/practice175.py
-# Count Items Matching a Rule
-
-class Solution(object):
-    def countMatches(self, items, ruleKey, ruleValue):
-        matches = 0
-        rules = {
-            'type': 0,
-            'color': 1,
-            'name': 2
-        }
-        for item in items:
-            if item[rules[ruleKey]] == ruleValue:
-                matches += 1
-        return matches
-    
-s = Solution()
-print(s.countMatches([["phone","blue","pixel"],["computer","silver","lenovo"],["phone","gold","iphone"]], "color", "silver")) # 1
-print(s.countMatches([["phone","blue","pixel"],["computer","silver","phone"],["phone","gold","iphone"]], "type", "phone")) # 2
-=======
 # HackerRank - Decorators 2 - Name Directory
 
 def person_lister(f):
@@ -33,4 +13,3 @@ def name_format(person):
 if __name__ == '__main__':
     people = [input().split() for i in range(int(input()))]
     print(*name_format(people), sep='\n')
->>>>>>> 96c2367 (chore: refactor the project structure):solutions/python/practice175.py

@@ -1,15 +1,3 @@
-<<<<<<< HEAD:practice_problem_solutions (2026)/practice211.py
-# HackerRank - Utopian Tree
-
-def utopianTree(n):
-    res = 1
-    for i in range(n):
-        if i % 2 == 0:
-            res *= 2
-        else:
-            res += 1
-    return res
-=======
 # CodeWars - Multiplication Table
 
 def multiplication_table(size):
@@ -23,4 +11,3 @@ def multiplication_table(size):
 print(multiplication_table(1)) # [[1]]
 print(multiplication_table(2)) # [[1, 2], [2, 4]]
 print(multiplication_table(3)) # [[1, 2, 3], [2, 4, 6], [3, 6, 9]]
->>>>>>> 96c2367 (chore: refactor the project structure):solutions/python/practice211.py

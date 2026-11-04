@@ -1,4 +1,5 @@
-# Backspace String Compare
+# Problem: Backspace String Compare
+# Source: https://leetcode.com/problems/backspace-string-compare/
 
 s = input('Enter string s: ')
 t = input('Enter string t: ')

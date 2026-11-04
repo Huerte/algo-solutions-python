@@ -1,4 +1,5 @@
-# CodeWars - Strip Comments
+# Problem: Strip Comments
+# Source: https://www.codewars.com/kata/strip-comments
 
 def strip_comments(strng, markers):
     arr = [s for s in strng.split('\n')]

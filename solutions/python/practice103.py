@@ -1,4 +1,5 @@
-# Calculate Percentage of Letter in String
+# Problem: Calculate Percentage of Letter in String
+# Source: https://leetcode.com/problems/percentage-of-letter-in-string/
 # Given a string s and a character letter, return the percentage of characters in s that equal letter rounded down to the nearest whole percent.
 
 # Input:

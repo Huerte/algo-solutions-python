@@ -1,4 +1,5 @@
-# Clear Digits
+# Problem: Clear Digits
+# Source: https://leetcode.com/problems/clear-digits/
 
 s = input("Enter the string: ")
 

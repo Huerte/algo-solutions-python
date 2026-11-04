@@ -1,10 +1,3 @@
-<<<<<<< HEAD:practice_problem_solutions (2026)/practice212.py
-# HackerRank - Designer PDF Viewer
-
-def designerPdfViewer(h, word):
-    alp = dict(zip([chr(i) for i in range(97, 123)], h))
-    return len(word) * alp[max(word, key=lambda x: alp[x])]
-=======
 # CodeWars - IP Validation
 
 # My waster unelegant solution
@@ -33,4 +26,3 @@ print(is_valid_IP("123.123.123.1234")) # False
 print(is_valid_IP("123.123.123"))      # False
 print(is_valid_IP("1.2.3.4"))          # True
 print(is_valid_IP("1.2.3"))            # False
->>>>>>> 96c2367 (chore: refactor the project structure):solutions/python/practice212.py

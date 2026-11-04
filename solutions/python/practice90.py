@@ -1,4 +1,5 @@
-# Find Strings Containing a Specific Character
+# Problem: Find Strings Containing a Specific Character
+# Source: https://leetcode.com/problems/find-words-containing-character/
 
 n = int(input('Enter the number of strings: '))
 print(f'Enter {n} strings:')

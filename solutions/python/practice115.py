@@ -1,4 +1,5 @@
-# Check If All A's Appears Before All B's
+# Problem: Check If All A's Appears Before All B's
+# Source: https://leetcode.com/problems/check-if-all-as-appears-before-all-bs/
 
 s = input('Enter the string: ')
 

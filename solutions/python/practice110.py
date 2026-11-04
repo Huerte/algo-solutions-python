@@ -1,4 +1,5 @@
-# Find the Missing Number
+# Problem: Find the Missing Number
+# Source: https://leetcode.com/problems/missing-number/
 
 n = int(input('Enter the number of elements: '))
 print(f'Enter {n} elements (between 1 and {n + 1}): ')

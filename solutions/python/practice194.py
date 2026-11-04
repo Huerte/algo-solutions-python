@@ -1,11 +1,3 @@
-<<<<<<< HEAD:practice_problem_solutions (2026)/practice194.py
-# HackerRank - Calendar Module
-
-from datetime import datetime
-d = list(map(int, input().split()))
-da = datetime(day=d[1], month=d[0], year=d[-1])
-print(['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'][da.weekday()])
-=======
 # Cancellable Item Transactions
 
 def calculate(price_dict, transaction):
@@ -43,4 +35,3 @@ print(calculate({"A":1,"B":3,"C":2}, "1A2BA3AC4CA"))        # 14
 print(calculate({"X":0,"Y":0,"Z":0},'5X6Y20Z1X6Y'))         # 0
 print(calculate({"R":1,"Q":2,"E":3,"X":4},"4R1Q4X2E1R2X"))  # 37
 print(calculate({"T":12,"F":6},"2F5T1T"))                   # 84
->>>>>>> 96c2367 (chore: refactor the project structure):solutions/python/practice194.py

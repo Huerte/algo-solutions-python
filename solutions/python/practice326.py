@@ -1,4 +1,5 @@
-# Counting Words With a Given Prefix
+# Problem: Counting Words With a Given Prefix
+# Source: https://leetcode.com/problems/counting-words-with-a-given-prefix/
 
 class Solution:
     def prefixCount(self, words, pref: str) -> int:

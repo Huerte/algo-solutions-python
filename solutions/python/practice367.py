@@ -1,3 +1,6 @@
+# Problem: Reverse Bits
+# Source: https://leetcode.com/problems/reverse-bits/
+
 class Solution(object):
     def reverseBits(self, n):
         return int(f"{n:032b}"[::-1], 2)

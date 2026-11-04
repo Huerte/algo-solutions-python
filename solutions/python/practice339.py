@@ -1,4 +1,5 @@
-# Maximum Subarray
+# Problem: Maximum Subarray
+# Source: https://leetcode.com/problems/maximum-subarray/
 
 class Solution:
     def maxSubArray(self, nums) -> int:

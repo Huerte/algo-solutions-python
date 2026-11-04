@@ -1,3 +1,6 @@
+# Problem: Finding 3-Digit Even Numbers
+# Source: https://leetcode.com/problems/finding-3-digit-even-numbers/
+
 from collections import Counter
 class Solution:
     def findEvenNumbers(self, digits):

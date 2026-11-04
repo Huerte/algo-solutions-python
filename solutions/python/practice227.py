@@ -1,10 +1,3 @@
-<<<<<<< HEAD:practice_problem_solutions (2026)/practice227.py
-# Multiply Strings
-
-class Solution:
-    def multiply(self, num1: str, num2: str) -> str:
-        return f"{int(num1) * int(num2)}"
-=======
 # Relative Ranks
 
 class Solution(object):
@@ -31,4 +24,3 @@ s = Solution()
 print(s.findRelativeRanks([5, 4, 3, 2, 1])) # ["Gold Medal","Silver Medal","Bronze Medal","4","5"]
 print(s.findRelativeRanks([10, 3, 8, 9, 4])) # ["Gold Medal","5","Bronze Medal","Silver Medal","4"]
 print(s.findRelativeRanks([1, 2, 3, 4, 5])) # ["5","4","Bronze Medal","Silver Medal","Gold Medal"]
->>>>>>> 96c2367 (chore: refactor the project structure):solutions/python/practice227.py

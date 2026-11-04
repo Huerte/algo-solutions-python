@@ -1,3 +1,6 @@
+# Problem: Word Pattern
+# Source: https://leetcode.com/problems/word-pattern/
+
 class Solution(object):
     def wordPattern(self, pattern, s):
         mapped = {}

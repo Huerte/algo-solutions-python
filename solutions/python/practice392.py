@@ -1,4 +1,5 @@
-# CodeWars - Most frequently used words in a text
+# Problem: Most frequently used words in a text
+# Source: https://www.codewars.com/kata/most-frequently-used-words-in-a-text
 
 from collections import Counter
 import re
