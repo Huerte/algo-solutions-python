@@ -1,4 +1,7 @@
 # Find Closest Person
+# Problem: Find Closest Person
+# Source: https://leetcode.com/problems/find-closest-person/
+# Note: Compares the distances of two people from a third person and returns the closer person's number.
 
 class Solution(object):
     def findClosest(self, x, y, z):
