@@ -1,5 +1,7 @@
 # HackerRank - Append and Delete
-
+# Problem: Append and Delete
+# Source: https://www.hackerrank.com/challenges/append-and-delete/problem
+# Note: Checks whether one string can be converted into another using exactly k append and delete operations.
 def appendAndDelete(s, t, k):
     i = 0
     while i < min(len(s), len(t)) and s[i] == t[i]:
