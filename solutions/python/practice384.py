@@ -1,5 +1,7 @@
 # HackerRank - Running Time of Algorithms
-
+# Problem: Running Time of Algorithms
+# Source: https://www.hackerrank.com/challenges/runningtime/problem
+# Note: Implements insertion sort and counts the number of shifts required to sort the array.
 def runningTime(arr):
     count = 0
     
