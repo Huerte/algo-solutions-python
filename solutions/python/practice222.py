@@ -1,6 +1,8 @@
 # CodeWars - Playing with Passphrases
 # TODO
-
+# Problem: Playing with Passphrases
+# Source: https://www.codewars.com/kata/559536379512a64472000053
+# Note: Shifts letters, replaces digits with their complements to 9, alternates letter casing, and reverses the resulting string.
 def play_pass(s, n):
     res = []
     
