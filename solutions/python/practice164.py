@@ -1,4 +1,7 @@
 # Matrix Script
+# Problem: Matrix Script
+# Source: https://www.hackerrank.com/challenges/matrix-script/problem
+# Note: Decodes a matrix by reading its characters column-wise and replacing symbols between alphanumeric characters with spaces.
 
 first_multiple_input = input().rstrip().split()
 
