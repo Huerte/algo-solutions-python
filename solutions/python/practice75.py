@@ -1,4 +1,7 @@
 # 📜 Problem — Nearest Value
+# Problem: Nearest Value
+# Source: https://py.checkio.org/mission/nearest-value/
+# Note: Finds the closest integer to the target, choosing the smaller value in case of a tie.
 # Description:
 # Given a set of integers and a target value, find the value in the set that is closest to the target.
 # If the target is equidistant from two values, return the smaller one.
