@@ -1,5 +1,7 @@
 # HackerRank - Between Two Sets
-
+# Problem: Between Two Sets
+# Source: https://www.hackerrank.com/challenges/between-two-sets/problem
+# Note: Counts integers that are divisible by every element in the first array and divide every element in the second array.
 def getTotalX(a, b):
     ar = []
     for i in range(a[-1], b[0] + 1):
