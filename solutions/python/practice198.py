@@ -1,5 +1,7 @@
 # Valid Braces
-
+# Problem: Valid Braces
+# Source: https://www.codewars.com/kata/5277c8a221e209d3f6000b56
+# Note: Validates the order and matching of parentheses, square brackets, and curly braces using stack and string-replacement approaches.
 def valid_braces(string):
     brace = {
         '}': '{',
