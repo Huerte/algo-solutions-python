@@ -1,4 +1,7 @@
 # Array Partition
+# Problem: Array Partition
+# Source: https://leetcode.com/problems/array-partition/
+# Note: Maximizes the sum of minimum values across n pairs by sorting the array.
 
 class Solution(object):
     def arrayPairSum(self, nums):
