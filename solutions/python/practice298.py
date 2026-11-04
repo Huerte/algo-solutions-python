@@ -1,5 +1,7 @@
 # HackerRank - Picking Numbers
-
+# Problem: Picking Numbers
+# Source: https://www.hackerrank.com/challenges/picking-numbers/problem
+# Note: Finds the largest subset where the absolute difference between any two selected elements is at most 1.
 def pickingNumbers(a):
     subs = []
     i = 0
