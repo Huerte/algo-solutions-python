@@ -1,4 +1,7 @@
 # Subarray Sum Equals K
+# Problem: Subarray Sum Equals K
+# Source: https://leetcode.com/problems/subarray-sum-equals-k/
+# Note: Counts the number of continuous subarrays whose sum equals the given target k.
 
 # My Solution
 class Solution(object):
