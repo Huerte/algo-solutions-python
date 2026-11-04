@@ -1,5 +1,7 @@
 # Relative Ranks
-
+# Problem: Relative Ranks
+# Source: https://leetcode.com/problems/relative-ranks/
+# Note: Assigns medals to the top three scores and numeric ranks to the remaining scores while preserving the original order.
 class Solution(object):
     def findRelativeRanks(self, score):
         s = sorted(score)
