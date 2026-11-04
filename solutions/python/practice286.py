@@ -1,5 +1,7 @@
 # HackerRank - Subarray Division
-
+# Problem: Subarray Division (Birthday Chocolate)
+# Source: https://www.hackerrank.com/challenges/the-birthday-bar/problem
+# Note: Counts contiguous subarrays of length m whose sum equals d.
 def birthday(s, d, m):
     count = 0
     
