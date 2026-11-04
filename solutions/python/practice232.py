@@ -1,5 +1,7 @@
 # CodeWars - Validate Credit Card Number
-
+# Problem: Validate Credit Card Number
+# Source: https://www.codewars.com/kata/5418a1dd6d8216e18a0012b2
+# Note: Validates a credit card number using the Luhn algorithm by doubling alternate digits and checking whether the final sum is divisible by 10.
 def validate(n):
     digits = str(n)
     res = []
