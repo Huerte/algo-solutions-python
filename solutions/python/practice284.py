@@ -1,5 +1,7 @@
 # Repeated String
-
+# Problem: Repeated String
+# Source: https://www.hackerrank.com/challenges/repeated-string/problem
+# Note: Counts occurrences of 'a' in an infinitely repeated string using full repetitions and the remaining prefix.
 def repeatedString(s, n):
     l = len(s)
     
