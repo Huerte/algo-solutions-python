@@ -1,6 +1,8 @@
 # 4Sum
 # Not accepted Solution
-
+# Problem: 4Sum
+# Source: https://leetcode.com/problems/4sum/
+# Note: Finds all unique quadruplets whose elements sum to the given target using four nested loops.
 class Solution(object):
     def fourSum(self, nums, target):
         res = []
