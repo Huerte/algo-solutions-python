@@ -1,5 +1,7 @@
 # GCD of Sums of Odd and Even Integers
-
+# Problem: GCD of Odd and Even Sums
+# Source: https://leetcode.com/problems/gcd-of-odd-and-even-sums/
+# Note: Calculates the GCD of the sums of the first n odd and n even integers using brute-force and mathematical approaches.
 # Brut Force Solution
 class Solution(object):
     def gcdOfOddEvenSums(self, n):
