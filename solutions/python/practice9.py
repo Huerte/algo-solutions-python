@@ -1,4 +1,4 @@
-# 📜 Problem — Length of Last Word
+# Problem — Length of Last Word
 # Source: https://leetcode.com/problems/length-of-last-word/
 # Topic: strings
 # Description:

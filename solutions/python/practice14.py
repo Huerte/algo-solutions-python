@@ -1,4 +1,4 @@
-# 📜 Problem — Rotate List
+# Problem — Rotate List
 # Source: https://leetcode.com/problems/rotate-list/
 # Time: O(n), Space: O(1)
 # Description:

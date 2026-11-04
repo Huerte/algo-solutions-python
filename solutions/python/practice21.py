@@ -1,4 +1,4 @@
-# 📜 Problem — Smallest Multiple That is Even
+# Problem — Smallest Multiple That is Even
 # Source: https://leetcode.com/problems/smallest-even-multiple/
 # Description:
 # Given a positive integer n, find the smallest multiple of n that is even. If n is already even,

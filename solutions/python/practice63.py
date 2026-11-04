@@ -1,4 +1,4 @@
-# 📜 Problem — Changing Direction
+# Problem — Changing Direction
 # Description:
 # Given a list of integers, count the number of times the direction changes from increasing to decreasing
 # or vice versa. A direction change occurs when the sequence switches from going up to going down,

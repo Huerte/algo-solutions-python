@@ -1,4 +1,4 @@
-# 📜 Problem — Reverse String II
+# Problem — Reverse String II
 # Source: https://leetcode.com/problems/reverse-string-ii/
 # Time: O(n), Space: O(n)
 # Description:

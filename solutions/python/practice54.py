@@ -1,4 +1,4 @@
-# 📜 Problem — Two Sum
+# Problem — Two Sum
 # Source: https://leetcode.com/problems/two-sum/
 # Description:
 # Given an array of integers and a target sum, find two numbers in the array that add up to the target.

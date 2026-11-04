@@ -1,4 +1,4 @@
-# 📜 Problem — Longest Common Prefix
+# Problem — Longest Common Prefix
 # Source: https://leetcode.com/problems/longest-common-prefix/
 # Description:
 # Write a function to find the longest common prefix string amongst an array of strings.

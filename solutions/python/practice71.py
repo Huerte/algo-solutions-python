@@ -1,4 +1,4 @@
-# 📜 Problem — Most Frequent Even Number
+# Problem — Most Frequent Even Number
 # Description:
 # Given a list of integers, find the most frequently occurring even number. If there are multiple
 # even numbers with the same frequency, return the smallest one. If no even numbers exist, return None.

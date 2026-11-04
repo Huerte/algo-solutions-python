@@ -1,4 +1,4 @@
-# 📜 Problem — Merge Intervals
+# Problem — Merge Intervals
 # Source: https://leetcode.com/problems/merge-intervals/
 # Topic: arrays, sorting
 # Description:

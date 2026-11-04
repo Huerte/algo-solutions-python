@@ -1,4 +1,4 @@
-# 📜 Problem — Nearest Value
+# Problem — Nearest Value
 # Description:
 # Given a set of integers and a target value, find the value in the set that is closest to the target.
 # If the target is equidistant from two values, return the smaller one.

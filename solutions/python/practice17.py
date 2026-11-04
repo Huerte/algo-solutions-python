@@ -1,4 +1,4 @@
-# 📜 Problem — Palindrome Number
+# Problem — Palindrome Number
 # Source: https://leetcode.com/problems/palindrome-number/
 # Description:
 # Given an integer x, return true if x is a palindrome, and false otherwise.

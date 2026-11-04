@@ -1,4 +1,4 @@
-# 📜 Problem — Bigger Price
+# Problem — Bigger Price
 # Description:
 # Given a limit and a list of dictionaries with "name" and "price" keys, return the top "limit" items
 # with the highest prices. The result should maintain the original order of items in the data.

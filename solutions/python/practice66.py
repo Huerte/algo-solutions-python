@@ -1,4 +1,4 @@
-# 📜 Problem — Frequency Counter
+# Problem — Frequency Counter
 # Description:
 # Given a list of strings, count the frequency of each string and return a formatted result string
 # showing each unique string and its count, sorted by frequency in descending order.

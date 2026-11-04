@@ -1,4 +1,4 @@
-# 📜 Problem — String Jump Decoder
+# Problem — String Jump Decoder
 # Description:
 # Given a string where even-indexed characters are letters and odd-indexed characters are digits,
 # decode the string by taking characters at even indices and jumping forward by the digit at the

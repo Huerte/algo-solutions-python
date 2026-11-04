@@ -1,4 +1,4 @@
-# 📜 Problem — Multiplicative Persistence
+# Problem — Multiplicative Persistence
 # Description:
 # Given a positive integer n, repeatedly multiply its digits until you get a single digit.
 # Return the number of steps it takes to reach a single digit.

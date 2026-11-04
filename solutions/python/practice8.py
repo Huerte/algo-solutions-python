@@ -1,4 +1,4 @@
-# 📜 Problem — Insert Interval
+# Problem — Insert Interval
 # Source: https://leetcode.com/problems/insert-interval/
 # Topic: arrays, intervals
 # Description:

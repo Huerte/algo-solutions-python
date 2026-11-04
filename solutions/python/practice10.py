@@ -1,4 +1,4 @@
-# 📜 Problem — First Letter to Appear Twice
+# Problem — First Letter to Appear Twice
 # Source: https://leetcode.com/problems/first-letter-to-appear-twice/
 # Time: O(n), Space: O(n)
 # Topic: strings, hash map

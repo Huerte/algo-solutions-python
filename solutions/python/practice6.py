@@ -1,4 +1,4 @@
-# 📜 Problem — Jump Game
+# Problem — Jump Game
 # Source: https://leetcode.com/problems/jump-game/
 # Time: O(n), Space: O(1)
 # Topic: arrays, greedy

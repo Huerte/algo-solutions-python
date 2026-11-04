@@ -1,4 +1,4 @@
-# 📜 Problem — String Split Check
+# Problem — String Split Check
 # Description:
 # This appears to be a simple string manipulation problem that checks if a string 
 # can be split into non-empty parts.

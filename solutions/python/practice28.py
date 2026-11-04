@@ -1,4 +1,4 @@
-# 📜 Problem — Reverse Integer
+# Problem — Reverse Integer
 # Source: https://leetcode.com/problems/reverse-integer/
 # Description:
 # Given a 32-bit signed integer, reverse digits of an integer.

@@ -1,4 +1,4 @@
-# 📜 Problem — Non-Unique Elements
+# Problem — Non-Unique Elements
 # Description:
 # Given an array of integers, return a new array containing only the elements that 
 # appear more than once in the original array. The order of elements should be preserved.

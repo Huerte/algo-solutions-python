@@ -1,4 +1,4 @@
-# 📜 Problem — Digital Root
+# Problem — Digital Root
 # Description:
 # Given a positive integer, repeatedly sum its digits until you get a single digit.
 # This is also known as the digital root of a number.

@@ -1,4 +1,4 @@
-# 📜 Problem — Unique Paths
+# Problem — Unique Paths
 # Source: https://leetcode.com/problems/unique-paths/
 # Description:
 # There is a robot on an m x n grid. The robot is initially located at the top-left corner

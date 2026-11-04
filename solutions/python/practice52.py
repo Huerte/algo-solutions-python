@@ -1,4 +1,4 @@
-# 📜 Problem — Equal and Divisible Pairs
+# Problem — Equal and Divisible Pairs
 # Source: https://leetcode.com/problems/count-equal-and-divisible-pairs-in-an-array/
 # Description:
 # Given an array of integers and an integer k, return the number of pairs (i, j) where:

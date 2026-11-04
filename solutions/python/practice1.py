@@ -1,5 +1,6 @@
-# 📜 Problem — N-Queens II
+# Problem: N-Queens II
 # Source: https://leetcode.com/problems/n-queens-ii/
+# Note: Backtracking, one queen per row, prune as soon as a placement is unsafe
 #
 # Topic: Recursion, Backtracking
 #

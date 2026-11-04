@@ -1,4 +1,4 @@
-# 📜 Problem — Rank Transform Array
+# Problem — Rank Transform Array
 # Source: https://leetcode.com/problems/rank-transform-of-an-array/
 # Description:
 # Given an array of integers, replace each element with its rank. The rank represents 

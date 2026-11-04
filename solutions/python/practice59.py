@@ -1,4 +1,4 @@
-# 📜 Problem — Backspace String Compare
+# Problem — Backspace String Compare
 # Source: https://leetcode.com/problems/backspace-string-compare/
 # Description:
 # Given two strings s and t, return true if they are equal when both are typed into 
