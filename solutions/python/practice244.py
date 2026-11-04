@@ -1,5 +1,7 @@
 # CodeWars - Human readable duration format
-
+# Problem: Human readable duration format
+# Source: https://www.codewars.com/kata/52742f58faf5485cae000b9a
+# Note: Converts seconds into a human-readable duration using years, days, hours, minutes and seconds.
 def format_duration(seconds):
     m, s = divmod(seconds, 60)
     h, m = divmod(m, 60)
