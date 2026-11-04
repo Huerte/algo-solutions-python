@@ -1,4 +1,4 @@
-# 📜 Problem — Better Days
+# Problem — Better Days
 # Source: https://leetcode.com/problems/daily-temperatures/
 # Description:
 # Given an array representing temperatures for n days, for each day find how many days 

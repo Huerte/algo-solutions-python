@@ -1,4 +1,4 @@
-# 📜 Problem — Fibonacci Sequence Generator
+# Problem — Fibonacci Sequence Generator
 # Description:
 # Generate the first n Fibonacci numbers starting from 0 and 1.
 # Each number in the sequence is the sum of the two preceding ones.

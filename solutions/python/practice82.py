@@ -1,4 +1,4 @@
-# 📜 Problem — Fibonacci Number
+# Problem — Fibonacci Number
 # Source: https://leetcode.com/problems/fibonacci-number/
 # Description:
 # The Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, 

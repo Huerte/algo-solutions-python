@@ -1,4 +1,4 @@
-# 📜 Problem — Pascal's Triangle
+# Problem — Pascal's Triangle
 # Source: https://leetcode.com/problems/pascals-triangle/
 # Description:
 # Given an integer numRows, return the first numRows of Pascal's triangle.

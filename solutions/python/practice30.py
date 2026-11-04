@@ -1,4 +1,4 @@
-# 📜 Problem — Alternating Digit Sum
+# Problem — Alternating Digit Sum
 # Source: https://leetcode.com/problems/alternating-digit-sum/
 # Description:
 # Given a positive integer n, return the alternating digit sum of n.

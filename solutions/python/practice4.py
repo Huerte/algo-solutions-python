@@ -1,4 +1,4 @@
-# 📜 Problem — Count Capital Letters in String
+# Problem — Count Capital Letters in String
 # Topic: strings
 # Description:
 # Given a string, count the number of capital letters (uppercase characters) in it.

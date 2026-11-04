@@ -1,4 +1,4 @@
-# 📜 Problem — Valid Parentheses
+# Problem — Valid Parentheses
 # Source: https://leetcode.com/problems/valid-parentheses/
 # Description:
 # Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the

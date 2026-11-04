@@ -1,4 +1,4 @@
-# 📜 Problem — Number Power Sum
+# Problem — Number Power Sum
 # Description:
 # Given a number and a power, reverse the number, raise each digit to the given power, 
 # and concatenate the results to form a new number.

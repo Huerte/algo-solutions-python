@@ -1,4 +1,4 @@
-# 📜 Problem — Valid Number
+# Problem — Valid Number
 # Source: https://leetcode.com/problems/valid-number/
 # Description:
 # A valid number can be split up into these components (in order):

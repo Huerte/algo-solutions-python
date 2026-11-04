@@ -1,4 +1,4 @@
-# 📜 Problem — Minimum Path Sum
+# Problem — Minimum Path Sum
 # Source: https://leetcode.com/problems/minimum-path-sum/
 # Description:
 # Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right,

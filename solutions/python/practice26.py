@@ -1,4 +1,4 @@
-# 📜 Problem — Integer to Roman
+# Problem — Integer to Roman
 # Source: https://leetcode.com/problems/integer-to-roman/
 # Description:
 # Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.

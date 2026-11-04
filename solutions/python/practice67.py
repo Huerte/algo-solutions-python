@@ -1,4 +1,4 @@
-# 📜 Problem — Sum of Multiples
+# Problem — Sum of Multiples
 # Source: https://leetcode.com/problems/sum-multiples/
 # Description:
 # Given a positive integer n, find the sum of all numbers from 1 to n that are multiples of 3, 5, or 7.

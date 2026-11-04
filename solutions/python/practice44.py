@@ -1,4 +1,4 @@
-# 📜 Problem — Character Percentage in String
+# Problem — Character Percentage in String
 # Source: https://leetcode.com/problems/percentage-of-letter-in-string/
 # Description:
 # Given a string s and a character c, return the percentage of characters in s that equal c.

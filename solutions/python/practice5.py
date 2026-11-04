@@ -1,4 +1,4 @@
-# 📜 Problem — Spiral Matrix
+# Problem — Spiral Matrix
 # Source: https://leetcode.com/problems/spiral-matrix/
 # Topic: arrays, simulation
 # Description:

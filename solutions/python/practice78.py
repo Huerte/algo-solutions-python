@@ -1,4 +1,4 @@
-# 📜 Problem — Time Limit Validator
+# Problem — Time Limit Validator
 # Description:
 # Given a time limit in HH:MM:SS format and a list of time durations, determine if all the
 # durations can fit within the time limit. Return True if they fit, False otherwise.

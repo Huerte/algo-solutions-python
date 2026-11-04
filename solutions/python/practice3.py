@@ -1,4 +1,4 @@
-# 📜 Problem — Cable Connection Optimization
+# Problem — Cable Connection Optimization
 # Description:
 # Given n coordinates (x, y), find the minimum total cable length needed to connect all points.
 # The cable runs horizontally to cover the x-range and vertically to reach the median y-coordinate.
