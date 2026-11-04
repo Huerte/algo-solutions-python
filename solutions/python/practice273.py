@@ -1,5 +1,7 @@
 # Distribute Candies
-
+# Problem: Distribute Candies
+# Source: https://leetcode.com/problems/distribute-candies/
+# Note: Counts the unique candy types using a set and returns the minimum of the unique types and half the total candies.
 class Solution(object):
     def distributeCandies(self, candyType):
         cd = len(set(candyType))
