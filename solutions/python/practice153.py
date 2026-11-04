@@ -1,3 +1,7 @@
+# Problem: Decode the Message
+# Source: https://leetcode.com/problems/decode-the-message/
+# Note: Decodes a message using a substitution mapping based on the first occurrence of characters in the key.
+
 class Solution(object):
     def decodeMessage(self, key, message):
         
