@@ -1,4 +1,5 @@
-# Minimum Operations to Reduce Number to One
+# Problem: Minimum Operations to Reduce Number to One
+# Source: https://www.geeksforgeeks.org/dsa/reduce-a-number-to-1-by-performing-given-operations/
 
 n = int(input('Enter a positive integer: '))
 op = 0
