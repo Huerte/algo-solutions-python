@@ -1,5 +1,7 @@
 # GeeksForGeeks - Kadane's Algorithm
-
+# Problem: Kadane's Algorithm
+# Source: https://www.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1
+# Note: Finds the maximum sum of a contiguous subarray using Kadane's Algorithm by tracking the current sum and maximum sum.
 class Solution:
     def maxSubarraySum(self, arr):
         cur_max = float('-inf')
