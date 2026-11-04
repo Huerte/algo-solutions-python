@@ -1,5 +1,7 @@
 # Count Digit Appearances
-
+# Problem: Count Digit Appearances
+# Source: https://leetcode.com/problems/count-digit-appearances/
+# Note: Counts the total occurrences of a target digit across the decimal representations of all numbers using string conversion.
 class Solution(object):
     def countDigitOccurrences(self, nums, digit):
         count = 0
