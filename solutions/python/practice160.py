@@ -1,4 +1,7 @@
 # Shuffle String
+# Problem: Shuffle String
+# Source: https://leetcode.com/problems/shuffle-string/
+# Note: Restores a string by placing each character at its corresponding index.
 
 class Solution(object):
     def restoreString(self, s, indices):
