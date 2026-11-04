@@ -1,5 +1,7 @@
 # Wildcard Matching
-
+# Problem: Wildcard Matching
+# Source: https://leetcode.com/problems/wildcard-matching/
+# Note: Checks whether a string matches a pattern where '?' matches one character and '*' matches any sequence of characters.
 # Other sol
 class Solution:
     def isMatch(self, s: str, p: str) -> bool:
