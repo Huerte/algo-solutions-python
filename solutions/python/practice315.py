@@ -1,5 +1,7 @@
 # Group Anagrams
-
+# Problem: Group Anagrams
+# Source: https://leetcode.com/problems/group-anagrams/
+# Note: Groups words that contain the same characters by using their sorted character sequence as a dictionary key.
 class Solution:
     def groupAnagrams(self, strs):
         groups = {}
