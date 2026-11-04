@@ -1,4 +1,7 @@
 # XOR Operation in an Array
+# Problem: XOR Operation in an Array
+# Source: https://leetcode.com/problems/xor-operation-in-an-array/
+# Note: Creates an array using start + 2 * i and returns the XOR of all its elements.
 
 class Solution(object):
     def xorOperation(self, n, start):
