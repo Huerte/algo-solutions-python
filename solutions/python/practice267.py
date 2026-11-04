@@ -1,5 +1,7 @@
 # Next Greater Element I
-
+# Problem: Next Greater Element I
+# Source: https://leetcode.com/problems/next-greater-element-i/
+# Note: Uses nested loops to find each nums1 element in nums2 and searches to its right for the first greater element, returning -1 if none exists.
 class Solution(object):
     def nextGreaterElement(self, nums1, nums2):
         arr = []
