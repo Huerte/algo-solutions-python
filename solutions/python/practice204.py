@@ -1,5 +1,7 @@
 # HackerRank - Time Delta
-
+# Problem: Time Delta
+# Source: https://www.hackerrank.com/challenges/python-time-delta/problem
+# Note: Calculates the absolute difference in seconds between two timestamps while accounting for timezone offsets.
 #!/bin/python3
 
 import math
