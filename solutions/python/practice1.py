@@ -1,5 +1,6 @@
 # 📜 Problem — N-Queens II
 # Source: https://leetcode.com/problems/n-queens-ii/
+#
 # Topic: Recursion, Backtracking
 #
 # Why this solution?
@@ -18,18 +19,42 @@
 # Why backtracking?
 # It stops exploring a path as soon as a placement is invalid.
 #
+# Note: Uses recursion and backtracking to count valid queen placements.
+#
+# Description:
+# The N-Queens problem asks us to place N queens on an N x N chessboard
+# so that no two queens can attack each other.
+#
+# This solution uses backtracking to find all valid arrangements.
+# It places one queen in each row and checks whether the selected position
+# is safe by examining its row, column, and diagonals.
+# If the position is safe, it places the queen and moves to the next row.
+# If a placement does not lead to a valid arrangement, it removes the queen
+# and tries another column.
+# Whenever queens are successfully placed in all N rows, the solution
+# counter is increased.
+#
 # Input:
 # - n: Size of the n x n chessboard (1 <= n <= 9)
 #
 # Output:
 # - Number of distinct valid arrangements.
+# - An integer representing the total number of distinct valid arrangements.
+#
+# Approach:
+# - Use recursion to process the chessboard one row at a time.
+# - Check whether each position is safe before placing a queen.
+# - Use backtracking to undo placements and explore other possibilities.
+# - Count an arrangement when all rows have been filled successfully.
 #
 # Complexity:
 # - Time: Exponential in the worst case.
 # - Space: O(n²) for the board, plus recursion stack.
 #
+# Time Complexity: O(N! * N) — upper-bound estimate for exploring placements.
+# Space Complexity: O(N^2) — for storing the chessboard, excluding recursion.
+#
 # Status: SOLVED
-
 
 def totalNQueens(n):
     def is_safe(board, row, col):
