@@ -1,5 +1,7 @@
 # py.checkio - Monkey Typing
-
+# Problem: Monkey Typing
+# Source: https://py.checkio.org/mission/monkey-typing/
+# Note: Counts how many distinct words from the given set appear as substrings in the text, ignoring case.
 def count_words(text: str, words: set) -> int:
     w = dict(zip([w.lower()for w in words], [0] * len(words)))
     print(w)

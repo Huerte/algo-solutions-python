@@ -1,3 +1,7 @@
+# Problem: Equal Sides Of An Array
+# Source: https://www.codewars.com/kata/5679aa472b8f57fb8c000047
+# Note: Finds the lowest index where the sum of elements to the left equals the sum of elements to the right.
+
 from math import floor
 def find_even_index(arr):
     num = floor(len(arr) / 2)

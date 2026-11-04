@@ -1,5 +1,7 @@
 # Weighted Word Mapping
-
+# Problem: Weighted Word Mapping
+# Source: https://leetcode.com/problems/weighted-word-mapping/
+# Note: Calculates each word's total character weight, takes modulo 26, and maps it to a reverse-alphabet character.
 class Solution:
     def mapWordWeights(self, words, weights) -> str:
         alp = dict(zip(range(25, -1, -1),[chr(i) for i in range(97, 123)]))

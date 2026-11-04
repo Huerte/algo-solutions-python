@@ -1,5 +1,7 @@
 # Two Sum Variant
-
+# Problem: Two Sum
+# Source: https://leetcode.com/problems/two-sum/
+# Note: Finds two indices whose corresponding elements add up to the target using a hash map for efficient lookup.
 # Simple Solution 0(n2)
 def sums(arr, targ):
     for i in range(len(arr) - 1):

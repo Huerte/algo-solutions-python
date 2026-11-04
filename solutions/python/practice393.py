@@ -1,5 +1,7 @@
 # CodeWars - Convert PascalCase string into snake_case
-
+# Problem: Convert PascalCase string into snake_case
+# Source: https://www.codewars.com/kata/529b418d533b76924600085d
+# Note: Converts uppercase word boundaries into underscores and lowercases the string.
 def to_underscore(strng: str) -> str:
     words = []
     temp = ""

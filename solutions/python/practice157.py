@@ -1,4 +1,7 @@
 # Split a String in Balanced Strings
+# Problem: Split a String in Balanced Strings
+# Source: https://leetcode.com/problems/split-a-string-in-balanced-strings/
+# Note: Finds the maximum number of balanced substrings with equal numbers of L and R.
 
 class Solution(object):
     def balancedStringSplit(self, s):

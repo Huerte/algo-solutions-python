@@ -1,5 +1,7 @@
 # Maximum Subarray Sum
-
+# Problem: Maximum subarray sum
+# Source: https://www.codewars.com/kata/54521e9ec8e60bc4de000d6c
+# Note: Attempts to find the contiguous subarray with the maximum sum by grouping consecutive increasing elements.
 def maxSub(arr):
     cur_sum = []
     seen = []

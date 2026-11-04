@@ -1,5 +1,7 @@
 # Geeksforgeeks - Longest Subarray with Sum K
-
+# Problem: Longest Subarray with Sum K
+# Source: https://www.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1
+# Note: Finds the length of the longest contiguous subarray whose elements sum to the target k using prefix sums and a hash map.
 # My Sol;
 class Solution:
     def longestSubarray(self, arr, k):  

@@ -1,5 +1,7 @@
 # Geeksforgeeks - Print n to 1 without loop
-
+# Problem: Print n to 1 without loop
+# Source: https://www.geeksforgeeks.org/problems/print-n-to-1-without-loop/1
+# Note: Prints numbers from n down to 1 without using loops, using recursion.
 class Solution:
     def printNos(self, n):
         return ' '.join(map(str,range(n,0,-1)))

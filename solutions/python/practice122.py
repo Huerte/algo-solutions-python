@@ -1,4 +1,6 @@
 # Spiral Matrix Display
+# Source: https://leetcode.com/problems/spiral-matrix/description/
+# Note: Returns all elements of a matrix in spiral order.
 
 def spiral_display(arr):
 

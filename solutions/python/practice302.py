@@ -1,3 +1,6 @@
+# Problem: Viral Advertising
+# Source: https://www.hackerrank.com/challenges/strange-advertising/problem
+# Note: Simulates daily ad sharing and calculates the cumulative number of likes over n days.
 import math
 
 def viralAdvertising(n):

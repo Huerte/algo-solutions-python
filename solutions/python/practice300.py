@@ -1,5 +1,7 @@
 # HackerRank - Sequence Equation
-
+# Problem: Sequence Equation
+# Source: https://www.hackerrank.com/challenges/permutation-equation/problem
+# Note: Finds the position of each value and then the position of that position in the given permutation.
 def permutationEquation(p):
     res = []
     for i in range(1, len(p) + 1):

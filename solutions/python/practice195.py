@@ -1,5 +1,7 @@
 # Sort by binary ones
-
+# Problem: Sort by binary ones
+# Source: https://www.codewars.com/kata/59eb28fb0a2bffafbb0000d6
+# Note: Sorts numbers by descending count of binary ones, then by binary length and numeric value.
 def sort_by_binary_ones (numList): 
     bins = [bin(ch)[2:] for ch in numList]
     return list(map(lambda x: int(x, 2), sorted(bins, key=lambda x: (-(x.count('1')), len(x), int(x, 2)))))

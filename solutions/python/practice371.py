@@ -1,5 +1,7 @@
 # Geeksforgeeks - Maximum Product Subarray
-
+# Problem: Maximum Product Subarray
+# Source: https://www.geeksforgeeks.org/dsa/maximum-product-subarray/
+# Note: Finds the maximum product of any contiguous subarray, including positive, negative and zero values.
 # My Sol;
 from math import prod
 class Solution:

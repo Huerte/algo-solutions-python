@@ -1,4 +1,7 @@
-# Problem — Remove Digits from String
+# 📜 Problem — Remove Digits from String
+# Problem: Clear Digits
+# Source: https://leetcode.com/problems/clear-digits/
+# Note: Removes each digit and the closest remaining non-digit character to its left.
 # Description:
 # Given a string s, remove all digits from the string. When a digit is encountered, 
 # remove the character that comes before it as well.

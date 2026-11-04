@@ -1,5 +1,7 @@
 # CodeWars - N-th Fibonacci
-
+# Problem: N-th Fibonacci
+# Source: https://www.codewars.com/kata/522551eee9abb932420004a0
+# Note: Calculates the N-th Fibonacci number iteratively using two variables to track the previous two values.
 def nth_fib(n):
     a, b = 0, 1
     count = 2

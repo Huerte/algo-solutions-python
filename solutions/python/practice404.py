@@ -1,5 +1,7 @@
 # CodeWars - Sum of Pairs
-
+# Problem: Sum of Pairs
+# Source: https://www.codewars.com/kata/54d81488b981293527000c8f
+# Note: Finds the first pair of numbers, from left to right, that adds up to the target sum.
 def sum_pairs(ints, s):
     
     seen = set()

@@ -1,5 +1,7 @@
 # Uncommon Words from Two Sentences
-
+# Problem: Uncommon Words from Two Sentences
+# Source: https://leetcode.com/problems/uncommon-words-from-two-sentences/
+# Note: Combines both sentences, counts each word using Counter, and returns words that appear exactly once across both sentences.
 from collections import Counter
 class Solution(object):
     def uncommonFromSentences(self, s1, s2):

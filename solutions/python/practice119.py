@@ -1,4 +1,6 @@
 # Is Prime Number
+# Source: https://www.geeksforgeeks.org/problems/prime-number2314/1
+# Note: Checks whether a number is prime using optimized trial division.
 
 def is_prime(n):
     if n <= 1:

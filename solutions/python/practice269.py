@@ -1,5 +1,7 @@
 # Self Dividing Numbers
-
+# Problem: Self Dividing Numbers
+# Source: https://leetcode.com/problems/self-dividing-numbers/
+# Note: Checks each number in the given range and includes it if every digit is non-zero and divides the number exactly.
 class Solution(object):
     def selfDividingNumbers(self, left, right):
         arr = []

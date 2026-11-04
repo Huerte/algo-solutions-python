@@ -1,5 +1,7 @@
 # CodeWars - Simple Encryption #1 - Alternating Split
-
+# Problem: Simple Encryption #1 - Alternating Split
+# Source: https://www.codewars.com/kata/57814d79a56c88e3e0000786
+# Note: Implements alternating split encryption and decryption by rearranging odd- and even-indexed characters.
 def encrypt(encrypted_text, n):
     res = encrypted_text
     for _ in range(n):

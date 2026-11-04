@@ -1,5 +1,7 @@
 # Find Common Characters
-
+# Problem: Find Common Characters
+# Source: https://leetcode.com/problems/find-common-characters/
+# Note: Finds characters common to all strings, including duplicates, using character frequency counting.
 # My solution
 from collections import Counter
 class Solution(object):

@@ -1,5 +1,7 @@
 # Sorting the Sentence
-
+# Problem: Sorting the Sentence
+# Source: https://leetcode.com/problems/sorting-the-sentence/
+# Note: Reconstructs the original sentence by sorting words according to the position number appended to each word.
 class Solution:
     def sortSentence(self, s: str) -> str:
         return ' '.join(word[:-1] for word in sorted(s.split(), key=lambda x: x[-1]))

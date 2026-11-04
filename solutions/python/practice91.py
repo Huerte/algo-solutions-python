@@ -1,5 +1,7 @@
 # Shift Odd-Indexed Characters
-
+# Problem: Replace All Digits with Characters
+# Source: https://leetcode.com/problems/replace-all-digits-with-characters/
+# Note: Replaces each digit at an odd index with the previous character shifted by that digit.
 s = input('Enter the string: ')
 res = []
 

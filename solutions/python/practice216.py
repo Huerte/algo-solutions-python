@@ -1,5 +1,7 @@
 # CodeWars - Title Case
-
+# Problem: Title Case
+# Source: https://www.codewars.com/kata/5202ef17a402dd033c000009
+# Note: Converts a title to title case while keeping specified minor words lowercase, except for the first word.
 def title_case(title, minor_words=''):
     result = []
     minors = [word.lower() for word in minor_words.split()]

@@ -1,5 +1,7 @@
 # Cancellable Item Transactions
-
+# Problem: Cancellable Item Transactions
+# Source: https://www.codewars.com/kata/cancellable-item-transactions
+# Note: Calculates the total transaction value while supporting cancellation of the most recent purchase of each item.
 def calculate(price_dict, transaction):
     stacks = {k: [] for k in price_dict}
     

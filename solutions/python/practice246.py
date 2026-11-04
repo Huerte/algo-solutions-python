@@ -1,5 +1,7 @@
 # CodeWars - String incrementer
-
+# Problem: String incrementer
+# Source: https://www.codewars.com/kata/54a91a4883a7de5d7800009c
+# Note: Increments the numeric suffix of a string while preserving its prefix and leading zeros.
 
 def increment_string(string):
     if not string:

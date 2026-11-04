@@ -1,5 +1,7 @@
 # GeeksforGeeks - Row with max 1s
-
+# Problem: Row with Max 1s
+# Source: https://www.geeksforgeeks.org/problems/row-with-max-1s0023/1
+# Note: Finds the index of the first row containing the maximum number of 1s in a row-wise sorted binary matrix.
 class Solution:
     def rowWithMax1s(self, arr):
         max_ones = 0

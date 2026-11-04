@@ -1,5 +1,7 @@
 # CodeWars - Sum of Odd Cubed Numbers
-
+# Problem: Sum of Odd Cubed Numbers
+# Source: https://www.codewars.com/kata/580dda86c40fa6c45f00028a
+# Note: Returns the sum of cubed odd integers, or None if the array contains a non-integer value.
 def cube_odd(arr):
     res = 0
     

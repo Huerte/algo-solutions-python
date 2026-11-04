@@ -1,5 +1,7 @@
 # Count of Matches in Tournament
-
+# Problem: Count of Matches in Tournament
+# Source: https://leetcode.com/problems/count-of-matches-in-tournament/
+# Note: Simulates each tournament round, counting matches and updating the number of teams advancing until one winner remains.
 class Solution(object):
     def numberOfMatches(self, n):
         count = 0

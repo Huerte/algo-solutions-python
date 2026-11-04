@@ -1,5 +1,7 @@
 # Geeksforgeeks - Rotate Array by One
-
+# Problem: Rotate Array by One
+# Source: https://www.geeksforgeeks.org/problems/cyclically-rotate-an-array-by-one2614/1
+# Note: Cyclically rotates an array one position clockwise, moving the last element to the front.
 class Solution:
     def rotate(self, arr):
         if not arr:

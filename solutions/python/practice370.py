@@ -1,3 +1,7 @@
+# Problem: Two Sum - Pair with Given Sum
+# Source: https://www.geeksforgeeks.org/problems/key-pair5616/1
+# Note: Checks whether two distinct elements in an array add up to the given target.
+
 class Solution:
     def twoSum(self, arr, target):
         arr.sort()

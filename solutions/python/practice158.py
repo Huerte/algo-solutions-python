@@ -1,4 +1,7 @@
 # Count Number of Maximum Bitwise-OR Subsets
+# Problem: Count Number of Maximum Bitwise-OR Subsets
+# Source: https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/
+# Note: Generates all subsets and counts those whose bitwise OR equals the maximum possible OR.
 
 class Solution(object):
     def countMaxOrSubsets(self, nums):

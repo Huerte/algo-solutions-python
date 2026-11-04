@@ -1,3 +1,6 @@
+# Problem: Split the Array
+# Source: https://leetcode.com/problems/split-the-array/
+# Note: Checks whether an array can be divided into two equal-sized arrays, each containing distinct elements.
 from collections import Counter
 class Solution:
     def isPossibleToSplit(self, nums) -> bool:

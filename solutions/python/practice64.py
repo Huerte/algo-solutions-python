@@ -1,4 +1,7 @@
-# Problem — Bigger Price
+# 📜 Problem — Bigger Price
+# Problem: Bigger Price
+# Source: https://py.checkio.org/en/mission/bigger-price/
+# Note: Returns the most expensive products from a list of dictionaries.
 # Description:
 # Given a limit and a list of dictionaries with "name" and "price" keys, return the top "limit" items
 # with the highest prices. The result should maintain the original order of items in the data.

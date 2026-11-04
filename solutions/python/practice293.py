@@ -1,5 +1,7 @@
 # HackerRank - The Hurdle Race
-
+# Problem: The Hurdle Race
+# Source: https://www.hackerrank.com/challenges/the-hurdle-race/problem
+# Note: Calculates the minimum number of potion doses needed to clear the tallest hurdle.
 def hurdleRace(k, height):
     return max(height) - k if k < max(height) else 0
 

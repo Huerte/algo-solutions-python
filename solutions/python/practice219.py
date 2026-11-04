@@ -1,5 +1,7 @@
 # CodeWars - The Vowel Code
-
+# Problem: The Vowel Code
+# Source: https://www.codewars.com/kata/53697be005f803751e0015aa
+# Note: Encodes lowercase vowels as numbers 1-5 and decodes those numbers back into vowels.
 vowels = 'aeiou'
 
 def encode(st):

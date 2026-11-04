@@ -1,5 +1,7 @@
 # Find Indices of Stable Mountains
-
+# Problem: Find Indices of Stable Mountains
+# Source: https://leetcode.com/problems/find-indices-of-stable-mountains/
+# Note: Finds indices where the immediately preceding mountain's height exceeds the given threshold.
 class Solution(object):
     def stableMountains(self, height, threshold):
         

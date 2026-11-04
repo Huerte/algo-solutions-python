@@ -1,4 +1,6 @@
-# Maximum Substrings With Distinct Start
+# Problem: Maximum Substrings With Distinct Start
+# Source: https://leetcode.com/problems/maximum-substrings-with-distinct-start/
+# Note: Finds the maximum number of substrings with distinct starting characters.
 class Solution(object):
     def maxDistinct(self, s):
         l=len(s)

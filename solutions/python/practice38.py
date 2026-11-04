@@ -1,3 +1,7 @@
+# Problem: Add Two Numbers
+# Source: https://leetcode.com/problems/add-two-numbers/
+# Note: Adds two numbers represented by reverse-order linked lists and returns their sum as a linked list.
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val

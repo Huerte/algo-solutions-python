@@ -1,5 +1,7 @@
 # Bouncing Balls
-
+# Problem: Bouncing Balls
+# Source: https://www.codewars.com/kata/5544c7a5cb454edb3c000047
+# Note: Counts how many times a bouncing ball passes a window, considering the initial fall and subsequent rebounds.
 def bouncing_ball(h, bounce, window):
     if h <= 0 or (bounce <= 0 or bounce >= 1) or window >= h:
         return -1

@@ -1,3 +1,7 @@
+# Problem: Grading Students
+# Source: https://www.hackerrank.com/challenges/grading/problem
+# Note: Rounds student grades up to the next multiple of 5 when the difference is less than 3, provided the grade is at least 38.
+
 def gradingStudents(grades):
     arr = []
     for grade in grades:

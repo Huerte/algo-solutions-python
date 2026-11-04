@@ -1,4 +1,7 @@
 # Insert Greatest Common Divisors in Linked List
+# Problem: Insert Greatest Common Divisors in Linked List
+# Source: https://leetcode.com/problems/insert-greatest-common-divisors-in-linked-list/
+# Note: Inserts a new node containing the GCD of every pair of adjacent nodes.
 
 class ListNode(object):
     def __init__(self, val=0, next=None):

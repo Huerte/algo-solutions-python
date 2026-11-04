@@ -1,5 +1,7 @@
 # Minimum Average of Smallest and Largest Elements
-
+# Problem: Minimum Average of Smallest and Largest Elements
+# Source: https://leetcode.com/problems/minimum-average-of-smallest-and-largest-elements/
+# Note: Pairs the smallest and largest elements, calculates their averages, and returns the minimum average.
 class Solution(object):
     def minimumAverage(self, nums):
         arr = []

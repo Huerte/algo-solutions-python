@@ -1,5 +1,7 @@
 # CodeWars - The Supermarket Queue
-
+# Problem: The Supermarket Queue
+# Source: https://www.codewars.com/kata/57b06f90e298a7b53d000a86
+# Note: Calculates the total checkout time by assigning each customer to the till with the minimum accumulated time.
 def queue_time(customers, n):
     
     queus = [0] * n

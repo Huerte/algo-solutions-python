@@ -1,5 +1,7 @@
 # Are they the "same"?
-
+# Problem: Are they the "same"?
+# Source: https://www.codewars.com/kata/550498447451fbbd7600041c
+# Note: Checks whether the second array contains the squares of all elements in the first array, preserving duplicate counts regardless of order.
 from collections import Counter
 def comp(array1, array2):
     if array1 is None or array2 is None:

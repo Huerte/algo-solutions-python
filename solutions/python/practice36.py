@@ -1,3 +1,7 @@
+# Problem: Frequency Sorting
+# Source: https://py.checkio.org/mission/frequency-sorting/
+# Note: Groups numbers by decreasing frequency, sorting numbers in ascending order when their frequencies are equal.
+
 from collections.abc import Iterable
 from collections import Counter
 

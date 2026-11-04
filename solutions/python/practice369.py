@@ -1,5 +1,7 @@
 # Geeksforgeeks - Peak element
-
+# Problem: Peak Element
+# Source: https://www.geeksforgeeks.org/problems/peak-element/1
+# Note: Finds the index of any element that is strictly greater than its adjacent elements.
 class Solution:   
     def peakElement(self, arr):
         if len(arr) == 1:

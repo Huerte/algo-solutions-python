@@ -1,5 +1,7 @@
 # HackerRank - Validating Credit Card Numbers
-
+# Problem: Validating Credit Card Numbers
+# Source: https://www.hackerrank.com/challenges/validating-credit-card-number/problem
+# Note: Validates credit card numbers using regular expressions and checks for four or more consecutive repeated digits.
 import re
 
 pattern = re.compile(r"^(?:[456]\d{15}|[456]\d{3}(-\d{4}){3})$")
