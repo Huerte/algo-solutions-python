@@ -23,7 +23,9 @@ Explanation: We only consider base 2: 4 = 100 (base 2), which is not palindromic
 Therefore, we return false.
 
 """
-
+# Problem: Strictly Palindromic Number
+# Source: https://leetcode.com/problems/strictly-palindromic-number/
+# Note: Checks whether a number's representation is palindromic in every base from 2 to n - 2.
 class Solution:
     def isStrictlyPalindromic(self, n: int) -> bool:
         if n == 0:
