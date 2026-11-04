@@ -1,5 +1,7 @@
 # Clear Digits
-
+# Problem: Clear Digits
+# Source: https://leetcode.com/problems/clear-digits/
+# Note: Uses a stack to remove each digit and the closest remaining letter to its left.
 class Solution(object):
     def clearDigits(self, s):
 
