@@ -1,4 +1,6 @@
-# 📜 Problem — Maximum Subarray
+# Problem: Maximum Subarray
+# Source: https://leetcode.com/problems/maximum-subarray/
+# Note: Use Kadane's algorithm to track the best sum ending at each element
 # Time: O(n), Space: O(n) because nums[1:] creates a copy
 # Topic: arrays, dp
 # Description:
@@ -41,5 +43,20 @@ assert maxSubArray([-1]) == -1
 assert maxSubArray([-2, -1]) == -1
 assert maxSubArray([1, 2, 3, 4]) == 10
 assert maxSubArray([-1, -2, -3, -4]) == -1
+
+# All-zero input
+assert maxSubArray([0, 0, 0]) == 0
+
+# Zero is better than any negative element
+assert maxSubArray([-3, 0, -2]) == 0
+
+# Positive elements separated by a loss cannot be combined arbitrarily
+assert maxSubArray([5, -10, 6]) == 6
+
+# The best subarray ends before a large trailing loss
+assert maxSubArray([4, -1, 2, -10]) == 5
+
+# Maximum allowed length and element value
+assert maxSubArray([10_000] * 100_000) == 1_000_000_000
 
 print("All test cases passed!")
