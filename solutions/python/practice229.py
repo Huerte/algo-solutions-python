@@ -1,5 +1,7 @@
 # CodeWars - The Solar System - Lost Moons
-
+# Problem: The Solar System - Lost Moons
+# Source: https://www.codewars.com/kata/67e1768b5c64e7019dc30966
+# Note: Reconstructs each planet's moon list using the known moon order and the moons that have been found.
 planet_moons = {
     'Mercury': [],
     'Venus': [],
