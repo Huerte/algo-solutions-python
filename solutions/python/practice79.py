@@ -1,4 +1,7 @@
 # 📜 Problem — Digital Root
+# Problem: Sum of Digits / Digital Root
+# Source: https://www.codewars.com/kata/541c8630095125aba6000c00
+# Note: Repeatedly sums the digits of a number until a single digit remains.
 # Description:
 # Given a positive integer, repeatedly sum its digits until you get a single digit.
 # This is also known as the digital root of a number.
