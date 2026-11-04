@@ -1,4 +1,7 @@
 # 📜 Problem — Changing Direction
+# Problem: Changing direction
+# Source: https://py.checkio.org/en/mission/changing-direction/
+# Note: Counts how many times a sequence switches between increasing and decreasing.
 # Description:
 # Given a list of integers, count the number of times the direction changes from increasing to decreasing
 # or vice versa. A direction change occurs when the sequence switches from going up to going down,
