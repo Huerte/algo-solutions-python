@@ -1,4 +1,6 @@
-# py.checkio - Subject is Stressful
+# Problem: Stressful Subject
+# Source: https://py.checkio.org/en/mission/stressful-subject/
+
 
 def is_stressful(subj: str) -> bool:
     if subj.isupper():
