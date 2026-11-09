@@ -1,4 +1,5 @@
-# FizzBuzz with Twist
+# Problem: FizzBuzz with Twist
+# Source: https://leetcode.com/problems/fizz-buzz/
 
 def fizzbuzzpop(n):
     res = ""

@@ -1,4 +1,5 @@
-# Coin Change (Minimum Coins)
+# Problem: Coin Change (Minimum Coins)
+# Source: https://leetcode.com/problems/coin-change/
 
 def change(n):
     coins = [50, 20, 10, 5, 1]

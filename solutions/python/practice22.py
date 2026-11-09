@@ -1,4 +1,5 @@
-#----- Pascal Triangle -----#
+# Problem: Pascal Triangle
+# Source: https://leetcode.com/problems/pascals-triangle/
 
 ## Prints Pascal's Triangle with the number of rows entered by the user.
 # Each row starts and ends with 1.
