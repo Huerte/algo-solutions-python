@@ -10,3 +10,11 @@ def utopianTree(n):
         else:
             res += 1
     return res
+# Test cases
+assert utopianTree(0) == 1
+assert utopianTree(1) == 2
+assert utopianTree(3) == 6
+assert utopianTree(4) == 7
+assert utopianTree(5) == 14
+
+print("All test cases passed!")
