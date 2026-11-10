@@ -1,5 +1,6 @@
-# String Frequency Sorter
+# Problem: Sort Characters By Frequency
 # Source: https://leetcode.com/problems/sort-characters-by-frequency/
+# Note: Sorts characters in descending order of their frequency
 # Note: Ties are ordered alphabetically.
 
 from collections import Counter

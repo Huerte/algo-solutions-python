@@ -1,5 +1,6 @@
-# Problem — Unique Paths II
+# Problem: Unique Paths II
 # Source: https://leetcode.com/problems/unique-paths-ii/
+# Note: Solves the Unique Paths II problem
 # Description:
 # You are given an m x n integer array obstacleGrid. There is a robot initially located at
 # the top-left corner (i.e., obstacleGrid[0][0]). The robot tries to move to the bottom-right

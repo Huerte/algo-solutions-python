@@ -1,5 +1,6 @@
-# Sliding window - longest subarray with sum <= S
-
+# Problem: Longest Subarray With Sum Less Than or Equal to S
+# Source: 
+# Note: Sliding window approach to find longest subarray with sum at most S
 n = int(input())
 arr = [int(i) for i in input().split()][:n]
 

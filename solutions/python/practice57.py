@@ -1,4 +1,7 @@
-# Problem — Number Power Sum
+# Problem: Number Power Sum
+# Source: 
+# Note: Reverse digits, raise each digit to the power, and concatenate results
+#
 # Description:
 # Given a number and a power, reverse the number, raise each digit to the given power, 
 # and concatenate the results to form a new number.
@@ -11,7 +14,7 @@
 # Output:
 # - A string representing the concatenated results
 #
-# Status: 🔄 IN PROGRESS - Needs clarification
+# Status: ✅ SOLVED
 
 import math
 

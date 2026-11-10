@@ -1,5 +1,7 @@
-# Problem — Rank Transform Array
+# Problem: Rank Transform of an Array
 # Source: https://leetcode.com/problems/rank-transform-of-an-array/
+# Note: Used sorted index mapping to rank elements starting from 1
+#
 # Description:
 # Given an array of integers, replace each element with its rank. The rank represents 
 # how large the element is. The rank has the following rules:
@@ -14,7 +16,7 @@
 # Output:
 # - An array where each element is replaced by its rank
 #
-# Status: 🔄 IN PROGRESS - Incomplete implementation
+# Status: ✅ SOLVED
 
 def rankTransformArray(arr):
     if not arr:
@@ -32,7 +34,7 @@ def rankTransformArray(arr):
     
     for i in range(len(indexed_arr)):
         if i > 0 and indexed_arr[i][0] != indexed_arr[i-1][0]:
-            rank = i + 1
+            rank += 1
         ranks[indexed_arr[i][1]] = rank
     
     return ranks

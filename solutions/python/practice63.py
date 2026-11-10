@@ -1,4 +1,3 @@
-# 📜 Problem — Changing Direction
 # Problem: Changing direction
 # Source: https://py.checkio.org/en/mission/changing-direction/
 # Note: Counts how many times a sequence switches between increasing and decreasing.

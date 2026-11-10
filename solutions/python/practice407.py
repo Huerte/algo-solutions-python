@@ -1,5 +1,6 @@
-# CodeChum - Longest subarray with sum k
-
+# Problem: Longest Subarray with Sum K
+# Source: https://www.codechum.com/
+# Note: Finds longest subarray with sum equal to target k
 ln, r = map(int, input().split())
 arr = list(map(int, input().split()[:ln]))
 

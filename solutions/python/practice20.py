@@ -1,5 +1,6 @@
-# Problem — Valid Number
+# Problem: Valid Number
 # Source: https://leetcode.com/problems/valid-number/
+# Note: Solves the Valid Number problem
 # Description:
 # A valid number can be split up into these components (in order):
 # 1. A decimal number or an integer.

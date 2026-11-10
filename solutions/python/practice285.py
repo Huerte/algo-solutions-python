@@ -1,4 +1,6 @@
-
+# Problem: Punctuation Score
+# Source: 
+# Note: Calculates total score of consecutive punctuation marks
 def punctuation_score(msg):
     punc = {
         '.': 2,

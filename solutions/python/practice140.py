@@ -1,5 +1,6 @@
-# Matrix Rotate 90deg clockwise
-
+# Problem: Matrix Rotate 90deg Clockwise
+# Source: 
+# Note: Rotates square matrix clockwise by 90 degrees
 matrix = []
 for _ in range(3):
     matrix.append(list(map(int, input().split())))

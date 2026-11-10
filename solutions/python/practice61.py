@@ -1,5 +1,6 @@
-# Problem — Pascal's Triangle
+# Problem: Pascal's Triangle
 # Source: https://leetcode.com/problems/pascals-triangle/
+# Note: Solves the Pascal's Triangle problem
 # Description:
 # Given an integer numRows, return the first numRows of Pascal's triangle.
 # In Pascal's triangle, each number is the sum of the two numbers directly above it.

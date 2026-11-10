@@ -1,5 +1,4 @@
-# CodeWars - +1 Array
-# Problem: +1 Array
+# Problem: Plus One Array
 # Source: https://www.codewars.com/kata/5514e5b77e6b2f38e0000ca9
 # Note: Adds 1 to the number represented by an array of digits and returns None for invalid or empty arrays.
 def up_array(arr):

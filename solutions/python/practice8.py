@@ -1,5 +1,6 @@
-# Problem — Insert Interval
+# Problem: Insert Interval
 # Source: https://leetcode.com/problems/insert-interval/
+# Note: Solves the Insert Interval problem
 # Topic: arrays, intervals
 # Description:
 # You are given an array of non-overlapping intervals intervals where intervals[i] = [starti, endi]

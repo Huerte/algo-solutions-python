@@ -1,5 +1,6 @@
-# CodeWars - Add Fractions
-
+# Problem: Add Fractions
+# Source: https://www.codewars.com/
+# Note: Adds fractions and returns simplified sum using Fraction
 from fractions import Fraction
 def add_fracs(*args):
     return str(Fraction(sum(eval(c) for c in args)).limit_denominator()) if args else ''

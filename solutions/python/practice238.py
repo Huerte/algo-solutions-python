@@ -1,3 +1,6 @@
+# Problem: Character Year Count Mapping
+# Source: 
+# Note: Maps letter frequencies to indexed years
 n = int(input())
 c = {}
 alpha = list(range(2005, 2023)) + [2003, 2004]

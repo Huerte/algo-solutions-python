@@ -1,4 +1,3 @@
-# 📜 Problem — Non-Unique Elements
 # Problem: Non-unique Elements
 # Source: https://py.checkio.org/en/mission/non-unique-elements/
 # Note: Removes elements that occur only once while preserving the original order.

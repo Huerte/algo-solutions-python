@@ -1,5 +1,6 @@
-# Shortest Escape Path
-
+# Problem: Shortest Escape Path
+# Source: 
+# Note: Finds shortest escape path using BFS
 from collections import deque
 
 r, c = map(int, input().split())

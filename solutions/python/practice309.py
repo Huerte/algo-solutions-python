@@ -1,5 +1,6 @@
-# Not in place
-
+# Problem: Not In Place
+# Source: 
+# Note: Checks positions not in original sorted place
 w = "ABCDFEGH"
 alp = [chr(i).upper() for i in range(97, 123)]
 
@@ -12,4 +13,3 @@ for i in w:
         print(i)
         sys.exit()
     prev = alp.index(i)
- 

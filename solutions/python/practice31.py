@@ -1,3 +1,6 @@
+# Problem: Generate Palindrome ASCII
+# Source: 
+# Note: Generates random ASCII palindromic strings
 import random
 start = 65#32
 end = 90#126

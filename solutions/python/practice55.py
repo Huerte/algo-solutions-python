@@ -1,4 +1,6 @@
-# Problem — Average Without Min and Max
+# Problem: Average Without Min and Max
+# Source: 
+# Note: Solves the Average Without Min and Max problem
 # Description:
 # Given an array of integers, calculate the average of all elements except the minimum 
 # and maximum values. The result should be formatted to two decimal places.

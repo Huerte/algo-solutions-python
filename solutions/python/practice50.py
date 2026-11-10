@@ -1,3 +1,6 @@
+# Problem: Singly Linked List Implementation
+# Source: 
+# Note: Implements singly linked list with push, append, pop, and search
 class Nodes:
     def __init__(self, value, nextNode=None):
         self.value = value

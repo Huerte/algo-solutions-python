@@ -1,5 +1,6 @@
-# Vowel and Consonant
-
+# Problem: Vowel and Consonant Counter
+# Source: 
+# Note: Counts vowels and consonants in text
 n = int(input()) # "àç_èç_è_(-'(çè_-çàà)ç_è(_-v çè- çàè_-ponctuation"
 v, c = 0, 0
 for i in range(n):

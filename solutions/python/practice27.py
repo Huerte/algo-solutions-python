@@ -1,5 +1,6 @@
-# # Binary Palindrome
-
+# Problem: Binary Palindrome
+# Source: 
+# Note: Checks if binary representation of string is a palindrome
 s = input()
 result = ''.join(format(ord(c), '07b') for c in s)
 print(len(result) if result == result[::-1] else 'Not a palindrome')

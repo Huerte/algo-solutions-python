@@ -1,5 +1,6 @@
-# Average of Array Excluding Minimum and Maximum
-
+# Problem: Average of Array Excluding Minimum and Maximum
+# Source: 
+# Note: Calculates average excluding min and max values
 n = int(input('Enter the number of integers (N): '))
 print(f'Enter {n} integers:')
 

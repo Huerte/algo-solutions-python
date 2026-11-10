@@ -1,5 +1,6 @@
-# Matrix Diagonal Sum
-
+# Problem: Matrix Diagonal Sum
+# Source: https://leetcode.com/problems/matrix-diagonal-sum/
+# Note: Calculates sum of primary and secondary matrix diagonals
 class Solution(object):
     def diagonalSum(self, mat):
         tot = 0

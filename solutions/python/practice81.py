@@ -1,4 +1,6 @@
-# Problem — Check if All Arrays Have Same Elements
+# Problem: Check if All Arrays Have Same Elements
+# Source: 
+# Note: Solves the Check if All Arrays Have Same Elements problem
 # Description:
 # Given a list of arrays, determine if all arrays contain the same elements (regardless of order).
 # The function should return True if all arrays have the same elements, False otherwise.

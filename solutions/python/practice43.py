@@ -1,4 +1,6 @@
-# Problem — Sum of Multiples of 3 and 5
+# Problem: Sum of Multiples of 3 and 5
+# Source: 
+# Note: Solves the Sum of Multiples of 3 and 5 problem
 # Description:
 # Given a limit n, find the sum of all numbers from 0 to n-1 that are multiples of 3 or 5.
 # This is a classic problem similar to Project Euler Problem 1.

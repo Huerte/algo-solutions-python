@@ -1,4 +1,3 @@
-# 📜 Problem — Find the nth Prime Number
 # Problem: 10,001st Prime
 # Source: https://projecteuler.net/problem=7
 # Note: Finds the nth prime number using trial division up to the square root.

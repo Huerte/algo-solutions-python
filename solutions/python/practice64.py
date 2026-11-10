@@ -1,4 +1,3 @@
-# 📜 Problem — Bigger Price
 # Problem: Bigger Price
 # Source: https://py.checkio.org/en/mission/bigger-price/
 # Note: Returns the most expensive products from a list of dictionaries.

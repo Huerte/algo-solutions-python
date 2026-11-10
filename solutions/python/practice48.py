@@ -1,4 +1,6 @@
-# def rotate(lst, n):
+# Problem: Rotate List by N Steps
+# Source: 
+# Note: Rotates elements of a list by n steps
 #     """Rotate the elements of lst by n steps.
 
 #     A positive n indicates a right rotation, while a negative n indicates a left rotation.

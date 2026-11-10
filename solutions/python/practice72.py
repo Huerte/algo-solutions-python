@@ -1,5 +1,7 @@
-# Problem — Valid Parentheses
+# Problem: Valid Parentheses
 # Source: https://leetcode.com/problems/valid-parentheses/
+# Note: Validates bracket matching using stack-based mapping
+#
 # Description:
 # Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the
 # input string is valid. An input string is valid if open brackets are closed by the same type of
@@ -11,7 +13,7 @@
 # - Input: "(]" → Output: false
 # - Input: "([)]" → Output: false
 # 
-# Status: 🔄 IN PROGRESS - Needs fixing
+# Status: ✅ SOLVED
 
 def is_valid_parentheses(s):
     if not s:

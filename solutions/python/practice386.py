@@ -1,5 +1,6 @@
-# HackerRank - Pair of gloves
-
+# Problem: Pair of Gloves
+# Source: https://www.hackerrank.com/
+# Note: Counts matching pairs of gloves by color
 from collections import Counter
 def number_of_pairs(gloves):
     count = Counter(gloves)

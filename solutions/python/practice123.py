@@ -1,5 +1,6 @@
-# Keypad Phone Simulator
-
+# Problem: Keypad Phone Simulator
+# Source: 
+# Note: Simulates phone keypad text input
 number_of_word = int(input())
 
 res = []

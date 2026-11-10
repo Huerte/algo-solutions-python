@@ -1,5 +1,6 @@
-# Problem — Two Sum
+# Problem: Two Sum
 # Source: https://leetcode.com/problems/two-sum/
+# Note: Solves the Two Sum problem
 # Description:
 # Given an array of integers and a target sum, find two numbers in the array that add up to the target.
 # Return the indices of these two numbers. You may assume that each input has exactly one solution.

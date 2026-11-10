@@ -1,5 +1,6 @@
-# Problem — Largest Number At Least Twice of Others
+# Problem: Largest Number At Least Twice of Others
 # Source: https://leetcode.com/problems/largest-number-at-least-twice-of-others/
+# Note: Solves the Largest Number At Least Twice of Others problem
 # Description:
 # Given an array of integers, return the index of the largest element if it is at least twice as much
 # as every other number in the array. If no such element exists, return -1.

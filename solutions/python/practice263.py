@@ -1,3 +1,6 @@
+# Problem: Find Common Elements Between Two Arrays
+# Source: https://leetcode.com/problems/find-common-elements-between-two-arrays/
+# Note: Counts occurrences of elements of each array present in the other
 class Solution(object):
     def findIntersectionValues(self, nums1, nums2):
         arr = [0, 0]

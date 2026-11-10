@@ -1,4 +1,3 @@
-# 📜 Problem — Nearest Value
 # Problem: Nearest Value
 # Source: https://py.checkio.org/mission/nearest-value/
 # Note: Finds the closest integer to the target, choosing the smaller value in case of a tie.

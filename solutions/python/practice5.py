@@ -1,5 +1,6 @@
-# Problem — Spiral Matrix
+# Problem: Spiral Matrix
 # Source: https://leetcode.com/problems/spiral-matrix/
+# Note: Solves the Spiral Matrix problem
 # Topic: arrays, simulation
 # Description:
 # Given an m x n matrix, return all elements of the matrix in spiral order.

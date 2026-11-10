@@ -1,5 +1,6 @@
-# CodeWars - Valid Phone Number
-
+# Problem: Valid Phone Number
+# Source: https://www.codewars.com/
+# Note: Validates phone number string format using regex
 import re
 def valid_phone_number(phone_number):
     return bool(re.match(r"\([0-9]{3}\)\s[0-9]{3}-[0-9]{4}$", phone_number))

@@ -1,5 +1,6 @@
-# Problem — Maximum Area of Longest Diagonal Rectangle
+# Problem: Maximum Area of Longest Diagonal Rectangle
 # Source: https://leetcode.com/problems/maximum-area-of-longest-diagonal-rectangle/
+# Note: Solves the Maximum Area of Longest Diagonal Rectangle problem
 # Description:
 # Given a list of rectangles with length and breadth, find the rectangle with the maximum area 
 # among those that have the longest diagonal. If multiple rectangles have the same longest diagonal, 

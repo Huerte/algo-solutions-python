@@ -1,4 +1,6 @@
-# Problem — Filter Strings by Substring
+# Problem: Filter Strings by Substring
+# Source: 
+# Note: Solves the Filter Strings by Substring problem
 # Description:
 # Given a list of strings and a substring, return all strings from the list that contain the substring.
 # The result should be returned as a newline-separated string.

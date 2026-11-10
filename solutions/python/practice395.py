@@ -1,5 +1,6 @@
-# py.checkio - The Highest Building
-
+# Problem: The Highest Building
+# Source: https://py.checkio.org/
+# Note: Determines building with highest height
 def highest_building(buildings: list[list[int]]) -> list[int]:
     
     cur_max = float('-inf')

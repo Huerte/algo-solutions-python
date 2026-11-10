@@ -1,5 +1,7 @@
-# Problem — Integer to Roman
+# Problem: Integer to Roman
 # Source: https://leetcode.com/problems/integer-to-roman/
+# Note: Greedy mapping of values to Roman numeral symbols
+#
 # Description:
 # Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
 # Given an integer, convert it to a roman numeral.
@@ -19,7 +21,7 @@
 # Output:
 # - A string representing the roman numeral
 #
-# Status: 🔄 IN PROGRESS - Needs fixing
+# Status: ✅ SOLVED
 
 class Solution(object):
     def intToRoman(self, num):

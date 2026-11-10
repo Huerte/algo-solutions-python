@@ -1,4 +1,7 @@
-# Problem — Create Phone Number
+# Problem: Create Phone Number
+# Source: https://www.codewars.com/kata/525f50e3b73515a6db000b83
+# Note: Formats an array of 10 integers into phone number format (XXX) XXX-XXXX
+#
 # Description:
 # Write a function that accepts an array of 10 integers (between 0 and 9), that returns 
 # a string of those numbers in the form of a phone number.
@@ -10,7 +13,7 @@
 # Output:
 # - A string in the format "(XXX) XXX-XXXX"
 #
-# Status: 🔄 IN PROGRESS - Needs fixing
+# Status: ✅ SOLVED
 
 def create_phone_number(n):
     if len(n) != 10 or max(n) > 9 or min(n) < 0:

@@ -1,4 +1,6 @@
-# Problem — String Unscrambling
+# Problem: String Unscrambling
+# Source: 
+# Note: Solves the String Unscrambling problem
 # Description:
 # Given a scrambled string, unscramble it by taking characters at even indices first 
 # (0, 2, 4, ...) and then characters at odd indices in reverse order.

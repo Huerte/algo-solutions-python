@@ -1,5 +1,6 @@
-# Problem — Smallest Multiple That is Even
+# Problem: Smallest Multiple That is Even
 # Source: https://leetcode.com/problems/smallest-even-multiple/
+# Note: Solves the Smallest Multiple That is Even problem
 # Description:
 # Given a positive integer n, find the smallest multiple of n that is even. If n is already even,
 # return n. If n is odd, return n * 2.

@@ -1,4 +1,6 @@
-# Problem — Character Triangle Pattern
+# Problem: Character Triangle Pattern
+# Source: 
+# Note: Solves the Character Triangle Pattern problem
 # Description:
 # Given a character and a number n, print a triangle pattern where each row contains an odd number
 # of characters, starting with 1 character and incrementing by 2 for each row.

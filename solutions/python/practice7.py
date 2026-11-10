@@ -1,5 +1,6 @@
-# Problem — Merge Intervals
+# Problem: Merge Intervals
 # Source: https://leetcode.com/problems/merge-intervals/
+# Note: Solves the Merge Intervals problem
 # Topic: arrays, sorting
 # Description:
 # Given an array of intervals where intervals[i] = [starti, endi],

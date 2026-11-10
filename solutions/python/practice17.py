@@ -1,5 +1,6 @@
-# Problem — Palindrome Number
+# Problem: Palindrome Number
 # Source: https://leetcode.com/problems/palindrome-number/
+# Note: Solves the Palindrome Number problem
 # Description:
 # Given an integer x, return true if x is a palindrome, and false otherwise.
 # An integer is a palindrome when it reads the same backward as forward.

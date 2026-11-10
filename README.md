@@ -43,8 +43,11 @@ algo-solutions-python/
 │       └── practice1.js
 ├── assets/
 ├── README.md
+├── TOPICS.md
 └── LICENSE
 ```
+
+For problems classified by topic, see [TOPICS.md](TOPICS.md).
 
 Each file includes the problem source and a short note at the top as a comment:
 
@@ -99,9 +102,11 @@ Don't see a folder for your language? Create it. You'll be the first contributor
 
 Thanks to everyone who helps this collection grow.
 
-<a href="../../graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Huerte/algo-solutions-python" alt="Contributors">
-</a>
+<p align="center">
+  <a href="../../graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=Huerte/algo-solutions-python" alt="Contributors">
+  </a>
+</p>
 
 ## Platforms
 

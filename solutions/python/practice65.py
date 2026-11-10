@@ -1,5 +1,7 @@
-# Problem — Longest Substring Without Repeating Characters
+# Problem: Longest Substring Without Repeating Characters
 # Source: https://leetcode.com/problems/longest-substring-without-repeating-characters/
+# Note: Finds length of longest substring without repeating characters using sets
+#
 # Description:
 # Given a string, find the length of the longest substring without repeating characters.
 # 
@@ -8,7 +10,7 @@
 # - Input: "bbbbb" → Output: 1 (substring "b" has length 1)
 # - Input: "pwwkew" → Output: 3 (substring "wke" has length 3)
 # 
-# Status: 🔄 IN PROGRESS - Needs fixing
+# Status: ✅ SOLVED
 
 def longest_substring_without_repeating(s):
     if not s:

@@ -1,5 +1,6 @@
-# Problem — Reverse Integer
+# Problem: Reverse Integer
 # Source: https://leetcode.com/problems/reverse-integer/
+# Note: Solves the Reverse Integer problem
 # Description:
 # Given a 32-bit signed integer, reverse digits of an integer.
 # If reversing x causes the value to go outside the signed 32-bit integer range 

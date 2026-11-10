@@ -1,3 +1,6 @@
+# Problem: Polish Alphabet Converter
+# Source: https://www.codewars.com/kata/57ab2d6072292dbf7c000039
+# Note: Replaces Polish diacritic characters with standard Latin letters
 def correct_polish_letters(st): 
     polish = {
         "ą": "a",

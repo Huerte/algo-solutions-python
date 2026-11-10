@@ -1,5 +1,6 @@
-# Geeksforgeeks - Count Even Letters
-
+# Problem: Count Even Letters
+# Source: https://www.geeksforgeeks.org/
+# Note: Counts letters with even frequency using Counter
 from collections import Counter
 class Solution:
     def count(self, s):

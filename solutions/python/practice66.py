@@ -1,4 +1,7 @@
-# Problem — Frequency Counter
+# Problem: Frequency Counter
+# Source: 
+# Note: Counts string frequencies and formats descending frequency output
+#
 # Description:
 # Given a list of strings, count the frequency of each string and return a formatted result string
 # showing each unique string and its count, sorted by frequency in descending order.
@@ -7,7 +10,7 @@
 # - Input: ["a", "b", "a", "c", "b", "a"]
 # - Output: "a - 3, b - 2, c - 1"
 # 
-# Status: 🔄 IN PROGRESS - Needs fixing
+# Status: ✅ SOLVED
 
 def frequency_counter(strings):
     if not strings:

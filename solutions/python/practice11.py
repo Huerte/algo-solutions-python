@@ -1,5 +1,6 @@
-# Problem — Spiral Matrix II
+# Problem: Spiral Matrix II
 # Source: https://leetcode.com/problems/spiral-matrix-ii/
+# Note: Solves the Spiral Matrix II problem
 # Topic: arrays, simulation
 # Description:
 # Given a positive integer n, generate an n x n matrix filled with elements from 1 to n^2

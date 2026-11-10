@@ -1,5 +1,6 @@
-# py.checkio - Cookies
-
+# Problem: Cookies
+# Source: https://py.checkio.org/
+# Note: Parses and retrieves cookie value by name
 def get_cookie(cookie, name):
     cont = [word.strip() for word in cookie.split(';')]
     

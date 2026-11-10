@@ -1,5 +1,6 @@
-# Problem — Jump Game
+# Problem: Jump Game
 # Source: https://leetcode.com/problems/jump-game/
+# Note: Solves the Jump Game problem
 # Time: O(n), Space: O(1)
 # Topic: arrays, greedy
 # Description:

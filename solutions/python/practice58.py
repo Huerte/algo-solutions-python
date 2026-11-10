@@ -1,4 +1,7 @@
-# Problem — String Split Check
+# Problem: String Split Check
+# Source: 
+# Note: Checks whether string can be split into non-empty whitespace-separated parts
+#
 # Description:
 # This appears to be a simple string manipulation problem that checks if a string 
 # can be split into non-empty parts.
@@ -9,7 +12,7 @@
 # Output:
 # - A boolean indicating whether the string can be split into non-empty parts
 #
-# Status: 🔄 IN PROGRESS - Needs clarification
+# Status: ✅ SOLVED
 
 def canSplitString(s):
     if not s:

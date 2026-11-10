@@ -1,3 +1,6 @@
+# Problem: Strictly Palindromic Number
+# Source: https://leetcode.com/problems/strictly-palindromic-number/
+# Note: Checks if an integer is palindromic across bases 2 to n-2
 """
 An integer n is strictly palindromic if, for every base b between 2 and n - 2 (inclusive), the string representation of the integer n in base b is palindromic.
 

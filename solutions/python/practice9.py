@@ -1,5 +1,6 @@
-# Problem — Length of Last Word
+# Problem: Length of Last Word
 # Source: https://leetcode.com/problems/length-of-last-word/
+# Note: Solves the Length of Last Word problem
 # Topic: strings
 # Description:
 # Given a string s consisting of words and spaces, return the length of the last word in the string.
