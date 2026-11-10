@@ -7,20 +7,20 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 
 ## Categories
 
-- [Array](#array) (97)
+- [Array](#array) (96)
 - [Dynamic Programming](#dynamic-programming) (4)
 - [Hash Map / Set](#hash-map--set) (6)
 - [Math](#math) (83)
 - [Sorting & Search](#sorting--search) (9)
-- [String](#string) (87)
+- [String](#string) (89)
 - [Tree](#tree) (2)
-- [Unclassified](#unclassified) (125)
+- [Unclassified](#unclassified) (124)
 
 ## Array
 
 | Problem | Language | File | Status |
 |---|---|---|---|
-| 3Sum Closet | python | [practice135.py](solutions/python/practice135.py) | Complete |
+| 3Sum Closest | python | [practice135.py](solutions/python/practice135.py) | Complete |
 | Array Partition | python | [practice145.py](solutions/python/practice145.py) | Complete |
 | Array Search | python | [practice266.py](solutions/python/practice266.py) | Complete |
 | Average of Array Excluding Minimum and Maximum | python | [practice93.py](solutions/python/practice93.py) | Complete |
@@ -29,7 +29,6 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Circular Array Rotation | python | [practice332.py](solutions/python/practice332.py) | Complete |
 | Contains Duplicate | python | [practice159.py](solutions/python/practice159.py) | Complete |
 | Convert an Array Into a 2D Array With Conditions | python | [practice226.py](solutions/python/practice226.py) | Complete |
-| Convert PascalCase string into snake_case | python | [practice393.py](solutions/python/practice393.py) | Complete |
 | Count Elements Smaller Than Current Element | python | [practice97.py](solutions/python/practice97.py) | Complete |
 | Create Target Array in the Given Order | python | [practice200.py](solutions/python/practice200.py) | Complete |
 | Currying functions: multiply all elements in an array | python | [practice387.py](solutions/python/practice387.py) | Complete |
@@ -252,12 +251,14 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Buddy Strings | python | [practice60.py](solutions/python/practice60.py) | Complete |
 | Buddy Strings Challenge | python | [practice108.py](solutions/python/practice108.py) | Complete |
 | Calculate Percentage of Letter in String | python | [practice103.py](solutions/python/practice103.py) | Complete |
+| CamelCase | python | [practice383.py](solutions/python/practice383.py) | Complete |
 | Character Percentage in String | python | [practice44.py](solutions/python/practice44.py) | Complete |
 | Character Triangle Pattern | python | [practice80.py](solutions/python/practice80.py) | Complete |
 | Character Year Count Mapping | python | [practice238.py](solutions/python/practice238.py) | Complete |
 | Common Words | python | [practice397.py](solutions/python/practice397.py) | Complete |
 | Compress the String! | python | [practice207.py](solutions/python/practice207.py) | Complete |
 | Consonant value | python | [practice231.py](solutions/python/practice231.py) | Complete |
+| Convert PascalCase string into snake_case | python | [practice393.py](solutions/python/practice393.py) | Complete |
 | Count Binary Substrings | python | [practice276.py](solutions/python/practice276.py) | Complete |
 | Count CamelCase Words | python | [practice113.py](solutions/python/practice113.py) | Complete |
 | Count Capital Letters in String | python | [practice4.py](solutions/python/practice4.py) | Complete |
@@ -358,7 +359,6 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Cable Connection Optimization | python | [practice3.py](solutions/python/practice3.py) | Complete |
 | Calculate H-Index | python | [practice100.py](solutions/python/practice100.py) | Complete |
 | Calendar Module | python | [practice279.py](solutions/python/practice279.py) | Complete |
-| CamelCase | python | [practice383.py](solutions/python/practice383.py) | Complete |
 | Cancellable Item Transactions | python | [practice194.py](solutions/python/practice194.py) | Complete |
 | Chain me | python | [practice224.py](solutions/python/practice224.py) | Complete |
 | Changing direction | python | [practice63.py](solutions/python/practice63.py) | Complete |
