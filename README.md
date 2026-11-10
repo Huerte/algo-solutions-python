@@ -110,6 +110,13 @@ Thanks to everyone who helps this collection grow.
 
 ## Platforms
 
+| Platform | Best For | Beginner Problem |
+| :--- | :--- | :--- |
+| [LeetCode](https://leetcode.com/) | Technical interview preparation, algorithm patterns, and topic-tagged problem sets. | [Two Sum](https://leetcode.com/problems/two-sum/) |
+| [Codewars](https://www.codewars.com/) | Gamified practice (kata) and discovering idiomatic solutions from the community. | [Multiply](https://www.codewars.com/kata/50654ddff44f800200000004) |
+| [HackerRank](https://www.hackerrank.com/) | Structured skill tracks (algorithms, data structures, SQL) and company screening assessments. | [Solve Me First](https://www.hackerrank.com/challenges/solve-me-first/problem) |
+| [CheckiO](https://checkio.org/) | Game-driven coding adventures with interactive Python and TypeScript mission islands. | [Multiply (Intro)](https://py.checkio.org/mission/multiply-intro/) |
+| [GeeksforGeeks](https://www.geeksforgeeks.org/) | Comprehensive DSA concepts, company interview archives, and school-level problem ladders. | [Missing Number in Array](https://www.geeksforgeeks.org/problems/missing-number-in-array1416/1) |
 ## License
 
 Distributed under the MIT License. See `LICENSE` for details.
