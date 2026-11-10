@@ -1,4 +1,4 @@
-# Problem: 3Sum Closet
+# Problem: 3Sum Closest
 # Source: https://leetcode.com/problems/3sum-closest/
 
 def three_sum(arr, target):

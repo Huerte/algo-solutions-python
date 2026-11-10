@@ -14,7 +14,7 @@ TOPICS_FILE = REPO_ROOT / "TOPICS.md"
 CATEGORY_KEYWORDS = {
     "Array": [
         "array", "matrix", "subarray", "vector", "rotate", "pivot", "element",
-        "pascal", "spiral", "squares of", "two sum", "three sum", "3sum",
+        "pascal triangle", "pascal's triangle", "spiral", "squares of", "two sum", "three sum", "3sum",
         "contains duplicate", "intersection", "move zero", "running sum",
         "remove duplicate", "intervals", "jump game", "diagonal", "stock",
         "partition", "grid", "range",
@@ -23,7 +23,7 @@ CATEGORY_KEYWORDS = {
         "string", "substring", "palindrome", "anagram", "parenthes", "vowel",
         "word", "words", "character", "roman", "prefix", "suffix", "reverse",
         "isomorphic", "ransom", "needle", "haystack", "letter", "phone",
-        "morse", "text", "consonant",
+        "morse", "text", "consonant", "pascalcase", "snake_case", "snake case", "camelcase",
     ],
     "Math": [
         "prime", "sum", "digit", "integer", "factorial", "fibonacci", "number",
