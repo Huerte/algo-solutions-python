@@ -11,6 +11,12 @@
 # - Input: "abccbaacz" → Output: "c" (first appears at index 2, then again at index 3)
 # - Input: "abcdd" → Output: "d" (first appears at index 3, then again at index 4)
 # 
+# Explanation (plain English):
+# We read the string one letter at a time and keep a "seen" box of letters.
+# For each letter, we check the box. If the letter is already there, it is
+# the first one to repeat, so we return it. If not, we put it in the box.
+# If we reach the end with no repeat, we return None.
+#
 # Status: ✅ SOLVED
 
 def first_letter_twice(s):
