@@ -1,49 +1,24 @@
-// Problem: Valid Parentheses
-// Source: https://leetcode.com/problems/valid-parentheses/
-// Note: Use an array as a stack and a lookup object to match closing brackets
-// Time: O(n), Space: O(n)
+﻿// Problem: Two Sum
+// Source: https://leetcode.com/problems/two-sum/
+// Note: Uses a Map for efficient O(n) lookup.
 
-function isValid(s) {
-  const matchingOpen = {
-    ")": "(",
-    "]": "[",
-    "}": "{",
-  };
-  const stack = [];
+function twoSum(nums, target) {
+    const seen = new Map();
 
-  for (const char of s) {
-    if (Object.hasOwn(matchingOpen, char)) {
-      if (stack.length === 0 || stack.pop() !== matchingOpen[char]) {
-        return false;
-      }
-    } else {
-      stack.push(char);
+    for (let i = 0; i < nums.length; i++) {
+        const complement = target - nums[i];
+
+        if (seen.has(complement)) {
+            return [seen.get(complement), i];
+        }
+
+        seen.set(nums[i], i);
     }
-  }
 
-  return stack.length === 0;
+    return [];
 }
 
-if (require.main === module) {
-  const cases = [
-    ["()", true],
-    ["()[]{}", true],
-    ["(]", false],
-    ["([])", true],
-    ["([)]", false],
-    ["{[]}", true],
-    ["", true],
-    ["(", false],
-    ["(((((((((())))))))))", true],
-  ];
-
-  for (const [value, expected] of cases) {
-    if (isValid(value) !== expected) {
-      throw new Error("Failed for input: " + value);
-    }
-  }
-
-  console.log("All " + cases.length + " test cases passed!");
-}
-
-module.exports = { isValid };
+// Example tests
+console.log(twoSum([2, 7, 11, 15], 9));  // [0, 1]
+console.log(twoSum([3, 2, 4], 6));       // [1, 2]
+console.log(twoSum([3, 3], 6));          // [0, 1]
