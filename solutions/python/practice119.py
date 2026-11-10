@@ -39,3 +39,19 @@ def test_isPrime():
         print(f"Test passed for {num}")
 
 test_isPrime()
+
+# Test cases with assertions (edge cases)
+# Edge case: zero and one are not prime by definition
+assert is_prime(0) is False
+assert is_prime(1) is False
+
+# Edge case: negative numbers are not prime
+assert is_prime(-7) is False
+
+# Edge case: the smallest prime and the first even prime
+assert is_prime(2) is True
+
+# Edge case: an even number greater than 2 is never prime
+assert is_prime(4) is False
+
+print("All test cases passed!")
