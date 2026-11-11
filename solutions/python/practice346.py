@@ -1,13 +1,12 @@
-# Problem: Count Even Letters
-# Source: https://www.geeksforgeeks.org/
-# Note: Counts letters with even frequency using Counter
-from collections import Counter
+# Geeksforgeeks - Binary to Decimal
+# Problem: Binary to Decimal
+# Source: https://www.geeksforgeeks.org/problems/binary-number-to-decimal-number3525/1
+# Note: Converts a binary number represented as a string into its decimal equivalent using Python's int() function.
 class Solution:
-    def count(self, s):
-        alp = Counter(s)
-        return sum(1 for k in alp.values() if k % 2 == 0)
+    def binary_to_decimal(self, B):
+        return int(B, 2)
 
 s = Solution()
-print(s.count("abcde"))    # 0
-print(s.count("aabbcde"))  # 2
-print(s.count("aabbccde")) # 3
+print(s.binary_to_decimal("101"))  # 5
+print(s.binary_to_decimal("1001")) # 9
+print(s.binary_to_decimal("1111")) # 15

@@ -1,28 +1,25 @@
-# Group Anagrams
-# Problem: Group Anagrams
-# Source: https://leetcode.com/problems/group-anagrams/
-# Note: Groups words that contain the same characters by using their sorted character sequence as a dictionary key.
+# Count and Say
+# Problem: Count and Say
+# Source: https://leetcode.com/problems/count-and-say/
+# Note: Generates the nth sequence term by counting consecutive repeated digits in the previous term.
 class Solution:
-    def groupAnagrams(self, strs):
-        groups = {}
-        for w in strs:
-            srt = ''.join(sorted(w))
-            if groups and srt in groups:
-                groups[srt].append(w)
+    def countAndSay(self, n: int) -> str:
+        if n == 1:
+            return "1"
+        
+        prev = self.countAndSay(n - 1)
+        res = ""
+        c = 1
+
+        for i in range(len(prev)):
+            if i + 1 < len(prev) and prev[i] == prev[i + 1]:
+                c += 1
             else:
-                groups[srt] = [w]
-        return list(groups.values())
-
-from collections import defaultdict
-class Solution:
-    def groupAnagrams(self, strs):
-        groups = defaultdict(list)
-        for w in strs:
-            srt = ''.join(sorted(w))
-            groups[srt].append(w)
-        return list(groups.values())
-
+                res += str(c) + prev[i]
+                c = 1
+        
+        return res
+    
 s = Solution()
-print(s.groupAnagrams(["eat","tea","tan","ate","nat","bat"])) # [["eat","tea","ate"],["tan","nat"],["bat"]]
-print(s.groupAnagrams(["a"]))                                 # [["a"]]
-print(s.groupAnagrams([""]))                                  # [[""]]
+print(s.countAndSay(1)) # "1"
+print(s.countAndSay(4)) # "1211"

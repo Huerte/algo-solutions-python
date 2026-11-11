@@ -1,8 +1,18 @@
-# Problem: Remove Duplicates from Sorted Array
-# Source: https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+# Problem: Maximum Substrings With Distinct Start
+# Source: https://leetcode.com/problems/maximum-substrings-with-distinct-start/
+# Note: Finds the maximum number of substrings with distinct starting characters.
+class Solution(object):
+    def maxDistinct(self, s):
+        l=len(s)
+        if len(set(s)) == l:
+            return l
 
-def remove_duplicates(arr):
-    return len(set(arr))
-
-print(remove_duplicates([1, 1, 2]))
-print(remove_duplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]))
+        arr = [s]
+        for i in range(1, l):
+            arr.append(s[i:])
+        
+        return len(set([a[0] for a in arr]))
+    
+s = Solution()
+temp = "abab"
+print(s.maxDistinct(temp))

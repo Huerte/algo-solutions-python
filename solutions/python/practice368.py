@@ -1,24 +1,26 @@
-# Problem: Minimum Absolute Difference
-# Source: https://leetcode.com/problems/minimum-absolute-difference/
-
-class Solution(object):
-    def minimumAbsDifference(self, arr):
-        arr.sort()
-
-        mn = float('inf')
-        res = []
-
-        for i in range(len(arr) - 1):
-            diff = arr[i+1] - arr[i]
-
-            if diff < mn:
-                mn = diff
-                res = [[arr[i], arr[i+1]]]
-            elif diff == mn:
-                res.append([arr[i], arr[i+1]])
-        return res
+# Geeksforgeeks - Peak element
+# Problem: Peak Element
+# Source: https://www.geeksforgeeks.org/problems/peak-element/1
+# Note: Finds the index of any element that is strictly greater than its adjacent elements.
+class Solution:   
+    def peakElement(self, arr):
+        if len(arr) == 1:
+            return 0
+            
+        for i in range(len(arr)):
+            if i == 0:
+                if float('-inf') < arr[i] and arr[i] > arr[i + 1]:
+                    return i
+            elif i == len(arr) - 1:
+                if arr[i-1] < arr[i] and arr[i] > float('-inf'):
+                    return i
+            else:
+                if arr[i-1] < arr[i] and i + 1 < len(arr) and arr[i] > arr[i+1]:
+                    return i
+        return False
     
 s = Solution()
-print(s.minimumAbsDifference([3,8,-10,23,19,-4,-14,27])) # [[-14,-10],[19,23],[23,27]]
-print(s.minimumAbsDifference([-25,-51,-29,-23,57,-18]))  # [[-25,-23]]
-print(s.minimumAbsDifference([1,3,6,10,15]))             # [[1, 3]]
+print(s.peakElement([1, 2, 4, 5, 7, 8, 3])) # True
+print(s.peakElement([1, 2, 3, 4, 5]))       # True
+print(s.peakElement([1, 2]))                # True
+print(s.peakElement([-1]))                  # True

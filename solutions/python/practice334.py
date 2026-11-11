@@ -1,30 +1,26 @@
-# Problem: Bigger is Greater
-# Source: https://www.hackerrank.com/challenges/bigger-is-greater/problem
+# Problem: Jump Game II
+# Source: https://leetcode.com/problems/jump-game-ii/
 
-# Not my Sol;
-def biggerIsGreater(w):
-    arr = list(w)
+class Solution:
+    def jumps(self, arr):
+        jump = 0
+        
+        l, r = 0, 0
+        
+        while r < len(arr) - 1:
+            farthest = 0
+            
+            for i in range(l, r + 1):
+                farthest = max(farthest, i + arr[i])
+            
+            l = r
+            r = farthest
+            
+            jump += 1
+        
+        return jump
 
-    pivot = -1
-    for i in range(len(arr) - 1, 0, -1):
-        if arr[i] > arr[i - 1]:
-            pivot = i - 1
-            break
-
-    if pivot == -1:
-        return 'no answer'
-
-    for i in range(len(arr) - 1, pivot, -1):
-        if arr[i] > arr[pivot]:
-            arr[i], arr[pivot] = arr[pivot], arr[i]
-            break
-
-    arr[pivot + 1:] = sorted(arr[pivot + 1:])
-
-    return ''.join(arr)
-
-
-print(biggerIsGreater("ab"))  # "ba"
-print(biggerIsGreater("bb"))  # "no answer"
-print(biggerIsGreater("hefg"))  # "hegf"
-print(biggerIsGreater("dkhc"))  # "hcdk"
+s = Solution()
+print(s.jumps([2, 3, 1, 1, 4])) # 2
+print(s.jumps([2, 3, 0, 1, 4])) # 2
+print(s.jumps([0])) # 0

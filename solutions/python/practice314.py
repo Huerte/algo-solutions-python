@@ -1,18 +1,28 @@
-# Weighted Word Mapping
-# Problem: Weighted Word Mapping
-# Source: https://leetcode.com/problems/weighted-word-mapping/
-# Note: Calculates each word's total character weight, takes modulo 26, and maps it to a reverse-alphabet character.
+# Group Anagrams
+# Problem: Group Anagrams
+# Source: https://leetcode.com/problems/group-anagrams/
+# Note: Groups words that contain the same characters by using their sorted character sequence as a dictionary key.
 class Solution:
-    def mapWordWeights(self, words, weights) -> str:
-        alp = dict(zip(range(25, -1, -1),[chr(i) for i in range(97, 123)]))
+    def groupAnagrams(self, strs):
+        groups = {}
+        for w in strs:
+            srt = ''.join(sorted(w))
+            if groups and srt in groups:
+                groups[srt].append(w)
+            else:
+                groups[srt] = [w]
+        return list(groups.values())
 
-        res = ""
-        for word in words:
-            t = sum([weights[ord(w) - 97] for w in word]) % 26
-            print(t)
-            res += alp[t]
-
-        return res
+from collections import defaultdict
+class Solution:
+    def groupAnagrams(self, strs):
+        groups = defaultdict(list)
+        for w in strs:
+            srt = ''.join(sorted(w))
+            groups[srt].append(w)
+        return list(groups.values())
 
 s = Solution()
-print(s.mapWordWeights(["abcd","def","xyz"], [5,3,12,14,1,2,3,2,10,6,6,9,7,8,7,10,8,9,6,9,9,8,3,7,7,2]))
+print(s.groupAnagrams(["eat","tea","tan","ate","nat","bat"])) # [["eat","tea","ate"],["tan","nat"],["bat"]]
+print(s.groupAnagrams(["a"]))                                 # [["a"]]
+print(s.groupAnagrams([""]))                                  # [[""]]

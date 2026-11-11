@@ -1,29 +1,23 @@
-# 4Sum
-# Not accepted Solution
-# Problem: 4Sum
-# Source: https://leetcode.com/problems/4sum/
-# Note: Finds all unique quadruplets whose elements sum to the given target using four nested loops.
+# Convert an Array Into a 2D Array With Conditions
+# Problem: Convert an Array Into a 2D Array With Conditions
+# Source: https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions/
+# Note: Distributes array elements into rows while ensuring each row contains distinct integers and the total number of rows is minimized.
 class Solution(object):
-    def fourSum(self, nums, target):
+    def findMatrix(self, nums):
         res = []
-        nums.sort()
-        for i in range(len(nums) - 3):
-            for j in range(i + 1, len(nums) - 2):
-                for k in range(j + 1, len(nums) - 1):
-                    for n in range(k + 1, len(nums)):
-                        if sum([nums[i], nums[k], nums[j], nums[n]]) == target:
-                            res.append([nums[i], nums[k], nums[j], nums[n]])
-        
-        final = []
 
-        for lst in res:
-            if final and lst in final:
-                continue
-            final.append(lst)
-
-        return final
-
+        while nums:
+            cur = []
+            for num in nums:
+                if cur and num in cur:
+                    continue
+                cur.append(num)
+            res.append(cur)
+            for val in cur:
+                nums.remove(val)
+        return res
+    
 s = Solution()
-print(s.fourSum([1, 0, -1, 0, -2, 2], 0)) # [[-2, -1, 1, 2], [-2, 0, 0, 2], [-1, 0, 0, 1]]
-print(s.fourSum([2, 2, 2, 2, 2], 8)) # [[2, 2, 2, 2]]
-print(s.fourSum([0, 0, 0, 0], 0)) # [[0, 0, 0, 0]]
+print(s.findMatrix([1, 3, 4, 1, 2, 3, 1])) # [[1, 3, 4, 2], [1, 3], [1]]
+print(s.findMatrix([1, 1, 1, 1, 1])) # [[1], [1], [1], [1], [1]]
+print(s.findMatrix([1, 2, 3, 4])) # [[1, 2, 3, 4]]

@@ -1,10 +1,14 @@
-# Problem: Sum of Values at Indices With K Set Bits
-# Source: https://leetcode.com/problems/sum-of-values-at-indices-with-k-set-bits/
+# Problem: Counting Words With a Given Prefix
+# Source: https://leetcode.com/problems/counting-words-with-a-given-prefix/
 
 class Solution:
-    def sumIndicesWithKSetBits(self, nums, k) -> int:
-        return sum(num for i, num in enumerate(nums) if bin(i)[2:].count('1') == k)
+    def prefixCount(self, words, pref: str) -> int:
+        count = 0
+        for word in words:
+            if word.startswith(pref):
+                count += 1
+        return count
 
 s = Solution()
-print(s.sumIndicesWithKSetBits([5,10,1,5,2], 1)) # 13
-print(s.sumIndicesWithKSetBits([4,3,2,1], 2))    # 1
+print(s.prefixCount(["leetcode","win","loops","success"], 'code'))  # 0
+print(s.prefixCount(["pay","attention","practice","attend"], 'at')) # 2

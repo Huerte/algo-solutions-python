@@ -1,17 +1,16 @@
-# Problem: Count Elements Smaller Than Current Element
-# Source: https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/
+# Count Beautiful Days in a Range
+# Problem: Beautiful Days at the Movies
+# Source: https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem
+# Note: Counts numbers in a range whose difference from their reverse is divisible by a given divisor.
+st = int(input('Enter start: '))
+end = int(input('Enter end: '))
+div = int(input('Enter divisor: '))
 
-n = int(input('Enter the number of elements: '))
-print(f'Enter {n} integers:')
-arr = [int(input()) for _ in range(n)]
+res = 0
 
-res = [0] * len(arr)
+for i in range(st, end):
+    temp = ((i - int(str(i)[::-1])) / div)
+    if temp == int(temp):
+        res += 1
 
-for i in range(n):
-    for j in range(n):
-        if i == j:
-            continue
-        if arr[i] < arr[j]:
-            res[i] += 1
-
-print(f'Results: {res}')
+print(f"The number of just right number is: {res}")

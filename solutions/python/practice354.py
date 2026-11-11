@@ -1,48 +1,28 @@
-# GeeksforGeeks - Longest Palindrome in a String
-# Problem: Longest Palindrome in a String
-# Source: https://www.geeksforgeeks.org/problems/longest-palindrome-in-a-string3411/1
-# Note: Finds the longest palindromic substring, returning the first occurrence when multiple answers have the same length.
-# My Sol;
+# GeeksforGeeks - Implement Atoi
+# Problem: Implement Atoi
+# Source: https://www.geeksforgeeks.org/problems/implement-atoi/1
+# Note: Converts a numeric string to a 32-bit signed integer, handling signs, whitespace, invalid characters and overflow.
 class Solution:
-    def longestPalindrome(self, s):
-        palindrome = ""
-        n = len(s)
-        for i in range(n - 1):
-            right = n
-            while right > i:
-                temp = s[i:right]
-                if temp == temp[::-1] and len(temp) > len(palindrome):
-                    palindrome = temp
-                    break
-                right -= 1
-        return palindrome
-
-# Optimized Sol;
-class Solution:
-    def longestPalindrome(self, s: str) -> str:
-        if not s:
-            return ""
+    def myAtoi(self, s):
+        digits = ""
+        for i, c in enumerate(s.strip()):
+            if not c.isdigit() and i > 0:
+                break
+            elif i == 0 and c in ["-", "+"]:
+                digits += c
+            else:
+                digits += c
         
-        res = ""
-        
-        def expand(left, right):
-            while left >= 0 and right < len(s) and s[left] == s[right]:
-                left -= 1
-                right += 1
-            return s[left + 1:right]
-
-        for i in range(len(s)):
-            p1 = expand(i, i)
-            if len(p1) > len(res):
-                res = p1
-
-            p2 = expand(i, i + 1)
-            if len(p2) > len(res):
-                res = p2
-                
-        return res
+        peak = 2 ** 31 - 1
+        deep = -2 ** 31
+        n = int(digits)
+        if n > peak:
+            n = peak
+        elif n < deep:
+            n = deep
+        return n
 
 s = Solution()
-print(s.longestPalindrome("bswrhxboawtdfqggqfdtwyypwnssnwpyyaobxhrwsb")) # wtdfqggqfdtw
-print(s.longestPalindrome("aaaabbaa"))                                   # aabbaa
-print(s.longestPalindrome("ababa"))                                      # ababa
+print(s.myAtoi("-999999999999")) # -2147483648
+print(s.myAtoi("  -0012gfg4"))   # -12
+print(s.myAtoi("-123"))          # -123

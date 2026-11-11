@@ -1,42 +1,41 @@
-# Problem: Largest Number At Least Twice of Others
-# Source: https://leetcode.com/problems/largest-number-at-least-twice-of-others/
-# Note: Solves the Largest Number At Least Twice of Others problem
+# Problem: Changing direction
+# Source: https://py.checkio.org/en/mission/changing-direction/
+# Note: Counts how many times a sequence switches between increasing and decreasing.
 # Description:
-# Given an array of integers, return the index of the largest element if it is at least twice as much
-# as every other number in the array. If no such element exists, return -1.
+# Given a list of integers, count the number of times the direction changes from increasing to decreasing
+# or vice versa. A direction change occurs when the sequence switches from going up to going down,
+# or from going down to going up.
 # 
 # Example:
-# - Input: [3, 6, 1, 0] → Output: 1 (6 is largest and 6 >= 2*3, 6 >= 2*1, 6 >= 2*0)
-# - Input: [1, 2, 3, 4] → Output: -1 (4 is not >= 2*3)
+# - Input: [1, 2, 3, 2, 1] → Output: 1 (changes from increasing to decreasing at index 2)
+# - Input: [1, 2, 3, 4, 5] → Output: 0 (always increasing)
+# - Input: [1, 2, 2, 1, 2, 2] → Output: 2 (changes at index 2 and 3)
 # 
 # Status: ✅ SOLVED
 
-def getMaxTwice(arr):
-    if len(arr) <= 1:
-        return -1
+def changing_direction(elements: list[int]) -> int:
+    if len(elements) < 2:
+        return 0
 
-    # Find the maximum value and its index
-    max_index = 0
-    max_value = arr[0]
-    
-    for i in range(1, len(arr)):
-        if arr[i] > max_value:
-            max_value = arr[i]
-            max_index = i
+    count_turns = 0
+    is_increasing = None
 
-    # Check if max_value is at least twice of all other elements
-    for i in range(len(arr)):
-        if i != max_index and arr[i] * 2 > max_value:
-            return -1
-    
-    return max_index
+    for i in range(1, len(elements)):
+        if elements[i] == elements[i - 1]:
+            continue
+
+        if is_increasing is None:
+            is_increasing = elements[i] > elements[i - 1]
+        elif (elements[i] > elements[i - 1] and not is_increasing) or (elements[i] < elements[i - 1] and is_increasing):
+            is_increasing = not is_increasing
+            count_turns += 1
+    return count_turns
 
 # Test cases with assertions
-assert getMaxTwice([3, 6, 1, 0]) == 1
-assert getMaxTwice([1, 2, 3, 4]) == -1
-assert getMaxTwice([1]) == -1
-assert getMaxTwice([0, 0, 0, 1]) == 3
-assert getMaxTwice([1, 0]) == 0
-assert getMaxTwice([2, 4, 8, 16]) == -1
+assert changing_direction([1, 2, 3, 4, 5]) == 0
+assert changing_direction([1, 2, 3, 2, 1]) == 1
+assert changing_direction([1, 2, 2, 1, 2, 2]) == 2
+assert changing_direction([1, 2, 3, 5, 4, 2, 5, 7, 8, 3, 2, 1]) == 3
+assert changing_direction([6, 6, 6, 4, 1, 2, 5, 9, 7, 8, 5, 9, 4, 2, 6]) == 7
 
 print("All test cases passed!")

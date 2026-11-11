@@ -1,46 +1,78 @@
-# Problem: Check if All Arrays Have Same Elements
-# Source: 
-# Note: Solves the Check if All Arrays Have Same Elements problem
+# Problem: Fibonacci Number
+# Source: https://leetcode.com/problems/fibonacci-number/
+# Note: Solves the Fibonacci Number problem
 # Description:
-# Given a list of arrays, determine if all arrays contain the same elements (regardless of order).
-# The function should return True if all arrays have the same elements, False otherwise.
-# 
-# Example:
-# - Input: [[1,2,3], [3,1,2], [2,3,1]] → Output: True (all arrays have same elements)
-# - Input: [[1,2,3], [3,1,2], [2,3,4]] → Output: False (last array has different element)
-# 
+# The Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, 
+# such that each number is the sum of the two preceding ones, starting from 0 and 1.
+# That is, F(0) = 0, F(1) = 1, F(n) = F(n - 1) + F(n - 2) for n > 1.
+# Given n, calculate F(n).
+#
+# Input:
+# - An integer `n` where 0 <= n <= 30
+#
+# Output:
+# - An integer representing the nth Fibonacci number
+#
 # Status: ✅ SOLVED
 
-def sol(arr):
-    if not arr:
-        return True
-    
-    l = sorted(arr[0])
-    for i in arr[1:]:
-        if sorted(i) != l:
-            return False
-    return True
+class Solution1(object):
+    def fib(self, n):
+        if n <= 1:
+            return n
+            
+        base_fib = [0, 1]
+        right = 1
+
+        while len(base_fib) <= n:
+            base_fib.append(base_fib[right - 1] + base_fib[right])
+            right += 1
+
+        return base_fib[n]
+
+class Solution2(object):
+    def fib(self, n):
+        if n <= 1:
+            return n
+            
+        a, b = 0, 1
+        for _ in range(n - 1):
+            a, b = b, a + b
+        return b
 
 # Test cases with assertions
-assert sol([[1,2,3], [3,1,2], [2,3,1]]) == True  # Basic test with small lists
-assert sol([[1,2,3], [3,1,2], [2,3,4]]) == False  # One list has a different element
-assert sol([[5, 10, 15], [10, 15, 5], [15, 5, 10]]) == True  # Different order but same elements
-assert sol([[1,1,2], [2,1,1], [1,2,1]]) == True  # Lists contain duplicates
-assert sol([[1,2,3,4], [4,3,2,1], [3,1,4,2]]) == True  # Slightly larger lists
-assert sol([[1,2,3,4], [4,3,2,1], [3,1,4,5]]) == False  # Last list has a wrong element
-assert sol([[7,8,9], [9,7,8], [8,9,7], [7,9,8]]) == True  # Four lists
-assert sol([[1,2], [2,1], [1,2]]) == True  # Simple two-element lists
-assert sol([[1,2], [1,3]]) == False  # One different list
-assert sol([[1]]) == True  # Single list should always return True
-assert sol([[1,1,1], [1,1,1], [1,1,1]]) == True  # All identical lists
-assert sol([[1,1,2], [2,2,1], [1,2,1]]) == False  # One list has a different frequency
-assert sol([[0,0,0], [0,0,0], [0,0,0]]) == True  # All zeros
-assert sol([[1,2,3,4,5], [5,4,3,2,1], [3,4,1,2,5]]) == True  # Longer lists with same numbers
-assert sol([[1,2,3,4,5], [5,4,3,2,1], [3,4,1,2,6]]) == False  # Last list has a wrong element
-assert sol([[1]*1000, [1]*1000, [1]*1000]) == True  # Large identical lists
-assert sol([[i for i in range(1000)], [i for i in range(999, -1, -1)], sorted([i for i in range(1000)])]) == True  # Large lists with the same elements in different order
-assert sol([[1,2,3,4], [1,2,3,4], [1,2,3,5]]) == False  # Last list has one incorrect element
-assert sol([[1,2,3,4,4], [1,2,3,4,4], [4,3,2,1,4]]) == True  # Lists with repeated elements in different order
-assert sol([[1,2,3,4,5], [5,4,3,2,1], [1,2,3,4]]) == False  # One list is shorter
+sol1 = Solution1()
+sol2 = Solution2()
+
+# Example 1
+assert sol1.fib(0) == 0
+assert sol2.fib(0) == 0
+
+# Example 2
+assert sol1.fib(1) == 1
+assert sol2.fib(1) == 1
+
+# Example 3
+assert sol1.fib(2) == 1
+assert sol2.fib(2) == 1
+
+# Example 4
+assert sol1.fib(3) == 2
+assert sol2.fib(3) == 2
+
+# Example 5
+assert sol1.fib(4) == 3
+assert sol2.fib(4) == 3
+
+# Example 6
+assert sol1.fib(5) == 5
+assert sol2.fib(5) == 5
+
+# Example 7
+assert sol1.fib(6) == 8
+assert sol2.fib(6) == 8
+
+# Example 8
+assert sol1.fib(10) == 55
+assert sol2.fib(10) == 55
 
 print("All test cases passed!")

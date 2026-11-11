@@ -1,16 +1,40 @@
-# CodeWars -Pyramid Array
-# Problem: Pyramid Array
-# Source: https://www.codewars.com/kata/515f51d438015969f7000013
-# Note: Generates a nested array with rows containing increasing numbers of 1s, from 1 to n.
-def pyramid(n):
+# Problem: Playing with Passphrases
+# Source: https://www.codewars.com/kata/559536379512a64472000053
+# Note: Shifts letters, replaces digits with their complements to 9, alternates letter casing, and reverses the resulting string.
+# Status: 🔄 IN PROGRESS - Incomplete implementation
+# TODO: Fix alternate casing logic and letter wrapping
+def play_pass(s, n):
     res = []
-    for i in range(1, n + 1):
+    
+    for word in s.split():
+        
         temp = []
-        for j in range(i):
-            temp.append(1)
-        res.append(temp)
-    return res
+        for c in word:
+            if c.isalpha():
+                temp.append(chr(ord(c) + n))
+            elif c.isdigit():
+                temp.append(str(abs(int(c) - 9)))
+            else:
+                temp.append(c)
+        res.append(''.join(temp[::-1]))
 
-print(pyramid(0)) # []
-print(pyramid(1)) # [[1]]
-print(pyramid(3)) # [[1], [1, 1], [1, 1, 1]]
+    words = ' '.join(res)
+    final = []
+    temp = ""
+    for i in range(len(words)):
+        if words[i] == " ":
+            final.append(temp)
+            temp = ""
+            continue
+        if i % 2 == 0:
+            temp += words[i].upper()
+        else:
+            temp += words[i].lower()
+    final.append(temp)
+
+    print(final)
+    return ' '.join(final[::-1])
+
+print(play_pass("I LOVE YOU!!!", 1)) # "!!!vPz fWpM J"
+# print(play_pass("MY GRANMA CAME FROM NY ON THE 23RD OF APRIL 2015", 2)) # "4897 NkTrC Hq fT67 GjV Pq aP OqTh gOcE CoPcTi aO"
+# print(play_pass("BOY! YOU WANTED TO SEE HIM? IT'S YOUR FATHER:-)", 15)) # ")-:gTwIpU GjDn h'iX ?bXw tTh dI StIcPl jDn !NdQ"

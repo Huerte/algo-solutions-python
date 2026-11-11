@@ -1,9 +1,19 @@
-# Palindrome Check (Ignoring Non-Alphanumeric)
-# Problem: Valid Palindrome
-# Source: https://leetcode.com/problems/valid-palindrome/
-# Note: Removes non-alphanumeric characters, converts the remaining characters to lowercase, and checks whether the resulting string reads the same forwards and backwards.
-def palindrome(s):
-    new_s = ''.join(c for c in s if c.isalpha() or c.isdigit()).lower()
-    return new_s == new_s[::-1]
+# Maximum Subarray Sum
+# Problem: Maximum subarray sum
+# Source: https://www.codewars.com/kata/54521e9ec8e60bc4de000d6c
+# Note: Attempts to find the contiguous subarray with the maximum sum by grouping consecutive increasing elements.
+def maxSub(arr):
+    cur_sum = []
+    seen = []
+    for i in range(len(arr)):
+        if seen and seen[-1] > arr[i]:
+            cur_sum.append(seen)
+            seen = [arr[i]]
+            continue
+        seen.append(arr[i])
+    if seen:
+        cur_sum.append(seen)
+    return max(cur_sum, key=lambda x: sum(x)) if cur_sum else []
 
-print(palindrome("A man, a plan, a canal: Panama"))
+print(maxSub([1,2,3,4,5,6,7,8,9]))
+print(maxSub([1,2,3,4,1,7,8,9]))

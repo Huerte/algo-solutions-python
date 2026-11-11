@@ -1,20 +1,7 @@
-# HackerRank - Utopian Tree
-# Problem: Utopian Tree
-# Source: https://www.hackerrank.com/challenges/utopian-tree/problem
-# Note: Calculates tree height after n growth cycles, doubling in spring and increasing by 1 in summer.
-def utopianTree(n):
-    res = 1
-    for i in range(n):
-        if i % 2 == 0:
-            res *= 2
-        else:
-            res += 1
-    return res
-# Test cases
-assert utopianTree(0) == 1
-assert utopianTree(1) == 2
-assert utopianTree(3) == 6
-assert utopianTree(4) == 7
-assert utopianTree(5) == 14
-
-print("All test cases passed!")
+# HackerRank - Designer PDF Viewer
+# Problem: Designer PDF Viewer
+# Source: https://www.hackerrank.com/challenges/designer-pdf-viewer/problem
+# Note: Calculates the highlighted area using the tallest letter in the word multiplied by the word's length.
+def designerPdfViewer(h, word):
+    alp = dict(zip([chr(i) for i in range(97, 123)], h))
+    return len(word) * alp[max(word, key=lambda x: alp[x])]

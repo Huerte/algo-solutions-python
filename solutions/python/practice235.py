@@ -1,48 +1,17 @@
-# Find Common Characters
-# Problem: Find Common Characters
-# Source: https://leetcode.com/problems/find-common-characters/
-# Note: Finds characters common to all strings, including duplicates, using character frequency counting.
-# My solution
-from collections import Counter
+# Sum of Variable Length Subarrays
+# Problem: Sum of Variable Length Subarrays
+# Source: https://leetcode.com/problems/sum-of-variable-length-subarrays/
+# Note: Calculates the sum of subarrays ending at each index using the current element to determine the starting index.
 class Solution(object):
-    def commonChars(self, words):
-        
-        temp = []
-        for word in words:
-            temp.append(Counter(word))
-        
-        res = []
-        for c in words[0]:
-            if c in res:
-                continue
-            mins = min(word[c] for word in temp)
-            res.extend([c] * mins)
-        return res
+    def subarraySum(self, nums):
+        arr = []
 
-# Elegant Solution
-class Solution(object):
-    def commonChars(self, words):
-        count = Counter(words[0])
-        for word in words[1:]:
-            count &= Counter(word)
-        return list(count.elements())
+        for i in range(len(nums)):
+            s = max(0, i - nums[i])
+            arr.append(sum(nums[s:i + 1]))
 
-# Easy to understand Solution
-class Solution(object):
-    def commonChars(self, words):
-        result = list(words[0])
-        
-        for word in words[1:]:
-            temp = []
-            for ch in result:
-                if ch in word:
-                    temp.append(ch)
-                    word = word.replace(ch, "", 1)
-            result = temp
-        
-        return result
+        return sum(arr)
 
 s = Solution()
-print(s.commonChars(["bella","label","roller"])) # ["e","l","l"]
-print(s.commonChars(["cool","lock","cook"]))     # ["c","o"]
-print(s.commonChars(["abc","bcd","cde"]))        # ["c"]
+print(s.subarraySum([2,3,1]))   # 11
+print(s.subarraySum([3,1,1,2])) # 13

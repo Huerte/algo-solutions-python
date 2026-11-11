@@ -1,10 +1,19 @@
-# Difference in Digit Sums
-# Problem: Char Code Calculation
-# Source: https://www.codewars.com/kata/char-code-calculation/
-# Note: Calculates the difference between digit sums before and after replacing 7 with 1 in concatenated ASCII codes. 
+# Problem: Matrix Rotate 90deg Clockwise
+# Source: 
+# Note: Rotates square matrix clockwise by 90 degrees
+matrix = []
+for _ in range(3):
+    matrix.append(list(map(int, input().split())))
 
-def calc(x):
-    total1 = ''.join(map(str, [ord(c) for c in x]))
-    return int(sum(map(int, total1))) - int(sum(map(int,total1.replace('7', '1'))))
+row = len(matrix)
+column = len(matrix[0])
 
-print(calc("ABC"))
+r = int(input()) % 4
+for _ in range(r):
+    result = [[0] * column for _ in range(row)]
+    for i in range(row):
+        for j in range(column):
+            result[j][row - 1 - i] = matrix[i][j]
+    matrix = result
+
+print('\n'.join(map(str, matrix)))

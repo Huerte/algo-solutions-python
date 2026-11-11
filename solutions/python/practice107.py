@@ -1,19 +1,26 @@
-# Problem: Backspace String Compare
-# Source: https://leetcode.com/problems/backspace-string-compare/
+# Problem: Buddy Strings Challenge
+# Source: https://leetcode.com/problems/buddy-strings/
 
-s = input('Enter string s: ')
-t = input('Enter string t: ')
+a = input('Enter string A: ')
+b = input('Enter string B: ')
 
-res = []
-for c in s:
-    if not res:
-        res.append(c)
-    elif c == '#':
-        res.pop()
-    else:
-        res.append(c)
+arr = list(a)
 
-if ''.join(res) == t:
-    print('true')
-else:
-    print('false')
+for i in range(len(arr)):
+    for j in range(len(arr)):
+        temp = arr.copy()
+        if i == j:
+            continue
+
+        r = temp[i]
+        temp[i] = temp[j]
+        temp[j] = r
+
+        if ''.join(temp) == b:
+            print('true')
+            import sys
+            sys.exit(
+                
+            )
+
+print('false')

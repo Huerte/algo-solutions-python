@@ -1,26 +1,36 @@
-# Problem: Two Sum - Pair with Given Sum
-# Source: https://www.geeksforgeeks.org/problems/key-pair5616/1
-# Note: Checks whether two distinct elements in an array add up to the given target.
-
+# Geeksforgeeks - Maximum Product Subarray
+# Problem: Maximum Product Subarray
+# Source: https://www.geeksforgeeks.org/dsa/maximum-product-subarray/
+# Note: Finds the maximum product of any contiguous subarray, including positive, negative and zero values.
+# My Sol;
+from math import prod
 class Solution:
-    def twoSum(self, arr, target):
-        arr.sort()
-        left = 0
-        right = len(arr) - 1
-        
-        while left < right:
-            res = arr[left] + arr[right]
-            if res == target:
-                return True
-            
-            if res > target:
-                right -= 1
-            else:
-                left += 1
-        
-        return False
+    def maxProduct(self, arr):
+        maxN = float('-inf')
+        for i in range(len(arr)):
+            for j in range(i, len(arr)):
+                maxN = max(maxN, prod(arr[i:j+1]))
 
+        return maxN
+
+# Accepted Sol;
+class Solution:
+    def maxProduct(self, arr):
+        max_prod = min_prod = ans = arr[0]
+
+        for x in arr[1:]:
+            if x < 0:
+                max_prod, min_prod = min_prod, max_prod
+
+            max_prod = max(x, max_prod * x)
+            min_prod = min(x, min_prod * x)
+
+            ans = max(ans, max_prod)
+
+        return ans
+    
 s = Solution()
-print(s.twoSum([1, 2, 3, 4, 5], 9))  # True
-print(s.twoSum([1, 2, 3, 4, 5], 10)) # False
-print(s.twoSum([1, 2, 3, 4, 5], 5))  # True
+print(s.maxProduct([10, 9, 1, 9, 8, -5, 0]))   # 6480
+print(s.maxProduct([1, 2, -8, -4, 8, -3, -1])) # 1536
+print(s.maxProduct([1, 2, 3, 4, 5]))           # 120
+print(s.maxProduct([-1, 2]))                   # 2

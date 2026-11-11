@@ -1,26 +1,29 @@
-# Problem: Word Pattern
-# Source: https://leetcode.com/problems/word-pattern/
+# Problem: Valid Parentheses
+# Source: https://leetcode.com/problems/valid-parentheses/
 
 class Solution(object):
-    def wordPattern(self, pattern, s):
-        mapped = {}
-        words = s.split() if ' ' in s else list(s)
-        for i, l in enumerate(pattern):
-            if mapped:
-                if l in mapped and mapped[l] != words[i]:
-                    return False
-                
-                elif l not in mapped and words[i] in mapped.values():
-                    return False
-                
-            mapped[l] = words[i]
-
-        result = []
-        for ltr in pattern:
-            result.append(mapped[ltr])
+    def isValid(self, s):
         
-        return ' '.join(result) == s
+        parenthesis = {
+            ')': '(',
+            '}': '{',
+            ']': '['
+        }
+
+        seen = []
+
+        for par in s:
+            if par in parenthesis:
+
+                if seen and seen[-1] == parenthesis[par]:
+                    seen.pop()
+                else:
+                    seen.append(par)
+            
+            else:
+                seen.append(par)
+                
+        return not seen
 
 s = Solution()
-# print(s.wordPattern("abba", "dog cat cat dog"))
-print(s.wordPattern("jquery","jquery"))
+print(s.isValid("({{{{}}}))"))

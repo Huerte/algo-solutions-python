@@ -1,55 +1,32 @@
-# Problem: Remove Duplicates from Sorted List
-# Source: https://leetcode.com/problems/remove-duplicates-from-sorted-list/
-# Note: Removes duplicate values from a sorted linked list while keeping one occurrence of each value.
+# Problem: Sum of Multiples of 3 and 5
+# Source: 
+# Note: Solves the Sum of Multiples of 3 and 5 problem
+# Description:
+# Given a limit n, find the sum of all numbers from 0 to n-1 that are multiples of 3 or 5.
+# This is a classic problem similar to Project Euler Problem 1.
+# 
+# Example:
+# - Input: n = 10 → Output: 3 + 5 + 6 + 9 = 23
+# - Input: n = 1000 → Output: sum of all multiples of 3 or 5 below 1000
+# 
+# Status: ✅ SOLVED
 
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
-
-def to_list(node):
-    arr = []
-    while node:
-        arr.append(node.val)
-        node = node.next
-    return arr
-def to_listnode(nums):
-    dummy = ListNode(0)
-    cur = dummy
-    for n in nums:
-        cur.next = ListNode(n)
-        cur = cur.next
-    return dummy.next
-
-
-class Solution(object):
-    def deleteDuplicates(self, head):
-        if not head:
-            return None
-        
-        new_head = ListNode()
-        tail = new_head
-
-        arr = []
-        while head:
-            arr.append(head.val)
-            head = head.next
-
-        seen = []
-        for num in arr:
-            if not seen:
-                tail.next = ListNode(val=num)
-                tail = tail.next
-            elif seen and num not in seen:
-                tail.next = ListNode(val=num)
-                tail = tail.next
-            seen.append(num)
-
-        return new_head.next
+def sum_multiples_3_5(limit):
+    if limit <= 0:
+        return 0
     
+    total_sum = 0
+    for i in range(limit):
+        if i % 3 == 0 or i % 5 == 0:
+            total_sum += i
+    return total_sum
 
+# Test cases with assertions
+assert sum_multiples_3_5(10) == 3 + 5 + 6 + 9  # 23
+assert sum_multiples_3_5(20) == 3 + 5 + 6 + 9 + 10 + 12 + 15 + 18  # 78
+assert sum_multiples_3_5(1) == 0  # No multiples below 1
+assert sum_multiples_3_5(6) == 3 + 5  # 8
+assert sum_multiples_3_5(0) == 0
+assert sum_multiples_3_5(1000) == 233168  # Classic Project Euler result
 
-s = Solution()
-l1 = to_listnode([1,1,2,3,3])
-
-print(to_list(s.deleteDuplicates(l1)))
+print("All test cases passed!")

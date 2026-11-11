@@ -1,13 +1,18 @@
-# Problem: Number of trailing zeros of N!
-# Source: https://www.codewars.com/kata/number-of-trailing-zeros-of-n
-# Note: Counts the factors of 5 in N! to calculate its trailing zeros without computing the factorial.
-def zeros(n):
-    count = 0
-    while n:
-        n //= 5
-        count += n
-    return count
-    
-print(zeros(6))          # 1
-print(zeros(30))         # 7
-print(zeros(1000000000)) # 249999998
+# CodeWars - Return the Missing Element
+# Problem: Return the Missing Element
+# Source: https://www.codewars.com/kata/5299413901337c637e000004
+# Note: Finds the missing digit from a sequence containing digits 0 through 9 using sorting or the difference between the expected and actual sums.
+# My solution
+def get_missing_element(seq): 
+    for num, i in zip(sorted(seq), range(len(seq))):
+        if num != i:
+            return i
+    return 9
+
+# Other clever solution
+def get_missing_element(seq): 
+    return 45 - sum(seq)
+
+print(get_missing_element([0,5,1,3,2,9,7,6,4])) # 8
+print(get_missing_element([9,2,4,5,7,0,8,6,1])) # 3
+print(get_missing_element([9,2,4,5,3,0,8,6,1])) # 7

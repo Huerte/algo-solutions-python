@@ -1,17 +1,28 @@
-# CodeWars - N-th Fibonacci
-# Problem: N-th Fibonacci
-# Source: https://www.codewars.com/kata/522551eee9abb932420004a0
-# Note: Calculates the N-th Fibonacci number iteratively using two variables to track the previous two values.
-def nth_fib(n):
-    a, b = 0, 1
-    count = 2
-    if n < 2:
-        return [a, b][n - 1]
-    while count < n:
-        a, b = b, a + b
-        count += 1
-    return b
+# CodeWars - Consonant Value
+# Problem: Consonant value
+# Source: https://www.codewars.com/kata/59c633e7dcc4053512000073
+# Note: Finds consecutive consonant substrings, calculates their alphabetical values, and returns the maximum sum.
+def solve(s):
+    words = []
+    temp = ""
+    for c in s:
+        if c in 'aeiou':
+            words.append(temp)
+            temp = ""
+        else:
+            temp += c
+    words.append(temp)
+    maxt = float('-inf')
+    for word in words:
+        maxt = max(maxt, sum(ord(c) - 96 for c in word))
+    return maxt
 
-print(nth_fib(1)) # 0
-print(nth_fib(2)) # 1
-print(nth_fib(100)) # 218922995834555169026
+print(solve("cozy"), 51)
+print(solve("xyzzy"), 126)
+print(solve("zodiac"), 26)
+print(solve("chruschtschov"), 80)
+print(solve("khrushchev"), 38)
+print(solve("strength"), 57)
+print(solve("catchphrase"), 73)
+print(solve("twelfthstreet"), 103)
+print(solve("mischtschenkoana"), 80)

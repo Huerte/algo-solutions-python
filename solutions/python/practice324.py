@@ -1,18 +1,10 @@
-# Problem: Maximum 69 Number
-# Source: https://leetcode.com/problems/maximum-69-number/
+# Problem: Sum of Values at Indices With K Set Bits
+# Source: https://leetcode.com/problems/sum-of-values-at-indices-with-k-set-bits/
 
 class Solution:
-    def maximum69Number (self, num: int) -> int:
-        cur = list(str(num))
-        maxs = num
-        for i in range(len(cur)):
-            if cur[i] == '6':
-                cur[i] = '9'
-                maxs = max(maxs, int(''.join(cur)))
-                cur[i] = '6'
-        return maxs
+    def sumIndicesWithKSetBits(self, nums, k) -> int:
+        return sum(num for i, num in enumerate(nums) if bin(i)[2:].count('1') == k)
 
 s = Solution()
-print(s.maximum69Number(9999)) # 9999
-print(s.maximum69Number(9996)) # 9999
-print(s.maximum69Number(9669)) # 9969
+print(s.sumIndicesWithKSetBits([5,10,1,5,2], 1)) # 13
+print(s.sumIndicesWithKSetBits([4,3,2,1], 2))    # 1

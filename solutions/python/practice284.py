@@ -1,15 +1,32 @@
-# Repeated String
-# Problem: Repeated String
-# Source: https://www.hackerrank.com/challenges/repeated-string/problem
-# Note: Counts occurrences of 'a' in an infinitely repeated string using full repetitions and the remaining prefix.
-def repeatedString(s, n):
-    l = len(s)
-    
-    total = n // l
-    other = n % l
-    
-    return (s.count('a') * total) + s[:other].count('a')
+# Problem: Punctuation Score
+# Source: 
+# Note: Calculates total score of consecutive punctuation marks
+def punctuation_score(msg):
+    punc = {
+        '.': 2,
+        '!': 5,
+        '?': 10
+    }
 
-print(repeatedString('a', 1000000000000)) # 1000000000000
-print(repeatedString('aba', 10))          # 7
-print(repeatedString('abcac', 10))        # 4
+    t = 0
+    i = 0
+
+    while i < len(msg):
+        if msg[i] in punc:
+            cur = i
+
+            while cur < len(msg) and msg[cur] in punc:
+                cur += 1
+
+            group_score = sum(punc[c] for c in msg[i:cur])
+
+            t += group_score * (i + 1)
+
+            i = cur
+        else:
+            i += 1
+
+    return t
+
+print(punctuation_score("I like to write multiple sentences. Don't you? Come on!")) # 805
+print(punctuation_score("Hello world!"))                                            # 60

@@ -1,25 +1,11 @@
-# CodeWars - Return pyramids
-# Problem: Return pyramids
-# Source: https://www.codewars.com/kata/5803a6d8db07c59fff00015f
-# Note: Generates an ASCII pyramid with n floors and a trailing newline.
-def pyramid(n):
-    
-    sp = n - 1
-    mid = 0
-    
-    res = []
-    
-    for _ in range(n - 1):
-        
-        res.append(' ' * sp + '/' + ' ' * mid + '\\')
-        
-        sp -= 1
-        mid += 2
-    
-    res.append('/' + '_' * mid + '\\')
-    
-    return '\n'.join(res) + '\n'
+# CodeWars - Area of a Square
+# Problem: Area of a Square
+# Source: https://www.codewars.com/kata/5748838ce2fab90b86001b1a
+# Note: Calculates the area of a square using the circumference of its circumscribed circle.
+from math import pi
+def square_area(A):
+    return round((4 * A ** 2) / pi ** 2, 2)
 
-print(pyramid(1)) # '/\\\n'
-print(pyramid(2)) # ' /\\\n/__\\\n'
-print(pyramid(3)) # '  /\\\n /  \\\n/____\\\n'
+print(square_area(14.05)) # 80.0
+print(square_area(2))     # 1.62
+print(square_area(0))     # 0.0

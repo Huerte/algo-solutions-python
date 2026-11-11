@@ -100,8 +100,8 @@ def parse_solution_file(path: Path) -> dict[str, str]:
             topic_match = re.match(r"^(?:#|//)\s*Topic:\s*(.*)$", line, re.IGNORECASE)
             if topic_match:
                 declared_topic = topic_match.group(1).strip()
-        if re.search(r"(?:#|//)\s*Status:\s*.*(?:in progress|needs|incomplete).*", line, re.IGNORECASE):
-            if not re.search(r"solved|pass|complete", line, re.IGNORECASE):
+        if re.search(r"(?:#|//)\s*(?:Status:\s*.*(?:in progress|needs|incomplete)|TODO\b).*", line, re.IGNORECASE):
+            if not re.search(r"solved|complete", line, re.IGNORECASE):
                 status = "In Progress / Needs Work"
 
     if not problem:

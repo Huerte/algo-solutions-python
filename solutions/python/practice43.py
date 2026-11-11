@@ -1,32 +1,52 @@
-# Problem: Sum of Multiples of 3 and 5
-# Source: 
-# Note: Solves the Sum of Multiples of 3 and 5 problem
+# Problem: Character Percentage in String
+# Source: https://leetcode.com/problems/percentage-of-letter-in-string/
+# Note: Solves the Character Percentage in String problem
 # Description:
-# Given a limit n, find the sum of all numbers from 0 to n-1 that are multiples of 3 or 5.
-# This is a classic problem similar to Project Euler Problem 1.
-# 
-# Example:
-# - Input: n = 10 → Output: 3 + 5 + 6 + 9 = 23
-# - Input: n = 1000 → Output: sum of all multiples of 3 or 5 below 1000
-# 
+# Given a string s and a character c, return the percentage of characters in s that equal c.
+# The percentage is rounded down to the nearest integer.
+#
+# Input:
+# - A string `s` where 1 <= s.length <= 100
+# - A character `c` to count in the string
+#
+# Output:
+# - An integer representing the percentage of characters equal to c
+#
 # Status: ✅ SOLVED
 
-def sum_multiples_3_5(limit):
-    if limit <= 0:
+# def percentageString(s, c):
+#     if not s:
+#         return 0
+        
+#     count = s.count(c)
+#     return int((count / len(s)) * 100)
+
+def percentageString(s, c):
+    if not s:
         return 0
-    
-    total_sum = 0
-    for i in range(limit):
-        if i % 3 == 0 or i % 5 == 0:
-            total_sum += i
-    return total_sum
+    return int(s.count(c)/len(s) * 100)
 
 # Test cases with assertions
-assert sum_multiples_3_5(10) == 3 + 5 + 6 + 9  # 23
-assert sum_multiples_3_5(20) == 3 + 5 + 6 + 9 + 10 + 12 + 15 + 18  # 78
-assert sum_multiples_3_5(1) == 0  # No multiples below 1
-assert sum_multiples_3_5(6) == 3 + 5  # 8
-assert sum_multiples_3_5(0) == 0
-assert sum_multiples_3_5(1000) == 233168  # Classic Project Euler result
+# Example 1
+assert percentageString("hello", "l") == 40
+
+# Example 2
+assert percentageString("aabbcc", "a") == 33
+
+# Example 3
+assert percentageString("testcase", "t") == 25
+
+# Example 4
+assert percentageString("aaaaa", "a") == 100
+
+# Example 5
+assert percentageString("abcde", "z") == 0
+
+# Example 6
+assert percentageString("a", "a") == 100
+
+# Edge cases
+assert percentageString("", "a") == 0
+assert percentageString("abc", "a") == 33
 
 print("All test cases passed!")

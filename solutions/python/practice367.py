@@ -1,10 +1,24 @@
-# Problem: Reverse Bits
-# Source: https://leetcode.com/problems/reverse-bits/
+# Problem: Minimum Absolute Difference
+# Source: https://leetcode.com/problems/minimum-absolute-difference/
 
 class Solution(object):
-    def reverseBits(self, n):
-        return int(f"{n:032b}"[::-1], 2)
+    def minimumAbsDifference(self, arr):
+        arr.sort()
 
+        mn = float('inf')
+        res = []
+
+        for i in range(len(arr) - 1):
+            diff = arr[i+1] - arr[i]
+
+            if diff < mn:
+                mn = diff
+                res = [[arr[i], arr[i+1]]]
+            elif diff == mn:
+                res.append([arr[i], arr[i+1]])
+        return res
+    
 s = Solution()
-print(s.reverseBits(43261596))   # 964176192
-print(s.reverseBits(2147483644)) # 1073741822
+print(s.minimumAbsDifference([3,8,-10,23,19,-4,-14,27])) # [[-14,-10],[19,23],[23,27]]
+print(s.minimumAbsDifference([-25,-51,-29,-23,57,-18]))  # [[-25,-23]]
+print(s.minimumAbsDifference([1,3,6,10,15]))             # [[1, 3]]

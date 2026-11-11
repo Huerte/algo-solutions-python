@@ -1,18 +1,27 @@
-# CodeWars - Return the Missing Element
-# Problem: Return the Missing Element
-# Source: https://www.codewars.com/kata/5299413901337c637e000004
-# Note: Finds the missing digit from a sequence containing digits 0 through 9 using sorting or the difference between the expected and actual sums.
-# My solution
-def get_missing_element(seq): 
-    for num, i in zip(sorted(seq), range(len(seq))):
-        if num != i:
-            return i
-    return 9
+# Two Sum Variant
+# Problem: Two Sum
+# Source: https://leetcode.com/problems/two-sum/
+# Note: Finds two indices whose corresponding elements add up to the target using a hash map for efficient lookup.
+# Simple Solution 0(n2)
+def sums(arr, targ):
+    for i in range(len(arr) - 1):
+        for j in range(i + 1, len(arr)):
+            if arr[i] + arr[j] == targ:
+                return [i, j]
+    return -1
 
-# Other clever solution
-def get_missing_element(seq): 
-    return 45 - sum(seq)
 
-print(get_missing_element([0,5,1,3,2,9,7,6,4])) # 8
-print(get_missing_element([9,2,4,5,7,0,8,6,1])) # 3
-print(get_missing_element([9,2,4,5,3,0,8,6,1])) # 7
+# Accepted solution
+def sums(arr, targ):
+    seen = {}
+
+    for i in range(len(arr)):
+        need = targ - arr[i]
+        if need in seen:
+            return seen[need], i
+        seen[arr[i]] = i
+        
+    return -1
+
+print(sums([1,2,3,4], 7))
+print(sums([1,2,3], 7))

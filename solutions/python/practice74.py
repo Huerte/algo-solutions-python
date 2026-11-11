@@ -1,53 +1,58 @@
-# Problem: 10,001st Prime
-# Source: https://projecteuler.net/problem=7
-# Note: Finds the nth prime number using trial division up to the square root.
+# Problem: Nearest Value
+# Source: https://py.checkio.org/mission/nearest-value/
+# Note: Finds the closest integer to the target, choosing the smaller value in case of a tie.
 # Description:
-# Given a positive integer n, find the nth prime number. A prime number is a natural number greater
-# than 1 that has no positive divisors other than 1 and itself.
-# 
-# Example:
-# - Input: n = 1 → Output: 2 (first prime number)
-# - Input: n = 6 → Output: 13 (6th prime number: 2, 3, 5, 7, 11, 13)
-# - Input: n = 10001 → Output: 104743 (10,001st prime number)
-# 
+# Given a set of integers and a target value, find the value in the set that is closest to the target.
+# If the target is equidistant from two values, return the smaller one.
+# If the target is already in the set, return the target.
+#
+# Input:
+# - A set of integers `values`
+# - An integer `one` representing the target value
+#
+# Output:
+# - An integer from the set that is closest to the target value
+#
 # Status: ✅ SOLVED
 
-def is_prime(n):
-    if n < 2:
-        return False
-    if n == 2:
-        return True
-    if n % 2 == 0:
-        return False
-    
-    for i in range(3, int(n**0.5) + 1, 2):
-        if n % i == 0:
-            return False
-    return True
+def nearest_value(values: set[int], one: int) -> int:
+    if len(values) == 1:
+        return next(iter(values))
+    elif one in values:
+        return one
 
-def nth_prime(n):
-    if n <= 0:
-        return None
-    
-    if n == 1:
-        return 2
-    
-    count = 1
-    num = 3
-    
-    while count < n:
-        if is_prime(num):
-            count += 1
-        num += 2
-    
-    return num - 2
+    values.add(one)
+    values = sorted(values)
+
+    one_index = 0
+    while values[one_index] != one:
+        one_index += 1
+
+    if one_index == 0:
+        return values[1]
+    elif one_index == len(values) - 1:
+        return values[-2]
+    else:
+        left = one - values[one_index - 1]
+        right = values[one_index + 1] - one
+        if left <= right:
+            return values[one_index - 1]
+        else:
+            return values[one_index + 1]
 
 # Test cases with assertions
-assert nth_prime(1) == 2
-assert nth_prime(6) == 13
-assert nth_prime(10) == 29
-assert nth_prime(100) == 541
-assert nth_prime(0) == None
-assert nth_prime(-1) == None
+print("Example:")
+print(nearest_value({4, 7, 10, 11, 12, 17}, 9))
+
+assert nearest_value({17, 4, 7, 10, 11, 12}, 9) == 10
+assert nearest_value({17, 4, 7, 10, 11, 12}, 8) == 7
+assert nearest_value({17, 4, 8, 10, 11, 12}, 9) == 8
+assert nearest_value({17, 4, 9, 10, 11, 12}, 9) == 9
+assert nearest_value({17, 4, 7, 10, 11, 12}, 0) == 4
+assert nearest_value({17, 4, 7, 10, 11, 12}, 100) == 17
+assert nearest_value({100, 5, 8, 89, 10, 12}, 7) == 8
+assert nearest_value({2, 3, -1}, 0) == -1
+assert nearest_value({5}, 5) == 5
+assert nearest_value({5}, 7) == 5
 
 print("All test cases passed!")

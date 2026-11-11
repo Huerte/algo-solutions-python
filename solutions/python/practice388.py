@@ -1,23 +1,20 @@
-# Problem: Polish Alphabet Converter
-# Source: https://www.codewars.com/kata/57ab2d6072292dbf7c000039
-# Note: Replaces Polish diacritic characters with standard Latin letters
-def correct_polish_letters(st): 
-    polish = {
-        "ą": "a",
-        "ć": "c",
-        "ę": "e",
-        "ł": "l",
-        "ń": "n",
-        "ó": "o",
-        "ś": "s",
-        "ź": "z",
-        "ż": "z",
-    }
-    res = ""
-    for c in st:
-        res += polish.get(c, c)
-    return res
+# Problem: Strip Comments
+# Source: https://www.codewars.com/kata/strip-comments
 
-print(correct_polish_letters("Maria Skłodowska-Curie"))  # "Maria Sklodowska-Curie"
-print(correct_polish_letters("Jędrzej Błądziński"))      # "Jedrzej Bladzinski"
-print(correct_polish_letters("Lech Wałęsa"))             # "Lech Walesa"
+def strip_comments(strng, markers):
+    arr = [s for s in strng.split('\n')]
+    
+    for i in range(len(arr)):
+        temp = []
+        for mark in markers:
+            ind = arr[i].find(mark)
+            if ind >= 0:
+                temp.append(ind)
+        if temp:
+            arr[i] = arr[i][:min(temp)].rstrip()
+    
+    return '\n'.join(arr)
+
+print(strip_comments("apples, pears # and bananas\ngrapes\nbananas !apples", ["#", "!"])) # "apples, pears\ngrapes\nbananas")
+print(strip_comments("   a #b\nc\nd $e f g", ["#", "$"]))                                 # "   a\nc\nd")
+print(strip_comments("a #b\nc\nd $e f g", ["#", "$"]))                                    # "a\nc\nd")

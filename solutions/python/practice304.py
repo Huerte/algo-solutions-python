@@ -1,18 +1,11 @@
-# Minimum Average of Smallest and Largest Elements
-# Problem: Minimum Average of Smallest and Largest Elements
-# Source: https://leetcode.com/problems/minimum-average-of-smallest-and-largest-elements/
-# Note: Pairs the smallest and largest elements, calculates their averages, and returns the minimum average.
-class Solution(object):
-    def minimumAverage(self, nums):
-        arr = []
-        nums.sort()
-        for i in range(len(nums) // 2):
-            av = (nums[i] + nums[len(nums) - i - 1] ) / 2
-            arr.append(av)
-
-        return min(arr)
-
-s = Solution()   
-print(s.minimumAverage([7,8,3,4,15,13,4,1])) # 5.5
-print(s.minimumAverage([1,9,8,3,10,5]))      # 5.5
-print(s.minimumAverage([1,2,3,7,8,9]))       # 5.0
+# Sorting the Sentence
+# Problem: Sorting the Sentence
+# Source: https://leetcode.com/problems/sorting-the-sentence/
+# Note: Reconstructs the original sentence by sorting words according to the position number appended to each word.
+class Solution:
+    def sortSentence(self, s: str) -> str:
+        return ' '.join(word[:-1] for word in sorted(s.split(), key=lambda x: x[-1]))
+    
+s = Solution()
+print(s.sortSentence("is2 sentence4 This1 a3")) # "This is a sentence"
+print(s.sortSentence("Myself2 Me1 I4 and3"))    # "Me Myself and I"

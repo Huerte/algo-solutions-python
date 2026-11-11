@@ -1,51 +1,37 @@
-# Problem: String Unscrambling
+# Problem: Singly Linked List Implementation
 # Source: 
-# Note: Solves the String Unscrambling problem
-# Description:
-# Given a scrambled string, unscramble it by taking characters at even indices first 
-# (0, 2, 4, ...) and then characters at odd indices in reverse order.
-# This appears to be a custom string manipulation problem.
-#
-# Input:
-# - A scrambled string `scrambled`
-#
-# Output:
-# - The unscrambled string
-#
-# Status: ✅ SOLVED
+# Note: Implements singly linked list with push, append, pop, and search
+class Nodes:
+    def __init__(self, value, nextNode=None):
+        self.value = value
+        self.nextNode = nextNode
 
-def unscramble_string(scrambled):
-    result = ''
-    
-    # Take characters at even indices first
-    for i in range(0, len(scrambled), 2):
-        result += scrambled[i]
-    
-    # Take characters at odd indices in reverse order
-    for j in range(len(scrambled) - 2, 0, -2):
-        result += scrambled[j]
-    
-    return result
+class LinkedList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
 
-# Test cases with assertions
-# Example 1
-scrambled1 = "H!e ldllor ow"
-assert unscramble_string(scrambled1) == "Hello world!"
+    def push(self, value):
+        new_node = Nodes(value)
+        if not self.head:
+            self.head = new_node
+            self.tail = new_node
+            return
 
-# Example 2
-scrambled2 = "abcde"
-assert unscramble_string(scrambled2) == "acebd"
+        self.tail.nextNode = new_node
+        self.tail = new_node
 
-# Example 3
-scrambled3 = "xyz"
-assert unscramble_string(scrambled3) == "xzy"
+    def printNodes(self):
+        current_node = self.head
+        while current_node:
+            print(current_node.value, end=' -> ')
+            current_node = current_node.nextNode
+        print("None")
 
-# Example 4
-scrambled4 = "a"
-assert unscramble_string(scrambled4) == "a"
-
-# Example 5
-scrambled5 = "ab"
-assert unscramble_string(scrambled5) == "ab"
-
-print("All test cases passed!")
+linkedList = LinkedList()
+linkedList.printNodes()
+linkedList.push(1)
+linkedList.push(2)
+linkedList.push(3)
+linkedList.push(4)
+linkedList.printNodes()

@@ -1,7 +1,31 @@
-# Truncate Sentence
-# Problem: Truncate Sentence
-# Source: https://leetcode.com/problems/truncate-sentence/
-# Note: Returns a sentence containing only the first k words using string splitting and joining.
+# Squares of a Sorted Array
+# Problem: Squares of a Sorted Array
+# Source: https://leetcode.com/problems/squares-of-a-sorted-array/
+# Note: Squares each element of a sorted array and returns the squared values in ascending order using two pointers.
 class Solution(object):
-    def truncateSentence(self, s, k):
-        return " ".join(s.split()[:k])
+    def sortedSquares(self, nums):
+        
+        left = 0
+        right = len(nums) - 1
+
+        res = []
+
+        while left <= right:
+            if abs(nums[left]) > abs(nums[right]):
+                res.append(nums[left] ** 2)
+                left += 1
+            else:
+                res.append(nums[right] ** 2)
+                right -= 1
+
+        res.reverse()
+        return res
+    
+# 2nd solution
+class Solution(object):
+    def sortedSquares(self, nums):
+        return sorted(num ** 2 for num in nums)
+
+s = Solution()
+print(s.sortedSquares([-4, -1, 0, 3, 10])) # [0, 1, 9, 16, 100]
+print(s.sortedSquares([-7, -3, 2, 3, 11])) # [4, 9, 9, 49, 121]

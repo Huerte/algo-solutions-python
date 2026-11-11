@@ -1,40 +1,45 @@
-# Problem: Spiral Matrix Display
-# Source: https://leetcode.com/problems/spiral-matrix/description/
-# Note: Traverses a matrix in spiral order
-# Note: Returns all elements of a matrix in spiral order.
+# Problem: Keypad Phone Simulator
+# Source: 
+# Note: Simulates phone keypad text input
+number_of_word = int(input())
 
-def spiral_display(arr):
+res = []
 
-    s = []
-
-    n = len(arr)
-
-    left, right = 0, n - 1
-    top , down  = 0, n - 1
-
-    while top <= down and left <= right:
-
-        for i in range(left, right + 1):
-            s.append(arr[top][i])
-        top += 1
-
-        for i in range(top, down + 1):
-            s.append(arr[i][right])
-        right -= 1
-
-        for i in range(right, left - 1, -1):
-            s.append(arr[down][i])
-        down -= 1
-
-        for i in range(down, top - 1, -1):
-            s.append(arr[i][left])
-        left += 1
-
-    return ' '.join(map(str, s))
+keypad_coord = {
+    '2': 'abc',
+    '3': 'def',
+    '4': 'ghi',
+    '5': 'jkl',
+    '6': 'mno',
+    '7': 'pqrs',
+    '8': 'tuv',
+    '9': 'wxyz',
+    '0': ' '
+}
 
 
-print(spiral_display([
-    [1, 2, 3],
-    [8, 9, 4],
-    [7, 6, 5]
-]))
+for _ in range(number_of_word):
+
+    seq = input()
+    word = ""
+    cur = []
+
+    for c in seq:
+        if not cur:
+            cur.append(c)
+        elif c in cur:
+            cur.append(c)
+        else:
+            if c == ' ':
+                word += keypad_coord[cur[-1]][len(cur) - 1]
+                cur = []
+                continue
+            word += keypad_coord[cur[-1]][len(cur) - 1]
+            cur = [c]
+    
+    if cur:
+        word += keypad_coord[cur[-1]][len(cur) - 1]
+        
+    res.append(word)
+
+print('\n'.join(res))

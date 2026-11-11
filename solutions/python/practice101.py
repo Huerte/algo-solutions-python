@@ -1,19 +1,16 @@
-# Problem: A Number After a Double Reversal
-# Source: https://leetcode.com/problems/a-number-after-a-double-reversal/
+# Problem: Calculate Alternating Digit Sum
+# Source: https://leetcode.com/problems/alternating-digit-sum/
+# Read the digits from left to right, adding the first, subtracting the next,
+# and continuing to alternate. For example, 521 becomes 5 - 2 + 1 = 4.
+# Time: O(d), where d is the number of digits.
 
-#Checks whether an integer remains the same after reversing its digits twice.
+n = int(input('Enter a positive integer: '))
 
-#Returns False when reversing twice changes the original number, such as 120 -> 021(12) -> 12.
-#Returns True when the final number matches the original number, such as 123 -> 321 -> 123.
+plus = True
+res = 0
 
-# Then, Time Complexity become O(d), where d is the number of digits in the integer.
+for num in map(int, str(n)):
+    res += num * 1 if plus else num * -1
+    plus = not plus
 
-n = int(input('Enter an integer: '))
-temp = n
-for i in range(2):
-    temp = int(str(temp)[::-1])
-
-if temp == n:
-    print(True)
-else:
-    print(False)
+print(f'Sum: {res}')

@@ -1,21 +1,11 @@
-# Problem: Maximum Subarray
-# Source: https://leetcode.com/problems/maximum-subarray/
+# Problem: Find the Difference
+# Source: https://leetcode.com/problems/find-the-difference/
 
-class Solution:
-    def maxSubArray(self, nums) -> int:
-        max_sub = nums[0]
-        cur_sum = 0
-
-        for n in nums:
-            if cur_sum < 0:
-                cur_sum = 0
-            
-            cur_sum += n
-            max_sub = max(max_sub, cur_sum)
-        
-        return max_sub
+class Solution(object):
+    def findTheDifference(self, s, t):
+        return chr(sum([ord(c) for c in t]) - sum([ord(c) for c in s]))
 
 s = Solution()
-print(s.maxSubArray([-2,1,-3,4,-1,2,1,-5,4])) # 6
-print(s.maxSubArray([5,4,-1,7,8]))            # 23
-print(s.maxSubArray([1]))                     # 1
+print(s.findTheDifference("abcd", "abcde")) # e
+print(s.findTheDifference("", "y"))          # y
+print(s.findTheDifference("a", "aa"))       # a

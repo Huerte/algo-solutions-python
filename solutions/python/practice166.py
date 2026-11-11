@@ -1,35 +1,8 @@
-# Subarray Sum Equals K
-# Problem: Subarray Sum Equals K
-# Source: https://leetcode.com/problems/subarray-sum-equals-k/
-# Note: Counts the number of continuous subarrays whose sum equals the given target k.
+# Problem: Display the First Three Rows
+# Source: https://leetcode.com/problems/display-the-first-three-rows/
+# Note: Returns the first three rows of the employees DataFrame using Pandas iloc
 
-# My Solution
-class Solution(object):
-    def subarraySum(self, nums, k):
-        count = 0
+import pandas as pd
 
-        for i in range(len(nums)):
-            for j in range(i + 1, len(nums) + 1):
-                if sum(nums[i:j]) == k:
-                    count += 1
-        
-        return count
-
-# Accepted Solution
-class Solution(object):
-    def subarraySum(self, nums, k):
-        res = 0
-        curSum = 0
-        prefixSums = {0 : 1}
-
-        for n in nums:
-            curSum += n
-            diff = curSum - k
-
-            res += prefixSums.get(diff, 0)
-            prefixSums[curSum] = 1 + prefixSums.get(curSum, 0)
-        return res
-
-s = Solution()
-print(s.subarraySum([1, 1, 1], 2))   # Expected: 2
-# print(s.subarraySum([1, 2, 3], 3))   # Expected: 2
+def selectFirstRows(employees: pd.DataFrame) -> pd.DataFrame:
+    return employees.iloc[0:3]

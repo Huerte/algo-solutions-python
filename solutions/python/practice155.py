@@ -1,14 +1,20 @@
-# Problem: Running Sum of 1d Array
-# Source: https://leetcode.com/problems/running-sum-of-1d-array/
-# Note: Sum each prefix slice to build the running sums.
+# Unique Morse Code Words
+# Problem: Unique Morse Code Words
+# Source: https://leetcode.com/problems/unique-morse-code-words/
+# Note: Converts words into Morse code and counts the number of unique transformations.
 
 class Solution(object):
-    def runningSum(self, nums):
+    def uniqueMorseRepresentations(self, words):
+        morse = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
         res = []
-        for i in range(1, len(nums) + 1):
-            print(nums[:i])
-            res.append(sum(nums[:i]))
-        return res
-    
+        for word in words:
+            temp = ""
+            for c in word:
+                temp += morse[ord(c.lower()) - 97]
+            res.append(temp)
+        print(res)
+        return len(set(res))
+
 s = Solution()
-print(s.runningSum([1, 2, 3, 4])) # [1,3,6,10]
+print(s.uniqueMorseRepresentations(["gin", "zen", "gig", "msg"]))
+print(s.uniqueMorseRepresentations(["a"]))

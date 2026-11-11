@@ -1,22 +1,6 @@
-# Problem: Longest Subarray With Sum Less Than or Equal to S
+# Problem: Generate Permutations
 # Source: 
-# Note: Sliding window approach to find longest subarray with sum at most S
-n = int(input())
-arr = [int(i) for i in input().split()][:n]
+# Note: Generates all permutations of a list using itertools
+from itertools import permutations
 
-s = int(input())
-
-res = []
-
-for num in arr:
-    if not res:
-        res.append(num)
-    
-    elif sum(res) + num <= s:
-        res.append(num)
-    else:
-        largest = max(res)
-        if num < largest:
-            res[res.index(largest)] = num
-
-print(len(res))
+print(list(permutations([1,2,3])))

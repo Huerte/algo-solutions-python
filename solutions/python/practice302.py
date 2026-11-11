@@ -1,18 +1,20 @@
-# Problem: Viral Advertising
-# Source: https://www.hackerrank.com/challenges/strange-advertising/problem
-# Note: Simulates daily ad sharing and calculates the cumulative number of likes over n days.
-import math
+# Longest Increasing Subsequence
+# Problem: The Longest Increasing Subsequence
+# Source: https://www.hackerrank.com/challenges/longest-increasing-subsequent/problem
+# Note: Finds the length of the longest strictly increasing subsequence in an array.
+def lis(arr):
+    ar = []
 
-def viralAdvertising(n):
-    shared = 5
-    likes = 0
+    for i in range(len(arr) - 1):
+        temp = [arr[i]]
+        for j in range(i + 1, len(arr)):
+            if temp[-1] < arr[j]:
+                temp.append(arr[j])
+            else:
+                temp[-1] = arr[j]
+        ar.append(temp)
 
-    for _ in range(n):
-        like = shared // 2
-        likes += like
-        shared = like * 3
-    
-    return likes
+    return len(max(ar, key=len))
 
-print(viralAdvertising(3)) # 9
-print(viralAdvertising(4)) # 15
+print(lis([3,1,8,2,5]))       # 3
+print(lis([5,2,8,6,3,6,9,5])) # 4

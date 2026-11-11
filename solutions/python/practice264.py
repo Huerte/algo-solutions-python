@@ -1,16 +1,17 @@
-# GeeksForGeeks - Indexes of Subarray Sum
-# Problem: Indexes of Subarray Sum
-# Source: https://www.geeksforgeeks.org/problems/subarray-with-given-sum-1587115621/1
-# Note: Uses nested loops to find the first continuous subarray whose sum equals the target and returns its 1-based starting and ending indices.
-arr = [1, 2, 3, 7, 5]
-def subarraySum(arr, target):
-        for i in range(len(arr) - 1):
-            for j in range(i + 1, len(arr)):
-                x = sum(arr[i:j+1])
-                if x == target:
-                    return [i+1, j+1]
-                elif x > target:
-                    break
-        return [-1]
-
-print(subarraySum(arr, 12))
+# GeeksForGeeks - Kadane's Algorithm
+# Problem: Kadane's Algorithm
+# Source: https://www.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1
+# Note: Finds the maximum sum of a contiguous subarray using Kadane's Algorithm by tracking the current sum and maximum sum.
+class Solution:
+    def maxSubarraySum(self, arr):
+        cur_max = float('-inf')
+        cur_sum = 0
+        for i in range(len(arr)):
+            cur_sum += arr[i]
+            cur_max = max(cur_max, cur_sum)
+            if cur_sum < 0:
+                cur_sum = 0
+        return cur_max
+    
+s = Solution()
+print(s.maxSubarraySum([-3, -2, -6, -1, -7, -4]))

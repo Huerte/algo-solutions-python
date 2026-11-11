@@ -1,8 +1,11 @@
-# HackerRank - Calendar Module
-# Problem: Calendar Module
-# Source: https://www.hackerrank.com/challenges/calendar-module/problem
-# Note: Converts the given month, day, and year into a date object and determines the weekday using datetime, then prints the day in uppercase.
-from datetime import datetime
-d = list(map(int, input().split()))
-da = datetime(day=d[1], month=d[0], year=d[-1])
-print(['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'][da.weekday()])
+# HackerRank - Write a function
+# Problem: Write a function (Leap Year)
+# Source: https://www.hackerrank.com/challenges/write-a-function/problem
+# Note: Checks whether a year is a leap year using divisibility rules for 4, 100, and 400.
+def is_leap(year):
+    leap = False
+    
+    if year % 4 == 0 and (year % 100 != 0 or year % 400  == 0):
+        leap = True
+    
+    return leap

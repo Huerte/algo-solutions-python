@@ -1,19 +1,17 @@
-# Maximum Subarray Sum
-# Problem: Maximum subarray sum
-# Source: https://www.codewars.com/kata/54521e9ec8e60bc4de000d6c
-# Note: Attempts to find the contiguous subarray with the maximum sum by grouping consecutive increasing elements.
-def maxSub(arr):
-    cur_sum = []
-    seen = []
-    for i in range(len(arr)):
-        if seen and seen[-1] > arr[i]:
-            cur_sum.append(seen)
-            seen = [arr[i]]
-            continue
-        seen.append(arr[i])
-    if seen:
-        cur_sum.append(seen)
-    return max(cur_sum, key=lambda x: sum(x)) if cur_sum else []
+# Problem: FizzBuzz with Twist
+# Source: https://leetcode.com/problems/fizz-buzz/
 
-print(maxSub([1,2,3,4,5,6,7,8,9]))
-print(maxSub([1,2,3,4,1,7,8,9]))
+def fizzbuzzpop(n):
+    res = ""
+    if n % 3 == 0:
+        res += 'Fizz'
+    if n % 5 == 0:
+        res += 'Buzz'
+    if n % 7 == 0:
+        res += 'Pop'
+    return res
+
+print(fizzbuzzpop(9))
+print(fizzbuzzpop(10))
+print(fizzbuzzpop(15))
+print(fizzbuzzpop(49))

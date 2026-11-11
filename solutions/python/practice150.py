@@ -1,13 +1,20 @@
-# Count Pairs Whose Sum is Less than Target
-# Problem: Count Pairs Whose Sum is Less than Target
-# Source: https://leetcode.com/problems/count-pairs-whose-sum-is-less-than-target/
-# Note: Counts pairs of elements whose sum is strictly less than the target.
+# Count Asterisks
+# Problem: Count Asterisks
+# Source: https://leetcode.com/problems/count-asterisks/
+# Note: Counts asterisks outside pairs of vertical bars.
 
 class Solution(object):
-    def countPairs(self, nums, target):
+    def countAsterisks(self, s):
+        if '*' not in s:
+            return 0
+        elif '|' not in s:
+            return s.count('*')
+        
+        had_f = False
         count = 0
-        for i in range(len(nums) - 1):
-            for j in range(i+1, len(nums)):
-                if nums[i] + nums[j] < target:
-                    count += 1
+        for c in s:
+            if c == '|':
+                had_f = not had_f
+            elif not had_f and c == '*':
+                count += 1
         return count

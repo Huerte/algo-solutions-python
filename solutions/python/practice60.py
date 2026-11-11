@@ -1,36 +1,68 @@
-# Problem: Buddy Strings
-# Source: https://leetcode.com/problems/buddy-strings/
-# Note: Solves the Buddy Strings problem
+# Problem: Pascal's Triangle
+# Source: https://leetcode.com/problems/pascals-triangle/
+# Note: Solves the Pascal's Triangle problem
 # Description:
-# Given two strings a and b, return true if you can swap two letters in a so the result is equal to b,
-# and false otherwise. Swapping letters is defined as taking two indices i and j (0-indexed) such that
-# i != j and swapping the characters at a[i] and a[j].
-# 
-# Example:
-# - Input: a = "ab", b = "ba" → Output: true (swap a[0] and a[1])
-# - Input: a = "ab", b = "ab" → Output: false (no swap needed)
-# - Input: a = "aa", b = "aa" → Output: true (swap a[0] and a[1] to get same string)
-# 
+# Given an integer numRows, return the first numRows of Pascal's triangle.
+# In Pascal's triangle, each number is the sum of the two numbers directly above it.
+#
+# Input:
+# - An integer `numRows` where 1 <= numRows <= 30
+#
+# Output:
+# - A list of lists representing Pascal's triangle
+#
 # Status: ✅ SOLVED
 
-from collections import Counter
+# class Solution(object):
+#     def generate(self, numRows):
+#         if numRows == 1:
+#             return [[1]]
 
-def buddy_strings(a, b):
-    # Check if strings have same length and character counts
-    return len(a) == len(b) and Counter(a) == Counter(b)
+#         triangle = [[1], [1, 1]]
+
+#         for i in range(numRows - 2):  # for rows loop
+#             current_row_content = [1]
+#             for j in range(len(triangle[-1]) - 1):
+#                 current_row_content.append(triangle[-1][j] + triangle[-1][j + 1])
+#             current_row_content.append(1)
+#             triangle.append(current_row_content)
+
+#         return triangle
+
+class Solution:
+    def generate(self, num):
+        if num == 1:
+            return [[1]]
+
+        triangle = [[1], [1,1]]
+
+        for i in range(num - 2):
+            current = [1]
+            
+            for j in range(len(triangle[-1]) - 1):
+                current.append(triangle[-1][j] + triangle[-1][j + 1])
+
+            current.append(1)
+            triangle.append(current)
+
+        return triangle
 
 # Test cases with assertions
-# ✅ Valid buddy strings (same length, same character counts)
-assert buddy_strings("ab", "ba") == True
-assert buddy_strings("aabb", "bbaa") == True
-assert buddy_strings("abc", "cab") == True
-assert buddy_strings("aa", "aa") == True  # Identical strings with duplicates
+sol = Solution()
 
-# ❌ Not buddy strings
-assert buddy_strings("abc", "abd") == False  # Different characters
-assert buddy_strings("abcd", "abcc") == False  # Different frequencies
-assert buddy_strings("abc", "cbaa") == False  # Different lengths
-assert buddy_strings("a", "a") == True  # Single character (no swap possible)
-assert buddy_strings("", "a") == False
+# Example 1
+assert sol.generate(1) == [[1]]
+
+# Example 2
+assert sol.generate(2) == [[1], [1, 1]]
+
+# Example 3
+assert sol.generate(3) == [[1], [1, 1], [1, 2, 1]]
+
+# Example 4
+assert sol.generate(4) == [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1]]
+
+# Example 5
+assert sol.generate(5) == [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
 
 print("All test cases passed!")

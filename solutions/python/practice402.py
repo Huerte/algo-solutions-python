@@ -1,11 +1,11 @@
-# CodeWars - Area of a Square
-# Problem: Area of a Square
-# Source: https://www.codewars.com/kata/5748838ce2fab90b86001b1a
-# Note: Calculates the area of a square using the circumference of its circumscribed circle.
-from math import pi
-def square_area(A):
-    return round((4 * A ** 2) / pi ** 2, 2)
+# CodeWars - So Many Permutations!
+# Problem: So Many Permutations!
+# Source: https://www.codewars.com/kata/5254ca2719453dcc0b00027d
+# Note: Generates all unique permutations of a non-empty input string.
+from itertools import permutations as p
+def permutations(s):
+    return list(set(''.join(list(e)) for e in p(s)))
 
-print(square_area(14.05)) # 80.0
-print(square_area(2))     # 1.62
-print(square_area(0))     # 0.0
+print(permutations('abcd')) # ['abcd', 'abdc', 'acbd', 'acdb', 'adbc', 'adcb', 'bacd', 'badc', 'bcad', 'bcda', 'bdac', 'bdca', 'cabd', 'cadb', 'cbad', 'cbda', 'cdab', 'cdba', 'dabc', 'dacb', 'dbac', 'dbca', 'dcab', 'dcba']
+print(permutations('aabb')) # ['aabb', 'abab', 'abba', 'baab', 'baba', 'bbaa']
+print(permutations('a'))    # ['a']

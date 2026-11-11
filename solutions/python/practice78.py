@@ -1,48 +1,40 @@
-# Problem: Time Limit Validator
-# Source: 
-# Note: Solves the Time Limit Validator problem
+# Problem: Sum of Digits / Digital Root
+# Source: https://www.codewars.com/kata/541c8630095125aba6000c00
+# Note: Repeatedly sums the digits of a number until a single digit remains.
 # Description:
-# Given a time limit in HH:MM:SS format and a list of time durations, determine if all the
-# durations can fit within the time limit. Return True if they fit, False otherwise.
+# Given a positive integer, repeatedly sum its digits until you get a single digit.
+# This is also known as the digital root of a number.
 # 
 # Example:
-# - Input: limit="02:30:00", times=["00:45:00", "01:00:00", "00:30:00"]
-# - Output: True (total time: 2:15:00, which fits within 2:30:00)
+# - Input: 38 → Output: 2 (3+8=11, 1+1=2)
+# - Input: 999 → Output: 9 (9+9+9=27, 2+7=9)
+# - Input: 12345 → Output: 6 (1+2+3+4+5=15, 1+5=6)
 # 
 # Status: ✅ SOLVED
 
-def is_valid(lim, lis):
-    def extract_sec(s):
-        a, b, c = map(int, s.split(':'))
-        return a * 3600 + b * 60 + c
+import math
 
-    time_limit = extract_sec(lim)
+def sum_digits(num: int) -> int:
+    if num < 10:
+        return num
     
-    for t in lis:
-        time_limit -= extract_sec(t)
-
-    if time_limit < 0:
-        return False
-    else:
-        return True
+    while num >= 10:
+        digit_sum = 0
+        temp = num
+        while temp > 0:
+            digit_sum += temp % 10
+            temp //= 10
+        num = digit_sum
+    
+    return num
 
 # Test cases with assertions
-# Test Case 1: Within limit
-assert is_valid("02:30:00", ["00:45:00", "01:00:00", "00:30:00"]) == True
-
-# Test Case 2: Exactly reaching the limit
-assert is_valid("02:30:00", ["01:30:00", "01:00:00"]) == True
-
-# Test Case 3: Exceeding the limit
-assert is_valid("02:30:00", ["01:45:00", "01:00:00", "00:30:00"]) == False
-
-# Test Case 4: No times given (should return True)
-assert is_valid("01:00:00", []) == True
-
-# Test Case 5: Single time exceeding the limit
-assert is_valid("01:00:00", ["01:30:00"]) == False
-
-# Test Case 6: Edge case (exact zero seconds remaining)
-assert is_valid("00:10:00", ["00:05:00", "00:05:00"]) == True
+assert sum_digits(38) == 2
+assert sum_digits(999) == 9
+assert sum_digits(12345) == 6
+assert sum_digits(9) == 9
+assert sum_digits(10) == 1
+assert sum_digits(0) == 0
+assert sum_digits(123) == 6
 
 print("All test cases passed!")

@@ -1,22 +1,16 @@
-# Sum of All Odd Length Subarrays
-# Problem: Sum of All Odd Length Subarrays
-# Source: https://leetcode.com/problems/sum-of-all-odd-length-subarrays/
-# Note: Calculates the sum of all contiguous subarrays having odd lengths.
+# Find Missing Elements
+# Problem: Find Missing Elements
+# Source: https://leetcode.com/problems/find-missing-elements/
+# Note: Finds all missing integers between the minimum and maximum values in the array.
 class Solution:
-    def sumOddLengthSubarrays(self, arr) -> int:
-        n = len(arr)
-        t = sum(arr)
-        
-        for i in range(n - 1):
-            for j in range(i + 2, n, 2):
-                temp = arr[i:j+1]
-                print(temp)
-                if len(temp) % 2 != 0:
-                    t += sum(temp)
+    def findMissingElements(self, nums):
+        complete = list(range(min(nums), max(nums) + 1))
+        arr = []
+        for num in complete:
+            if num not in nums:
+                arr.append(num)
+        return arr
 
-        return t
-        
 s = Solution()
-print(s.sumOddLengthSubarrays([1,4,2,5,3])) # 58
-print(s.sumOddLengthSubarrays([10,11,12]))  # 66
-print(s.sumOddLengthSubarrays([1,2]))       # 3
+print(s.findMissingElements([1,4,2,5])) # [3]
+print(s.findMissingElements([5,1]))     # [2,3,4]

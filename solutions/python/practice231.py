@@ -1,28 +1,28 @@
-# CodeWars - Consonant Value
-# Problem: Consonant value
-# Source: https://www.codewars.com/kata/59c633e7dcc4053512000073
-# Note: Finds consecutive consonant substrings, calculates their alphabetical values, and returns the maximum sum.
-def solve(s):
-    words = []
-    temp = ""
-    for c in s:
-        if c in 'aeiou':
-            words.append(temp)
-            temp = ""
+# CodeWars - Validate Credit Card Number
+# Problem: Validate Credit Card Number
+# Source: https://www.codewars.com/kata/5418a1dd6d8216e18a0012b2
+# Note: Validates a credit card number using the Luhn algorithm by doubling alternate digits and checking whether the final sum is divisible by 10.
+def validate(n):
+    digits = str(n)
+    res = []
+    count = 0
+    l = len(digits)
+    for i in range(l):
+        if i % 2 == 0 and l % 2 == 0:
+            res.append(int(digits[i]) * 2)
+        elif i % 2 != 0 and l % 2 != 0:
+            res.append(int(digits[i]) * 2)
         else:
-            temp += c
-    words.append(temp)
-    maxt = float('-inf')
-    for word in words:
-        maxt = max(maxt, sum(ord(c) - 96 for c in word))
-    return maxt
+            res.append(int(digits[i]))
 
-print(solve("cozy"), 51)
-print(solve("xyzzy"), 126)
-print(solve("zodiac"), 26)
-print(solve("chruschtschov"), 80)
-print(solve("khrushchev"), 38)
-print(solve("strength"), 57)
-print(solve("catchphrase"), 73)
-print(solve("twelfthstreet"), 103)
-print(solve("mischtschenkoana"), 80)
+    for i, digit in enumerate(res):
+        temp = str(digit)
+        while len(temp) > 1:
+            temp = str(sum(int(c) for c in temp))
+        res[i] = int(temp)
+    return sum(res) % 10 == 0
+
+print(validate(1230)) # True
+print(validate(1714)) # False
+print(validate(2121)) # True
+print(validate(891)) # False

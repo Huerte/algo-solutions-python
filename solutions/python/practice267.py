@@ -1,26 +1,15 @@
-# Next Greater Element I
-# Problem: Next Greater Element I
-# Source: https://leetcode.com/problems/next-greater-element-i/
-# Note: Uses nested loops to find each nums1 element in nums2 and searches to its right for the first greater element, returning -1 if none exists.
+# Number Complement
+# Problem: Number Complement
+# Source: https://leetcode.com/problems/number-complement/
+# Note: Converts the number to binary, flips each bit (0 to 1 and 1 to 0), and converts the resulting binary string back to an integer.
 class Solution(object):
-    def nextGreaterElement(self, nums1, nums2):
-        arr = []
+    def findComplement(self, num):
+        bina = list(bin(num)[2:])
+        for i, c in enumerate(bina):
+            bina[i] = '1' if c == '0' else '0'
+        return int(''.join(bina), 2)
 
-        for i in range(len(nums1)):
-            for j in range(len(nums2)):
-                if nums1[i] == nums2[j]:
-                    if j < len(nums2) - 1:
-                        k = j + 1
-                        while k < len(nums2) and nums2[k] < nums2[j]:
-                            k += 1
-                        if k < len(nums2) and nums2[k] > nums2[j]:
-                            arr.append(nums2[k])
-                            break
-                    arr.append(-1)
-                
-        return arr
-    
 s = Solution()
-print(s.nextGreaterElement([2,4], [1,2,3,4]))             # [3,-1]
-print(s.nextGreaterElement([4,1,2], [1,3,4,2]))           # [-1,3,-1]
-print(s.nextGreaterElement([1,3,5,2,4], [6,5,4,3,2,1,7])) # [7,7,7,7,7]
+print(s.findComplement(5))  # 2
+print(s.findComplement(1))  # 0
+print(s.findComplement(12)) # 3

@@ -1,17 +1,39 @@
-# Problem: Alternating Characters
-# Source: https://www.hackerrank.com/challenges/alternating-characters/problem
+# Problem: Number of Islands
+# Source: https://leetcode.com/problems/number-of-islands/
 
-def alternatingCharacters(s):
-    seen = []
-    count = 0
-    for c in s:
-        if seen and c == seen[-1]:
-            count += 1
-            continue
-        seen.append(c)
-    return count
+class Solution(object):
+    def numIslands(self, grid):
+        
+        def flood(i, j):
+            
+            if i < 0 or i >= len(grid) or j < 0 or j >= len(grid[0]) or grid[i][j] == '0':
+                return
 
-print(alternatingCharacters('AAAA'))     # 3
-print(alternatingCharacters('BBBBB'))    # 4
-print(alternatingCharacters('ABABABAB')) # 0
-print(alternatingCharacters('AAABBB'))   # 4
+            grid[i][j] = '0'
+
+            flood(i + 1, j)
+            flood(i - 1, j)
+            flood(i, j + 1)
+            flood(i, j - 1)
+
+        count = 0
+        for i in range(len(grid)):
+            for j in range(len(grid[0])):
+                if grid[i][j] == '1':
+                    count += 1
+                    flood(i, j)
+        
+        return count
+
+s = Solution()
+print(s.numIslands([["1","1","1","1","0"],
+                      ["1","1","0","1","0"],
+                      ["1","1","0","0","0"],
+                      ["0","0","0","0","0"]])) # 1
+print(s.numIslands([["1","1","0","0","0"],
+                      ["1","1","0","0","0"],
+                      ["0","0","1","0","0"],
+                      ["0","0","0","1","1"]])) # 3
+print(s.numIslands([["1","1","1"],
+                    ["0","1","0"],
+                    ["1","1","1"]]))           # 1

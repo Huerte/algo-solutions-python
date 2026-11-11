@@ -1,31 +1,11 @@
-# CodeWars - The Vowel Code
-# Problem: The Vowel Code
-# Source: https://www.codewars.com/kata/53697be005f803751e0015aa
-# Note: Encodes lowercase vowels as numbers 1-5 and decodes those numbers back into vowels.
-vowels = 'aeiou'
+# CodeWars - Highest Rank Number in an Array
+# Problem: Highest Rank Number in an Array
+# Source: https://www.codewars.com/kata/5420fc9bb5b2c7fd57000004
+# Note: Returns the most frequent number in an array, choosing the largest number when frequencies are tied.
+from collections import Counter
+def highest_rank(arr):
+    return max(set(arr), key=lambda x: (Counter(arr)[x], x))
 
-def encode(st):
-    res = ''
-    for c in st:
-        if c in vowels:
-            res += str(vowels.index(c) + 1)
-        else:
-            res += c
-    return res
-
-def decode(st):
-    res = ''
-    for c in st:
-        if c.isdigit() and 0 < int(c) <= 5:
-            res += vowels[int(c) - 1]
-        else:
-            res += c
-    return res
-
-print(encode('hello')) # h2ll4
-print(encode('h2ll4')) # h2ll4
-print(encode('How are you today?')) # H4w 1r2 y45 t4d1y?
-
-print(decode('h2ll4')) # hello
-print(decode('How are you today?')) # How are you today?
-print(decode('H4w 1r2 y45 t4d1y?')) # How are you today?
+print(highest_rank([1, 2, 3, 2, 1, 3, 3])) # 3
+print(highest_rank([1, 1, 2, 2, 3])) # 2
+print(highest_rank([1, 2, 3, 4, 5])) # 5

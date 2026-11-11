@@ -1,53 +1,61 @@
-# Problem: Pow(x, n)
-# Source: https://leetcode.com/problems/powx-n/
-# Note: Solves the Pow(x, n) problem
+# Problem: Count Numbers with Even Number of Digits
+# Source: https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
+# Note: Solves the Count Numbers with Even Number of Digits problem
 # Description:
-# Implement pow(x, n), which calculates x raised to the power n (i.e., x^n).
+# Given a list of numbers, count how many of them have an even number of digits.
+# A number has an even number of digits if the count of its digits is divisible by 2.
 #
 # Input:
-# - x: A double representing the base number
-# - n: An integer representing the exponent
-# - -100.0 < x < 100.0
-# - -2^31 <= n <= 2^31-1
-# - n is an integer
-# - -10^4 <= x^n <= 10^4
+# - An integer n representing the number of numbers to check
+# - n lines of integers to check
 #
 # Output:
-# - A double representing x^n
+# - An integer representing the count of numbers with even number of digits
 #
 # Status: ✅ SOLVED
 
-def myPow(x, n):
-    if n == 0:
-        return 1
-    if n < 0:
-        x = 1 / x
-        n = -n
-    
-    result = 1
-    current_product = x
-    
-    while n > 0:
-        if n % 2 == 1:
-            result *= current_product
-        current_product *= current_product
-        n //= 2
-    
-    return result
+import math
+
+# def evenNumberDigits(numbers):
+#     if not numbers:
+#         return 0
+        
+#     count = 0
+#     for num in numbers:
+#         if num == 0:
+#             num_count = 1  # 0 has 1 digit
+#         else:
+#             num_count = math.floor(math.log10(abs(num))) + 1
+            
+#         if num_count % 2 == 0:
+#             count += 1
+#     return count
+
+def evenNumberDigits(n):
+    return sum(1 for num in n if len(str(num)) % 2 == 0)
 
 # Test cases with assertions
 # Example 1
-assert abs(myPow(2.00000, 10) - 1024.00000) < 1e-5
+numbers1 = [12, 345, 2, 6, 7896]
+assert evenNumberDigits(numbers1) == 2  # 12 and 7896 have even digits
 
 # Example 2
-assert abs(myPow(2.10000, 3) - 9.26100) < 1e-5
+numbers2 = [555, 901, 482, 1771]
+assert evenNumberDigits(numbers2) == 1  # Only 1771 has even digits
 
 # Example 3
-assert abs(myPow(2.00000, -2) - 0.25000) < 1e-5
+numbers3 = [1, 2, 3, 4, 5]
+assert evenNumberDigits(numbers3) == 0  # All have odd digits
+
+# Example 4
+numbers4 = [10, 1000, 100000]
+assert evenNumberDigits(numbers4) == 3  # All have even digits
 
 # Edge cases
-assert abs(myPow(1.00000, 2147483647) - 1.00000) < 1e-5
-assert abs(myPow(2.00000, 0) - 1.00000) < 1e-5
-assert abs(myPow(0.00001, 2147483647) - 0.00000) < 1e-5
+numbers5 = []
+assert evenNumberDigits(numbers5) == 0
+
+numbers6 = [0]
+assert evenNumberDigits(numbers6) == 0  # 0 has 1 digit (odd)
 
 print("All test cases passed!")

@@ -1,21 +1,15 @@
-# HackerRank - Drawing Book
-# Problem: Drawing Book
-# Source: https://www.hackerrank.com/challenges/drawing-book/problem
-# Note: Finds the minimum number of page turns needed to reach a target page from either the front or the back of a book.
-def pageCount(n, p):
-    pages = [[i, i+1] for i in range(0, n+1, 2)]
-    
-    cur_min = 0
-    for i in range(len(pages)):
-        if p in pages[i]:
-            cur_min = i
-    
-    for i, page in enumerate(pages[::-1]):
-        if p in page:
-            cur_min = min(cur_min, i)
-    
-    return(cur_min)
+# Problem: Not In Place
+# Source: 
+# Note: Checks positions not in original sorted place
+w = "ABCDFEGH"
+alp = [chr(i).upper() for i in range(97, 123)]
 
-print(pageCount(5, 3)) # 1
-print(pageCount(6, 2)) # 1
-print(pageCount(5, 4)) # 0
+
+import sys
+prev = None
+
+for i in w:
+    if prev and alp.index(i) < prev:
+        print(i)
+        sys.exit()
+    prev = alp.index(i)

@@ -1,37 +1,25 @@
-# Problem: Calculate Percentage of Letter in String
-# Source: https://leetcode.com/problems/percentage-of-letter-in-string/
-# Given a string s and a character letter, return the percentage of characters in s that equal letter rounded down to the nearest whole percent.
+# Problem: Count Numbers with Unique Digits
+# Source: https://leetcode.com/problems/count-numbers-with-unique-digits/
+
+# Given an integer n, return the count of all numbers with unique digits, x, where 0 <= x < 10^n.
+# This implementation brute-forces every number from 0 to 10^n - 1 and checks whether its decimal representation has all distinct digits.
 
 # Input:
-# - s: A string consisting of lowercase and uppercase English letters (1 <= s.length <= 100)
-# - c: A character representing the target letter to count
-
+# - n: An integer representing the digit-length bound (0 <= n <= 8)
 # Output:
-# - An integer representing the percentage of occurrences of c in s (floored)
+# - An integer representing how many numbers in [0, 10^n) have all unique digits
 #
-# Examples:
-# Example 1:
-#   Input:  s = "foobar", letter = "o"
-#   Output: 33
-#   Explanation: The percentage of characters in s that equal the letter 'o' is 2 / 6 * 100% = 33% when rounded down.
+# Example
+#   Input:  n = 2
+#   Output: 91
+#   Explanation: Count numbers 0..99 with unique digits. Only 11, 22, ..., 99  are excluded -> 100 - 9 = 91.
 
-def letter_percentage(s, c):
-    if not s:
-        return 0
-    return int(s.lower().count(c.lower()) / len(s) * 100)
+n = int(input('Enter an integer: '))
+ctr = 0
+digits_range = int('9' * n)
+for i in range(digits_range + 1):
+    temp = str(i)
+    if len(set(temp)) == len(temp):
+        ctr += 1
 
-
-if __name__ == "__main__":
-    s = input("Enter a string: ")
-    c = input("Enter a character: ")
-    print(f"Percentage: {letter_percentage(s, c)}%")
-
-
-# Test cases with assertions
-assert letter_percentage("hello", "l") == 40
-assert letter_percentage("Hello", "H") == 20
-assert letter_percentage("abc", "z") == 0
-assert letter_percentage("aaaa", "A") == 100
-assert letter_percentage("", "a") == 0
-
-print("All test cases passed!")
+print(f'Count of numbers with unique digits from 0 to {digits_range}: {ctr}')

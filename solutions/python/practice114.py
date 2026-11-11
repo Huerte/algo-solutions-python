@@ -1,14 +1,21 @@
-# Problem: Rank Elements in an Array
-# Source: https://leetcode.com/problems/rank-transform-of-an-array/
+# Problem: Check If All A's Appears Before All B's
+# Source: https://leetcode.com/problems/check-if-all-as-appears-before-all-bs/
 
-n = int(input('Enter the number of elements: '))
-print('Enter the elements: ', end='')
-arr = list(map(int, input().split()))
+s = input('Enter the string: ')
 
-rank = sorted(list(set(arr)))
+a_index = []
+b_index = []
 
-res = []
-for num in arr:
-    res.append(rank.index(num) + 1)
+for i in range(len(s)):
+    if s[i] == 'a':
+        a_index.append(i)
+    else:
+        b_index.append(i)
 
-print(f"Ranks: {' '.join(map(str, res))}")
+res = False
+if not a_index or not b_index:
+    res = True
+elif max(a_index) < min(b_index):
+    res = True
+
+print(res)

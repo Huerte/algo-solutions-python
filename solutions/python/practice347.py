@@ -1,12 +1,19 @@
-# Geeksforgeeks - Binary to Decimal
-# Problem: Binary to Decimal
-# Source: https://www.geeksforgeeks.org/problems/binary-number-to-decimal-number3525/1
-# Note: Converts a binary number represented as a string into its decimal equivalent using Python's int() function.
-class Solution:
-    def binary_to_decimal(self, B):
-        return int(B, 2)
+# Geeksfor Geeks - Bits Counting
+# Problem: Counting Bits
+# Source: https://leetcode.com/problems/counting-bits/
+# Note: Returns an array containing the number of set bits in the binary representation of every integer from 0 to n.
+from typing import List
 
+class Solution:
+    def countBits(self, n : int) -> List[int]:
+        arr = []
+        
+        for i in range(n + 1):
+            arr.append(bin(i)[2:].count('1'))
+        
+        return arr
+        
 s = Solution()
-print(s.binary_to_decimal("101"))  # 5
-print(s.binary_to_decimal("1001")) # 9
-print(s.binary_to_decimal("1111")) # 15
+print(s.countBits(10)) # [0, 1, 1, 2, 1, 2, 2, 3, 1, 2, 2]
+print(s.countBits(5))  # [0, 1, 1, 2, 1, 2]
+print(s.countBits(2))  # [0, 1, 1]

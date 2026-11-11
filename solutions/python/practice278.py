@@ -1,15 +1,8 @@
-# Check if the Sentence Is Pangram
-# Problem: Check if the Sentence Is Pangram
-# Source: https://leetcode.com/problems/check-if-the-sentence-is-pangram/
-# Note: Checks whether every letter from a to z appears at least once in the given sentence.
-class Solution(object):
-    def checkIfPangram(self, sentence):
-        alp = [chr(i) for i in range(97, 123)]
-        for c in alp:
-            if c not in sentence:
-                return False
-        return True
-
-s = Solution()
-print(s.checkIfPangram("thequickbrownfoxjumpsoverthelazydog")) # True
-print(s.checkIfPangram("leetcode"))                            # False
+# HackerRank - Calendar Module
+# Problem: Calendar Module
+# Source: https://www.hackerrank.com/challenges/calendar-module/problem
+# Note: Converts the given month, day, and year into a date object and determines the weekday using datetime, then prints the day in uppercase.
+from datetime import datetime
+d = list(map(int, input().split()))
+da = datetime(day=d[1], month=d[0], year=d[-1])
+print(['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'][da.weekday()])

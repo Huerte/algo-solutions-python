@@ -1,25 +1,25 @@
-# Count and Say
-# Problem: Count and Say
-# Source: https://leetcode.com/problems/count-and-say/
-# Note: Generates the nth sequence term by counting consecutive repeated digits in the previous term.
+# Wildcard Matching
+# Problem: Wildcard Matching
+# Source: https://leetcode.com/problems/wildcard-matching/
+# Note: Checks whether a string matches a pattern where '?' matches one character and '*' matches any sequence of characters.
+# Other sol
 class Solution:
-    def countAndSay(self, n: int) -> str:
-        if n == 1:
-            return "1"
-        
-        prev = self.countAndSay(n - 1)
-        res = ""
-        c = 1
+    def isMatch(self, s: str, p: str) -> bool:
+        m, n = len(s), len(p)
 
-        for i in range(len(prev)):
-            if i + 1 < len(prev) and prev[i] == prev[i + 1]:
-                c += 1
-            else:
-                res += str(c) + prev[i]
-                c = 1
+        ar = [[False] * (n + 1) for _ in range(m + 1)]
+
+        ar[0][0] = True
+
+        for j in range(1, n + 1):
+            if p[j - 1] == '*':
+                ar[0][j] = ar[0][j - 1]
         
-        return res
-    
-s = Solution()
-print(s.countAndSay(1)) # "1"
-print(s.countAndSay(4)) # "1211"
+        for i in range(1, m + 1):
+            for j in range(1, n + 1):
+                if p[j - 1] == '*':
+                    ar[i][j] = ar[i - 1][j] or ar[i][j - 1]
+                elif p[j - 1] == '?' or s[i - 1] == p[j - 1]:
+                    ar[i][j] = ar[i - 1][j - 1]
+        
+        return ar[m][n]

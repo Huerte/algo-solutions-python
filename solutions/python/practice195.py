@@ -1,11 +1,20 @@
-# Sort by binary ones
-# Problem: Sort by binary ones
-# Source: https://www.codewars.com/kata/59eb28fb0a2bffafbb0000d6
-# Note: Sorts numbers by descending count of binary ones, then by binary length and numeric value.
-def sort_by_binary_ones (numList): 
-    bins = [bin(ch)[2:] for ch in numList]
-    return list(map(lambda x: int(x, 2), sorted(bins, key=lambda x: (-(x.count('1')), len(x), int(x, 2)))))
+# Bouncing Balls
+# Problem: Bouncing Balls
+# Source: https://www.codewars.com/kata/5544c7a5cb454edb3c000047
+# Note: Counts how many times a bouncing ball passes a window, considering the initial fall and subsequent rebounds.
+def bouncing_ball(h, bounce, window):
+    if h <= 0 or (bounce <= 0 or bounce >= 1) or window >= h:
+        return -1
+    
+    seen = 1
+    while h > 0:
+        bounce_height = h * bounce
+        if bounce_height > window:
+            seen += 2
+            h = bounce_height
+        else:
+            break
+    return seen
 
-print(sort_by_binary_ones( [1,15,5,7,3])) # [15, 7, 5, 3, 1]
-print(sort_by_binary_ones([5, 2049, 3]))  # [3, 5, 2049]
-print(sort_by_binary_ones([99, 51, 21, 7, 44, 50, 49, 25, 5, 80, 33, 1])) # [51, 99, 7, 21, 25, 44, 49, 50, 5, 33, 80, 1]
+print(bouncing_ball(3, 0.66, 1.5))  # 3
+print(bouncing_ball(2, 0.5, 1))     # 1

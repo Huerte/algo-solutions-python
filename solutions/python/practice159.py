@@ -1,12 +1,14 @@
-# Contains Duplicate
-# Problem: Contains Duplicate
-# Source: https://leetcode.com/problems/contains-duplicate/
-# Note: Checks whether an array contains any duplicate elements using a set.
+# Shuffle String
+# Problem: Shuffle String
+# Source: https://leetcode.com/problems/shuffle-string/
+# Note: Restores a string by placing each character at its corresponding index.
 
-class Solution:
-    def hasDuplicate(self, nums) -> bool:
-        return len(nums) != len(set(nums))
+class Solution(object):
+    def restoreString(self, s, indices):
+        arr = [""] * len(s)
+        for i, num in enumerate(indices):
+            arr[num] = s[i]
+        return "".join(arr)
 
 s = Solution()
-print(s.hasDuplicate([1, 2, 3, 1]))  # Output: True
-print(s.hasDuplicate([1, 2, 3, 4]))  # Output: False
+print(s.restoreString("codeleet", [4,5,6,7,0,2,1,3])) # "leetcode"

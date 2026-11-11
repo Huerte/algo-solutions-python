@@ -1,18 +1,19 @@
-# Find Majority Element
-# Problem: Majority Element
-# Source: https://www.geeksforgeeks.org/problems/majority-element-1587115620/1
-# Note: Finds the element occurring more than half the size of the array.
+# Generate All Subsets
+# Problem: Subsets
+# Source: https://leetcode.com/problems/subsets/
+# Note: Generates all possible subsets of an array using an iterative approach.
 
-arr = list(map(int, input().split()))
+class Solution(object):
+    def subsets(self, nums):
+        res = [[]]
 
-from collections import Counter
-import sys
+        for i in range(len(nums)):
+            temp = []
+            for subset in res:
+                temp.append(subset + [nums[i]])
+            res.extend(temp)
 
-half = len(arr) // 2 + 1
+        return res
 
-for k, val in Counter(arr).items():
-    if val >= half:
-        print(k)
-        sys.exit()
-
-print(-1)
+s = Solution()
+print(s.subsets([1, 2, 3]))

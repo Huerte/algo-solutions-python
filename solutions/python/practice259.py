@@ -1,16 +1,20 @@
-# Decompress Run-Length Encoded List
-# Problem: Decompress Run-Length Encoded List
-# Source: https://leetcode.com/problems/decompress-run-length-encoded-list/
-# Note: Decompresses a list by repeating each value according to its corresponding frequency in adjacent pairs.
+# Count Items Matching a Rule
+# Problem: Count Items Matching a Rule
+# Source: https://leetcode.com/problems/count-items-matching-a-rule/
+# Note: Uses a dictionary to map rule keys to item indices and counts items whose corresponding attribute matches the given rule value.
 class Solution(object):
-    def decompressRLElist(self, nums):
-        arr = []
-
-        for i in range(0, len(nums) - 1, 2):
-            arr.extend([nums[i + 1]] * nums[i])
-        
-        return arr
+    def countMatches(self, items, ruleKey, ruleValue):
+        matches = 0
+        rules = {
+            'type': 0,
+            'color': 1,
+            'name': 2
+        }
+        for item in items:
+            if item[rules[ruleKey]] == ruleValue:
+                matches += 1
+        return matches
     
 s = Solution()
-print(s.decompressRLElist([1,2,3,4])) # [2,4,4,4]
-print(s.decompressRLElist([1,1,2,3])) # [1,3,3]
+print(s.countMatches([["phone","blue","pixel"],["computer","silver","lenovo"],["phone","gold","iphone"]], "color", "silver")) # 1
+print(s.countMatches([["phone","blue","pixel"],["computer","silver","phone"],["phone","gold","iphone"]], "type", "phone")) # 2

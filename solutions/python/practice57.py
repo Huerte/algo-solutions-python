@@ -1,53 +1,45 @@
-# Problem: Number Power Sum
+# Problem: String Split Check
 # Source: 
-# Note: Reverse digits, raise each digit to the power, and concatenate results
+# Note: Checks whether string can be split into non-empty whitespace-separated parts
 #
 # Description:
-# Given a number and a power, reverse the number, raise each digit to the given power, 
-# and concatenate the results to form a new number.
-# This appears to be a custom mathematical problem.
+# This appears to be a simple string manipulation problem that checks if a string 
+# can be split into non-empty parts.
 #
 # Input:
-# - A number as a string `x` in format "number power"
-# - Example: "123 2" means number 123 with power 2
+# - A string `s`
 #
 # Output:
-# - A string representing the concatenated results
+# - A boolean indicating whether the string can be split into non-empty parts
 #
 # Status: ✅ SOLVED
 
-import math
-
-def number_power_sum(x):
-    # Parse input
-    nums = x.split(' ')
-    if len(nums) != 2:
-        return "Invalid input format"
-    
-    number = nums[0]
-    power = int(nums[1])
-    
-    # Reverse the number
-    rev_num = number[::-1]
-    result = ''
-    
-    # Raise each digit to the power and concatenate
-    for digit in rev_num:
-        result += str(int(math.pow(int(digit), power)))
-    
-    return result
+def canSplitString(s):
+    if not s:
+        return False
+        
+    # Check if string can be split into non-empty parts
+    return bool(s.split())
 
 # Test cases with assertions
 # Example 1
-assert number_power_sum("123 2") == "941"
+s1 = "b"
+assert canSplitString(s1) == True
 
 # Example 2
-assert number_power_sum("12 3") == "81"
+s2 = ""
+assert canSplitString(s2) == False
 
 # Example 3
-assert number_power_sum("5 2") == "25"
+s3 = "hello world"
+assert canSplitString(s3) == True
 
 # Example 4
-assert number_power_sum("10 1") == "01"
+s4 = "   "
+assert canSplitString(s4) == False
+
+# Example 5
+s5 = "a"
+assert canSplitString(s5) == True
 
 print("All test cases passed!")

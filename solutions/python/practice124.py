@@ -1,16 +1,22 @@
-# Problem: 1000-digit Fibonacci Number
-# Source: https://projecteuler.net/problem=25
-# Return the first 1000-digit fibonacci number index
+# Problem: Two Sum
+# Source: https://leetcode.com/problems/two-sum/
 
-a, b = 0, 1
-from math import log10, ceil
+def twoSum(arr, target):
 
-i = 1
-while ceil(log10(b)) < 1000:
-    a, b = b, a + b
-    i += 1
+    seen = {}
 
-print(b)
+    for i in range(len(arr)):
+        if not seen:
+            seen[arr[i]] = i
+            continue
 
-print(f"\nIndex is: {i}")
-print('Digit Count of "b":', len(str(b)))
+        to_find = target - arr[i]
+        if to_find in seen:
+            return [seen[to_find], i]
+        else:
+            seen[arr[i]] = i
+
+    return []
+
+
+print(twoSum([1, 2, 3, 5], 7))

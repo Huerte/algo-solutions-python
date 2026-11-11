@@ -1,10 +1,23 @@
-# CodeWars - Currying functions: multiply all elements in an array
-# Problem: Currying functions: multiply all elements in an array
-# Source: https://www.codewars.com/kata/586909e4c66d18dd1800009b
-# Note: Returns a function that multiplies every element of the original array by a given integer.
-def multiply_all(arr):
-    return lambda n: [x * n for x in arr]
+# Problem: Polish Alphabet Converter
+# Source: https://www.codewars.com/kata/57ab2d6072292dbf7c000039
+# Note: Replaces Polish diacritic characters with standard Latin letters
+def correct_polish_letters(st): 
+    polish = {
+        "ą": "a",
+        "ć": "c",
+        "ę": "e",
+        "ł": "l",
+        "ń": "n",
+        "ó": "o",
+        "ś": "s",
+        "ź": "z",
+        "ż": "z",
+    }
+    res = ""
+    for c in st:
+        res += polish.get(c, c)
+    return res
 
-print(multiply_all([1, 2, 3])(4))  # [4, 8, 12] 
-print(multiply_all([1, 2, 3])(3))  # [3, 6, 9]
-print(multiply_all([1, 2, 3])(2))  # [2, 4, 6]
+print(correct_polish_letters("Maria Skłodowska-Curie"))  # "Maria Sklodowska-Curie"
+print(correct_polish_letters("Jędrzej Błądziński"))      # "Jedrzej Bladzinski"
+print(correct_polish_letters("Lech Wałęsa"))             # "Lech Walesa"

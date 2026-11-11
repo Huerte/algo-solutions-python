@@ -1,47 +1,15 @@
-# Problem: Rotate List
-# Source: https://leetcode.com/problems/rotate-list/
-
-class ListNode(object):
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
-
-def nodes_to_list(head):
-    arr = []
-    temp = head
-    while temp:
-        arr.append(temp.val)
-        temp = temp.next
-    return arr
-
-def list_to_nodes(arr):
-    new = ListNode(0)
-    temp = new
-    for num in arr:
-        temp.next = ListNode(num)
-        temp = temp.next
-    return new.next
+# Problem: Find Pivot Index
+# Source: https://leetcode.com/problems/find-pivot-index/
 
 class Solution(object):
-    def rotateRight(self, head, k):
+    def pivotIndex(self, nums):        
+        for i in range(len(nums)):
+            if sum(nums[:i]) == sum(nums[i+1:]):
+                return i
         
-        arr = []
-        temp = head
-        while temp:
-            arr.append(temp.val)
-            temp = temp.next
+        return -1
 
-        d = k % len(arr)
-        arr = arr[-d:] + arr[:-d]
-
-        new = ListNode(0)
-        temp = new
-        for num in arr:
-            temp.next = ListNode(num)
-            temp = temp.next
-        
-        return new.next
-    
 s = Solution()
-print(nodes_to_list(s.rotateRight(list_to_nodes([1,2,3,4,5]), 2)))   # [4,5,1,2,3]
-print(nodes_to_list(s.rotateRight(list_to_nodes([0,1,2]), 4)))       # [2,0,1]
+print(s.pivotIndex([1,7,3,6,5,6]))   # 3
+print(s.pivotIndex([2,1,-1]))        # 0
+print(s.pivotIndex([1,2,3]))         # -1

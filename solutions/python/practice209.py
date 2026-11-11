@@ -1,17 +1,18 @@
-# CodeWars - The Supermarket Queue
-# Problem: The Supermarket Queue
-# Source: https://www.codewars.com/kata/57b06f90e298a7b53d000a86
-# Note: Calculates the total checkout time by assigning each customer to the till with the minimum accumulated time.
-def queue_time(customers, n):
-    
-    queus = [0] * n
-    
-    for t in customers:
-        i = queus.index(min(queus))
-        queus[i] += t
-    
-    return max(queus)
+# Problem: WeIrD StRiNg CaSe
+# Source: https://www.codewars.com/kata/52b757663a95b11b3d00062d
+# Note: Converts characters at even indices to uppercase and odd indices to lowercase, restarting the pattern for each word.
+def to_weird_case(words):
+    res = []
+    for word in words.split():
+        temp = []
+        for i in range(len(word)):
+            if i % 2 == 0:
+                temp.append(word[i].upper())
+            else:
+                temp.append(word[i].lower())
+        res.append(''.join(temp))
+    return ' '.join(res)
 
-print(queue_time([5,3,4], 1)) # 12
-print(queue_time([10,2,3,3], 2)) # 10
-print(queue_time([2,3,10], 2)) # 12
+print(to_weird_case('This'))           # 'ThIs'
+print(to_weird_case('THIs iS a TEST')) # 'ThIs Is A TeSt'
+print(to_weird_case('Weird string case')) # 'WeIrD StRiNg CaSe'

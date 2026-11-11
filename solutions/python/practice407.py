@@ -1,14 +1,41 @@
-# Problem: Longest Subarray with Sum K
-# Source: https://www.codechum.com/
-# Note: Finds longest subarray with sum equal to target k
-ln, r = map(int, input().split())
-arr = list(map(int, input().split()[:ln]))
+# Problem: Word Ladder
+# Source: https://leetcode.com/problems/word-ladder/
 
-seen = []
+from collections import deque
 
-for i in range(ln - 1):
-    for j in range(i + 1, ln):
-        if sum(arr[i:j+1]) == r:
-            seen.append(len(arr[i:j+1]))
+def word_ladder(start, end, word_list):
+    words = set(word_list)
 
-print(min(seen) if seen else 0)
+    if end not in words:
+        return
+    
+    queue = deque([(start, [start])])
+    visited = set()
+    visited.add(start)
+
+    while queue:
+        
+        word, paths = queue.popleft()
+
+        for i in range(len(word)):
+            for c in [chr(i) for i in range(97, 123)]:
+                cur = word[:i] + c + word[i+1:]
+
+                if cur == end:
+                    return paths + [cur]
+                
+                if cur in words and cur not in visited:
+                    visited.add((cur))
+                    queue.append((cur, paths + [cur]))
+
+    print(0)
+
+
+n = int(input('Enter word array length: '))
+print('Enter the word list:')
+words = [input().strip() for _ in range(n)]
+
+start = input('Enter start word: ')
+end = input('Enter end word: ')
+
+print(word_ladder(start, end, [start] + words))

@@ -1,20 +1,20 @@
-# Final Array State After K Multiplication Operations I
-# Problem: Final Array State After K Multiplication Operations I
-# Source: https://leetcode.com/problems/final-array-state-after-k-multiplication-operations-i/
-# Note: Repeatedly multiplies the first occurrence of the minimum array element by the given multiplier for k operations.
+# Number of Steps to Reduce a Number to Zero
+# Problem: Number of Steps to Reduce a Number to Zero
+# Source: https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/
+# Note: Counts the operations required to reduce a number to zero by dividing even numbers by 2 and subtracting 1 from odd numbers.
 class Solution(object):
-    def getFinalState(self, nums, k, multiplier):
+    def numberOfSteps(self, num):
+        count = 0
 
-        for _ in range(k):
-            cur_min = min(nums)
-            for i in range(len(nums)):
-                if nums[i] == cur_min:
-                    nums[i] *= multiplier
-                    break
-        
-        return nums
+        while num > 0:
+            if num % 2 == 0:
+                num //= 2
+            else:
+                num -= 1
+            count += 1
+        return count
 
 s = Solution()
-print(s.getFinalState([1, 2, 3], 3, 10)) # [100, 20, 30]
-print(s.getFinalState([1, 1, 1], 3, 10)) # [1000, 1, 1]
-print(s.getFinalState([1, 2, 3], 0, 10)) # [1, 2, 3]
+print(s.numberOfSteps(14)) # 6
+print(s.numberOfSteps(8)) # 4
+print(s.numberOfSteps(123)) # 12

@@ -1,12 +1,24 @@
-# Problem: Vowel and Consonant Counter
-# Source: 
-# Note: Counts vowels and consonants in text
-n = int(input()) # "àç_èç_è_(-'(çè_-çàà)ç_è(_-v çè- çàè_-ponctuation"
-v, c = 0, 0
-for i in range(n):
-    text = input().lower()
-    v += len([c for c in text if c in 'aeiou' and c.isalpha()])
-    c += len([c for c in text if c not in 'aeiou' and 97 <= ord(c) < 123])
-    print(v)
-    print(c)
-print(v * c)
+# Problem: Minimum Distances
+# Source: https://www.hackerrank.com/challenges/minimum-distances/problem
+
+def minimumDistances(a):
+    if len(set(a)) == len(a):
+        return -1
+        
+    d = {}
+    
+    for i in range(len(a)):
+        if a[i] in d:
+            d[a[i]].append(i)
+        else:
+            d[a[i]] = [i]
+    minN = float('inf')
+    for pairs in d.values():
+        if len(pairs) > 1:
+            minN = min(minN, abs(pairs[0] - pairs[1]))
+    
+    return minN
+
+print(minimumDistances([7, 1, 3, 4, 1, 7])) # 3
+print(minimumDistances([1, 2, 3, 4, 5]))    # -1
+print(minimumDistances([1, 1]))             # 1

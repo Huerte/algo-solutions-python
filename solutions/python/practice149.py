@@ -1,8 +1,13 @@
-# Kids With the Greatest Number of Candies
-# Problem: Kids With the Greatest Number of Candies
-# Source: https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/
-# Note: Checks whether each kid can have the greatest number of candies after receiving all extra candies.
+# Count Pairs Whose Sum is Less than Target
+# Problem: Count Pairs Whose Sum is Less than Target
+# Source: https://leetcode.com/problems/count-pairs-whose-sum-is-less-than-target/
+# Note: Counts pairs of elements whose sum is strictly less than the target.
 
 class Solution(object):
-    def kidsWithCandies(self, candies, extraCandies):
-        return [(num + extraCandies) >= max(candies) for num in candies]
+    def countPairs(self, nums, target):
+        count = 0
+        for i in range(len(nums) - 1):
+            for j in range(i+1, len(nums)):
+                if nums[i] + nums[j] < target:
+                    count += 1
+        return count

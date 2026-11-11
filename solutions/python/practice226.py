@@ -1,23 +1,28 @@
-# Convert an Array Into a 2D Array With Conditions
-# Problem: Convert an Array Into a 2D Array With Conditions
-# Source: https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions/
-# Note: Distributes array elements into rows while ensuring each row contains distinct integers and the total number of rows is minimized.
+# Relative Ranks
+# Problem: Relative Ranks
+# Source: https://leetcode.com/problems/relative-ranks/
+# Note: Assigns medals to the top three scores and numeric ranks to the remaining scores while preserving the original order.
 class Solution(object):
-    def findMatrix(self, nums):
+    def findRelativeRanks(self, score):
+        s = sorted(score)
         res = []
+        winners = s[-3:][::-1]
+        not_ranked = []
+        for num in score:
+            if num in winners:
+                res.append(["Gold Medal","Silver Medal","Bronze Medal"][winners.index(num)])
+            else:
+                res.append('')
+                not_ranked.append((num, len(res) - 1))
 
-        while nums:
-            cur = []
-            for num in nums:
-                if cur and num in cur:
-                    continue
-                cur.append(num)
-            res.append(cur)
-            for val in cur:
-                nums.remove(val)
+        cur_ranked = 4
+        for _, i in sorted(not_ranked, key=lambda x: x[0], reverse=True):
+            res[i] = str(cur_ranked)
+            cur_ranked += 1
+
         return res
     
 s = Solution()
-print(s.findMatrix([1, 3, 4, 1, 2, 3, 1])) # [[1, 3, 4, 2], [1, 3], [1]]
-print(s.findMatrix([1, 1, 1, 1, 1])) # [[1], [1], [1], [1], [1]]
-print(s.findMatrix([1, 2, 3, 4])) # [[1, 2, 3, 4]]
+print(s.findRelativeRanks([5, 4, 3, 2, 1])) # ["Gold Medal","Silver Medal","Bronze Medal","4","5"]
+print(s.findRelativeRanks([10, 3, 8, 9, 4])) # ["Gold Medal","5","Bronze Medal","Silver Medal","4"]
+print(s.findRelativeRanks([1, 2, 3, 4, 5])) # ["5","4","Bronze Medal","Silver Medal","Gold Medal"]

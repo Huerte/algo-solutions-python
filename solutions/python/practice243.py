@@ -1,17 +1,31 @@
-# Height Checker
-# Problem: Height Checker
-# Source: https://leetcode.com/problems/height-checker/
-# Note: Counts the positions where the original height order differs from the sorted expected order.
-class Solution(object):
-    def heightChecker(self, heights):
-        srt = sorted(heights)
-        count = 0
-        for x, y in zip(heights, srt):
-            if x != y:
-                count += 1
-        return count
+# CodeWars - Human readable duration format
+# Problem: Human readable duration format
+# Source: https://www.codewars.com/kata/52742f58faf5485cae000b9a
+# Note: Converts seconds into a human-readable duration using years, days, hours, minutes and seconds.
+def format_duration(seconds):
+    m, s = divmod(seconds, 60)
+    h, m = divmod(m, 60)
+    d, h = divmod(h, 24)
+    y, d = divmod(d, 365)
 
-s = Solution()
-print(s.heightChecker([1,1,4,2,1,3])) # 3
-print(s.heightChecker([5,1,2,3,4]))   # 5
-print(s.heightChecker([1,2,3,4,5]))   # 0
+    res = ""
+    if y > 0:
+        res += f"{y} year{'s' if y > 1 else ''}{', ' if any([s,d,h,m]) else ''}"
+    if d > 0:
+        res += f"{'and ' if all([a<0 for a in [h,m,s]]) and y > 0 else ''}{d} day{'s' if d > 1 else ''}{', ' if any([s,h,m]) else ''}"
+    if h > 0:
+        res += f"{'and ' if all([a<0 for a in [m,s]]) and any([d, y]) else ''}{h} hour{'s' if h > 1 else ''}"
+        if m > 0:
+            res += ', ' if s > 0 else ' and '
+        elif s > 0:
+            res += ' '
+    if m > 0:
+        res += f"{'and ' if s < 0 and any([y,d,h]) else ''}{m} minute{'s' if m > 1 else ''}{' ' if s > 0 else ''}"
+    if s > 0:
+        res += f"{'and ' if any([y,d,h,m]) else ''}{s} second{'s' if s > 1 else ''}"
+
+    return res if res else 'now'
+
+print(format_duration(62))         # 1 minute and 2 seconds
+print(format_duration(31_556_926)) # 1 year and 1 second
+print(format_duration(132030240))  #"4 years, 68 days, 3 hours and 4 minutes"

@@ -1,26 +1,26 @@
-# Problem: Max Consecutive Ones
-# Source: https://leetcode.com/problems/max-consecutive-ones/
+# Problem: Print in Order
+# Source: https://leetcode.com/problems/print-in-order/
 
-class Solution:
-    def findMaxConsecutiveOnes(self, nums) -> int:
-        counts = []
 
-        i = 0
-        while i < len(nums):
-            count = 0
-            j = i
-            while j < len(nums) and nums[j] == 1:
-                count += 1
-                j += 1
-            if count > 0:
-                counts.append(count)
-                i = j
-            i += 1
+from threading import Event
+class Foo:
+    def __init__(self):
+        self.first_done = Event()
+        self.second_done = Event()
+
+    def first(self, printFirst) -> None:
         
-        return max(counts) if counts else 0
+        printFirst()
+        self.first_done.set()
 
-s = Solution()
-print(s.findMaxConsecutiveOnes([1,1,0,1,1,1])) # 3
-print(s.findMaxConsecutiveOnes([1,0,1,1,0,1])) # 2
-print(s.findMaxConsecutiveOnes([0,0,0,0,0,0])) # 0
-print(s.findMaxConsecutiveOnes([]))            # 0
+
+    def second(self, printSecond) -> None:
+        self.first_done.wait()
+        printSecond()
+        self.second_done.set()
+
+
+    def third(self, printThird) -> None:
+
+        self.second_done.wait()        
+        printThird()

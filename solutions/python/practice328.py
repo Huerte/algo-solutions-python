@@ -1,22 +1,26 @@
-# Problem: Finding 3-Digit Even Numbers
-# Source: https://leetcode.com/problems/finding-3-digit-even-numbers/
+# Problem: Max Consecutive Ones
+# Source: https://leetcode.com/problems/max-consecutive-ones/
 
-from collections import Counter
 class Solution:
-    def findEvenNumbers(self, digits):
-        arr = []
+    def findMaxConsecutiveOnes(self, nums) -> int:
+        counts = []
+
+        i = 0
+        while i < len(nums):
+            count = 0
+            j = i
+            while j < len(nums) and nums[j] == 1:
+                count += 1
+                j += 1
+            if count > 0:
+                counts.append(count)
+                i = j
+            i += 1
         
-        D = Counter(map(str, digits))
+        return max(counts) if counts else 0
 
-        for i in range(100, 999, 2):
-            temp = Counter(str(i))
-
-            if all(temp[k] <= D[k] for k in temp):
-                arr.append(i)
-                
-        return arr
-    
 s = Solution()
-print(s.findEvenNumbers([2,1,3,0]))   # [102,120,130,132,210,230,302,310,312,320]
-print(s.findEvenNumbers([2,2,8,8,2])) # [222,228,282,288,822,828,882]
-print(s.findEvenNumbers([3,7,5]))     # []
+print(s.findMaxConsecutiveOnes([1,1,0,1,1,1])) # 3
+print(s.findMaxConsecutiveOnes([1,0,1,1,0,1])) # 2
+print(s.findMaxConsecutiveOnes([0,0,0,0,0,0])) # 0
+print(s.findMaxConsecutiveOnes([]))            # 0

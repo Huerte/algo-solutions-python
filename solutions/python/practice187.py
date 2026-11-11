@@ -1,20 +1,14 @@
-# Count the Digits That Divide a Number
-# Problem: Count the Digits That Divide a Number
-# Source: https://leetcode.com/problems/count-the-digits-that-divide-a-number/
-# Note: Counts how many digits of a number divide the original number without a remainder.
+# Maximum Number of Words Found in Sentences
+# Problem: Maximum Number of Words Found in Sentences
+# Source: https://leetcode.com/problems/maximum-number-of-words-found-in-sentences/
+# Note: Finds the maximum number of words present in any sentence using string splitting.
 class Solution(object):
-    def countDigits(self, num):
-        count = 0
-        n = num
-
-        while n > 0:
-            temp = n % 10
-            if num % temp == 0:
-                count += 1
-            n //= 10
-        return count
+    def mostWordsFound(self, sentences):
+        cur_max = float('-inf')
+        for words in sentences:
+            cur_max = max(cur_max, len(words.split()))
+        return cur_max
 
 s = Solution()
-print(s.countDigits(7)) # 1
-print(s.countDigits(121)) # 2
-print(s.countDigits(1248)) # 4
+print(s.mostWordsFound(["alice and bob love leetcode", "i think so too", "this is great thanks very much"])) # 6
+print(s.mostWordsFound(["please wait", "continue to fight", "continue to win"])) # 3

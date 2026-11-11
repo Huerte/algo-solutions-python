@@ -1,25 +1,10 @@
-# Problem: Valid Parentheses
-# Source: https://leetcode.com/problems/valid-parentheses/
+# Difference in Digit Sums
+# Problem: Char Code Calculation
+# Source: https://www.codewars.com/kata/char-code-calculation/
+# Note: Calculates the difference between digit sums before and after replacing 7 with 1 in concatenated ASCII codes. 
 
-def valid_parenthesis(s):
+def calc(x):
+    total1 = ''.join(map(str, [ord(c) for c in x]))
+    return int(sum(map(int, total1))) - int(sum(map(int,total1.replace('7', '1'))))
 
-    valid = {
-        '}': '{',
-        ']': '[',
-        ')': '('
-    }
-
-    temp = []
-
-    for c in s:
-        if temp and c in valid and valid[c] in temp:
-            temp.pop()
-        else:
-            temp.append(c)
-    
-    return not temp
-
-
-print(valid_parenthesis('{[()]}'))
-print(valid_parenthesis('({)}'))
-print(valid_parenthesis('{([])}][]'))
+print(calc("ABC"))

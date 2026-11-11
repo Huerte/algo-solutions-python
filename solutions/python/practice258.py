@@ -1,18 +1,16 @@
-# Count of Matches in Tournament
-# Problem: Count of Matches in Tournament
-# Source: https://leetcode.com/problems/count-of-matches-in-tournament/
-# Note: Simulates each tournament round, counting matches and updating the number of teams advancing until one winner remains.
+# Decompress Run-Length Encoded List
+# Problem: Decompress Run-Length Encoded List
+# Source: https://leetcode.com/problems/decompress-run-length-encoded-list/
+# Note: Decompresses a list by repeating each value according to its corresponding frequency in adjacent pairs.
 class Solution(object):
-    def numberOfMatches(self, n):
-        count = 0
-        while n > 1:
-            if n % 2 == 0:
-                count += n // 2
-                n //= 2
-            else:
-                count += (n - 1) // 2
-                n = (n - 1) // 2 + 1
-        return count
+    def decompressRLElist(self, nums):
+        arr = []
+
+        for i in range(0, len(nums) - 1, 2):
+            arr.extend([nums[i + 1]] * nums[i])
+        
+        return arr
     
 s = Solution()
-print(s.numberOfMatches(n=7)) # 6
+print(s.decompressRLElist([1,2,3,4])) # [2,4,4,4]
+print(s.decompressRLElist([1,1,2,3])) # [1,3,3]

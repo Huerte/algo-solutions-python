@@ -1,20 +1,31 @@
-# CodeWars - Data Reverse
-# Problem: Data Reverse
-# Source: https://www.codewars.com/kata/569d488d61b812a0f7000015
-# Note: Reverses the order of 8-bit data blocks while preserving the order of bits within each block.
-def data_reverse(data):
-    n = 8
-    res = []
-    
-    i = 0
-    for _ in range(len(data) // n):
-        cur = []
-        while i < len(data) and len(cur) < n:
-            cur.append(data[i])
-            i += 1
-        res.append(cur)
-    return [num for sublist in res[::-1] for num in sublist]
+# CodeWars - The Vowel Code
+# Problem: The Vowel Code
+# Source: https://www.codewars.com/kata/53697be005f803751e0015aa
+# Note: Encodes lowercase vowels as numbers 1-5 and decodes those numbers back into vowels.
+vowels = 'aeiou'
 
-print(data_reverse([1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0])) # [1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0]
-print(data_reverse([0,0,1,0,1,1,1,0,1,1,0,0,1,1,1,0])) # [1,1,1,0,1,1,0,0,1,0,0,0,1,0,0,0]
-print(data_reverse([1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0])) # [1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0]
+def encode(st):
+    res = ''
+    for c in st:
+        if c in vowels:
+            res += str(vowels.index(c) + 1)
+        else:
+            res += c
+    return res
+
+def decode(st):
+    res = ''
+    for c in st:
+        if c.isdigit() and 0 < int(c) <= 5:
+            res += vowels[int(c) - 1]
+        else:
+            res += c
+    return res
+
+print(encode('hello')) # h2ll4
+print(encode('h2ll4')) # h2ll4
+print(encode('How are you today?')) # H4w 1r2 y45 t4d1y?
+
+print(decode('h2ll4')) # hello
+print(decode('How are you today?')) # How are you today?
+print(decode('H4w 1r2 y45 t4d1y?')) # How are you today?

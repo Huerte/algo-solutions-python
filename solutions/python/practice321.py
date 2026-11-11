@@ -1,12 +1,15 @@
-# Trim Trailing Vowels
-# Problem: Trim Trailing Vowels
-# Source: https://leetcode.com/problems/trim-trailing-vowels/
-# Note: Removes all consecutive vowels from the end of a string while preserving the rest of the string.
+# Problem: Split the Array
+# Source: https://leetcode.com/problems/split-the-array/
+# Note: Checks whether an array can be divided into two equal-sized arrays, each containing distinct elements.
+from collections import Counter
 class Solution:
-    def trimTrailingVowels(self, s: str) -> str:
-        return s.rstrip('aeiou')
-    
+    def isPossibleToSplit(self, nums) -> bool:
+        num = Counter(nums)
+        for n in num.values():
+            if n > 2:
+                return False
+        return True
+
 s = Solution()
-print(s.trimTrailingVowels("a"))    # ""
-print(s.trimTrailingVowels("ba"))   # "b"
-print(s.trimTrailingVowels("idea")) # "id"
+print(s.isPossibleToSplit([1,1,2,2,3,4]))     # True
+print(s.isPossibleToSplit([1,1,2,2,2,2,3,4])) # False

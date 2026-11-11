@@ -1,14 +1,12 @@
-# Problem: Cookies
-# Source: https://py.checkio.org/
-# Note: Parses and retrieves cookie value by name
-def get_cookie(cookie, name):
-    cont = [word.strip() for word in cookie.split(';')]
-    
-    for prt in cont:
-        key, val = prt.split('=', 1)
-        if key == name:
-            return val
+# py.checkio - Common Words
+# Problem: Common Words
+# Source: https://py.checkio.org/mission/common-words/
+# Note: Finds words common to two comma-separated strings and returns them in alphabetical order.
 
-print(get_cookie("theme=light; sessionToken=abc123", "sessionToken")) # "abc123"
-print(get_cookie("theme=light; sessionToken=abc123", "userId"))       # None
-print(get_cookie("theme=light; sessionToken=abc123", "theme"))        # "light"
+def checkio(line1: str, line2: str) -> str:
+    l1, l2 = line1.split(','), line2.split(',')
+    return ','.join(sorted([word for word in l1 if word in l2]))
+
+print(checkio("one,two,three", "four,three,two,one")) # "one,three,two"
+print(checkio("one,two,three", "four,five,six"))      # ""
+print(checkio("hello,world", "hello,earth"))          # "hello"

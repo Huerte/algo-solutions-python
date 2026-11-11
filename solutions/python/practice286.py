@@ -1,21 +1,12 @@
-# HackerRank - Subarray Division
-# Problem: Subarray Division (Birthday Chocolate)
-# Source: https://www.hackerrank.com/challenges/the-birthday-bar/problem
-# Note: Counts contiguous subarrays of length m whose sum equals d.
-def birthday(s, d, m):
-    count = 0
-    
-    for i in range(len(s)):
-        cur = []
-        for j in range(i, len(s)):
-            if len(cur) < m:
-                cur.append(s[j])
-            else:
-                break
-        print(cur)
-        if sum(cur) == d:
-            count += 1
-    
-    return count
+# HackerRank - Migratory Birds
+# Problem: Migratory Birds
+# Source: https://www.hackerrank.com/challenges/migratory-birds/problem
+# Note: Finds the most frequently occurring bird type, choosing the smallest ID in case of a tie.
+from collections import Counter
+def migratoryBirds(arr):
+    c = Counter(arr)
+    return min(arr, key=lambda x: (-c[x], x))
 
-print(birthday([4], 4, 1)) # 1
+print(migratoryBirds([1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4])) # 3
+print(migratoryBirds([1, 4, 4, 4, 5, 3]))                # 4
+print(migratoryBirds([1, 1, 2, 2, 3]))                   # 1

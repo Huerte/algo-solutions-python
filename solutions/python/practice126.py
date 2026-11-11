@@ -1,80 +1,39 @@
-# Problem: Add Two Numbers
-# Source: https://leetcode.com/problems/add-two-numbers/
-# Note: Adds two numbers represented by linked lists in reverse digit order.
+# Problem: Spiral Matrix 2
+# Source: https://leetcode.com/problems/spiral-matrix-ii/
 
-class Node:
-    def __init__(self, data, next=None):
-        self.data = data
-        self.next = next
-
-def to_listNode(arr):
-    head = Node(0)
-
-    temp = head
-    for num in arr:
-        temp.next = Node(num)
-        temp = temp.next
+def spiralMatrix(n):
     
-    return head.next
+    left, right = 0, n - 1
+    top, down = 0, n - 1
 
-def to_list(list_node):
-    arr = []
-    while list_node:
-        arr.append(list_node.data)
-        list_node = list_node.next
-    return arr
+    iter = 1
+
+    matrix = [[0] * n for _ in range(n)]
 
 
+    while iter <= n * n:
+        for i in range(left, right + 1):
+            matrix[top][i] = iter
+            iter += 1
+        top += 1
+        
 
-# Add Two Numbers
+        for i in range(top, down + 1):
+            matrix[i][right] = iter
+            iter += 1
+        right -= 1 
 
-# 1st edition
-def add_two_numbers(node1, node2):
+        for i in range(right, left - 1, -1):
+            matrix[down][i] = iter
+            iter += 1 
+        down -= 1
 
-    res = []
-
-    l1, l2 = [], []
-    while node1:
-        l1.append(node1.data)
-        node1 = node1.next
-
-    while node2:
-        l2.append(node2.data)
-        node2 = node2.next
+        for i in range(down, top - 1, -1):
+            matrix[i][left] = iter
+            iter += 1
+        left += 1
     
-    res = list(map(int, str(int(''.join(map(str, l1))[::-1]) + int(''.join(map(str, l2))[::-1]))[::-1]))
+    return matrix        
 
-    head = Node(0)
-    cur = head
-    for num in res:
-        cur.next = Node(num)
-        cur = cur.next
 
-    return head.next
-
-# 2nd edition
-def add_two_numbers2(node1, node2):
-    dummy_head = Node(0)
-
-    carry = 0
-
-    cur = dummy_head
-    while node1 or node2 or carry:
-
-        val1 = node1.value if node1 else 0
-        val2 = node2.value if node2 else 0
-
-        carry, total = divmod(val1 - val2 + carry, 10)
-
-        cur.next = Node(total)
-        cur = cur.next
-
-        node1 = node1.next if node1 else None
-        node2 = node2.next if node2 else None
-
-    return dummy_head.next
-
-l1 = to_listNode([2, 4, 3])
-l2 = to_listNode([5, 6, 4])
-
-print(to_list(add_two_numbers(l1, l2))) # == [7, 0, 8]
+print(spiralMatrix(3)) # == [[1, 2, 3], [8, 9, 4], [7, 6, 5]]

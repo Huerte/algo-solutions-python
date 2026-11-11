@@ -1,45 +1,60 @@
-# Problem: String Split Check
-# Source: 
-# Note: Checks whether string can be split into non-empty whitespace-separated parts
-#
+# Problem: Backspace String Compare
+# Source: https://leetcode.com/problems/backspace-string-compare/
+# Note: Solves the Backspace String Compare problem
 # Description:
-# This appears to be a simple string manipulation problem that checks if a string 
-# can be split into non-empty parts.
+# Given two strings s and t, return true if they are equal when both are typed into 
+# empty text editors. '#' means a backspace character.
+# Note that after backspacing an empty text, the text will continue empty.
 #
 # Input:
-# - A string `s`
+# - Two strings `s` and `t` containing lowercase letters and '#' characters
 #
 # Output:
-# - A boolean indicating whether the string can be split into non-empty parts
+# - A boolean indicating whether the strings are equal after processing backspaces
 #
 # Status: ✅ SOLVED
 
-def canSplitString(s):
-    if not s:
-        return False
-        
-    # Check if string can be split into non-empty parts
-    return bool(s.split())
+def backspaceStringCompare(s, t):
+    def processString(string):
+        result = []
+        for char in string:
+            if char != "#":
+                result.append(char)
+            elif result:
+                result.pop()
+        return result
+    
+    s_processed = processString(s)
+    t_processed = processString(t)
+    
+    return s_processed == t_processed
 
 # Test cases with assertions
 # Example 1
-s1 = "b"
-assert canSplitString(s1) == True
+s1, t1 = "ab#c", "ad#c"
+assert backspaceStringCompare(s1, t1) == True
 
 # Example 2
-s2 = ""
-assert canSplitString(s2) == False
+s2, t2 = "ab##", "c#d#"
+assert backspaceStringCompare(s2, t2) == True
 
 # Example 3
-s3 = "hello world"
-assert canSplitString(s3) == True
+s3, t3 = "a#c", "b"
+assert backspaceStringCompare(s3, t3) == False
 
 # Example 4
-s4 = "   "
-assert canSplitString(s4) == False
+s4, t4 = "y#fo##f", "y#f#o##f"
+assert backspaceStringCompare(s4, t4) == True
 
 # Example 5
-s5 = "a"
-assert canSplitString(s5) == True
+s5, t5 = "a##c", "#a#c"
+assert backspaceStringCompare(s5, t5) == True
+
+# Edge cases
+s6, t6 = "", ""
+assert backspaceStringCompare(s6, t6) == True
+
+s7, t7 = "###", "###"
+assert backspaceStringCompare(s7, t7) == True
 
 print("All test cases passed!")

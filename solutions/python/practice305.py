@@ -1,11 +1,22 @@
-# Sorting the Sentence
-# Problem: Sorting the Sentence
-# Source: https://leetcode.com/problems/sorting-the-sentence/
-# Note: Reconstructs the original sentence by sorting words according to the position number appended to each word.
+# Sum of All Odd Length Subarrays
+# Problem: Sum of All Odd Length Subarrays
+# Source: https://leetcode.com/problems/sum-of-all-odd-length-subarrays/
+# Note: Calculates the sum of all contiguous subarrays having odd lengths.
 class Solution:
-    def sortSentence(self, s: str) -> str:
-        return ' '.join(word[:-1] for word in sorted(s.split(), key=lambda x: x[-1]))
-    
+    def sumOddLengthSubarrays(self, arr) -> int:
+        n = len(arr)
+        t = sum(arr)
+        
+        for i in range(n - 1):
+            for j in range(i + 2, n, 2):
+                temp = arr[i:j+1]
+                print(temp)
+                if len(temp) % 2 != 0:
+                    t += sum(temp)
+
+        return t
+        
 s = Solution()
-print(s.sortSentence("is2 sentence4 This1 a3")) # "This is a sentence"
-print(s.sortSentence("Myself2 Me1 I4 and3"))    # "Me Myself and I"
+print(s.sumOddLengthSubarrays([1,4,2,5,3])) # 58
+print(s.sumOddLengthSubarrays([10,11,12]))  # 66
+print(s.sumOddLengthSubarrays([1,2]))       # 3

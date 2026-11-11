@@ -1,16 +1,17 @@
-# HackerRank - Compress the String!
-# Problem: Compress the String!
-# Source: https://www.hackerrank.com/challenges/compress-the-string/problem
-# Note: Compresses consecutive occurrences of digits into tuples containing their frequency and value.
-s = input()
+# CodeWars - Mexican Wave
+# Problem: Mexican Wave
+# Source: https://www.codewars.com/kata/58f5c63f1e26ecda7e000029
+# Note: Generates a Mexican wave by capitalizing one alphabetic character at a time while preserving spaces.
+def wave(people):
+    arr = []
+    for i in range(len(people)):
+        if not people[i].isalpha():
+            continue
+        temp = list(people)
+        temp[i] = temp[i].upper()
+        arr.append(''.join(temp))
+    return arr
 
-res = []
-i = 0
-while i < len(s):
-    count = 0
-    while i + 1 < len(s) and s[i] == s[i + 1]:
-        count += 1
-        i += 1
-    i += 1
-    res.append((count + 1, int(s[i - 1])))
-print(' '.join(map(str, res)))
+print(wave('hello')) # ['Hello', 'hEllo', 'heLlo', 'helLo', 'hellO']
+print(wave('gap')) # ['Gap', 'gAp', 'gaP']
+print(wave('two words')) # ['Two words', 'tWo words', 'twO words', 'two Words', 'two wOrds', 'two woRds', 'two worDs', 'two wordS']

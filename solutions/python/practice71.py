@@ -1,41 +1,52 @@
-# Problem: Most Frequent Even Number
-# Source: 
-# Note: Solves the Most Frequent Even Number problem
+# Problem: Valid Parentheses
+# Source: https://leetcode.com/problems/valid-parentheses/
+# Note: Validates bracket matching using stack-based mapping
+#
 # Description:
-# Given a list of integers, find the most frequently occurring even number. If there are multiple
-# even numbers with the same frequency, return the smallest one. If no even numbers exist, return None.
+# Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the
+# input string is valid. An input string is valid if open brackets are closed by the same type of
+# brackets and in the correct order.
 # 
 # Example:
-# - Input: [1, 2, 2, 3, 4, 4, 4, 5] → Output: 4 (appears 3 times)
-# - Input: [1, 3, 5] → Output: None (no even numbers)
+# - Input: "()" → Output: true
+# - Input: "()[]{}" → Output: true
+# - Input: "(]" → Output: false
+# - Input: "([)]" → Output: false
 # 
 # Status: ✅ SOLVED
 
-def most_frequent_even(numbers):
-    if not numbers:
-        return None
+def is_valid_parentheses(s):
+    if not s:
+        return True
     
-    # Count frequencies of even numbers only
-    even_counts = {}
-    for num in numbers:
-        if num % 2 == 0:
-            even_counts[num] = even_counts.get(num, 0) + 1
+    # Map closing brackets to their corresponding opening brackets
+    brackets_map = {
+        '}': '{', 
+        ')': '(', 
+        ']': '['
+    }
     
-    if not even_counts:
-        return None
+    stack = []
     
-    # Find the most frequent even number, breaking ties by smaller value
-    max_freq = max(even_counts.values())
-    most_frequent = min(num for num, freq in even_counts.items() if freq == max_freq)
+    for char in s:
+        if char in brackets_map:
+            # Closing bracket
+            if not stack or stack.pop() != brackets_map[char]:
+                return False
+        else:
+            # Opening bracket
+            stack.append(char)
     
-    return most_frequent
+    return len(stack) == 0
 
 # Test cases with assertions
-assert most_frequent_even([1, 2, 2, 3, 4, 4, 4, 5]) == 4
-assert most_frequent_even([1, 3, 5]) == None
-assert most_frequent_even([2, 2, 4, 4, 4, 6, 6]) == 4
-assert most_frequent_even([2]) == 2
-assert most_frequent_even([2, 4, 6, 8]) == 2  # All have frequency 1, return smallest
-assert most_frequent_even([]) == None
+assert is_valid_parentheses("()") == True
+assert is_valid_parentheses("()[]{}") == True
+assert is_valid_parentheses("(]") == False
+assert is_valid_parentheses("([)]") == False
+assert is_valid_parentheses("{[]}") == True
+assert is_valid_parentheses("") == True
+assert is_valid_parentheses("(") == False
+assert is_valid_parentheses(")") == False
 
 print("All test cases passed!")

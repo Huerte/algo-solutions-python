@@ -1,16 +1,19 @@
-# Problem: Minimum Operations to Reduce Number to One
-# Source: https://www.geeksforgeeks.org/dsa/reduce-a-number-to-1-by-performing-given-operations/
+# Problem: Backspace String Compare
+# Source: https://leetcode.com/problems/backspace-string-compare/
 
-n = int(input('Enter a positive integer: '))
-op = 0
-while n > 1:
-    op += 1
+s = input('Enter string s: ')
+t = input('Enter string t: ')
 
-    if n % 2 == 0:
-        n //= 2
+res = []
+for c in s:
+    if not res:
+        res.append(c)
+    elif c == '#':
+        res.pop()
     else:
-        if (n - 1) / 2 == 1 or (n - 1) / 2 % 2 == 0:
-            n -= 1
-        else:
-            n += 1
-print(f"Minimum number of operations: {op}")
+        res.append(c)
+
+if ''.join(res) == t:
+    print('true')
+else:
+    print('false')

@@ -1,61 +1,80 @@
-# Problem: Count Numbers with Even Number of Digits
-# Source: https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
-# Note: Solves the Count Numbers with Even Number of Digits problem
+# Problem: N-Queens
+# Source: https://leetcode.com/problems/n-queens/
+# Note: Solves the N-Queens problem
 # Description:
-# Given a list of numbers, count how many of them have an even number of digits.
-# A number has an even number of digits if the count of its digits is divisible by 2.
+# The n-queens puzzle is the problem of placing n queens on an n x n chessboard
+# such that no two queens threaten each other.
+# Given an integer n, return all distinct solutions to the n-queens puzzle.
 #
 # Input:
-# - An integer n representing the number of numbers to check
-# - n lines of integers to check
+# - n: An integer representing the size of the chessboard (1 <= n <= 9)
 #
 # Output:
-# - An integer representing the count of numbers with even number of digits
+# - A list of all distinct solutions, where each solution is a list of strings
+# - Each string represents a row with 'Q' for queen and '.' for empty cell
 #
 # Status: ✅ SOLVED
 
-import math
-
-# def evenNumberDigits(numbers):
-#     if not numbers:
-#         return 0
+def solveNQueens(n):
+    def is_safe(board, row, col):
+        # Check row
+        for j in range(n):
+            if board[row][j] == 'Q':
+                return False
         
-#     count = 0
-#     for num in numbers:
-#         if num == 0:
-#             num_count = 1  # 0 has 1 digit
-#         else:
-#             num_count = math.floor(math.log10(abs(num))) + 1
-            
-#         if num_count % 2 == 0:
-#             count += 1
-#     return count
-
-def evenNumberDigits(n):
-    return sum(1 for num in n if len(str(num)) % 2 == 0)
+        # Check column
+        for i in range(n):
+            if board[i][col] == 'Q':
+                return False
+        
+        # Check diagonal (top-left to bottom-right)
+        for i, j in zip(range(row, -1, -1), range(col, -1, -1)):
+            if board[i][j] == 'Q':
+                return False
+        for i, j in zip(range(row, n), range(col, n)):
+            if board[i][j] == 'Q':
+                return False
+        
+        # Check diagonal (top-right to bottom-left)
+        for i, j in zip(range(row, -1, -1), range(col, n)):
+            if board[i][j] == 'Q':
+                return False
+        for i, j in zip(range(row, n), range(col, -1, -1)):
+            if board[i][j] == 'Q':
+                return False
+        
+        return True
+    
+    def backtrack(board, row):
+        if row == n:
+            result.append([''.join(row) for row in board])
+            return
+        
+        for col in range(n):
+            if is_safe(board, row, col):
+                board[row][col] = 'Q'
+                backtrack(board, row + 1)
+                board[row][col] = '.'
+    
+    result = []
+    board = [['.' for _ in range(n)] for _ in range(n)]
+    backtrack(board, 0)
+    return result
 
 # Test cases with assertions
 # Example 1
-numbers1 = [12, 345, 2, 6, 7896]
-assert evenNumberDigits(numbers1) == 2  # 12 and 7896 have even digits
+solutions_4 = solveNQueens(4)
+assert len(solutions_4) == 2
+assert ['.Q..', '...Q', 'Q...', '..Q.'] in solutions_4
+assert ['..Q.', 'Q...', '...Q', '.Q..'] in solutions_4
 
 # Example 2
-numbers2 = [555, 901, 482, 1771]
-assert evenNumberDigits(numbers2) == 1  # Only 1771 has even digits
+solutions_1 = solveNQueens(1)
+assert len(solutions_1) == 1
+assert solutions_1[0] == ['Q']
 
-# Example 3
-numbers3 = [1, 2, 3, 4, 5]
-assert evenNumberDigits(numbers3) == 0  # All have odd digits
-
-# Example 4
-numbers4 = [10, 1000, 100000]
-assert evenNumberDigits(numbers4) == 3  # All have even digits
-
-# Edge cases
-numbers5 = []
-assert evenNumberDigits(numbers5) == 0
-
-numbers6 = [0]
-assert evenNumberDigits(numbers6) == 0  # 0 has 1 digit (odd)
+# Edge case
+solutions_2 = solveNQueens(2)
+assert len(solutions_2) == 0  # No solution for 2x2
 
 print("All test cases passed!")

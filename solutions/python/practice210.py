@@ -1,18 +1,15 @@
-# Problem: WeIrD StRiNg CaSe
-# Source: https://www.codewars.com/kata/52b757663a95b11b3d00062d
-# Note: Converts characters at even indices to uppercase and odd indices to lowercase, restarting the pattern for each word.
-def to_weird_case(words):
-    res = []
-    for word in words.split():
-        temp = []
-        for i in range(len(word)):
-            if i % 2 == 0:
-                temp.append(word[i].upper())
-            else:
-                temp.append(word[i].lower())
-        res.append(''.join(temp))
-    return ' '.join(res)
+# CodeWars - Multiplication Table
+# Problem: Multiplication table
+# Source: https://www.codewars.com/kata/534d2f5b5371ecf8d2000a08
+# Note: Generates an N x N multiplication table using the multiples of each row number.
+def multiplication_table(size):
+    adder = 1
+    arr = []
+    for _ in range(size):
+        arr.append(list(range(adder, adder * size + 1, adder)))
+        adder += 1
+    return arr
 
-print(to_weird_case('This'))           # 'ThIs'
-print(to_weird_case('THIs iS a TEST')) # 'ThIs Is A TeSt'
-print(to_weird_case('Weird string case')) # 'WeIrD StRiNg CaSe'
+print(multiplication_table(1)) # [[1]]
+print(multiplication_table(2)) # [[1, 2], [2, 4]]
+print(multiplication_table(3)) # [[1, 2, 3], [2, 4, 6], [3, 6, 9]]

@@ -1,34 +1,13 @@
-# HackerRank - Time Delta
-# Problem: Time Delta
-# Source: https://www.hackerrank.com/challenges/python-time-delta/problem
-# Note: Calculates the absolute difference in seconds between two timestamps while accounting for timezone offsets.
-#!/bin/python3
+# HackerRank - Word Order
+# Problem: Word Order
+# Source: https://www.hackerrank.com/challenges/word-order/problem
+# Note: Counts the occurrences of distinct words while preserving their order of first appearance.
+from collections import Counter
+arr = [input() for _ in range(int(input()))]
 
-import math
-import os
-import random
-import re
-import sys
-from datetime import datetime
+counts = {}
+for word in arr:
+    counts[word] = counts.get(word, 0) + 1
 
-# Complete the time_delta function below.
-def time_delta(t1, t2):
-    t_1 = datetime.strptime(t1, '%a %d %b %Y %H:%M:%S %z')
-    t_2 = datetime.strptime(t2, '%a %d %b %Y %H:%M:%S %z')
-    return str(abs(int((t_1 - t_2).total_seconds())))
-    
-if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
-
-    t = int(input())
-
-    for t_itr in range(t):
-        t1 = input()
-
-        t2 = input()
-
-        delta = time_delta(t1, t2)
-
-        fptr.write(delta + '\n')
-
-    fptr.close()
+print(len(counts))
+print(' '.join(str(count) for count in counts.values()))

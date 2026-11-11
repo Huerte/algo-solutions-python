@@ -1,26 +1,9 @@
-# Problem: Next bigger number with the same digits
-# Source: https://www.codewars.com/kata/next-bigger-number-with-the-same-digits
+# Problem: Count IP Addresses
+# Source: https://www.codewars.com/kata/count-ip-addresses
 
-def next_bigger(n):
-    digits = list(str(n))
-    
-    i = len(digits) - 2
-    while i >= 0 and digits[i] >= digits[i+1]:
-        i -= 1
-    
-    if i == -1:
-        return -1
-    
-    j = len(digits) - 1
-    while j >= 0 and digits[j] <= digits[i]:
-        j -= 1
-    
-    digits[i], digits[j] = digits[j], digits[i]
-    
-    digits[i+1:] = sorted(digits[i+1:])
-    
-    return int(''.join(digits))
+def ips_between(start, end):
+    return sum([int(num) * (256 ** (3 - i)) for i, num in enumerate(end.split('.'))]) - sum([int(num) * (256 ** (3-i)) for i, num in enumerate(start.split('.'))])
 
-print(next_bigger(2017))    # 2071
-print(next_bigger(144))     # 414
-print(next_bigger(12))      # 21
+print(ips_between("10.11.12.13", "10.11.13.0")) # 243
+print(ips_between("20.0.0.10", "20.0.1.0"))     # 246
+print(ips_between("10.0.0.0", "10.0.0.50"))     # 50

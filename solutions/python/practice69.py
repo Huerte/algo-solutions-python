@@ -1,50 +1,23 @@
-# Problem: Fibonacci Sequence Generator
+# Problem: String Jump Decoder
 # Source: 
-# Note: Solves the Fibonacci Sequence Generator problem
+# Note: Decodes string by extracting characters at even indices
+# 
 # Description:
-# Generate the first n Fibonacci numbers starting from 0 and 1.
-# Each number in the sequence is the sum of the two preceding ones.
-#
-# Input:
-# - An integer `n` representing the number of Fibonacci numbers to generate
-#
-# Output:
-# - A list containing the first n Fibonacci numbers
-#
+# Given a string where even-indexed characters are letters and odd-indexed characters are digits,
+# decode the string by taking characters at even indices.
+# 
 # Status: ✅ SOLVED
 
-def generate_fibonacci(n):
-    if n <= 0:
-        return []
-    elif n == 1:
-        return [0]
-    elif n == 2:
-        return [0, 1]
-    
-    fib = [0, 1]
-    for i in range(n - 2):
-        fib.append(fib[i] + fib[i + 1])
-    
-    return fib
+def string_jump_decoder(s):
+    if not s:
+        return ""
+    return s[::2]
 
 # Test cases with assertions
-# Example 1
-assert generate_fibonacci(1) == [0]
-
-# Example 2
-assert generate_fibonacci(2) == [0, 1]
-
-# Example 3
-assert generate_fibonacci(5) == [0, 1, 1, 2, 3]
-
-# Example 4
-assert generate_fibonacci(8) == [0, 1, 1, 2, 3, 5, 8, 13]
-
-# Example 5
-assert generate_fibonacci(10) == [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
-
-# Edge cases
-assert generate_fibonacci(0) == []
-assert generate_fibonacci(-1) == []
+assert string_jump_decoder("a1b2c3") == "abc"  # a + (a+1) + (b+2) + (c+3)
+assert string_jump_decoder("x2") == "x"  # Only one letter
+assert string_jump_decoder("a1") == "a"  # Letter + digit
+assert string_jump_decoder("") == ""
+assert string_jump_decoder("a") == "a"  # Single letter
 
 print("All test cases passed!")

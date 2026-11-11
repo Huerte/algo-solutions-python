@@ -1,28 +1,21 @@
-# Problem: Merge Intervals
-# Source: https://leetcode.com/problems/merge-intervals/
+# Problem: Maximum Subarray
+# Source: https://leetcode.com/problems/maximum-subarray/
 
 class Solution:
-    def merge(self, intervals):
-        intervals.sort(key=lambda x: x[0])
+    def maxSubArray(self, nums) -> int:
+        max_sub = nums[0]
+        cur_sum = 0
 
-        res = []
-
-        temp = []
-        for l, r in intervals:
-            if not temp:
-                temp = [l, r]
-            elif l > temp[1]:
-                res.append(temp)
-                temp = [l, r]
-            elif r > temp[1]:
-                temp[1] = r
+        for n in nums:
+            if cur_sum < 0:
+                cur_sum = 0
+            
+            cur_sum += n
+            max_sub = max(max_sub, cur_sum)
         
-        if temp:
-            res.append(temp)
-        
-        return res
+        return max_sub
 
 s = Solution()
-print(s.merge([[1,3],[2,7],[8,10],[15,18],[17,23],[3,4],[4,5],[10,14],[11,12],[13,14]])) # [[1,7],[8,14],[15,23]]
-print(s.merge([[1,3],[2,6],[8,10],[15,18]]))                                             # [[1,6],[8,10],[15,18]]
-print(s.merge([[1,4],[4,5]]))                                                            # [[1,5]]
+print(s.maxSubArray([-2,1,-3,4,-1,2,1,-5,4])) # 6
+print(s.maxSubArray([5,4,-1,7,8]))            # 23
+print(s.maxSubArray([1]))                     # 1

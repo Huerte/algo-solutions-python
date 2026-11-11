@@ -1,19 +1,20 @@
-# Geeksfor Geeks - Bits Counting
-# Problem: Counting Bits
-# Source: https://leetcode.com/problems/counting-bits/
-# Note: Returns an array containing the number of set bits in the binary representation of every integer from 0 to n.
-from typing import List
-
+# Geeksforgeeks - Print n to 1 without loop
+# Problem: Print n to 1 without loop
+# Source: https://www.geeksforgeeks.org/problems/print-n-to-1-without-loop/1
+# Note: Prints numbers from n down to 1 without using loops, using recursion.
 class Solution:
-    def countBits(self, n : int) -> List[int]:
-        arr = []
-        
-        for i in range(n + 1):
-            arr.append(bin(i)[2:].count('1'))
-        
-        return arr
-        
+    def printNos(self, n):
+        return ' '.join(map(str,range(n,0,-1)))
+
+# Accepted Sol; Not mine
+class Solution:
+    def printNos(self, n):
+        if n == 0:
+            return
+        print(n, end=" ")
+        self.printNos(n-1)
+
 s = Solution()
-print(s.countBits(10)) # [0, 1, 1, 2, 1, 2, 2, 3, 1, 2, 2]
-print(s.countBits(5))  # [0, 1, 1, 2, 1, 2]
-print(s.countBits(2))  # [0, 1, 1]
+print(s.printNos(10)) # 10 9 8 7 6 5 4 3 2 1
+print(s.printNos(5))  # 5 4 3 2 1
+print(s.printNos(2))  # 2 1

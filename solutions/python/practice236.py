@@ -1,17 +1,23 @@
-# Sum of Variable Length Subarrays
-# Problem: Sum of Variable Length Subarrays
-# Source: https://leetcode.com/problems/sum-of-variable-length-subarrays/
-# Note: Calculates the sum of subarrays ending at each index using the current element to determine the starting index.
+# Clear Digits
+# Problem: Clear Digits
+# Source: https://leetcode.com/problems/clear-digits/
+# Note: Uses a stack to remove each digit and the closest remaining letter to its left.
 class Solution(object):
-    def subarraySum(self, nums):
-        arr = []
+    def clearDigits(self, s):
 
-        for i in range(len(nums)):
-            s = max(0, i - nums[i])
-            arr.append(sum(nums[s:i + 1]))
-
-        return sum(arr)
+        seen = []
+        for letter in s:
+            if not seen and letter.isalpha():
+                seen.append(letter)
+            elif letter.isalpha():
+                seen.append(letter)
+            else:
+                if seen:
+                    seen.pop()
+                
+        return ''.join(seen)
 
 s = Solution()
-print(s.subarraySum([2,3,1]))   # 11
-print(s.subarraySum([3,1,1,2])) # 13
+print(s.clearDigits("abc")) # "abc"
+print(s.clearDigits("cb34")) # ""
+print(s.clearDigits("1234")) # ""

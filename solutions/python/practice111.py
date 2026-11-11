@@ -1,14 +1,17 @@
-# Problem: Intersection of Two Arrays
-# Source: https://leetcode.com/problems/intersection-of-two-arrays/
+# Problem: Product of Array Except Self
+# Source: https://leetcode.com/problems/product-of-array-except-self/
 
-n = int(input('Enter the size of the first array: '))
-print(f"Enter {n} elements of the first array (sorted):")
-arr1 = list(map(int, input().split()))
+n = int(input('Enter the number of elements: '))
+print(f"Enter {n} elements:")
+arr = list(map(int, input().split()))
+res = [1] * n
 
-n2 = int(input('Enter the size of the second array: '))
-print(f"Enter {n2} elements of the second array (sorted):")
-arr2 = list(map(int, input().split()))
+for i in range(n):
+    for j in range(n):
+        if i == j:
+            continue
 
-res = set(arr1) & set(arr2)
+        res[i] *= arr[j]
 
-print(f"Unique common elements are: {' '.join(map(str, list(res)))}")
+print("Product array is:")
+print(" ".join(map(str, res)))

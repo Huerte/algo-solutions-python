@@ -1,67 +1,53 @@
-# Problem: Clear Digits
-# Source: https://leetcode.com/problems/clear-digits/
-# Note: Removes each digit and the closest remaining non-digit character to its left.
+# Problem: 10,001st Prime
+# Source: https://projecteuler.net/problem=7
+# Note: Finds the nth prime number using trial division up to the square root.
 # Description:
-# Given a string s, remove all digits from the string. When a digit is encountered, 
-# remove the character that comes before it as well.
-# This appears to be a custom string manipulation problem.
-#
-# Input:
-# - A string `s` containing letters and digits
-#
-# Output:
-# - A string with digits and their preceding characters removed
-#
+# Given a positive integer n, find the nth prime number. A prime number is a natural number greater
+# than 1 that has no positive divisors other than 1 and itself.
+# 
+# Example:
+# - Input: n = 1 → Output: 2 (first prime number)
+# - Input: n = 6 → Output: 13 (6th prime number: 2, 3, 5, 7, 11, 13)
+# - Input: n = 10001 → Output: 104743 (10,001st prime number)
+# 
 # Status: ✅ SOLVED
 
-# def clearDigits(s):
-#     if not s:
-#         return ""
-        
-#     result = []
-#     for char in s:
-#         if char.isdigit():
-#             if result:  # Only pop if there's something to pop
-#                 result.pop()
-#         else:
-#             result.append(char)
+def is_prime(n):
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    
+    for i in range(3, int(n**0.5) + 1, 2):
+        if n % i == 0:
+            return False
+    return True
 
-#     return ''.join(result)
-
-def clearDigits(s):
-    arr = []
-
-    for c in s:
-        if arr and c.isdigit():
-            arr.pop()
-        elif not c.isdigit():
-            arr.append(c)
-            
-    return ''.join(arr)
+def nth_prime(n):
+    if n <= 0:
+        return None
+    
+    if n == 1:
+        return 2
+    
+    count = 1
+    num = 3
+    
+    while count < n:
+        if is_prime(num):
+            count += 1
+        num += 2
+    
+    return num - 2
 
 # Test cases with assertions
-# Example 1
-assert clearDigits("a1bc2d3") == "b"
-
-# Example 2
-assert clearDigits("abc123") == ""
-
-# Example 3
-assert clearDigits("a1b2c3") == ""
-
-# Example 4
-assert clearDigits("1a2b3c") == "c"
-
-# Example 5
-assert clearDigits("abc") == "abc"
-
-# Example 6
-assert clearDigits("a1b") == "b"
-
-# Edge cases
-assert clearDigits("") == ""
-assert clearDigits("1") == ""
-assert clearDigits("a") == "a"
-assert clearDigits("12") == ""
+assert nth_prime(1) == 2
+assert nth_prime(6) == 13
+assert nth_prime(10) == 29
+assert nth_prime(100) == 541
+assert nth_prime(0) == None
+assert nth_prime(-1) == None
 
 print("All test cases passed!")

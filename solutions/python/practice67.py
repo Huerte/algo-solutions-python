@@ -1,31 +1,29 @@
-# Problem: Sum of Multiples
-# Source: https://leetcode.com/problems/sum-multiples/
-# Note: Solves the Sum of Multiples problem
+# Problem: Filter Strings by Substring
+# Source: 
+# Note: Solves the Filter Strings by Substring problem
 # Description:
-# Given a positive integer n, find the sum of all numbers from 1 to n that are multiples of 3, 5, or 7.
+# Given a list of strings and a substring, return all strings from the list that contain the substring.
+# The result should be returned as a newline-separated string.
 # 
 # Example:
-# - Input: n = 10 → Output: 3 + 5 + 6 + 7 + 9 + 10 = 40
-# - Input: n = 20 → Output: sum of multiples of 3, 5, or 7 up to 20
+# - Input: strings=["hello", "world", "hello world"], substring="lo"
+# - Output: "hello\nhello world"
 # 
 # Status: ✅ SOLVED
 
-def sum_of_multiples(n):
-    if n <= 0:
-        return 0
+def filter_strings_by_substring(strings, substring):
+    if not strings or not substring:
+        return ""
     
-    total_sum = 0
-    for i in range(1, n + 1):
-        if i % 3 == 0 or i % 5 == 0 or i % 7 == 0:
-            total_sum += i
-    return total_sum
+    filtered = [x for x in strings if substring in x]
+    return "\n".join(filtered)
 
 # Test cases with assertions
-assert sum_of_multiples(10) == 3 + 5 + 6 + 7 + 9 + 10  # 40
-assert sum_of_multiples(15) == 3 + 5 + 6 + 7 + 9 + 10 + 12 + 14 + 15  # 81
-assert sum_of_multiples(1) == 0  # No multiples
-assert sum_of_multiples(3) == 3  # Only 3
-assert sum_of_multiples(5) == 3 + 5  # 8
-assert sum_of_multiples(7) == 3 + 5 + 6 + 7  # 21
+assert filter_strings_by_substring(["hello", "world", "hello world"], "lo") == "hello\nhello world"
+assert filter_strings_by_substring(["abc", "def", "ghi"], "x") == ""
+assert filter_strings_by_substring(["test", "testing", "tested"], "test") == "test\ntesting\ntested"
+assert filter_strings_by_substring([], "any") == ""
+assert filter_strings_by_substring(["single"], "single") == "single"
+assert filter_strings_by_substring(["hello", "world"], "") == "hello\nworld"
 
 print("All test cases passed!")

@@ -1,41 +1,41 @@
-# Problem: Longest Substring Without Repeating Characters
-# Source: https://leetcode.com/problems/longest-substring-without-repeating-characters/
-# Note: Finds length of longest substring without repeating characters using sets
+# Problem: Frequency Counter
+# Source: 
+# Note: Counts string frequencies and formats descending frequency output
 #
 # Description:
-# Given a string, find the length of the longest substring without repeating characters.
+# Given a list of strings, count the frequency of each string and return a formatted result string
+# showing each unique string and its count, sorted by frequency in descending order.
 # 
 # Example:
-# - Input: "abcabcbb" → Output: 3 (substring "abc" has length 3)
-# - Input: "bbbbb" → Output: 1 (substring "b" has length 1)
-# - Input: "pwwkew" → Output: 3 (substring "wke" has length 3)
+# - Input: ["a", "b", "a", "c", "b", "a"]
+# - Output: "a - 3, b - 2, c - 1"
 # 
 # Status: ✅ SOLVED
 
-def longest_substring_without_repeating(s):
-    if not s:
-        return 0
+def frequency_counter(strings):
+    if not strings:
+        return ""
     
-    max_length = 0
-    for i in range(len(s)):
-        seen = set()
-        current_length = 0
-        for j in range(i, len(s)):
-            if s[j] in seen:
-                break
-            seen.add(s[j])
-            current_length += 1
-        max_length = max(max_length, current_length)
+    # Count frequencies
+    freq = {}
+    for s in strings:
+        freq[s] = freq.get(s, 0) + 1
     
-    return max_length
+    # Sort by frequency (descending) and then by string (ascending for ties)
+    sorted_items = sorted(freq.items(), key=lambda x: (-x[1], x[0]))
+    
+    # Format result
+    result_parts = []
+    for item, count in sorted_items:
+        result_parts.append(f"{item} - {count}")
+    
+    return ", ".join(result_parts)
 
 # Test cases with assertions
-assert longest_substring_without_repeating("abcabcbb") == 3
-assert longest_substring_without_repeating("bbbbb") == 1
-assert longest_substring_without_repeating("pwwkew") == 3
-assert longest_substring_without_repeating("") == 0
-assert longest_substring_without_repeating("a") == 1
-assert longest_substring_without_repeating("au") == 2
-assert longest_substring_without_repeating("dvdf") == 3
+assert frequency_counter(["a", "b", "a", "c", "b", "a"]) == "a - 3, b - 2, c - 1"
+assert frequency_counter(["hello", "world", "hello"]) == "hello - 2, world - 1"
+assert frequency_counter([]) == ""
+assert frequency_counter(["single"]) == "single - 1"
+assert frequency_counter(["a", "a", "a"]) == "a - 3"
 
 print("All test cases passed!")

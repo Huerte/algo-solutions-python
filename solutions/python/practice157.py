@@ -1,27 +1,30 @@
-# Split a String in Balanced Strings
-# Problem: Split a String in Balanced Strings
-# Source: https://leetcode.com/problems/split-a-string-in-balanced-strings/
-# Note: Finds the maximum number of balanced substrings with equal numbers of L and R.
+# Count Number of Maximum Bitwise-OR Subsets
+# Problem: Count Number of Maximum Bitwise-OR Subsets
+# Source: https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/
+# Note: Generates all subsets and counts those whose bitwise OR equals the maximum possible OR.
 
 class Solution(object):
-    def balancedStringSplit(self, s):
+    def countMaxOrSubsets(self, nums):
+        cur = [[]]
+        for i in range(len(nums)):
+            for j in range(len(cur)):
+                cur.append(cur[j] + [nums[i]])
         
+        max_or = 0
+        for num in nums:
+            max_or |= num
+
         count = 0
-
-        r_count = 0
-        l_count = 0
-
-        for c in s:
-            if c == 'R':
-                r_count += 1
-            elif c == 'L':
-                l_count += 1
-            
-            if r_count == l_count:
+        for arr in cur:
+            or_sum = 0
+            for num in arr:
+                or_sum |= num
+            if or_sum == max_or:
                 count += 1
-                r_count = 0
-                l_count = 0
+
         return count
 
 s = Solution()
-print(s.balancedStringSplit("RLRRLLRLRL"))
+print(s.countMaxOrSubsets([3, 1]))  # Output: 2
+print(s.countMaxOrSubsets([2, 2, 2]))  # Output: 7
+print(s.countMaxOrSubsets([3, 2, 1, 5]))  # Output: 6

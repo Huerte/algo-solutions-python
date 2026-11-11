@@ -1,11 +1,16 @@
-# CodeWars - Highest Rank Number in an Array
-# Problem: Highest Rank Number in an Array
-# Source: https://www.codewars.com/kata/5420fc9bb5b2c7fd57000004
-# Note: Returns the most frequent number in an array, choosing the largest number when frequencies are tied.
-from collections import Counter
-def highest_rank(arr):
-    return max(set(arr), key=lambda x: (Counter(arr)[x], x))
+# CodeWars -Pyramid Array
+# Problem: Pyramid Array
+# Source: https://www.codewars.com/kata/515f51d438015969f7000013
+# Note: Generates a nested array with rows containing increasing numbers of 1s, from 1 to n.
+def pyramid(n):
+    res = []
+    for i in range(1, n + 1):
+        temp = []
+        for j in range(i):
+            temp.append(1)
+        res.append(temp)
+    return res
 
-print(highest_rank([1, 2, 3, 2, 1, 3, 3])) # 3
-print(highest_rank([1, 1, 2, 2, 3])) # 2
-print(highest_rank([1, 2, 3, 4, 5])) # 5
+print(pyramid(0)) # []
+print(pyramid(1)) # [[1]]
+print(pyramid(3)) # [[1], [1, 1], [1, 1, 1]]

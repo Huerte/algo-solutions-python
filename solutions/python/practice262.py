@@ -1,20 +1,20 @@
-# Problem: Matrix Diagonal Sum
-# Source: https://leetcode.com/problems/matrix-diagonal-sum/
-# Note: Calculates sum of primary and secondary matrix diagonals
+# Problem: Find Common Elements Between Two Arrays
+# Source: https://leetcode.com/problems/find-common-elements-between-two-arrays/
+# Note: Counts occurrences of elements of each array present in the other
 class Solution(object):
-    def diagonalSum(self, mat):
-        tot = 0
+    def findIntersectionValues(self, nums1, nums2):
+        arr = [0, 0]
+        for num in nums1:
+            if num in nums2:
+                arr[0] += 1
+        
+        for num in nums2:
+            if num in nums1:
+                arr[1] += 1
 
-        for i in range(len(mat)):
-            tot += mat[i][i]
-            tot += mat[i][len(mat)-1-i]
-        
-        if len(mat) % 2 != 0:
-            tot -= mat[len(mat)//2][len(mat)//2]
-        
-        return tot
+        return arr
 
 s = Solution()
-print(s.diagonalSum([[7,3,1,9],[3,4,6,9],[6,9,6,6],[9,5,8,5]])) # 55
-print(s.diagonalSum([[1,2,3],[4,5,6],[7,8,9]])) # 25
-print(s.diagonalSum([[5]])) # 5
+print(s.findIntersectionValues([4,3,2,3,1], [2,2,5,2,3,6])) # [3,4]
+print(s.findIntersectionValues([3,4,2,3], [1,5])) # [0,0]
+print(s.findIntersectionValues([2,3,2], [1,2])) # [2,1]

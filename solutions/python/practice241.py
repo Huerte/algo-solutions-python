@@ -1,27 +1,14 @@
-# Design Parking System
-# Problem: Design Parking System
-# Source: https://leetcode.com/problems/design-parking-system/
-# Note: Tracks available parking spaces for each car type and decrements the corresponding count when a car parks successfully.
-class ParkingSystem(object):
+# Count Digit Appearances
+# Problem: Count Digit Appearances
+# Source: https://leetcode.com/problems/count-digit-appearances/
+# Note: Counts the total occurrences of a target digit across the decimal representations of all numbers using string conversion.
+class Solution(object):
+    def countDigitOccurrences(self, nums, digit):
+        count = 0
+        for num in map(str, nums):
+            count += num.count(str(digit))
+        return count
 
-    def __init__(self, big, medium, small):
-        self.big = big
-        self.medium = medium
-        self.small = small
-
-    def addCar(self, carType):
-        if carType == 1 and self.big > 0:
-            self.big -= 1
-            return True
-        elif carType == 2 and self.medium > 0:
-            self.medium -= 1
-            return True
-        elif carType == 3 and self.small > 0:
-            self.small -= 1
-            return True
-        return False
-
-
-# Your ParkingSystem object will be instantiated and called as such:
-# obj = ParkingSystem(big, medium, small)
-# param_1 = obj.addCar(carType)
+s = Solution()
+print(s.countDigitOccurrences([12,54,32,22], 2)) # 4
+print(s.countDigitOccurrences([3], 1))           # 0

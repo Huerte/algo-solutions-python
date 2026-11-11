@@ -1,14 +1,17 @@
-# Count Digit Appearances
-# Problem: Count Digit Appearances
-# Source: https://leetcode.com/problems/count-digit-appearances/
-# Note: Counts the total occurrences of a target digit across the decimal representations of all numbers using string conversion.
+# Height Checker
+# Problem: Height Checker
+# Source: https://leetcode.com/problems/height-checker/
+# Note: Counts the positions where the original height order differs from the sorted expected order.
 class Solution(object):
-    def countDigitOccurrences(self, nums, digit):
+    def heightChecker(self, heights):
+        srt = sorted(heights)
         count = 0
-        for num in map(str, nums):
-            count += num.count(str(digit))
+        for x, y in zip(heights, srt):
+            if x != y:
+                count += 1
         return count
 
 s = Solution()
-print(s.countDigitOccurrences([12,54,32,22], 2)) # 4
-print(s.countDigitOccurrences([3], 1))           # 0
+print(s.heightChecker([1,1,4,2,1,3])) # 3
+print(s.heightChecker([5,1,2,3,4]))   # 5
+print(s.heightChecker([1,2,3,4,5]))   # 0

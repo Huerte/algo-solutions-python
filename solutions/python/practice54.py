@@ -1,34 +1,56 @@
-# Problem: Two Sum
-# Source: https://leetcode.com/problems/two-sum/
-# Note: Solves the Two Sum problem
+# Problem: Average Without Min and Max
+# Source: 
+# Note: Solves the Average Without Min and Max problem
 # Description:
-# Given an array of integers and a target sum, find two numbers in the array that add up to the target.
-# Return the indices of these two numbers. You may assume that each input has exactly one solution.
-# 
-# Example:
-# - Input: arr=[2, 7, 11, 15], target=9 → Output: [0, 1] (2 + 7 = 9)
-# - Input: arr=[3, 2, 4], target=6 → Output: [1, 2] (2 + 4 = 6)
-# 
+# Given an array of integers, calculate the average of all elements except the minimum 
+# and maximum values. The result should be formatted to two decimal places.
+#
+# Input:
+# - An array of integers `arr` with at least 3 elements
+#
+# Output:
+# - A float representing the average of elements excluding min and max
+#
 # Status: ✅ SOLVED
 
-def two_sum(arr, target):
-    if not arr or len(arr) < 2:
-        return []
+def averageWithoutMinMax(arr):
+    if len(arr) < 3:
+        return 0.0
+        
+    # Create a copy to avoid modifying the original array
+    temp_arr = arr.copy()
     
-    for i in range(len(arr)):
-        for j in range(i + 1, len(arr)):
-            if arr[i] + arr[j] == target:
-                return [i, j]
+    # Remove min and max
+    temp_arr.remove(min(temp_arr))
+    temp_arr.remove(max(temp_arr))
     
-    return []  # No solution found
+    # Calculate average
+    average = sum(temp_arr) / len(temp_arr)
+    return round(average, 2)
 
 # Test cases with assertions
-assert two_sum([2, 7, 11, 15], 9) == [0, 1]
-assert two_sum([3, 2, 4], 6) == [1, 2]
-assert two_sum([3, 3], 6) == [0, 1]
-assert two_sum([1, 2, 3, 4, 5], 9) == [3, 4]
-assert two_sum([1, 2], 3) == [0, 1]
-assert two_sum([1], 2) == []
-assert two_sum([], 5) == []
+# Example 1
+arr1 = [1, 2, 3, 4, 5]
+assert averageWithoutMinMax(arr1) == 3.0
+
+# Example 2
+arr2 = [10, 20, 30, 40, 50]
+assert averageWithoutMinMax(arr2) == 30.0
+
+# Example 3
+arr3 = [5, 5, 5, 5, 5]
+assert averageWithoutMinMax(arr3) == 5.0
+
+# Example 4
+arr4 = [1, 10, 100]
+assert averageWithoutMinMax(arr4) == 10.0
+
+# Example 5
+arr5 = [0, 1, 2, 3, 4, 5]
+assert averageWithoutMinMax(arr5) == 2.5
+
+# Edge cases
+arr6 = [1, 2, 3]
+assert averageWithoutMinMax(arr6) == 2.0
 
 print("All test cases passed!")

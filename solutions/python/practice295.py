@@ -1,15 +1,20 @@
-# HackerRank - Day of the Programmer
-# Problem: Day of the Programmer
-# Source: https://www.hackerrank.com/challenges/day-of-the-programmer/problem
-# Note: Determines the 256th day of the year while accounting for Julian, Gregorian, and the 1918 calendar transition.
-def dayOfProgrammer(year):
-    if year < 1919:
-        days = 243 if year % 4 != 0 else 244
-    else:
-        if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:
-            days = 244
+# HackerRank - Utopian Tree
+# Problem: Utopian Tree
+# Source: https://www.hackerrank.com/challenges/utopian-tree/problem
+# Note: Calculates tree height after n growth cycles, doubling in spring and increasing by 1 in summer.
+def utopianTree(n):
+    res = 1
+    for i in range(n):
+        if i % 2 == 0:
+            res *= 2
         else:
-            days = 243
-    
-    if year == 1918:
-        days -= 13
+            res += 1
+    return res
+# Test cases
+assert utopianTree(0) == 1
+assert utopianTree(1) == 2
+assert utopianTree(3) == 6
+assert utopianTree(4) == 7
+assert utopianTree(5) == 14
+
+print("All test cases passed!")

@@ -1,45 +1,16 @@
-# Problem: Keypad Phone Simulator
-# Source: 
-# Note: Simulates phone keypad text input
-number_of_word = int(input())
+# Problem: 1000-digit Fibonacci Number
+# Source: https://projecteuler.net/problem=25
+# Return the first 1000-digit fibonacci number index
 
-res = []
+a, b = 0, 1
+from math import log10, ceil
 
-keypad_coord = {
-    '2': 'abc',
-    '3': 'def',
-    '4': 'ghi',
-    '5': 'jkl',
-    '6': 'mno',
-    '7': 'pqrs',
-    '8': 'tuv',
-    '9': 'wxyz',
-    '0': ' '
-}
+i = 1
+while ceil(log10(b)) < 1000:
+    a, b = b, a + b
+    i += 1
 
+print(b)
 
-for _ in range(number_of_word):
-
-    seq = input()
-    word = ""
-    cur = []
-
-    for c in seq:
-        if not cur:
-            cur.append(c)
-        elif c in cur:
-            cur.append(c)
-        else:
-            if c == ' ':
-                word += keypad_coord[cur[-1]][len(cur) - 1]
-                cur = []
-                continue
-            word += keypad_coord[cur[-1]][len(cur) - 1]
-            cur = [c]
-    
-    if cur:
-        word += keypad_coord[cur[-1]][len(cur) - 1]
-        
-    res.append(word)
-
-print('\n'.join(res))
+print(f"\nIndex is: {i}")
+print('Digit Count of "b":', len(str(b)))

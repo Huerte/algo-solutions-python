@@ -1,31 +1,25 @@
-# Squares of a Sorted Array
-# Problem: Squares of a Sorted Array
-# Source: https://leetcode.com/problems/squares-of-a-sorted-array/
-# Note: Squares each element of a sorted array and returns the squared values in ascending order using two pointers.
+# Problem: Next Greater Element I
+# Source: https://leetcode.com/problems/next-greater-element-i/
+
 class Solution(object):
-    def sortedSquares(self, nums):
-        
-        left = 0
-        right = len(nums) - 1
+    def nextGreaterElement(self, nums1, nums2):
+        arr = []
 
-        res = []
-
-        while left <= right:
-            if abs(nums[left]) > abs(nums[right]):
-                res.append(nums[left] ** 2)
-                left += 1
-            else:
-                res.append(nums[right] ** 2)
-                right -= 1
-
-        res.reverse()
-        return res
+        for i in range(len(nums1)):
+            for j in range(len(nums2)):
+                if nums1[i] == nums2[j]:
+                    if j < len(nums2) - 1:
+                        k = j + 1
+                        while k < len(nums2) and nums2[k] < nums2[j]:
+                            k += 1
+                        if k < len(nums2) and nums2[k] > nums2[j]:
+                            arr.append(nums2[k])
+                            break
+                    arr.append(-1)
+                
+        return arr
     
-# 2nd solution
-class Solution(object):
-    def sortedSquares(self, nums):
-        return sorted(num ** 2 for num in nums)
-
 s = Solution()
-print(s.sortedSquares([-4, -1, 0, 3, 10])) # [0, 1, 9, 16, 100]
-print(s.sortedSquares([-7, -3, 2, 3, 11])) # [4, 9, 9, 49, 121]
+print(s.nextGreaterElement([2,4], [1,2,3,4]))             # [3,-1]
+print(s.nextGreaterElement([4,1,2], [1,3,4,2]))           # [-1,3,-1]
+print(s.nextGreaterElement([1,3,5,2,4], [6,5,4,3,2,1,7])) # [7,7,7,7,7]

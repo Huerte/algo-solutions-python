@@ -1,30 +1,29 @@
-# HackerRank - Picking Numbers
-# Problem: Picking Numbers
-# Source: https://www.hackerrank.com/challenges/picking-numbers/problem
-# Note: Finds the largest subset where the absolute difference between any two selected elements is at most 1.
-def pickingNumbers(a):
-    subs = []
-    i = 0
-
-    a.sort()
-
-    while i < len(a) - 1:
-        temp = [a[i]]
+# HackerRank - Between Two Sets
+# Problem: Between Two Sets
+# Source: https://www.hackerrank.com/challenges/between-two-sets/problem
+# Note: Counts integers that are divisible by every element in the first array and divide every element in the second array.
+def getTotalX(a, b):
+    ar = []
+    for i in range(a[-1], b[0] + 1):
+        div = True
         
-        for j in range(i + 1, len(a)):
-            add = True
-            for num in temp:
-                if abs(num - a[j]) > 1:
-                    add = False
-            if add:
-                temp.append(a[j])
+        for num in a:
+            if i % num != 0:
+                div = False
+                break
+        if div:
+            ar.append(i)
 
-        subs.append(temp)
+    inc = []
+    for num in ar:
+        div = True
+        for n in b:
+            if n % num != 0:
+                div = False
+                break
+        if div:
+            inc.append(num)
+    
+    return len(inc)
 
-        i += 1
-                
-    return len(max(subs, key=len))
-
-print(pickingNumbers([1,1,2,2,4,4,5,5,5])) # 5
-print(pickingNumbers([4,6,5,3,3,1]))       # 3
-print(pickingNumbers([1,2,2,3,1,2]))       # 5
+print(getTotalX([2,4], [16,32,96]))

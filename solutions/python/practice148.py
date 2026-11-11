@@ -1,11 +1,8 @@
-# Permutation Difference between Two Strings
-# Problem: Permutation Difference between Two Strings
-# Source: https://leetcode.com/problems/permutation-difference-between-two-strings/
-# Note: Calculates the sum of absolute position differences of matching characters in two strings.
+# Kids With the Greatest Number of Candies
+# Problem: Kids With the Greatest Number of Candies
+# Source: https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/
+# Note: Checks whether each kid can have the greatest number of candies after receiving all extra candies.
 
 class Solution(object):
-    def findPermutationDifference(self, s, t):
-        res = 0
-        for i in range(len(s)):
-            res += abs(i - t.index(s[i]))
-        return res
+    def kidsWithCandies(self, candies, extraCandies):
+        return [(num + extraCandies) >= max(candies) for num in candies]

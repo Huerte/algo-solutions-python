@@ -1,17 +1,14 @@
-# How Many Numbers Are Smaller Than the Current Number
-# Problem: How Many Numbers Are Smaller Than the Current Number
-# Source: https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/
-# Note: Counts how many elements in the array are strictly smaller than each element.
+# Problem: Running Sum of 1d Array
+# Source: https://leetcode.com/problems/running-sum-of-1d-array/
+# Note: Sum each prefix slice to build the running sums.
 
 class Solution(object):
-    def smallerNumbersThanCurrent(self, nums):
-        res = [0] * len(nums)
-        
-        for i in range(len(nums)):
-            for j in range(len(nums)):
-                if i != j and nums[i] > nums[j]:
-                    res[i] += 1
+    def runningSum(self, nums):
+        res = []
+        for i in range(1, len(nums) + 1):
+            print(nums[:i])
+            res.append(sum(nums[:i]))
         return res
-
+    
 s = Solution()
-print(s.smallerNumbersThanCurrent([8, 1, 2, 2, 3])) # [4, 0, 1, 1, 3]
+print(s.runningSum([1, 2, 3, 4])) # [1,3,6,10]

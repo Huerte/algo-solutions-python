@@ -1,29 +1,16 @@
-# Problem: Valid Parentheses
-# Source: https://leetcode.com/problems/valid-parentheses/
+# Problem: Unique Morse Code Words
+# Source: https://leetcode.com/problems/unique-morse-code-words/
 
 class Solution(object):
-    def isValid(self, s):
+    def uniqueMorseRepresentations(self, words):
+        morse = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
         
-        parenthesis = {
-            ')': '(',
-            '}': '{',
-            ']': '['
-        }
+        result = []
+        for word in words:
+            temp = ""
+            for ltr in word.lower():
+                temp += morse[ord(ltr) - 64]
+            result.append(temp)
+        return len(result) - len(set(result))
 
-        seen = []
-
-        for par in s:
-            if par in parenthesis:
-
-                if seen and seen[-1] == parenthesis[par]:
-                    seen.pop()
-                else:
-                    seen.append(par)
-            
-            else:
-                seen.append(par)
-                
-        return not seen
-
-s = Solution()
-print(s.isValid("({{{{}}}))"))
+print(ord('a'))

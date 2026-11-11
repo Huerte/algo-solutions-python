@@ -1,17 +1,17 @@
-# CodeWars - Mexican Wave
-# Problem: Mexican Wave
-# Source: https://www.codewars.com/kata/58f5c63f1e26ecda7e000029
-# Note: Generates a Mexican wave by capitalizing one alphabetic character at a time while preserving spaces.
-def wave(people):
-    arr = []
-    for i in range(len(people)):
-        if not people[i].isalpha():
-            continue
-        temp = list(people)
-        temp[i] = temp[i].upper()
-        arr.append(''.join(temp))
-    return arr
+# CodeWars - The Supermarket Queue
+# Problem: The Supermarket Queue
+# Source: https://www.codewars.com/kata/57b06f90e298a7b53d000a86
+# Note: Calculates the total checkout time by assigning each customer to the till with the minimum accumulated time.
+def queue_time(customers, n):
+    
+    queus = [0] * n
+    
+    for t in customers:
+        i = queus.index(min(queus))
+        queus[i] += t
+    
+    return max(queus)
 
-print(wave('hello')) # ['Hello', 'hEllo', 'heLlo', 'helLo', 'hellO']
-print(wave('gap')) # ['Gap', 'gAp', 'gaP']
-print(wave('two words')) # ['Two words', 'tWo words', 'twO words', 'two Words', 'two wOrds', 'two woRds', 'two worDs', 'two wordS']
+print(queue_time([5,3,4], 1)) # 12
+print(queue_time([10,2,3,3], 2)) # 10
+print(queue_time([2,3,10], 2)) # 12

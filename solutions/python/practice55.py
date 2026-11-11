@@ -1,56 +1,43 @@
-# Problem: Average Without Min and Max
-# Source: 
-# Note: Solves the Average Without Min and Max problem
+# Problem: Non-unique Elements
+# Source: https://py.checkio.org/en/mission/non-unique-elements/
+# Note: Removes elements that occur only once while preserving the original order.
 # Description:
-# Given an array of integers, calculate the average of all elements except the minimum 
-# and maximum values. The result should be formatted to two decimal places.
+# Given an array of integers, return a new array containing only the elements that 
+# appear more than once in the original array. The order of elements should be preserved.
 #
 # Input:
-# - An array of integers `arr` with at least 3 elements
+# - An array of integers `data`
 #
 # Output:
-# - A float representing the average of elements excluding min and max
+# - An array containing only the non-unique elements in their original order
 #
 # Status: ✅ SOLVED
 
-def averageWithoutMinMax(arr):
-    if len(arr) < 3:
-        return 0.0
-        
-    # Create a copy to avoid modifying the original array
-    temp_arr = arr.copy()
-    
-    # Remove min and max
-    temp_arr.remove(min(temp_arr))
-    temp_arr.remove(max(temp_arr))
-    
-    # Calculate average
-    average = sum(temp_arr) / len(temp_arr)
-    return round(average, 2)
+from collections.abc import Iterable
+
+def checkio(data: list[int]) -> Iterable[int]:
+    unique = set(data)
+    result = []
+    for item in unique:
+        if data.count(item) == 1:
+            result.append(item)
+    return [x for x in data if x not in result]
 
 # Test cases with assertions
-# Example 1
-arr1 = [1, 2, 3, 4, 5]
-assert averageWithoutMinMax(arr1) == 3.0
+print("Example:")
+print(list(checkio([1, 2, 3, 1, 3])))
 
-# Example 2
-arr2 = [10, 20, 30, 40, 50]
-assert averageWithoutMinMax(arr2) == 30.0
-
-# Example 3
-arr3 = [5, 5, 5, 5, 5]
-assert averageWithoutMinMax(arr3) == 5.0
-
-# Example 4
-arr4 = [1, 10, 100]
-assert averageWithoutMinMax(arr4) == 10.0
-
-# Example 5
-arr5 = [0, 1, 2, 3, 4, 5]
-assert averageWithoutMinMax(arr5) == 2.5
-
-# Edge cases
-arr6 = [1, 2, 3]
-assert averageWithoutMinMax(arr6) == 2.0
+#These "asserts" are used for self-checking
+assert list(checkio([1, 2, 3, 1, 3])) == [1, 3, 1, 3]
+assert list(checkio([1, 2, 3, 4, 5])) == []
+assert list(checkio([5, 5, 5, 5, 5])) == [5, 5, 5, 5, 5]
+assert list(checkio([10, 9, 10, 10, 9, 8])) == [10, 9, 10, 10, 9]
+assert list(checkio([2, 2, 3, 2, 2])) == [2, 2, 2, 2]
+assert list(checkio([10, 20, 30, 10])) == [10, 10]
+assert list(checkio([7])) == []
+assert list(checkio([0, 1, 2, 3, 4, 0, 1, 2, 4])) == [0, 1, 2, 4, 0, 1, 2, 4]
+assert list(checkio([99, 98, 99])) == [99, 99]
+assert list(checkio([0, 0, 0, 1, 1, 100])) == [0, 0, 0, 1, 1]
+assert list(checkio([0, 0, 0, -1, -1, 100])) == [0, 0, 0, -1, -1]
 
 print("All test cases passed!")

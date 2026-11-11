@@ -1,17 +1,21 @@
-# Problem: Most frequently used words in a text
-# Source: https://www.codewars.com/kata/most-frequently-used-words-in-a-text
-
-from collections import Counter
-import re
-
-def top_3_words(text):
+# CodeWars - Convert PascalCase string into snake_case
+# Problem: Convert PascalCase string into snake_case
+# Source: https://www.codewars.com/kata/529b418d533b76924600085d
+# Note: Converts uppercase word boundaries into underscores and lowercases the string.
+def to_underscore(strng: str) -> str:
+    words = []
+    temp = ""
+    for c in str(strng):
+        if c.isupper() and temp:
+            words.append(temp)
+            temp = c
+        else:
+            temp += c
+    if temp:
+        words.append(temp)
     
-    words = re.findall(r"[a-z']+", text.lower())
-    
-    words = [w for w in words if any(c.isalpha() for c in w)]
-    
-    return [word for word, _ in Counter(words).most_common(3)]
+    return '_'.join(w.lower() for w in words)
 
-print(top_3_words("e e e e DDD ddd DdD: ddd ddd aa aA Aa, bb cc cC e e e")) # ['e', 'ddd', 'aa']
-print(top_3_words("  //wont won't won't "))                                 # ["won't", "wont"]
-print(top_3_words(" ''' , e   .. "))                                        # ["e"]
+print(to_underscore('MoviesAndBooks')) # 'movies_and_books'
+print(to_underscore('TestController')) # 'test_controller'
+print(to_underscore('App7Test'))       # 'app7_test'

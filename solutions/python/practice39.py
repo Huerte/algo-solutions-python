@@ -1,71 +1,61 @@
-# Problem: Merge Two Sorted Lists
-# Source: https://leetcode.com/problems/merge-two-sorted-lists/
-# Note: Merges two sorted linked lists into one sorted linked list.
+# Problem: Better Days
+# Source: https://leetcode.com/problems/daily-temperatures/
+# Note: Solves the Better Days problem
+# Description:
+# Given an array representing temperatures for n days, for each day find how many days 
+# you have to wait until a warmer temperature. If there is no future day for which 
+# this is possible, put 0 instead.
+# This is similar to the "Daily Temperatures" problem.
+#
+# Input:
+# - An array of integers `days` representing temperatures for each day
+#
+# Output:
+# - An array where each element represents the number of days to wait for a warmer temperature
+#
+# Status: ✅ SOLVED
 
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
-
-def to_list(node):
-    arr = []
-    while node:
-        arr.append(node.val)
-        node = node.next
-    return arr
-def to_listnode(nums):
-    dummy = ListNode(0)
-    cur = dummy
-    for n in nums:
-        cur.next = ListNode(n)
-        cur = cur.next
-    return dummy.next
-
-
-
-class Solution(object):
-    def mergeTwoLists(self, list1, list2):
-
-        if not list1 or not list2:
-            return None
-
-        arr = []
-
-        if list1:
-            arr.append(list1.val)
-            while list1.next:
-                list1 = list1.next
-                arr.append(list1.val)
-
-        if list2:
-            arr.append(list2.val)
-            while list2.next:
-                list2 = list2.next
-                arr.append(list2.val)
-
-        if len(arr) > 0:
-            arr.sort()
-            
-            head = ListNode(val = arr[0])
-            tail = head
-            if len(arr) > 0:
-                for num in arr[1:]:
-                    tail.next = ListNode(val = num)
-                    tail = tail.next
-                    print(num, end=", ")
-
-            print(to_list(head))
-
-            return head
+def betterDays(days):
+    if not days:
+        return []
         
-        return ListNode()
+    n = len(days)
+    results = [0] * n
     
+    for i in range(n):
+        not_lucky = True
+        for j in range(i + 1, n):
+            if days[i] < days[j]:
+                results[i] = j - i
+                not_lucky = False
+                break
+        if not_lucky:
+            results[i] = 0
+    
+    return results
 
+# Test cases with assertions
+# Example 1
+days1 = [73, 74, 75, 71, 69, 72, 76, 73]
+assert betterDays(days1) == [1, 1, 4, 2, 1, 1, 0, 0]
 
+# Example 2
+days2 = [30, 40, 50, 60]
+assert betterDays(days2) == [1, 1, 1, 0]
 
+# Example 3
+days3 = [30, 60, 90]
+assert betterDays(days3) == [1, 1, 0]
 
-s = Solution()
-l1 = to_listnode([])
-l2 = to_listnode([])
+# Example 4
+days4 = [70, 60, 50, 40]
+assert betterDays(days4) == [0, 0, 0, 0]
 
-print(to_list(s.mergeTwoLists(l1, l2)))
+# Edge cases
+days5 = []
+assert betterDays(days5) == []
+
+days6 = [100]
+assert betterDays(days6) == [0]
+
+print("All test cases passed!")

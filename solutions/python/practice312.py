@@ -1,7 +1,8 @@
-# Multiply Strings
-# Problem: Multiply Strings
-# Source: https://leetcode.com/problems/multiply-strings/
-# Note: Multiplies two non-negative integers represented as strings and returns their product as a string.
+# Sort Colors
+# Problem: Sort Colors
+# Source: https://leetcode.com/problems/sort-colors/
+# Note: Sorts an array containing only 0s, 1s, and 2s in-place without using the built-in sorting function.
 class Solution:
-    def multiply(self, num1: str, num2: str) -> str:
-        return f"{int(num1) * int(num2)}"
+    def sortColors(self, nums) -> None:
+        nums.sort()
+        return nums

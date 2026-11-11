@@ -1,44 +1,55 @@
-# Problem: Create Phone Number
-# Source: https://www.codewars.com/kata/525f50e3b73515a6db000b83
-# Note: Formats an array of 10 integers into phone number format (XXX) XXX-XXXX
-#
-# Description:
-# Write a function that accepts an array of 10 integers (between 0 and 9), that returns 
-# a string of those numbers in the form of a phone number.
-# The returned format must be correct in order for this challenge to pass.
-#
-# Input:
-# - An array of 10 integers where each integer is between 0 and 9
-#
-# Output:
-# - A string in the format "(XXX) XXX-XXXX"
-#
-# Status: ✅ SOLVED
+# Problem: Remove Duplicates from Sorted List
+# Source: https://leetcode.com/problems/remove-duplicates-from-sorted-list/
+# Note: Removes duplicate values from a sorted linked list while keeping one occurrence of each value.
 
-def create_phone_number(n):
-    if len(n) != 10 or max(n) > 9 or min(n) < 0:
-        return ''
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+def to_list(node):
+    arr = []
+    while node:
+        arr.append(node.val)
+        node = node.next
+    return arr
+def to_listnode(nums):
+    dummy = ListNode(0)
+    cur = dummy
+    for n in nums:
+        cur.next = ListNode(n)
+        cur = cur.next
+    return dummy.next
+
+
+class Solution(object):
+    def deleteDuplicates(self, head):
+        if not head:
+            return None
+        
+        new_head = ListNode()
+        tail = new_head
+
+        arr = []
+        while head:
+            arr.append(head.val)
+            head = head.next
+
+        seen = []
+        for num in arr:
+            if not seen:
+                tail.next = ListNode(val=num)
+                tail = tail.next
+            elif seen and num not in seen:
+                tail.next = ListNode(val=num)
+                tail = tail.next
+            seen.append(num)
+
+        return new_head.next
     
-    # Convert integers to strings and join them
-    n_str = ''.join(map(str, n))
-    
-    # Format as phone number
-    return f"({n_str[:3]}) {n_str[3:6]}-{n_str[6:]}"
 
-# Test cases with assertions
-# Example 1
-assert create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) == "(123) 456-7890"
 
-# Example 2
-assert create_phone_number([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]) == "(111) 111-1111"
+s = Solution()
+l1 = to_listnode([1,1,2,3,3])
 
-# Example 3
-assert create_phone_number([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]) == "(000) 000-0000"
-
-# Example 4
-assert create_phone_number([9, 8, 7, 6, 5, 4, 3, 2, 1, 0]) == "(987) 654-3210"
-
-# Edge cases
-assert create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 9]) == "(123) 456-7899"
-
-print("All test cases passed!")
+print(to_list(s.deleteDuplicates(l1)))

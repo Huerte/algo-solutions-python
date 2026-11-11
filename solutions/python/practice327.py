@@ -1,13 +1,22 @@
-# Problem: Minimum Sum of Four Digit Number After Splitting Digits
-# Source: https://leetcode.com/problems/minimum-sum-of-four-digit-number-after-splitting-digits/
+# Problem: Finding 3-Digit Even Numbers
+# Source: https://leetcode.com/problems/finding-3-digit-even-numbers/
 
+from collections import Counter
 class Solution:
-    def minimumSum(self, num: int) -> int:
-        temp = sorted(str(num))
-        n1, n2 = f"{temp[0]}{temp[3]}", f"{temp[1]}{temp[2]}"
-        return int(n1) + int(n2)
+    def findEvenNumbers(self, digits):
+        arr = []
+        
+        D = Counter(map(str, digits))
 
+        for i in range(100, 999, 2):
+            temp = Counter(str(i))
+
+            if all(temp[k] <= D[k] for k in temp):
+                arr.append(i)
+                
+        return arr
+    
 s = Solution()
-print(s.minimumSum(2932)) # 52
-print(s.minimumSum(4009)) # 13
-print(s.minimumSum(2687)) # 95
+print(s.findEvenNumbers([2,1,3,0]))   # [102,120,130,132,210,230,302,310,312,320]
+print(s.findEvenNumbers([2,2,8,8,2])) # [222,228,282,288,822,828,882]
+print(s.findEvenNumbers([3,7,5]))     # []

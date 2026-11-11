@@ -1,15 +1,20 @@
-# Create Target Array in the Given Order
-# Problem: Create Target Array in the Given Order
-# Source: https://leetcode.com/problems/create-target-array-in-the-given-order/
-# Note: Creates a target array by inserting each number at its corresponding index in the given order.
+# Final Array State After K Multiplication Operations I
+# Problem: Final Array State After K Multiplication Operations I
+# Source: https://leetcode.com/problems/final-array-state-after-k-multiplication-operations-i/
+# Note: Repeatedly multiplies the first occurrence of the minimum array element by the given multiplier for k operations.
 class Solution(object):
-    def createTargetArray(self, nums, index):
-        target = []
-        for i, num in zip(index, nums):
-            target.insert(i, num)
-        return target
+    def getFinalState(self, nums, k, multiplier):
+
+        for _ in range(k):
+            cur_min = min(nums)
+            for i in range(len(nums)):
+                if nums[i] == cur_min:
+                    nums[i] *= multiplier
+                    break
+        
+        return nums
 
 s = Solution()
-print(s.createTargetArray([0,1,2,3,4], [0,1,2,2,1]))  # [0,4,1,3,2]
-print(s.createTargetArray([1,2,3,4,0], [0,1,2,3,0]))  # [0,1,2,3,4]
-print(s.createTargetArray([1], [0]))  # [1]
+print(s.getFinalState([1, 2, 3], 3, 10)) # [100, 20, 30]
+print(s.getFinalState([1, 1, 1], 3, 10)) # [1000, 1, 1]
+print(s.getFinalState([1, 2, 3], 0, 10)) # [1, 2, 3]

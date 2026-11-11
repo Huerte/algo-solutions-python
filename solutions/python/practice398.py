@@ -1,32 +1,26 @@
-# Problem: Combination Sum
-# Source: https://leetcode.com/problems/combination-sum/
+# Problem: Integer to Roman
+# Source: https://leetcode.com/problems/integer-to-roman/
 
 class Solution(object):
-    def combinationSum(self, candidates, target):
+    def intToRoman(self, num):
+        romans = [
+            ['M', 1000],
+            ['CM', 900], ['D', 500], ['CD', 400],
+            ['C', 100], ['XC', 90], ['L', 50],
+            ['XL', 40], ['X', 10], ['IX', 9],
+            ['V', 5], ['IV', 4], ['I', 1]
+        ]
 
-        res = []
+        res = ""
 
-        sol = []
-
-        def backt(i):
-
-            print(sol[:], i)
-            if sum(sol) == target:
-                res.append(sol[:])
-                return
-            if i == len(candidates) or sum(sol) > target:
-                return
-
-            backt(i+1)
-
-            sol.append(candidates[i])
-            backt(i)
-            sol.pop()
+        for sym, val in romans:
+            if num // val:
+                count, num = divmod(num, val)
+                res += sym * count
         
-        backt(0)
         return res
 
 s = Solution()
-print(s.combinationSum([2,3,5], 8))    # [[2,2,2,2],[2,3,3],[3,5]]
-print(s.combinationSum([2,3,6,7], 7))  # [[2,2,3],[7]]
-print(s.combinationSum([2], 1))        # []
+print(s.intToRoman(1390)) # "MCCCXC"
+print(s.intToRoman(79))   # "LXXIX"
+print(s.intToRoman(3))    # "III"

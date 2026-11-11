@@ -1,14 +1,20 @@
-# Maximum Number of Words Found in Sentences
-# Problem: Maximum Number of Words Found in Sentences
-# Source: https://leetcode.com/problems/maximum-number-of-words-found-in-sentences/
-# Note: Finds the maximum number of words present in any sentence using string splitting.
+# Count Good Triplets
+# Problem: Count Good Triplets
+# Source: https://leetcode.com/problems/count-good-triplets/
+# Note: Counts triplets satisfying the given index and absolute-difference conditions.
 class Solution(object):
-    def mostWordsFound(self, sentences):
-        cur_max = float('-inf')
-        for words in sentences:
-            cur_max = max(cur_max, len(words.split()))
-        return cur_max
+    def countGoodTriplets(self, arr, a, b, c):
+        n = len(arr)
+        count = 0
+        for i in range(n - 2):
+            for j in range(i + 1, n - 1):
+                if abs(arr[i] - arr[j]) > a:
+                    continue
+                for k in range(j + 1, n):
+                    if abs(arr[j] - arr[k]) <= b and abs(arr[i] - arr[k]) <= c:
+                        count += 1
+        return count
 
 s = Solution()
-print(s.mostWordsFound(["alice and bob love leetcode", "i think so too", "this is great thanks very much"])) # 6
-print(s.mostWordsFound(["please wait", "continue to fight", "continue to win"])) # 3
+print(s.countGoodTriplets([3, 0, 1, 1, 9, 7], 7, 2, 3)) # 4
+print(s.countGoodTriplets([1, 1, 2, 2, 3], 0, 0, 1)) # 0

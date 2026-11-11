@@ -1,12 +1,11 @@
-# Find Numbers with Even Number of Digits
-# Problem: Find Numbers with Even Number of Digits
-# Source: https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
-# Note: Counts the numbers in an array that contain an even number of digits using logarithms.
-from math import log10, ceil
+# Remove Trailing Zeros From a String
+# Problem: Remove Trailing Zeros From a String
+# Source: https://leetcode.com/problems/remove-trailing-zeros-from-a-string/
+# Note: Removes all consecutive '0' characters from the end of a numeric string while preserving zeros in the middle.
 class Solution:
-    def findNumbers(self, nums) -> int:
-        return sum([1 for num in nums if ceil(log10(num + 1)) % 2 == 0])
+    def removeTrailingZeros(self, num: str) -> str:
+        return num.strip('0')
     
 s = Solution()
-print(s.findNumbers([12,345,2,6,7896]))  # 2
-print(s.findNumbers([555,901,482,1771])) # 1
+print(s.removeTrailingZeros("51230100")) # "512301"
+print(s.removeTrailingZeros("123"))      # "123"

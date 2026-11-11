@@ -1,33 +1,18 @@
-# CodeWars - Roman Numerals Decoder
-# Problem: Roman Numerals Decoder
-# Source: https://www.codewars.com/kata/51b6249c4612257ac0000005
-# Note: Decodes Roman numerals into integers using subtraction when a smaller value precedes a larger value.
-def solution(roman : str) -> int:
-    
-    romans = {
-        'I': 1,
-        'V': 5,
-        'X': 10,
-        'L': 50,
-        'C': 100,
-        'D': 500,
-        'M': 1000
-    }
+# CodeWars - Title Case
+# Problem: Title Case
+# Source: https://www.codewars.com/kata/5202ef17a402dd033c000009
+# Note: Converts a title to title case while keeping specified minor words lowercase, except for the first word.
+def title_case(title, minor_words=''):
+    result = []
+    minors = [word.lower() for word in minor_words.split()]
+    for i, word in enumerate(title.lower().split()):
+        if word in minors and i > 0:
+            result.append(word.lower())
+        else:
+            result.append(word.title())
+            
+    return ' '.join(result)
 
-    result = 0
-    i = 0
-    while i < len(roman):
-        if i + 1 < len(roman):
-            if romans[roman[i]] < romans[roman[i + 1]]:
-                result += romans[roman[i + 1]] - romans[roman[i]]
-                i += 2
-                continue
-        result += romans[roman[i]]
-        i += 1
-    return result
-
-print(solution('XXI'))      # 21
-print(solution('I'))        # 1
-print(solution('IV'))       # 4
-print(solution('MMVIII'))   # 2008
-print(solution('MDCLIXIV')) # 1663
+print(title_case("a clash of KINGS", "a an the of")) # "A Clash of Kings"
+print(title_case("THE WIND IN THE WILLOWS", "The In")) # "The Wind in the Willows"
+print(title_case("the quick brown fox")) # "The Quick Brown Fox"

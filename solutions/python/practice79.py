@@ -1,40 +1,51 @@
-# Problem: Sum of Digits / Digital Root
-# Source: https://www.codewars.com/kata/541c8630095125aba6000c00
-# Note: Repeatedly sums the digits of a number until a single digit remains.
+# Problem: Character Triangle Pattern
+# Source: 
+# Note: Solves the Character Triangle Pattern problem
 # Description:
-# Given a positive integer, repeatedly sum its digits until you get a single digit.
-# This is also known as the digital root of a number.
+# Given a character and a number n, print a triangle pattern where each row contains an odd number
+# of characters, starting with 1 character and incrementing by 2 for each row.
 # 
 # Example:
-# - Input: 38 → Output: 2 (3+8=11, 1+1=2)
-# - Input: 999 → Output: 9 (9+9+9=27, 2+7=9)
-# - Input: 12345 → Output: 6 (1+2+3+4+5=15, 1+5=6)
+# - Input: character="*", n=3
+# - Output:
+#   *
+#  ***
+# *****
 # 
 # Status: ✅ SOLVED
 
-import math
-
-def sum_digits(num: int) -> int:
-    if num < 10:
-        return num
+def print_character_triangle(character, n):
+    if n <= 0:
+        return ""
     
-    while num >= 10:
-        digit_sum = 0
-        temp = num
-        while temp > 0:
-            digit_sum += temp % 10
-            temp //= 10
-        num = digit_sum
+    result = []
+    level = 1
     
-    return num
+    for i in range(n):
+        # Calculate leading spaces
+        spaces = " " * ((n + 2) - (i + 3))
+        
+        # Create the row with characters
+        row = spaces + character * level
+        result.append(row)
+        
+        level += 2
+    
+    return "\n".join(result)
 
 # Test cases with assertions
-assert sum_digits(38) == 2
-assert sum_digits(999) == 9
-assert sum_digits(12345) == 6
-assert sum_digits(9) == 9
-assert sum_digits(10) == 1
-assert sum_digits(0) == 0
-assert sum_digits(123) == 6
+# Test with n=3
+expected_3 = " *\n***\n*****"
+assert print_character_triangle("*", 3) == expected_3
+
+# Test with n=1
+assert print_character_triangle("#", 1) == "#"
+
+# Test with n=2
+expected_2 = " #\n###"
+assert print_character_triangle("#", 2) == expected_2
+
+# Test with n=0
+assert print_character_triangle("*", 0) == ""
 
 print("All test cases passed!")

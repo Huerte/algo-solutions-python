@@ -1,22 +1,14 @@
-# Self Dividing Numbers
-# Problem: Self Dividing Numbers
-# Source: https://leetcode.com/problems/self-dividing-numbers/
-# Note: Checks each number in the given range and includes it if every digit is non-zero and divides the number exactly.
-class Solution(object):
-    def selfDividingNumbers(self, left, right):
-        arr = []
-        for i in range(left, right + 1):
-            digits = list(map(int, list(str(i))))
-            score = len(digits)
-            for d in digits:
-                if d == 0:
-                    break
-                if i % d == 0:
-                    score -= 1
-            if score == 0:
-                arr.append(i)
-        return arr
+# CodeWars - Help the bookseller !
+# Problem: Help the bookseller!
+# Source: https://www.codewars.com/kata/54dc6f5a224c26032800005c
+# Note: Groups book quantities by their first-letter category and returns the total stock for each requested category in the specified order.
+def stock_list(stocklist, categories):
     
-s = Solution()
-print(s.selfDividingNumbers(1, 22))  # [1,2,3,4,5,6,7,8,9,11,12,15,22]
-print(s.selfDividingNumbers(47, 85)) # [48,55,66,77]
+    cur = dict(zip(categories, [0] * len(categories)))
+    
+    for stock in stocklist:
+        name, count = stock.split()
+        if name[0] in cur:
+            cur[name[0]] += int(count)
+        
+    return " - ".join(f"({cat} : {val})" for cat, val in cur.items()) if stocklist else ''

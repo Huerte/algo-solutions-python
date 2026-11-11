@@ -1,9 +1,29 @@
-# CodeWars - Chain me
-# Problem: Chain me
-# Source: https://www.codewars.com/kata/54fb853b2c8785dd5e000957
-# Note: Applies a sequence of functions to an initial value, passing each function's output to the next.
-def chain(init_val, functions):
-    x = init_val
-    for func in functions:
-        x = func(x)
-    return x
+# 4Sum
+# Not accepted Solution
+# Problem: 4Sum
+# Source: https://leetcode.com/problems/4sum/
+# Note: Finds all unique quadruplets whose elements sum to the given target using four nested loops.
+class Solution(object):
+    def fourSum(self, nums, target):
+        res = []
+        nums.sort()
+        for i in range(len(nums) - 3):
+            for j in range(i + 1, len(nums) - 2):
+                for k in range(j + 1, len(nums) - 1):
+                    for n in range(k + 1, len(nums)):
+                        if sum([nums[i], nums[k], nums[j], nums[n]]) == target:
+                            res.append([nums[i], nums[k], nums[j], nums[n]])
+        
+        final = []
+
+        for lst in res:
+            if final and lst in final:
+                continue
+            final.append(lst)
+
+        return final
+
+s = Solution()
+print(s.fourSum([1, 0, -1, 0, -2, 2], 0)) # [[-2, -1, 1, 2], [-2, 0, 0, 2], [-1, 0, 0, 1]]
+print(s.fourSum([2, 2, 2, 2, 2], 8)) # [[2, 2, 2, 2]]
+print(s.fourSum([0, 0, 0, 0], 0)) # [[0, 0, 0, 0]]

@@ -1,60 +1,36 @@
-# Problem: Backspace String Compare
-# Source: https://leetcode.com/problems/backspace-string-compare/
-# Note: Solves the Backspace String Compare problem
+# Problem: Buddy Strings
+# Source: https://leetcode.com/problems/buddy-strings/
+# Note: Solves the Buddy Strings problem
 # Description:
-# Given two strings s and t, return true if they are equal when both are typed into 
-# empty text editors. '#' means a backspace character.
-# Note that after backspacing an empty text, the text will continue empty.
-#
-# Input:
-# - Two strings `s` and `t` containing lowercase letters and '#' characters
-#
-# Output:
-# - A boolean indicating whether the strings are equal after processing backspaces
-#
+# Given two strings a and b, return true if you can swap two letters in a so the result is equal to b,
+# and false otherwise. Swapping letters is defined as taking two indices i and j (0-indexed) such that
+# i != j and swapping the characters at a[i] and a[j].
+# 
+# Example:
+# - Input: a = "ab", b = "ba" → Output: true (swap a[0] and a[1])
+# - Input: a = "ab", b = "ab" → Output: false (no swap needed)
+# - Input: a = "aa", b = "aa" → Output: true (swap a[0] and a[1] to get same string)
+# 
 # Status: ✅ SOLVED
 
-def backspaceStringCompare(s, t):
-    def processString(string):
-        result = []
-        for char in string:
-            if char != "#":
-                result.append(char)
-            elif result:
-                result.pop()
-        return result
-    
-    s_processed = processString(s)
-    t_processed = processString(t)
-    
-    return s_processed == t_processed
+from collections import Counter
+
+def buddy_strings(a, b):
+    # Check if strings have same length and character counts
+    return len(a) == len(b) and Counter(a) == Counter(b)
 
 # Test cases with assertions
-# Example 1
-s1, t1 = "ab#c", "ad#c"
-assert backspaceStringCompare(s1, t1) == True
+# ✅ Valid buddy strings (same length, same character counts)
+assert buddy_strings("ab", "ba") == True
+assert buddy_strings("aabb", "bbaa") == True
+assert buddy_strings("abc", "cab") == True
+assert buddy_strings("aa", "aa") == True  # Identical strings with duplicates
 
-# Example 2
-s2, t2 = "ab##", "c#d#"
-assert backspaceStringCompare(s2, t2) == True
-
-# Example 3
-s3, t3 = "a#c", "b"
-assert backspaceStringCompare(s3, t3) == False
-
-# Example 4
-s4, t4 = "y#fo##f", "y#f#o##f"
-assert backspaceStringCompare(s4, t4) == True
-
-# Example 5
-s5, t5 = "a##c", "#a#c"
-assert backspaceStringCompare(s5, t5) == True
-
-# Edge cases
-s6, t6 = "", ""
-assert backspaceStringCompare(s6, t6) == True
-
-s7, t7 = "###", "###"
-assert backspaceStringCompare(s7, t7) == True
+# ❌ Not buddy strings
+assert buddy_strings("abc", "abd") == False  # Different characters
+assert buddy_strings("abcd", "abcc") == False  # Different frequencies
+assert buddy_strings("abc", "cbaa") == False  # Different lengths
+assert buddy_strings("a", "a") == True  # Single character (no swap possible)
+assert buddy_strings("", "a") == False
 
 print("All test cases passed!")

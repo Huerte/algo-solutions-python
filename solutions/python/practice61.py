@@ -1,68 +1,42 @@
-# Problem: Pascal's Triangle
-# Source: https://leetcode.com/problems/pascals-triangle/
-# Note: Solves the Pascal's Triangle problem
+# Problem: Largest Number At Least Twice of Others
+# Source: https://leetcode.com/problems/largest-number-at-least-twice-of-others/
+# Note: Solves the Largest Number At Least Twice of Others problem
 # Description:
-# Given an integer numRows, return the first numRows of Pascal's triangle.
-# In Pascal's triangle, each number is the sum of the two numbers directly above it.
-#
-# Input:
-# - An integer `numRows` where 1 <= numRows <= 30
-#
-# Output:
-# - A list of lists representing Pascal's triangle
-#
+# Given an array of integers, return the index of the largest element if it is at least twice as much
+# as every other number in the array. If no such element exists, return -1.
+# 
+# Example:
+# - Input: [3, 6, 1, 0] → Output: 1 (6 is largest and 6 >= 2*3, 6 >= 2*1, 6 >= 2*0)
+# - Input: [1, 2, 3, 4] → Output: -1 (4 is not >= 2*3)
+# 
 # Status: ✅ SOLVED
 
-# class Solution(object):
-#     def generate(self, numRows):
-#         if numRows == 1:
-#             return [[1]]
+def getMaxTwice(arr):
+    if len(arr) <= 1:
+        return -1
 
-#         triangle = [[1], [1, 1]]
+    # Find the maximum value and its index
+    max_index = 0
+    max_value = arr[0]
+    
+    for i in range(1, len(arr)):
+        if arr[i] > max_value:
+            max_value = arr[i]
+            max_index = i
 
-#         for i in range(numRows - 2):  # for rows loop
-#             current_row_content = [1]
-#             for j in range(len(triangle[-1]) - 1):
-#                 current_row_content.append(triangle[-1][j] + triangle[-1][j + 1])
-#             current_row_content.append(1)
-#             triangle.append(current_row_content)
-
-#         return triangle
-
-class Solution:
-    def generate(self, num):
-        if num == 1:
-            return [[1]]
-
-        triangle = [[1], [1,1]]
-
-        for i in range(num - 2):
-            current = [1]
-            
-            for j in range(len(triangle[-1]) - 1):
-                current.append(triangle[-1][j] + triangle[-1][j + 1])
-
-            current.append(1)
-            triangle.append(current)
-
-        return triangle
+    # Check if max_value is at least twice of all other elements
+    for i in range(len(arr)):
+        if i != max_index and arr[i] * 2 > max_value:
+            return -1
+    
+    return max_index
 
 # Test cases with assertions
-sol = Solution()
-
-# Example 1
-assert sol.generate(1) == [[1]]
-
-# Example 2
-assert sol.generate(2) == [[1], [1, 1]]
-
-# Example 3
-assert sol.generate(3) == [[1], [1, 1], [1, 2, 1]]
-
-# Example 4
-assert sol.generate(4) == [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1]]
-
-# Example 5
-assert sol.generate(5) == [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
+assert getMaxTwice([3, 6, 1, 0]) == 1
+assert getMaxTwice([1, 2, 3, 4]) == -1
+assert getMaxTwice([1]) == -1
+assert getMaxTwice([0, 0, 0, 1]) == 3
+assert getMaxTwice([1, 0]) == 0
+assert getMaxTwice([2, 4, 8, 16]) == -1
 
 print("All test cases passed!")

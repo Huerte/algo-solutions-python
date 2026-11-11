@@ -1,12 +1,32 @@
-# py.checkio - Common Words
-# Problem: Common Words
-# Source: https://py.checkio.org/mission/common-words/
-# Note: Finds words common to two comma-separated strings and returns them in alphabetical order.
+# Problem: Combination Sum
+# Source: https://leetcode.com/problems/combination-sum/
 
-def checkio(line1: str, line2: str) -> str:
-    l1, l2 = line1.split(','), line2.split(',')
-    return ','.join(sorted([word for word in l1 if word in l2]))
+class Solution(object):
+    def combinationSum(self, candidates, target):
 
-print(checkio("one,two,three", "four,three,two,one")) # "one,three,two"
-print(checkio("one,two,three", "four,five,six"))      # ""
-print(checkio("hello,world", "hello,earth"))          # "hello"
+        res = []
+
+        sol = []
+
+        def backt(i):
+
+            print(sol[:], i)
+            if sum(sol) == target:
+                res.append(sol[:])
+                return
+            if i == len(candidates) or sum(sol) > target:
+                return
+
+            backt(i+1)
+
+            sol.append(candidates[i])
+            backt(i)
+            sol.pop()
+        
+        backt(0)
+        return res
+
+s = Solution()
+print(s.combinationSum([2,3,5], 8))    # [[2,2,2,2],[2,3,3],[3,5]]
+print(s.combinationSum([2,3,6,7], 7))  # [[2,2,3],[7]]
+print(s.combinationSum([2], 1))        # []

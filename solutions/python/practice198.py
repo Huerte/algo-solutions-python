@@ -1,33 +1,17 @@
-# Valid Braces
-# Problem: Valid Braces
-# Source: https://www.codewars.com/kata/5277c8a221e209d3f6000b56
-# Note: Validates the order and matching of parentheses, square brackets, and curly braces using stack and string-replacement approaches.
-def valid_braces(string):
-    brace = {
-        '}': '{',
-        ']': '[',
-        ')': '('
-    }
-    
-    seen = []
-    
-    for c in string:
-        if seen and c in brace and brace[c] == seen[-1]:
-            seen.pop()
-            continue
-        seen.append(c)
-    return not seen
+# Find the Number of Good Pairs I
+# Problem: Find the Number of Good Pairs I
+# Source: https://leetcode.com/problems/find-the-number-of-good-pairs-i/
+# Note: Counts pairs where an element in nums1 is divisible by the corresponding element in nums2 multiplied by k.
+class Solution(object):
+    def numberOfPairs(self, nums1, nums2, k):
+        count = 0
+        for i in range(len(nums1)):
+            for j in range(len(nums2)):
+                if nums1[i] % (nums2[j] * k) == 0:
+                    count += 1
+        return count
 
-# Clever Solution From CodeWars
-def validBraces(s):
-  while '{}' in s or '()' in s or '[]' in s:
-      s=s.replace('{}','')
-      s=s.replace('[]','')
-      s=s.replace('()','')
-  return s==''
-
-print(valid_braces('()'))      # True
-print(valid_braces('(){}[]'))  # True
-print(valid_braces('([{}])'))  # True
-print(valid_braces('(}'))      # False
-print(valid_braces('[(])'))    # False
+s = Solution()
+print(s.numberOfPairs([1,2,3,4], [1,2,3,4], 1))  # 8
+print(s.numberOfPairs([1,2,3,4], [1,2,3,4], 2))  # 3
+print(s.numberOfPairs([1,2,3,4], [1,2,3,4], 3))  # 1

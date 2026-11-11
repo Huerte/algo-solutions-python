@@ -1,49 +1,33 @@
-# CodeWars - Simple Encryption #1 - Alternating Split
-# Problem: Simple Encryption #1 - Alternating Split
-# Source: https://www.codewars.com/kata/57814d79a56c88e3e0000786
-# Note: Implements alternating split encryption and decryption by rearranging odd- and even-indexed characters.
-def encrypt(encrypted_text, n):
-    res = encrypted_text
-    for _ in range(n):
-
-        odd = []
-        even = []
-
-        for i in range(len(res)):
-            if i % 2 == 0:
-                even.append(res[i])
-            else:
-                odd.append(res[i])
-
-        res = ''.join(odd + even)
-
-    return res
+# CodeWars - Roman Numerals Decoder
+# Problem: Roman Numerals Decoder
+# Source: https://www.codewars.com/kata/51b6249c4612257ac0000005
+# Note: Decodes Roman numerals into integers using subtraction when a smaller value precedes a larger value.
+def solution(roman : str) -> int:
     
-def decrypt(encrypted_text, n):
-    res = encrypted_text
-    for _ in range(n):
-        half = len(res) // 2
-        
-        odd = res[:half]
-        even = res[half:]
-        
-        temp = []
-        
-        for i in range(len(odd)):
-            temp.append(even[i])
-            temp.append(odd[i])
-        
-        if len(even) > len(odd):
-            temp.append(even[-1])
-        
-        res = ''.join(temp)
-    
-    return res
+    romans = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+    }
 
-print(encrypt("This is a test!", 0)) # This is a test!
-print(encrypt("This is a test!", 1)) # hsi  etTi sats!
-print(encrypt("This is a test!", 2)) # s eT ashi tist!
+    result = 0
+    i = 0
+    while i < len(roman):
+        if i + 1 < len(roman):
+            if romans[roman[i]] < romans[roman[i + 1]]:
+                result += romans[roman[i + 1]] - romans[roman[i]]
+                i += 2
+                continue
+        result += romans[roman[i]]
+        i += 1
+    return result
 
-print(decrypt("This is a test!", 0)) # This is a test!
-print(decrypt("hsi  etTi sats!", 1)) # This is a test!
-print(decrypt("s eT ashi tist!", 2)) # This is a test!
+print(solution('XXI'))      # 21
+print(solution('I'))        # 1
+print(solution('IV'))       # 4
+print(solution('MMVIII'))   # 2008
+print(solution('MDCLIXIV')) # 1663

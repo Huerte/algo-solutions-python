@@ -1,12 +1,19 @@
-# HackerRank - Migratory Birds
-# Problem: Migratory Birds
-# Source: https://www.hackerrank.com/challenges/migratory-birds/problem
-# Note: Finds the most frequently occurring bird type, choosing the smallest ID in case of a tie.
-from collections import Counter
-def migratoryBirds(arr):
-    c = Counter(arr)
-    return min(arr, key=lambda x: (-c[x], x))
+# HackerRank - Counting Valleys
+# Problem: Counting Valleys
+# Source: https://www.hackerrank.com/challenges/counting-valleys/problem
+# Note: Counts valleys by detecting when the hiker climbs back to sea level from below it.
+def countingValleys(steps, path):
+    
+    cur = 0
+    val = 0
+    for c in path:
+        if cur < 0 and c == 'U':
+            if cur + 1 == 0:
+                val += 1
+                cur += 1
+                continue
+        if c == 'U': cur += 1
+        else: cur -= 1
+    return val
 
-print(migratoryBirds([1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4])) # 3
-print(migratoryBirds([1, 4, 4, 4, 5, 3]))                # 4
-print(migratoryBirds([1, 1, 2, 2, 3]))                   # 1
+print(countingValleys(8, "UDDDUDUU")) # 1

@@ -1,21 +1,32 @@
-# CodeWars - Convert PascalCase string into snake_case
-# Problem: Convert PascalCase string into snake_case
-# Source: https://www.codewars.com/kata/529b418d533b76924600085d
-# Note: Converts uppercase word boundaries into underscores and lowercases the string.
-def to_underscore(strng: str) -> str:
-    words = []
-    temp = ""
-    for c in str(strng):
-        if c.isupper() and temp:
-            words.append(temp)
-            temp = c
-        else:
-            temp += c
-    if temp:
-        words.append(temp)
-    
-    return '_'.join(w.lower() for w in words)
+# Problem: Tic-Tac-Toe Checker
+# Source: https://www.codewars.com/kata/tic-tac-toe-checker
 
-print(to_underscore('MoviesAndBooks')) # 'movies_and_books'
-print(to_underscore('TestController')) # 'test_controller'
-print(to_underscore('App7Test'))       # 'app7_test'
+def is_solved(board):
+    if len(set(board[0])) == 1 and board[0][0] != 0:
+        return board[0][0]
+    if len(set(board[1])) == 1 and board[1][1] != 0:
+        return board[1][1]
+    if len(set(board[2])) == 1 and board[2][2] != 0:
+        return board[2][2]
+    
+    if len(set(board[i][0] for i in range(3))) == 1 and board[0][0] != 0:
+        return board[0][0]
+    if len(set(board[i][1] for i in range(3))) == 1 and board[0][1] != 0:
+        return board[0][1]
+    if len(set(board[i][2] for i in range(3))) == 1 and board[0][2] != 0:
+        return board[0][2]
+    
+    if len(set((board[i][i] for i in range(3)))) == 1 and board[0][0] != 0:
+        return board[0][0]
+    if len(set(board[2-i][i] for i in range(2, -1, -1))) == 1 and board[0][2] != 0:
+        return board[0][2]
+    
+    for row in board:
+        if any(num == 0 for num in row):
+            return -1
+    
+    return 0
+    
+print(is_solved([[0,0,2],[0,0,0],[1,0,1]])) # -1
+print(is_solved([[0,0,1],[0,1,0],[1,0,0]])) # 1
+print(is_solved([[1,2,1],[2,1,2],[2,1,2]])) # 0

@@ -1,16 +1,18 @@
-# Number of Islands
-# Problem: Number of Islands
-# Source: https://leetcode.com/problems/number-of-islands/
-# Note: Counts individual land cells ('1') in a 2D grid; the original problem requires counting connected groups of land using DFS or BFS.
-def islands(arr):
-    island = 0
+# Problem: Coin Change (Minimum Coins)
+# Source: https://leetcode.com/problems/coin-change/
 
-    for ar in arr:
-        for num in ar:
-            if num == '1':
-                island += 1
-    
-    return island
+def change(n):
+    coins = [50, 20, 10, 5, 1]
+    change = []
+    while n > 0:
+        for coin in coins:
+            if coin <= n:
+                n -= coin
+                change.append(coin)
+                break
+    return change
 
 
-print(islands([['1','0','1'], ['1','1','1'], ['1','0','1']]))
+print(change(25))
+print(change(15))
+print(change(45))

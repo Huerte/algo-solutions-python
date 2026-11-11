@@ -1,19 +1,12 @@
-# Generate All Subsets
-# Problem: Subsets
-# Source: https://leetcode.com/problems/subsets/
-# Note: Generates all possible subsets of an array using an iterative approach.
+# Array Partition
+# Problem: Array Partition
+# Source: https://leetcode.com/problems/array-partition/
+# Note: Maximizes the sum of minimum values across n pairs by sorting the array.
 
 class Solution(object):
-    def subsets(self, nums):
-        res = [[]]
-
-        for i in range(len(nums)):
-            temp = []
-            for subset in res:
-                temp.append(subset + [nums[i]])
-            res.extend(temp)
-
-        return res
+    def arrayPairSum(self, nums):
+        return sum(num for i, num in enumerate(sorted(nums)) if i % 2 == 0)
 
 s = Solution()
-print(s.subsets([1, 2, 3]))
+print(s.arrayPairSum([1, 4, 3, 2]))       # 4
+print(s.arrayPairSum([6, 2, 6, 5, 1, 2])) # 9

@@ -1,9 +1,18 @@
-# HackerRank - Equalize the Array
-# Problem: Equalize the Array
-# Source: https://www.hackerrank.com/challenges/equality-in-a-array/problem
-# Note: Finds the minimum number of elements to delete so that all remaining elements are equal.
-def equalizeArray(arr):
-    return len(arr) - arr.count(max(arr, key=lambda x: arr.count(x)))
+# Problem: Viral Advertising
+# Source: https://www.hackerrank.com/challenges/strange-advertising/problem
+# Note: Simulates daily ad sharing and calculates the cumulative number of likes over n days.
+import math
 
-print(equalizeArray([3,3,2,1,3]))       # 2
-print(equalizeArray([1,2,3,1,2,3,3,3])) # 4
+def viralAdvertising(n):
+    shared = 5
+    likes = 0
+
+    for _ in range(n):
+        like = shared // 2
+        likes += like
+        shared = like * 3
+    
+    return likes
+
+print(viralAdvertising(3)) # 9
+print(viralAdvertising(4)) # 15

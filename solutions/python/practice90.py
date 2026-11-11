@@ -1,14 +1,20 @@
-# Problem: Find Strings Containing a Specific Character
-# Source: https://leetcode.com/problems/find-words-containing-character/
+# Shift Odd-Indexed Characters
+# Problem: Replace All Digits with Characters
+# Source: https://leetcode.com/problems/replace-all-digits-with-characters/
+# Note: Replaces each digit at an odd index with the previous character shifted by that digit.
+s = input('Enter the string: ')
+res = []
 
-n = int(input('Enter the number of strings: '))
-print(f'Enter {n} strings:')
-arr = []
-for _ in range(n):
-    arr.append(input())
+pass_char = ""
+for i in range(len(s)):
+    if not res:
+        res.append(s[i])
+        pass_char = s[i]
+        
+    elif i % 2 != 0:
+        res.append(chr(ord(pass_char) + int(s[i])))
+    else:
+        res.append(s[i])
+        pass_char = s[i]
 
-s = input('Enter the character to search for: ')
-print(f"Strings containing the character '{s}'")
-for w in arr:
-    if s in w:
-        print(w)
+print(f'Transformed string: {''.join(res)}')

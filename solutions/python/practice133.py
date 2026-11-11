@@ -1,21 +1,26 @@
-# Problem: Jump Game
-# Source: https://leetcode.com/problems/jump-game/
+# Problem: Longest Substring Without Repeating Characters
+# Source: https://leetcode.com/problems/longest-substring-without-repeating-characters/
 
-def can_jump(arr):
+def longest_substring(s):
 
-    max_reach = 0
-
-    for i in range(len(arr)):
-        if i > max_reach:
-            return False
-        
-        max_reach = max(arr[i] + i, max_reach)
-
-        if max_reach >= len(arr) - 1:
-            return True
+    words = []
     
-    return False
+    temp = ""
+    for c in s:
+        if not temp:
+            temp += c
+            continue
+        
+        if c not in temp:
+            temp += c
+        else:
+            words.append(temp)
+            temp = c
+
+    return len(max(words, key=len))
 
 
-print(can_jump([2, 1, 3, 1, 0, 1])) # == True
-print(can_jump([3, 2, 1, 0, 4]))    # == False
+print(longest_substring("abcabcbb")) # == 3
+print(longest_substring("bbbbb"))    # == 1
+print(longest_substring("pwwkew"))   # == 3
+print(longest_substring("abcdac"))   # == 4

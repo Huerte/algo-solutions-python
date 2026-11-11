@@ -1,20 +1,16 @@
-# XOR Operation in an Array
-# Problem: XOR Operation in an Array
-# Source: https://leetcode.com/problems/xor-operation-in-an-array/
-# Note: Creates an array using start + 2 * i and returns the XOR of all its elements.
+# Vowel Recognition
+# Problem: Vowel Recognition
+# Source: https://www.codewars.com/kata/5bed96b9a68c19d394000b1d
+# Note: Calculates the total number of vowels across all possible substrings in linear time.
 
-class Solution(object):
-    def xorOperation(self, n, start):
-        arr = []
-        i = 0
-        while len(arr) < n:
-            arr.append(start + 2 * i)
-            i += 1
-        xor = arr[0]
-        for i in arr[1:]:
-            xor ^= i
-        return xor
+def vowel_recognition(s):
+    vowels = set("aeiouAEIOU")
+    count = 0
+    n = len(s)
+    for i, c in enumerate(s):
+        if c in vowels:
+            count += (i + 1) * (n - i)
+    return count
 
-s = Solution()
-print(s.xorOperation(5, 0)) # 8
-print(s.xorOperation(4, 3)) # 8
+print(vowel_recognition("aba")) # 6
+print(vowel_recognition("abc")) # 3

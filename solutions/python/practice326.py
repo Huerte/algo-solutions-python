@@ -1,14 +1,13 @@
-# Problem: Counting Words With a Given Prefix
-# Source: https://leetcode.com/problems/counting-words-with-a-given-prefix/
+# Problem: Minimum Sum of Four Digit Number After Splitting Digits
+# Source: https://leetcode.com/problems/minimum-sum-of-four-digit-number-after-splitting-digits/
 
 class Solution:
-    def prefixCount(self, words, pref: str) -> int:
-        count = 0
-        for word in words:
-            if word.startswith(pref):
-                count += 1
-        return count
+    def minimumSum(self, num: int) -> int:
+        temp = sorted(str(num))
+        n1, n2 = f"{temp[0]}{temp[3]}", f"{temp[1]}{temp[2]}"
+        return int(n1) + int(n2)
 
 s = Solution()
-print(s.prefixCount(["leetcode","win","loops","success"], 'code'))  # 0
-print(s.prefixCount(["pay","attention","practice","attend"], 'at')) # 2
+print(s.minimumSum(2932)) # 52
+print(s.minimumSum(4009)) # 13
+print(s.minimumSum(2687)) # 95

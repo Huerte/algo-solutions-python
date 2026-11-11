@@ -1,28 +1,33 @@
-# Problem: Stressful Subject
-# Source: https://py.checkio.org/en/mission/stressful-subject/
+# CodeWars - The Solar System - Lost Moons
+# Problem: The Solar System - Lost Moons
+# Source: https://www.codewars.com/kata/67e1768b5c64e7019dc30966
+# Note: Reconstructs each planet's moon list using the known moon order and the moons that have been found.
+planet_moons = {
+    'Mercury': [],
+    'Venus': [],
+    'Earth': ['Moon'],
+    'Mars': ['Deimos', 'Phobos'],
+    'Jupiter': ['Callisto', 'Europa', 'Ganymede', 'Io'],
+    'Saturn': ['Dione', 'Iapetus', 'Rhea', 'Tethys', 'Titan'],
+    'Uranus': ['Ariel', 'Miranda', 'Oberon', 'Titania', 'Umbriel'],
+    'Neptune': ['Nereid', 'Proteus', 'Triton']
+}
 
+def lost_moons(planets, moons):
+    res = []
+    for planet in sorted(planets, key=lambda x: ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"].index(x)):
+        temp = [planet]
+        right = True
+        for moon in planet_moons[planet]:
+            if moon in moons:
+                if right:
+                    temp.append(moon)
+                else:
+                    temp.insert(0, moon)
+                right = not right
+        res.append(temp)
+    return res
 
-def is_stressful(subj: str) -> bool:
-    if subj.isupper():
-        return True
-    elif subj[-3:] == '!!!':
-        return True
-    else:
-        reds = ["help", "asap", "urgent"]
-        
-        for word in subj.lower().split():
-            temp = ""
-            for c in word:
-                if c.isalpha():
-                    if temp and c == temp[-1]:
-                        continue
-                    temp += c
-            print(temp)
-            for code in reds:
-                if code in temp:
-                    return True
-    return False
-
-print(is_stressful("Hi"))           # False
-print(is_stressful("I need HELP"))  # True
-print(is_stressful("I neeed HLEP")) # False
+print(lost_moons(['Earth', 'Mars', 'Jupiter'], ['Moon', 'Phobos', 'Europa'])) # [['Earth', 'Moon'], ['Mars', 'Phobos'], ['Jupiter', 'Europa']]
+print(lost_moons(['Earth', 'Mars', 'Jupiter'], ['Deimos', 'Ganymede', 'Io'])) # [['Earth'], ['Mars', 'Deimos'], ['Jupiter', 'Ganymede', 'Io']]
+print(lost_moons(['Earth', 'Mars', 'Jupiter'], ['Callisto', 'Dione', 'Iapetus'])) # [['Earth'], ['Mars'], ['Jupiter', 'Callisto']]

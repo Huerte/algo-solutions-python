@@ -1,16 +1,17 @@
-# Count Beautiful Days in a Range
-# Problem: Beautiful Days at the Movies
-# Source: https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem
-# Note: Counts numbers in a range whose difference from their reverse is divisible by a given divisor.
-st = int(input('Enter start: '))
-end = int(input('Enter end: '))
-div = int(input('Enter divisor: '))
+# Problem: Days to Wait for a Luckier Day
+# Source: https://leetcode.com/problems/daily-temperatures/
 
-res = 0
+n = int(input('Enter the number of days: '))
+odd = list(map(int, input('Enter the odds of luck for each day:\n').split()))
+print('Number of days to wait for a luckier day:\n')
 
-for i in range(st, end):
-    temp = ((i - int(str(i)[::-1])) / div)
-    if temp == int(temp):
-        res += 1
+for i in range(n - 1):
+    temp = 0
+    for j in range(i + 1, n):
+        if odd[j] > odd[i]:
+            temp = j - i
+            break
+    print(temp, end=' ')
 
-print(f"The number of just right number is: {res}")
+    if i + 1 == n - 1:
+        print(0)

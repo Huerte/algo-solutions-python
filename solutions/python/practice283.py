@@ -1,16 +1,15 @@
-# HackerRank - Find Digits
-# Problem: Find Digits
-# Source: https://www.hackerrank.com/challenges/find-digits/problem
-# Note: Extracts each digit from the number and counts how many non-zero digits divide the original number exactly.
-def findDigits(n):
-    div = n
-    count = 0
-    while n > 0:
-        cur = n % 10
-        if cur != 0 and div % cur == 0:
-            count += 1
-        n //= 10
+# Repeated String
+# Problem: Repeated String
+# Source: https://www.hackerrank.com/challenges/repeated-string/problem
+# Note: Counts occurrences of 'a' in an infinitely repeated string using full repetitions and the remaining prefix.
+def repeatedString(s, n):
+    l = len(s)
     
-    return count
+    total = n // l
+    other = n % l
+    
+    return (s.count('a') * total) + s[:other].count('a')
 
-print(findDigits(12)) # 2
+print(repeatedString('a', 1000000000000)) # 1000000000000
+print(repeatedString('aba', 10))          # 7
+print(repeatedString('abcac', 10))        # 4

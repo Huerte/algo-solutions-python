@@ -1,58 +1,34 @@
-# Problem: Maximum Area of Longest Diagonal Rectangle
-# Source: https://leetcode.com/problems/maximum-area-of-longest-diagonal-rectangle/
-# Note: Solves the Maximum Area of Longest Diagonal Rectangle problem
+# Problem: Two Sum
+# Source: https://leetcode.com/problems/two-sum/
+# Note: Solves the Two Sum problem
 # Description:
-# Given a list of rectangles with length and breadth, find the rectangle with the maximum area 
-# among those that have the longest diagonal. If multiple rectangles have the same longest diagonal, 
-# choose the one with the maximum area.
-#
-# Input:
-# - An integer n representing the number of rectangles
-# - n lines of space-separated integers representing (length, breadth) for each rectangle
-#
-# Output:
-# - An integer representing the maximum area of the rectangle with the longest diagonal
-#
+# Given an array of integers and a target sum, find two numbers in the array that add up to the target.
+# Return the indices of these two numbers. You may assume that each input has exactly one solution.
+# 
+# Example:
+# - Input: arr=[2, 7, 11, 15], target=9 → Output: [0, 1] (2 + 7 = 9)
+# - Input: arr=[3, 2, 4], target=6 → Output: [1, 2] (2 + 4 = 6)
+# 
 # Status: ✅ SOLVED
 
-from math import sqrt
-
-def find_max_area_longest_diagonal(rectangles):
-    if not rectangles:
-        return 0
-        
-    max_area = 0
-    max_diagonal = 0
+def two_sum(arr, target):
+    if not arr or len(arr) < 2:
+        return []
     
-    for l, b in rectangles:
-        current_area = l * b
-        current_diagonal = sqrt(l ** 2 + b ** 2)
-        
-        if current_diagonal > max_diagonal or (current_diagonal == max_diagonal and current_area > max_area):
-            max_diagonal = current_diagonal
-            max_area = current_area
+    for i in range(len(arr)):
+        for j in range(i + 1, len(arr)):
+            if arr[i] + arr[j] == target:
+                return [i, j]
     
-    return max_area
+    return []  # No solution found
 
 # Test cases with assertions
-# Example 1
-rectangles1 = [(3, 4), (5, 12), (6, 8)]
-assert find_max_area_longest_diagonal(rectangles1) == 60  # 5x12 has longest diagonal
-
-# Example 2
-rectangles2 = [(1, 1), (2, 2), (3, 3)]
-assert find_max_area_longest_diagonal(rectangles2) == 9  # 3x3 has longest diagonal
-
-# Example 3
-rectangles3 = [(4, 3), (8, 6)]  # Same diagonal, different areas
-assert find_max_area_longest_diagonal(rectangles3) == 48  # 8x6 has larger area
-
-# Example 4
-rectangles4 = [(1, 1)]
-assert find_max_area_longest_diagonal(rectangles4) == 1
-
-# Edge cases
-rectangles5 = []
-assert find_max_area_longest_diagonal(rectangles5) == 0
+assert two_sum([2, 7, 11, 15], 9) == [0, 1]
+assert two_sum([3, 2, 4], 6) == [1, 2]
+assert two_sum([3, 3], 6) == [0, 1]
+assert two_sum([1, 2, 3, 4, 5], 9) == [3, 4]
+assert two_sum([1, 2], 3) == [0, 1]
+assert two_sum([1], 2) == []
+assert two_sum([], 5) == []
 
 print("All test cases passed!")

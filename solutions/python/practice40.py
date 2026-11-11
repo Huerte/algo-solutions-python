@@ -1,61 +1,44 @@
-# Problem: Better Days
-# Source: https://leetcode.com/problems/daily-temperatures/
-# Note: Solves the Better Days problem
+# Problem: Create Phone Number
+# Source: https://www.codewars.com/kata/525f50e3b73515a6db000b83
+# Note: Formats an array of 10 integers into phone number format (XXX) XXX-XXXX
+#
 # Description:
-# Given an array representing temperatures for n days, for each day find how many days 
-# you have to wait until a warmer temperature. If there is no future day for which 
-# this is possible, put 0 instead.
-# This is similar to the "Daily Temperatures" problem.
+# Write a function that accepts an array of 10 integers (between 0 and 9), that returns 
+# a string of those numbers in the form of a phone number.
+# The returned format must be correct in order for this challenge to pass.
 #
 # Input:
-# - An array of integers `days` representing temperatures for each day
+# - An array of 10 integers where each integer is between 0 and 9
 #
 # Output:
-# - An array where each element represents the number of days to wait for a warmer temperature
+# - A string in the format "(XXX) XXX-XXXX"
 #
 # Status: ✅ SOLVED
 
-def betterDays(days):
-    if not days:
-        return []
-        
-    n = len(days)
-    results = [0] * n
+def create_phone_number(n):
+    if len(n) != 10 or max(n) > 9 or min(n) < 0:
+        return ''
     
-    for i in range(n):
-        not_lucky = True
-        for j in range(i + 1, n):
-            if days[i] < days[j]:
-                results[i] = j - i
-                not_lucky = False
-                break
-        if not_lucky:
-            results[i] = 0
+    # Convert integers to strings and join them
+    n_str = ''.join(map(str, n))
     
-    return results
+    # Format as phone number
+    return f"({n_str[:3]}) {n_str[3:6]}-{n_str[6:]}"
 
 # Test cases with assertions
 # Example 1
-days1 = [73, 74, 75, 71, 69, 72, 76, 73]
-assert betterDays(days1) == [1, 1, 4, 2, 1, 1, 0, 0]
+assert create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) == "(123) 456-7890"
 
 # Example 2
-days2 = [30, 40, 50, 60]
-assert betterDays(days2) == [1, 1, 1, 0]
+assert create_phone_number([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]) == "(111) 111-1111"
 
 # Example 3
-days3 = [30, 60, 90]
-assert betterDays(days3) == [1, 1, 0]
+assert create_phone_number([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]) == "(000) 000-0000"
 
 # Example 4
-days4 = [70, 60, 50, 40]
-assert betterDays(days4) == [0, 0, 0, 0]
+assert create_phone_number([9, 8, 7, 6, 5, 4, 3, 2, 1, 0]) == "(987) 654-3210"
 
 # Edge cases
-days5 = []
-assert betterDays(days5) == []
-
-days6 = [100]
-assert betterDays(days6) == [0]
+assert create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 9]) == "(123) 456-7899"
 
 print("All test cases passed!")

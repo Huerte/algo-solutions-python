@@ -1,55 +1,16 @@
-# Problem: Sort Characters By Frequency
-# Source: https://leetcode.com/problems/sort-characters-by-frequency/
-# Note: Sorts characters in descending order of their frequency
-# Note: Ties are ordered alphabetically.
+# Problem: Even Fibonacci Numbers Sum
+# Source: https://projecteuler.net/problem=2
 
-from collections import Counter
-def sort_characters_by_frequency(s):
-
-    freq = Counter(s)
+def fibonacciEvenSum(limit):
     
-    return ''.join(sorted(s, key=lambda c: (-freq[c], c)))
+    total = 0
+    a, b = 0, 1
 
+    while b <= limit:
+        a, b = b, a + b
+        if b % 2 == 0:
+            total += b
 
-print(sort_characters_by_frequency('cbaba'))
+    return total
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-def test_sort_characters_by_frequency():
-    assert sort_characters_by_frequency("aabbccc") == "cccaabb"
-    assert sort_characters_by_frequency("hello") == "lleho"
-    assert sort_characters_by_frequency("") == ""
-    assert sort_characters_by_frequency("abc") == "abc"
-    assert sort_characters_by_frequency("abbbcc") == "bbbcca"
-
-test_sort_characters_by_frequency()
-print('Success')
+print(fibonacciEvenSum(4_000_000))

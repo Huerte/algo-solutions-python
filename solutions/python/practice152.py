@@ -1,17 +1,27 @@
-# Largest Local Values in a Matrix
-# Problem: Largest Local Values in a Matrix
-# Source: https://leetcode.com/problems/largest-local-values-in-a-matrix/
-# Note: Finds the maximum value in every contiguous 3x3 submatrix.
+# Problem: Decode the Message
+# Source: https://leetcode.com/problems/decode-the-message/
+# Note: Decodes a message using a substitution mapping based on the first occurrence of characters in the key.
 
 class Solution(object):
-    def largestLocal(self, grid):
-        n = len(grid)
-        res = [[0] * (n - 2) for _ in range(n - 2)]
-
-        for i in range(n - 2):
-            for j in range(n - 2):
-                for r in range(i, i + 3):
-                    for c in range(j, j + 3):
-                        res[i][j] = max(res[i][j], grid[r][c])
-
+    def decodeMessage(self, key, message):
+        
+        coord = {}
+        alpha = 0
+        for c in key.replace(' ', ''):
+            if not coord:
+                coord[c] = chr(97 + alpha)
+                alpha += 1
+            elif c not in coord:
+                coord[c] = chr(97 + alpha)
+                alpha += 1
+        
+        res = ""
+        for c in message:
+            if c == ' ':
+                res += ' '
+            else:
+                res += coord[c]
         return res
+
+s = Solution()
+print(s.decodeMessage("the quick brown fox jumps over the lazy dog", "vkbs bs t suepuv"))

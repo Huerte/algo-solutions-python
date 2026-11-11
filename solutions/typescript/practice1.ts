@@ -5,7 +5,7 @@
 
 // A string of brackets is valid when every closing bracket matches the most
 // recent unmatched opening bracket. That "most recent" rule is exactly what a
-// stack gives you, so this is a port of solutions/python/practice410.py with
+// stack gives you, so this is a port of solutions/python/practice409.py with
 // TypeScript type annotations added to the function and its data structures.
 function isValid(s: string): boolean {
   const matchingOpen: Record<string, string> = {

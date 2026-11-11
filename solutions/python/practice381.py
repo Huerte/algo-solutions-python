@@ -1,10 +1,31 @@
-# Problem: Valid Phone Number
-# Source: https://www.codewars.com/
-# Note: Validates phone number string format using regex
-import re
-def valid_phone_number(phone_number):
-    return bool(re.match(r"\([0-9]{3}\)\s[0-9]{3}-[0-9]{4}$", phone_number))
+# Problem: Plus One Array
+# Source: https://www.codewars.com/kata/5514e5b77e6b2f38e0000ca9
+# Note: Adds 1 to the number represented by an array of digits and returns None for invalid or empty arrays.
+def up_array(arr):
+    if not arr or any([c < 0 or c > 9 for c in arr]):
+        return None
+    
+    carry = 1
+    
+    for i in range(len(arr) - 1, -1, -1):
+        if carry < 1:
+            break
 
-print(valid_phone_number("(123) 456-7890abc")) # False
-print(valid_phone_number("(123) 456-7890"))    # True
-print(valid_phone_number("abc(123) 456-7890")) # False
+        temp = arr[i] + carry
+        if temp > 9:
+            arr[i] = temp % 10
+        else:
+            arr[i] = temp
+
+        carry = temp // 10
+    
+    if carry > 0:
+        arr.insert(0, carry)
+    
+    return arr
+
+print(up_array([4, 3, 2, 5])) # [4, 3, 2, 6]
+print(up_array([9, 9, 9]))    # [1, 0, 0, 0]
+print(up_array([1, 2, 3]))    # [1, 2, 4]
+print(up_array([1, -9]))      # None
+print(up_array([1, 10]))      # None

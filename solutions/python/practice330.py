@@ -1,26 +1,11 @@
-# Problem: Print in Order
-# Source: https://leetcode.com/problems/print-in-order/
+# Problem: Find the Difference of Two Arrays
+# Source: https://leetcode.com/problems/find-the-difference-of-two-arrays/
 
-
-from threading import Event
-class Foo:
-    def __init__(self):
-        self.first_done = Event()
-        self.second_done = Event()
-
-    def first(self, printFirst) -> None:
-        
-        printFirst()
-        self.first_done.set()
-
-
-    def second(self, printSecond) -> None:
-        self.first_done.wait()
-        printSecond()
-        self.second_done.set()
-
-
-    def third(self, printThird) -> None:
-
-        self.second_done.wait()        
-        printThird()
+class Solution:
+    def findDifference(self, nums1, nums2):
+        return [[num for num in set(nums1) if num not in nums2], [num for num in set(nums2) if num not in nums1]]
+    
+s = Solution()
+print(s.findDifference([1,2,3], [2,4,6])) # [[1,3], [4,6]]
+print(s.findDifference([1,2,3,3], [1,1,2,2])) # [[3], []]
+print(s.findDifference([1,2,3], [1,2,3])) # [[], []]

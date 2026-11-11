@@ -1,16 +1,14 @@
-# Find Indices of Stable Mountains
-# Problem: Find Indices of Stable Mountains
-# Source: https://leetcode.com/problems/find-indices-of-stable-mountains/
-# Note: Finds indices where the immediately preceding mountain's height exceeds the given threshold.
+# Sort the People
+# Problem: Sort the People
+# Source: https://leetcode.com/problems/sort-the-people/
+# Note: Sorts people's names in descending order of their corresponding heights.
 class Solution(object):
-    def stableMountains(self, height, threshold):
-        
-        stables = []
-        n = len(height)
-        for i in range(1, n):
-            if height[i - 1] > threshold and height[i] > 0:
-                stables.append(i)
-        return stables
+    def sortPeople(self, names, heights):
+        people = []
+        for name, height in zip(names, heights):
+            people.append([name, height])
+        return [name for name, _ in sorted(people, key=lambda x: -x[1])]
 
 s = Solution()
-print(s.stableMountains([1,2,3,4,5], 2)) # [3, 4]
+print(s.sortPeople(["Alice", "Bob", "Charlie"], [155, 165, 160])) # ["Bob", "Charlie", "Alice"]
+print(s.sortPeople(["Alice","Bob","Bob"], [155, 185, 150])) # ["Bob", "Alice", "Bob"]

@@ -1,37 +1,66 @@
-# Problem: Singly Linked List Implementation
-# Source: 
-# Note: Implements singly linked list with push, append, pop, and search
-class Nodes:
-    def __init__(self, value, nextNode=None):
-        self.value = value
-        self.nextNode = nextNode
+# Problem: Longest Common Prefix
+# Source: https://leetcode.com/problems/longest-common-prefix/
+# Note: Solves the Longest Common Prefix problem
+# Description:
+# Write a function to find the longest common prefix string amongst an array of strings.
+# If there is no common prefix, return an empty string "".
+#
+# Input:
+# - An array of strings `strs` where 1 <= strs.length <= 200
+# - Each string in strs consists of only lowercase English letters
+# - 0 <= strs[i].length <= 200
+#
+# Output:
+# - A string representing the longest common prefix
+#
+# Status: ✅ SOLVED
 
-class LinkedList:
-    def __init__(self):
-        self.head = None
-        self.tail = None
+def longestCommonPrefix(strs):
+    if not strs:
+        return ""
+    
+    sample_word = strs[0]
 
-    def push(self, value):
-        new_node = Nodes(value)
-        if not self.head:
-            self.head = new_node
-            self.tail = new_node
-            return
+    for word in strs[1:]:
+        while sample_word and word[:len(sample_word)] != sample_word:
+            sample_word = sample_word[:-1]
+    return sample_word
 
-        self.tail.nextNode = new_node
-        self.tail = new_node
+# def longestCommonPrefix(lst):
+#     common = ""
 
-    def printNodes(self):
-        current_node = self.head
-        while current_node:
-            print(current_node.value, end=' -> ')
-            current_node = current_node.nextNode
-        print("None")
+#     for i in range(len(min(lst))):
+#         w = min(lst)[i]
+#         add = False
+#         for word in lst:
+#             if word[i] != w:
+#                 add = False
+#                 break
+#             add = True
+#         if add:
+#             common += w
 
-linkedList = LinkedList()
-linkedList.printNodes()
-linkedList.push(1)
-linkedList.push(2)
-linkedList.push(3)
-linkedList.push(4)
-linkedList.printNodes()
+#     return common
+
+# Test cases with assertions
+# Example 1
+assert longestCommonPrefix(["flower","flow","flight"]) == "fl"
+
+# Example 2
+assert longestCommonPrefix(["ab", "a"]) == "a"
+
+# Example 3
+assert longestCommonPrefix(["dog","racecar","car"]) == ""
+
+# Example 4
+assert longestCommonPrefix(["interspecies","interstellar","interstate"]) == "inters"
+
+# Example 5
+assert longestCommonPrefix(["throne","throne"]) == "throne"
+
+# Edge cases
+assert longestCommonPrefix([""]) == ""
+assert longestCommonPrefix(["a"]) == "a"
+assert longestCommonPrefix(["", "b"]) == ""
+
+print("All test cases passed!")

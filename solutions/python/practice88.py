@@ -1,10 +1,10 @@
-# Problem: Count Integers with Even Number of Digits
-# Source: https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
+# Problem: Sum of Multiples of 3, 5, or 7
+# Source: https://leetcode.com/problems/sum-multiples/
 
-n = int(input('Enter the number of integers: '))
-arr = map(int, input("Enter the integers: ").split()[:n])
-c = 0
-for num in arr:
-    if len(str(num)) % 2 == 0:
-        c += 1
-print(f"Count of integers with an even number of digits: {c}")
+n = int(input('Enter a positive integer n: '))
+sums = 0
+for i in range(1, n+1):
+    if i % 3 == 0 or i % 5 == 0 or i % 7 == 0:
+        sums += i
+
+print(f'Sum of all integers: {sums}')

@@ -1,20 +1,21 @@
-# Shift Odd-Indexed Characters
-# Problem: Replace All Digits with Characters
-# Source: https://leetcode.com/problems/replace-all-digits-with-characters/
-# Note: Replaces each digit at an odd index with the previous character shifted by that digit.
-s = input('Enter the string: ')
-res = []
+# Problem: Count Valid Pairs with Equal Values and Divisible Product of Indices
+# Source: https://leetcode.com/problems/count-equal-and-divisible-pairs-in-an-array/
 
-pass_char = ""
-for i in range(len(s)):
-    if not res:
-        res.append(s[i])
-        pass_char = s[i]
-        
-    elif i % 2 != 0:
-        res.append(chr(ord(pass_char) + int(s[i])))
-    else:
-        res.append(s[i])
-        pass_char = s[i]
+n = int(input('Enter the number of integers (N): '))
+print(f'Enter {n} integers:')
 
-print(f'Transformed string: {''.join(res)}')
+res = 0
+
+nums = []
+
+for _ in range(n):
+    nums.append(int(input()))
+
+k = int(input('Enter the integer K: '))
+
+for i in range(n - 1):
+    for j in range(i + 1, n):
+        if (i * j) % k == 0 and (nums[i] == nums[j]):
+            res += 1
+
+print(f'Number of valid pairs: {res}')

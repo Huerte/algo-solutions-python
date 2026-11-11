@@ -1,32 +1,21 @@
-# Problem: Punctuation Score
-# Source: 
-# Note: Calculates total score of consecutive punctuation marks
-def punctuation_score(msg):
-    punc = {
-        '.': 2,
-        '!': 5,
-        '?': 10
-    }
+# HackerRank - Subarray Division
+# Problem: Subarray Division (Birthday Chocolate)
+# Source: https://www.hackerrank.com/challenges/the-birthday-bar/problem
+# Note: Counts contiguous subarrays of length m whose sum equals d.
+def birthday(s, d, m):
+    count = 0
+    
+    for i in range(len(s)):
+        cur = []
+        for j in range(i, len(s)):
+            if len(cur) < m:
+                cur.append(s[j])
+            else:
+                break
+        print(cur)
+        if sum(cur) == d:
+            count += 1
+    
+    return count
 
-    t = 0
-    i = 0
-
-    while i < len(msg):
-        if msg[i] in punc:
-            cur = i
-
-            while cur < len(msg) and msg[cur] in punc:
-                cur += 1
-
-            group_score = sum(punc[c] for c in msg[i:cur])
-
-            t += group_score * (i + 1)
-
-            i = cur
-        else:
-            i += 1
-
-    return t
-
-print(punctuation_score("I like to write multiple sentences. Don't you? Come on!")) # 805
-print(punctuation_score("Hello world!"))                                            # 60
+print(birthday([4], 4, 1)) # 1

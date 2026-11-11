@@ -1,13 +1,10 @@
-# Problem: Clear Digits
-# Source: https://leetcode.com/problems/clear-digits/
+# Problem: Count Integers with Even Number of Digits
+# Source: https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
 
-s = input("Enter the string: ")
-
-arr = []
-
-for i in range(len(s)):
-    if s[i].isdigit() and arr:
-        arr.pop()
-    else:
-        arr.append(s[i])
-print(''.join(arr))
+n = int(input('Enter the number of integers: '))
+arr = map(int, input("Enter the integers: ").split()[:n])
+c = 0
+for num in arr:
+    if len(str(num)) % 2 == 0:
+        c += 1
+print(f"Count of integers with an even number of digits: {c}")

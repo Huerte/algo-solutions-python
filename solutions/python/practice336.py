@@ -1,14 +1,26 @@
-# Problem: Sort an array of 0s, 1s and 2s without using any sorting algorithm.
-# Source: https://leetcode.com/problems/sort-colors/
+# Problem: Happy Number
+# Source: https://leetcode.com/problems/happy-number/
 
 class Solution:
-    def sort012(self, arr):
-        from collections import Counter
-        d = Counter(arr)
+    def isHappy(self, n: int) -> bool:
         
-        return [i for i in range(3) for _ in range(d[i])]
+        seen = set()
+
+        while n != 1:
+            sums = 0
+            temp = n
+            while temp > 0:
+                sums += (temp % 10) ** 2
+                temp //= 10
+            if sums in seen:
+                return False
+
+            seen.add(sums)
+            n = sums
+        
+        return True
 
 s = Solution()
-print(s.sort012([0, 1, 2, 0, 1, 2])) # [0, 0, 1, 1, 2, 2]
-print(s.sort012([1, 0, 1, 2, 0, 1])) # [0, 0, 1, 1, 1, 2]
-print(s.sort012([2, 2, 0, 1, 0, 1])) # [0, 0, 1, 1, 2, 2]
+print(s.isHappy(19)) # True
+print(s.isHappy(2)) # False
+print(s.isHappy(7)) # True

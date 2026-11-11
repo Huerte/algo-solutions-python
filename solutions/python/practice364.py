@@ -1,13 +1,17 @@
-# Problem: Combinations
-# Source: https://leetcode.com/problems/combinations/
+# Problem: Valid Number
+# Source: https://leetcode.com/problems/valid-number/
 
-from itertools import combinations
 class Solution(object):
-    def combine(self, n, k):
-        return [list(arr) for arr in combinations(range(1, n + 1), k)]
-
+    def isNumber(self, s):
+        try:
+            float(s)
+            s = s.lower().strip()
+            return 'inf' not in s and 'nan' not in s
+        except:
+            return False
+    
 s = Solution()
-print(s.combine(4, 2)) # [[1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4]]
-print(s.combine(4, 3)) # [[1, 2, 3], [1, 2, 4], [1, 3, 4], [2, 3, 4]]
-print(s.combine(4, 1)) # [[1], [2], [3], [4]]
-print(s.combine(1, 1)) # [[1]]
+print(s.isNumber(" 005047e+6")) # True
+print(s.isNumber("95a54e53"))   # False
+print(s.isNumber("+6e-1"))      # True
+print(s.isNumber("."))          # False

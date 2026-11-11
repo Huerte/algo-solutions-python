@@ -1,26 +1,20 @@
-# Problem: Buddy Strings Challenge
-# Source: https://leetcode.com/problems/buddy-strings/
+# Problem: Largest Number At Least Twice of Others
+# Source: https://leetcode.com/problems/largest-number-at-least-twice-of-others/
 
-a = input('Enter string A: ')
-b = input('Enter string B: ')
+n = int(input('Enter the number of integers: '))
+print('Enter the integers:')
+arr = [int(input()) for _ in range(n)]
+great = max(arr)
+dominant = -1
+count = 0
+for num in arr:
+    if num == great:
+        continue
+    
+    if num * 2 <= great:
+        count += 1
+    
+if count == (n - 1):
+    dominant = arr.index(max(arr))
 
-arr = list(a)
-
-for i in range(len(arr)):
-    for j in range(len(arr)):
-        temp = arr.copy()
-        if i == j:
-            continue
-
-        r = temp[i]
-        temp[i] = temp[j]
-        temp[j] = r
-
-        if ''.join(temp) == b:
-            print('true')
-            import sys
-            sys.exit(
-                
-            )
-
-print('false')
+print(f'Dominant Index: {dominant}')

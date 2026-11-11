@@ -1,18 +1,34 @@
-# Problem: Counting Valleys
-# Source: https://www.hackerrank.com/challenges/counting-valleys/problem
+# HackerRank - Time Delta
+# Problem: Time Delta
+# Source: https://www.hackerrank.com/challenges/python-time-delta/problem
+# Note: Calculates the absolute difference in seconds between two timestamps while accounting for timezone offsets.
+#!/bin/python3
 
-def countingValleys(steps, path):
+import math
+import os
+import random
+import re
+import sys
+from datetime import datetime
+
+# Complete the time_delta function below.
+def time_delta(t1, t2):
+    t_1 = datetime.strptime(t1, '%a %d %b %Y %H:%M:%S %z')
+    t_2 = datetime.strptime(t2, '%a %d %b %Y %H:%M:%S %z')
+    return str(abs(int((t_1 - t_2).total_seconds())))
     
-    cur = 0
-    val = 0
-    for c in path:
-        if cur < 0 and c == 'U':
-            if cur + 1 == 0:
-                val += 1
-                cur += 1
-                continue
-        if c == 'U': cur += 1
-        else: cur -= 1
-    return val
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-print(countingValleys(8, "UDDDUDUU")) # 1
+    t = int(input())
+
+    for t_itr in range(t):
+        t1 = input()
+
+        t2 = input()
+
+        delta = time_delta(t1, t2)
+
+        fptr.write(delta + '\n')
+
+    fptr.close()

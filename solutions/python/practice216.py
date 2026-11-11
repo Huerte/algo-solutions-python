@@ -1,18 +1,39 @@
-# CodeWars - Title Case
-# Problem: Title Case
-# Source: https://www.codewars.com/kata/5202ef17a402dd033c000009
-# Note: Converts a title to title case while keeping specified minor words lowercase, except for the first word.
-def title_case(title, minor_words=''):
-    result = []
-    minors = [word.lower() for word in minor_words.split()]
-    for i, word in enumerate(title.lower().split()):
-        if word in minors and i > 0:
-            result.append(word.lower())
-        else:
-            result.append(word.title())
-            
-    return ' '.join(result)
-
-print(title_case("a clash of KINGS", "a an the of")) # "A Clash of Kings"
-print(title_case("THE WIND IN THE WILLOWS", "The In")) # "The Wind in the Willows"
-print(title_case("the quick brown fox")) # "The Quick Brown Fox"
+# CodeWars - Good vs Evil
+# Problem: Good vs Evil
+# Source: https://www.codewars.com/kata/52761ee4cffbc69732000738
+# Note: Calculates the total worth of Good and Evil armies and determines the winner by comparing their scores.
+def good_vs_evil(good, evil):
+    
+    goods = {
+        0: 1,
+        1: 2,
+        2: 3,
+        3: 3,
+        4: 4,
+        5: 10
+    }
+    
+    evils = {
+        0: 1,
+        1: 2,
+        2: 2,
+        3: 2,
+        4: 3,
+        5: 5,
+        6: 10
+    }
+    
+    g_score = 0
+    for i, per in enumerate(good.split()):
+        g_score += goods[i] * int(per)
+    
+    e_score = 0
+    for i, per in enumerate(evil.split()):
+        e_score += evils[i] * int(per)
+    
+    if g_score > e_score:
+        return "Battle Result: Good triumphs over Evil"
+    elif g_score < e_score:
+        return "Battle Result: Evil eradicates all trace of Good"
+    
+    return "Battle Result: No victor on this battle field"

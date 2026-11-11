@@ -1,11 +1,12 @@
-# Remove Trailing Zeros From a String
-# Problem: Remove Trailing Zeros From a String
-# Source: https://leetcode.com/problems/remove-trailing-zeros-from-a-string/
-# Note: Removes all consecutive '0' characters from the end of a numeric string while preserving zeros in the middle.
+# Trim Trailing Vowels
+# Problem: Trim Trailing Vowels
+# Source: https://leetcode.com/problems/trim-trailing-vowels/
+# Note: Removes all consecutive vowels from the end of a string while preserving the rest of the string.
 class Solution:
-    def removeTrailingZeros(self, num: str) -> str:
-        return num.strip('0')
+    def trimTrailingVowels(self, s: str) -> str:
+        return s.rstrip('aeiou')
     
 s = Solution()
-print(s.removeTrailingZeros("51230100")) # "512301"
-print(s.removeTrailingZeros("123"))      # "123"
+print(s.trimTrailingVowels("a"))    # ""
+print(s.trimTrailingVowels("ba"))   # "b"
+print(s.trimTrailingVowels("idea")) # "id"

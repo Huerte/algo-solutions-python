@@ -1,23 +1,19 @@
-# Clear Digits
-# Problem: Clear Digits
-# Source: https://leetcode.com/problems/clear-digits/
-# Note: Uses a stack to remove each digit and the closest remaining letter to its left.
-class Solution(object):
-    def clearDigits(self, s):
+# Problem: Character Year Count Mapping
+# Source: 
+# Note: Maps letter frequencies to indexed years
+n = int(input())
+c = {}
+alpha = list(range(2005, 2023)) + [2003, 2004]
 
-        seen = []
-        for letter in s:
-            if not seen and letter.isalpha():
-                seen.append(letter)
-            elif letter.isalpha():
-                seen.append(letter)
-            else:
-                if seen:
-                    seen.pop()
-                
-        return ''.join(seen)
+for i in range(n):
+    name = input()
+    ch = alpha[ord(name[0].lower()) - 97]
+    c[ch] = c.get(ch, 0) + 1
+sor = sorted(c.items(), key=lambda x: x[1])
 
-s = Solution()
-print(s.clearDigits("abc")) # "abc"
-print(s.clearDigits("cb34")) # ""
-print(s.clearDigits("1234")) # ""
+res = []
+
+for key, val in sor:
+    res.append(f"{key} {val}")
+
+print('\n'.join(res))

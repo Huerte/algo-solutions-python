@@ -1,24 +1,16 @@
-# HackerRank - Word Score
-# Problem: Words Score
-# Source: https://www.hackerrank.com/challenges/words-score/problem
-# Note: Calculates the total score of words based on whether each word contains an even or odd number of vowels.
-def is_vowel(letter):
-    return letter in ['a', 'e', 'i', 'o', 'u', 'y']
+# HackerRank - Compress the String!
+# Problem: Compress the String!
+# Source: https://www.hackerrank.com/challenges/compress-the-string/problem
+# Note: Compresses consecutive occurrences of digits into tuples containing their frequency and value.
+s = input()
 
-def score_words(words):
-    score = 0
-    for word in words:
-        num_vowels = 0
-        for letter in word:
-            if is_vowel(letter):
-                num_vowels += 1
-        if num_vowels % 2 == 0:
-            score += 2
-        else:
-            score += 1
-    return score
-
-    
-n = int(input())
-words = input().split()
-print(score_words(words))
+res = []
+i = 0
+while i < len(s):
+    count = 0
+    while i + 1 < len(s) and s[i] == s[i + 1]:
+        count += 1
+        i += 1
+    i += 1
+    res.append((count + 1, int(s[i - 1])))
+print(' '.join(map(str, res)))

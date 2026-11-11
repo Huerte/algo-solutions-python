@@ -1,22 +1,18 @@
-# HackerRank - The Minion Game
-# Problem: The Minion Game
-# Source: https://www.hackerrank.com/challenges/the-minion-game/problem
-# Note: Calculates Stuart's and Kevin's scores by counting all possible substrings starting at each character, based on whether that character is a consonant or vowel.
-def minion_game(string):
-    st = 0
-    ke = 0
-    
-    for i in range(len(string)):
-        score = len(string) - i
-        
-        if string[i] in 'AEIOU':
-            ke += score
-        else:
-            st += score
-        
-    if st > ke:
-        print('Stuart', st)
-    elif st < ke:
-        print('Kevin', ke)
-    else:
-        print('Draw')
+# HackerRank - Number Line Jumps
+# Problem: Number Line Jumps
+# Source: https://www.hackerrank.com/challenges/kangaroo/problem
+# Note: Uses the difference in starting positions and jump distances to determine whether two kangaroos can meet at the same position after the same number of jumps.
+def kangaroo(x1, v1, x2, v2):
+    if v1 == v2:
+        return 'YES' if x1 == x2 else 'NO'
+
+    diff_pos = x2 - x1
+    diff_vel = v1 - v2
+
+    if diff_vel == 0:
+        return 'NO'
+
+    if diff_pos % diff_vel == 0 and diff_pos / diff_vel >= 0:
+        return 'YES'
+
+    return 'NO'

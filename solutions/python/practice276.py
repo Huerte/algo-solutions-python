@@ -1,46 +1,37 @@
-# Count Binary Substrings
-# Problem: Count Binary Substrings
-# Source: https://leetcode.com/problems/count-binary-substrings/
-# Note: Counts substrings containing equal consecutive groups of 0s and 1s using substring checking and consecutive-group counting approaches.
-# Mine
+# Number of Lines To Write String
+# Problem: Number of Lines To Write String
+# Source: https://leetcode.com/problems/number-of-lines-to-write-string/
+# Note: Maps each lowercase letter to its pixel width and simulates writing the string across lines with a maximum width of 100 pixels.
 class Solution(object):
-    def countBinarySubstrings(self, s):
-        count = 0
-        for i in range(len(s) - 1):
-            cur = [s[i]]
-            for j in range(i+1, len(s)):
-                if len(set(cur)) == 1 and s[j] != cur[-1]:
-                    cur.append(s[j])
-                elif s[j] == cur[-1] and cur.count('1') != cur.count('0'):
-                    cur.append(s[j])
-                else:
-                    break
-            if cur.count('1') == cur.count('0'):
-                count += 1
-                
-        return count
+    def numberOfLines(self, widths, s):
+        ar = []
+        al = dict(zip([chr(i)for i in range(97, 123)], widths))
 
-# Efficient Solution from GPT
-class Solution(object):
-    def countBinarySubstrings(self, s):
-        prev = 0
-        curr = 1
-        count = 0
-
-        for i in range(1, len(s)):
-            print(f"{s[i]} == {s[ - 1]}")
-            print(prev, curr, count)
-            if s[i] == s[i - 1]:
-                curr += 1
+        cur = 0
+        i = 0
+        temp = []
+        while i < len(s):
+            num = al[s[i]]
+            if cur + num > 100:
+                ar.append([temp, cur])
+                cur = num
+                temp = [s[i]]
+                i += 1
+                continue
             else:
-                count += min(prev, curr)
-                prev = curr
-                curr = 1
+                temp.append(s[i])
+                cur += num
 
-        count += min(prev, curr)
-        return count
-    
+            if cur == 100:
+                ar.append([temp, cur])
+                cur = 0
+                temp = []
+            i += 1
+        if temp and cur > 0:
+            ar.append([temp, cur])
+        return [len(ar), ar[-1][1]]
 
 s = Solution()
-print(s.countBinarySubstrings("00110011")) # 6
-print(s.countBinarySubstrings("10101"))    # 4
+print(s.numberOfLines([10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10], "abcdefghijklmnopqrstuvwxyz")) # [3,60]
+print(s.numberOfLines([4,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10], "bbbcccdddaaa")) # [2,4]
+print(s.numberOfLines([3,4,10,4,8,7,3,3,4,9,8,2,9,6,2,8,4,9,9,10,2,4,9,10,8,2], "mqblbtpvicqhbrejb")) # [1,100]

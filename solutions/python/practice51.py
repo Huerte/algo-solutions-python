@@ -1,66 +1,62 @@
-# Problem: Longest Common Prefix
-# Source: https://leetcode.com/problems/longest-common-prefix/
-# Note: Solves the Longest Common Prefix problem
+# Problem: Equal and Divisible Pairs
+# Source: https://leetcode.com/problems/count-equal-and-divisible-pairs-in-an-array/
+# Note: Solves the Equal and Divisible Pairs problem
 # Description:
-# Write a function to find the longest common prefix string amongst an array of strings.
-# If there is no common prefix, return an empty string "".
+# Given an array of integers and an integer k, return the number of pairs (i, j) where:
+# - 0 <= i < j < arr.length
+# - arr[i] == arr[j]
+# - (i * j) is divisible by k
 #
 # Input:
-# - An array of strings `strs` where 1 <= strs.length <= 200
-# - Each string in strs consists of only lowercase English letters
-# - 0 <= strs[i].length <= 200
+# - An array of integers `arr`
+# - An integer `k` representing the divisor
 #
 # Output:
-# - A string representing the longest common prefix
+# - An integer representing the count of valid pairs
 #
 # Status: ✅ SOLVED
 
-def longestCommonPrefix(strs):
-    if not strs:
-        return ""
+def equalDivisiblePairs(arr, k):
+    if not arr or len(arr) < 2:
+        return 0
+        
+    count_valid_pairs = 0
     
-    sample_word = strs[0]
-
-    for word in strs[1:]:
-        while sample_word and word[:len(sample_word)] != sample_word:
-            sample_word = sample_word[:-1]
-    return sample_word
-
-# def longestCommonPrefix(lst):
-#     common = ""
-
-#     for i in range(len(min(lst))):
-#         w = min(lst)[i]
-#         add = False
-#         for word in lst:
-#             if word[i] != w:
-#                 add = False
-#                 break
-#             add = True
-#         if add:
-#             common += w
-
-#     return common
+    for i in range(len(arr) - 1):
+        for j in range(i + 1, len(arr)):
+            if (arr[i] == arr[j]) and (i * j) % k == 0:
+                count_valid_pairs += 1
+    
+    return count_valid_pairs
 
 # Test cases with assertions
 # Example 1
-assert longestCommonPrefix(["flower","flow","flight"]) == "fl"
+arr1 = [3, 1, 2, 2, 2, 1, 3]
+k1 = 2
+assert equalDivisiblePairs(arr1, k1) == 4
 
 # Example 2
-assert longestCommonPrefix(["ab", "a"]) == "a"
+arr2 = [1, 2, 3, 4]
+k2 = 1
+assert equalDivisiblePairs(arr2, k2) == 0
 
 # Example 3
-assert longestCommonPrefix(["dog","racecar","car"]) == ""
+arr3 = [1, 1, 1, 1]
+k3 = 1
+assert equalDivisiblePairs(arr3, k3) == 6
 
 # Example 4
-assert longestCommonPrefix(["interspecies","interstellar","interstate"]) == "inters"
-
-# Example 5
-assert longestCommonPrefix(["throne","throne"]) == "throne"
+arr4 = [1, 2, 1, 2]
+k4 = 2
+assert equalDivisiblePairs(arr4, k4) == 1
 
 # Edge cases
-assert longestCommonPrefix([""]) == ""
-assert longestCommonPrefix(["a"]) == "a"
-assert longestCommonPrefix(["", "b"]) == ""
+arr5 = []
+k5 = 1
+assert equalDivisiblePairs(arr5, k5) == 0
+
+arr6 = [1]
+k6 = 1
+assert equalDivisiblePairs(arr6, k6) == 0
 
 print("All test cases passed!")

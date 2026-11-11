@@ -1,17 +1,18 @@
-# Problem: Days to Wait for a Luckier Day
-# Source: https://leetcode.com/problems/daily-temperatures/
+# Problem: Calculate H-Index
+# Source: https://leetcode.com/problems/h-index/
 
-n = int(input('Enter the number of days: '))
-odd = list(map(int, input('Enter the odds of luck for each day:\n').split()))
-print('Number of days to wait for a luckier day:\n')
+n = int(input('Enter the number of papers: '))
+print('Enter the number of citations for each paper:')
+cit = list(map(int, input().split()))
 
-for i in range(n - 1):
+res = 0
+
+for i in range(n - 1, -1, -1):
     temp = 0
-    for j in range(i + 1, n):
-        if odd[j] > odd[i]:
-            temp = j - i
-            break
-    print(temp, end=' ')
+    for j in range(n):
+        if cit[j] >= i:
+            temp += 1
+    if temp >= i:
+        print(f"The researcher's h-index is: {temp}")
+        break
 
-    if i + 1 == n - 1:
-        print(0)

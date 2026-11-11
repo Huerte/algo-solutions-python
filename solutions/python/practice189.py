@@ -1,20 +1,16 @@
-# Count Good Triplets
-# Problem: Count Good Triplets
-# Source: https://leetcode.com/problems/count-good-triplets/
-# Note: Counts triplets satisfying the given index and absolute-difference conditions.
+# Find Indices of Stable Mountains
+# Problem: Find Indices of Stable Mountains
+# Source: https://leetcode.com/problems/find-indices-of-stable-mountains/
+# Note: Finds indices where the immediately preceding mountain's height exceeds the given threshold.
 class Solution(object):
-    def countGoodTriplets(self, arr, a, b, c):
-        n = len(arr)
-        count = 0
-        for i in range(n - 2):
-            for j in range(i + 1, n - 1):
-                if abs(arr[i] - arr[j]) > a:
-                    continue
-                for k in range(j + 1, n):
-                    if abs(arr[j] - arr[k]) <= b and abs(arr[i] - arr[k]) <= c:
-                        count += 1
-        return count
+    def stableMountains(self, height, threshold):
+        
+        stables = []
+        n = len(height)
+        for i in range(1, n):
+            if height[i - 1] > threshold and height[i] > 0:
+                stables.append(i)
+        return stables
 
 s = Solution()
-print(s.countGoodTriplets([3, 0, 1, 1, 9, 7], 7, 2, 3)) # 4
-print(s.countGoodTriplets([1, 1, 2, 2, 3], 0, 0, 1)) # 0
+print(s.stableMountains([1,2,3,4,5], 2)) # [3, 4]

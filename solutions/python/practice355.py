@@ -1,28 +1,12 @@
-# GeeksforGeeks - Implement Atoi
-# Problem: Implement Atoi
-# Source: https://www.geeksforgeeks.org/problems/implement-atoi/1
-# Note: Converts a numeric string to a 32-bit signed integer, handling signs, whitespace, invalid characters and overflow.
-class Solution:
-    def myAtoi(self, s):
-        digits = ""
-        for i, c in enumerate(s.strip()):
-            if not c.isdigit() and i > 0:
-                break
-            elif i == 0 and c in ["-", "+"]:
-                digits += c
-            else:
-                digits += c
-        
-        peak = 2 ** 31 - 1
-        deep = -2 ** 31
-        n = int(digits)
-        if n > peak:
-            n = peak
-        elif n < deep:
-            n = deep
-        return n
-
-s = Solution()
-print(s.myAtoi("-999999999999")) # -2147483648
-print(s.myAtoi("  -0012gfg4"))   # -12
-print(s.myAtoi("-123"))          # -123
+# Problem: Vowel and Consonant Counter
+# Source: 
+# Note: Counts vowels and consonants in text
+n = int(input()) # "àç_èç_è_(-'(çè_-çàà)ç_è(_-v çè- çàè_-ponctuation"
+v, c = 0, 0
+for i in range(n):
+    text = input().lower()
+    v += len([c for c in text if c in 'aeiou' and c.isalpha()])
+    c += len([c for c in text if c not in 'aeiou' and 97 <= ord(c) < 123])
+    print(v)
+    print(c)
+print(v * c)

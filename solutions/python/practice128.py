@@ -1,10 +1,8 @@
-# Problem: Permutation Sequence
-# Source: https://leetcode.com/problems/permutation-sequence/
+# Problem: Length of Last Word
+# Source: https://leetcode.com/problems/length-of-last-word/
 
-from itertools import permutations
-def kth_permutation(n, k):
-    return f'"{list(map(lambda x: ''.join(x), permutations(''.join(map(str, range(1, n + 1))))))[k - 1]}"'
-
-print(kth_permutation(3, 3))
-print(kth_permutation(4, 9))
-print(kth_permutation(3, 1))
+def get_length(s):
+    return len(s.split()[-1])
+    
+print(get_length('Hello World'))
+print(get_length('     fly me   to    the    mooon   '))

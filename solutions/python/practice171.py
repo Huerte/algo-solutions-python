@@ -1,18 +1,15 @@
-# HackerRank - collections.Counter()
-# Problem: collections.Counter()
-# Source: https://www.hackerrank.com/challenges/collections-counter/problem
-# Note: Tracks available shoe sizes and calculates total earnings from customer purchases.
+# HackerRank - Company Logo
+# Problem: Company Logo
+# Source: https://www.hackerrank.com/challenges/most-commons/problem
+# Note: Finds the three most frequent characters, sorting by descending frequency and alphabetical order for ties.
 
 from collections import Counter
+if __name__ == '__main__':
+    s = input()
+    
+    arr = Counter(s)
+    srt = sorted(arr, key=lambda x: (-arr[x], x))[:3]
+    
+    for ch in srt:
+        print(ch, arr[ch])
 
-x = int(input())
-arr = Counter(list(map(int, input().split()[:x+1])))
-
-total = 0
-for _ in range(int(input())):
-    size, prize = map(int, input().split())
-    if arr[size] > 0:
-        arr[size] -= 1
-        total += prize
-
-print(total)

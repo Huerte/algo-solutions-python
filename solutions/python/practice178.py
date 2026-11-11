@@ -1,21 +1,11 @@
-# Water Bottles
-# Problem: Water Bottles
-# Source: https://leetcode.com/problems/water-bottles/
-# Note: Calculates the maximum number of water bottles that can be consumed through repeated exchanges of empty bottles.
+# First Matching Character From Both Ends
+# Problem: First Matching Character From Both Ends
+# Source: https://leetcode.com/problems/first-matching-character-from-both-ends/
+# Note: Finds the smallest index where a character matches its mirrored character from the opposite end of the string.
 class Solution(object):
-    def numWaterBottles(self, numBottles, numExchange):
-        res = 0
-        empty = 0
-        
-        while numBottles > 0:
-            res += numBottles
-            empty += numBottles
-            numBottles = empty // numExchange
-            empty = empty % numExchange
-
-        return res
-
-    
-s = Solution()
-print(s.numWaterBottles(9, 3))  # 13
-print(s.numWaterBottles(15, 4)) # 19
+    def firstMatchingIndex(self, s):
+        n = len(s)
+        for i in range(n):
+            if s[i] == s[n - i - 1]:
+                return i
+        return -1

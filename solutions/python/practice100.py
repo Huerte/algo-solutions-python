@@ -1,18 +1,19 @@
-# Problem: Calculate H-Index
-# Source: https://leetcode.com/problems/h-index/
+# Problem: A Number After a Double Reversal
+# Source: https://leetcode.com/problems/a-number-after-a-double-reversal/
 
-n = int(input('Enter the number of papers: '))
-print('Enter the number of citations for each paper:')
-cit = list(map(int, input().split()))
+#Checks whether an integer remains the same after reversing its digits twice.
 
-res = 0
+#Returns False when reversing twice changes the original number, such as 120 -> 021(12) -> 12.
+#Returns True when the final number matches the original number, such as 123 -> 321 -> 123.
 
-for i in range(n - 1, -1, -1):
-    temp = 0
-    for j in range(n):
-        if cit[j] >= i:
-            temp += 1
-    if temp >= i:
-        print(f"The researcher's h-index is: {temp}")
-        break
+# Then, Time Complexity become O(d), where d is the number of digits in the integer.
 
+n = int(input('Enter an integer: '))
+temp = n
+for i in range(2):
+    temp = int(str(temp)[::-1])
+
+if temp == n:
+    print(True)
+else:
+    print(False)

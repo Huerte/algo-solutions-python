@@ -1,26 +1,15 @@
-# Problem: Integer to Roman
-# Source: https://leetcode.com/problems/integer-to-roman/
+# Problem: Sort Array by Increasing Frequency
+# Source: https://leetcode.com/problems/sort-array-by-increasing-frequency/
 
+from collections import Counter
 class Solution(object):
-    def intToRoman(self, num):
-        romans = [
-            ['M', 1000],
-            ['CM', 900], ['D', 500], ['CD', 400],
-            ['C', 100], ['XC', 90], ['L', 50],
-            ['XL', 40], ['X', 10], ['IX', 9],
-            ['V', 5], ['IV', 4], ['I', 1]
-        ]
+    def frequencySort(self, nums):
+        c = Counter(nums)
+        return sorted(nums, key=lambda x: (c[x], -x))
 
-        res = ""
 
-        for sym, val in romans:
-            if num // val:
-                count, num = divmod(num, val)
-                res += sym * count
-        
-        return res
 
 s = Solution()
-print(s.intToRoman(1390)) # "MCCCXC"
-print(s.intToRoman(79))   # "LXXIX"
-print(s.intToRoman(3))    # "III"
+print(s.frequencySort([-1,1,-6,4,5,-6,1,4,1])) # [5,-1,4,4,-6,-6,1,1,1]
+print(s.frequencySort([1,1,2,2,2,3])) # [3,1,1,2,2,2]
+print(s.frequencySort([2,3,1,3,2]))   # [1,3,3,2,2]

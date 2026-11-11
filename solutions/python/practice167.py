@@ -1,9 +1,20 @@
-# Display the First Three Rows
-# Problem: Display the First Three Rows
-# Source: https://leetcode.com/problems/display-the-first-three-rows/
-# Note: Returns the first three rows of the employees DataFrame using Pandas iloc
-.
-import pandas as pd
+# XOR Operation in an Array
+# Problem: XOR Operation in an Array
+# Source: https://leetcode.com/problems/xor-operation-in-an-array/
+# Note: Creates an array using start + 2 * i and returns the XOR of all its elements.
 
-def selectFirstRows(employees: pd.DataFrame) -> pd.DataFrame:
-    return employees.iloc[0:3]
+class Solution(object):
+    def xorOperation(self, n, start):
+        arr = []
+        i = 0
+        while len(arr) < n:
+            arr.append(start + 2 * i)
+            i += 1
+        xor = arr[0]
+        for i in arr[1:]:
+            xor ^= i
+        return xor
+
+s = Solution()
+print(s.xorOperation(5, 0)) # 8
+print(s.xorOperation(4, 3)) # 8

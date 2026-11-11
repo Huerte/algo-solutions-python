@@ -1,39 +1,20 @@
-# CodeWars - Good vs Evil
-# Problem: Good vs Evil
-# Source: https://www.codewars.com/kata/52761ee4cffbc69732000738
-# Note: Calculates the total worth of Good and Evil armies and determines the winner by comparing their scores.
-def good_vs_evil(good, evil):
+# CodeWars - Data Reverse
+# Problem: Data Reverse
+# Source: https://www.codewars.com/kata/569d488d61b812a0f7000015
+# Note: Reverses the order of 8-bit data blocks while preserving the order of bits within each block.
+def data_reverse(data):
+    n = 8
+    res = []
     
-    goods = {
-        0: 1,
-        1: 2,
-        2: 3,
-        3: 3,
-        4: 4,
-        5: 10
-    }
-    
-    evils = {
-        0: 1,
-        1: 2,
-        2: 2,
-        3: 2,
-        4: 3,
-        5: 5,
-        6: 10
-    }
-    
-    g_score = 0
-    for i, per in enumerate(good.split()):
-        g_score += goods[i] * int(per)
-    
-    e_score = 0
-    for i, per in enumerate(evil.split()):
-        e_score += evils[i] * int(per)
-    
-    if g_score > e_score:
-        return "Battle Result: Good triumphs over Evil"
-    elif g_score < e_score:
-        return "Battle Result: Evil eradicates all trace of Good"
-    
-    return "Battle Result: No victor on this battle field"
+    i = 0
+    for _ in range(len(data) // n):
+        cur = []
+        while i < len(data) and len(cur) < n:
+            cur.append(data[i])
+            i += 1
+        res.append(cur)
+    return [num for sublist in res[::-1] for num in sublist]
+
+print(data_reverse([1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0])) # [1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0]
+print(data_reverse([0,0,1,0,1,1,1,0,1,1,0,0,1,1,1,0])) # [1,1,1,0,1,1,0,0,1,0,0,0,1,0,0,0]
+print(data_reverse([1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0])) # [1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0]

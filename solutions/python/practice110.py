@@ -1,19 +1,14 @@
-# Problem: Find the Missing Number
-# Source: https://leetcode.com/problems/missing-number/
+# Problem: Intersection of Two Arrays
+# Source: https://leetcode.com/problems/intersection-of-two-arrays/
 
-n = int(input('Enter the number of elements: '))
-print(f'Enter {n} elements (between 1 and {n + 1}): ')
-arr = sorted(list(map(int, input().split())))
+n = int(input('Enter the size of the first array: '))
+print(f"Enter {n} elements of the first array (sorted):")
+arr1 = list(map(int, input().split()))
 
-it = 0
-recent = None
-missing = None
-while it < len(arr):
-    if recent and recent + 1 != arr[it]:
-        missing = recent + 1
-        break
-    else:
-        recent = arr[it]
-    it += 1
+n2 = int(input('Enter the size of the second array: '))
+print(f"Enter {n2} elements of the second array (sorted):")
+arr2 = list(map(int, input().split()))
 
-print(f'The missing number is: {missing}')
+res = set(arr1) & set(arr2)
+
+print(f"Unique common elements are: {' '.join(map(str, list(res)))}")

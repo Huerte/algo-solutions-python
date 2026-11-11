@@ -1,12 +1,23 @@
-# HackerRank - Regex Substitution
-# Problem: Regex Substitution
-# Source: https://www.hackerrank.com/challenges/re-sub-regex-substitution/problem
-# Note: Replaces && with and and || with or when surrounded by spaces using regular expressions.
+# HackerRank - Validating Credit Card Numbers
+# Problem: Validating Credit Card Numbers
+# Source: https://www.hackerrank.com/challenges/validating-credit-card-number/problem
+# Note: Validates credit card numbers using regular expressions and checks for four or more consecutive repeated digits.
 import re
 
-def replace(match):
-    op = match.group(0)
-    return "or" if op == "||" else "and"
+pattern = re.compile(r"^(?:[456]\d{15}|[456]\d{3}(-\d{4}){3})$")
 
-for _ in range(int(input())):
-    print(re.sub(r"(?<= )(&&|\|\|)(?= )", replace, input()))
+n = int(input())
+for _ in range(n):
+    temp = input()
+    
+    is_seq = False
+    arr = [num for num in temp if num.isdigit()]
+    for i in range(len(arr) - 4):
+        if len(set(arr[i+1:i+5])) == 1:
+            is_seq = True
+            break
+            
+    if is_seq:
+        print('Invalid')
+    else:
+        print(('Invalid', 'Valid')[bool(pattern.match(temp))])

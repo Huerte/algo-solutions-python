@@ -1,9 +1,17 @@
-# Problem: Count IP Addresses
-# Source: https://www.codewars.com/kata/count-ip-addresses
+# Problem: Most frequently used words in a text
+# Source: https://www.codewars.com/kata/most-frequently-used-words-in-a-text
 
-def ips_between(start, end):
-    return sum([int(num) * (256 ** (3 - i)) for i, num in enumerate(end.split('.'))]) - sum([int(num) * (256 ** (3-i)) for i, num in enumerate(start.split('.'))])
+from collections import Counter
+import re
 
-print(ips_between("10.11.12.13", "10.11.13.0")) # 243
-print(ips_between("20.0.0.10", "20.0.1.0"))     # 246
-print(ips_between("10.0.0.0", "10.0.0.50"))     # 50
+def top_3_words(text):
+    
+    words = re.findall(r"[a-z']+", text.lower())
+    
+    words = [w for w in words if any(c.isalpha() for c in w)]
+    
+    return [word for word, _ in Counter(words).most_common(3)]
+
+print(top_3_words("e e e e DDD ddd DdD: ddd ddd aa aA Aa, bb cc cC e e e")) # ['e', 'ddd', 'aa']
+print(top_3_words("  //wont won't won't "))                                 # ["won't", "wont"]
+print(top_3_words(" ''' , e   .. "))                                        # ["e"]

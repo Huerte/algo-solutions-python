@@ -1,43 +1,53 @@
-# Problem: Non-unique Elements
-# Source: https://py.checkio.org/en/mission/non-unique-elements/
-# Note: Removes elements that occur only once while preserving the original order.
+# Problem: Number Power Sum
+# Source: 
+# Note: Reverse digits, raise each digit to the power, and concatenate results
+#
 # Description:
-# Given an array of integers, return a new array containing only the elements that 
-# appear more than once in the original array. The order of elements should be preserved.
+# Given a number and a power, reverse the number, raise each digit to the given power, 
+# and concatenate the results to form a new number.
+# This appears to be a custom mathematical problem.
 #
 # Input:
-# - An array of integers `data`
+# - A number as a string `x` in format "number power"
+# - Example: "123 2" means number 123 with power 2
 #
 # Output:
-# - An array containing only the non-unique elements in their original order
+# - A string representing the concatenated results
 #
 # Status: ✅ SOLVED
 
-from collections.abc import Iterable
+import math
 
-def checkio(data: list[int]) -> Iterable[int]:
-    unique = set(data)
-    result = []
-    for item in unique:
-        if data.count(item) == 1:
-            result.append(item)
-    return [x for x in data if x not in result]
+def number_power_sum(x):
+    # Parse input
+    nums = x.split(' ')
+    if len(nums) != 2:
+        return "Invalid input format"
+    
+    number = nums[0]
+    power = int(nums[1])
+    
+    # Reverse the number
+    rev_num = number[::-1]
+    result = ''
+    
+    # Raise each digit to the power and concatenate
+    for digit in rev_num:
+        result += str(int(math.pow(int(digit), power)))
+    
+    return result
 
 # Test cases with assertions
-print("Example:")
-print(list(checkio([1, 2, 3, 1, 3])))
+# Example 1
+assert number_power_sum("123 2") == "941"
 
-#These "asserts" are used for self-checking
-assert list(checkio([1, 2, 3, 1, 3])) == [1, 3, 1, 3]
-assert list(checkio([1, 2, 3, 4, 5])) == []
-assert list(checkio([5, 5, 5, 5, 5])) == [5, 5, 5, 5, 5]
-assert list(checkio([10, 9, 10, 10, 9, 8])) == [10, 9, 10, 10, 9]
-assert list(checkio([2, 2, 3, 2, 2])) == [2, 2, 2, 2]
-assert list(checkio([10, 20, 30, 10])) == [10, 10]
-assert list(checkio([7])) == []
-assert list(checkio([0, 1, 2, 3, 4, 0, 1, 2, 4])) == [0, 1, 2, 4, 0, 1, 2, 4]
-assert list(checkio([99, 98, 99])) == [99, 99]
-assert list(checkio([0, 0, 0, 1, 1, 100])) == [0, 0, 0, 1, 1]
-assert list(checkio([0, 0, 0, -1, -1, 100])) == [0, 0, 0, -1, -1]
+# Example 2
+assert number_power_sum("12 3") == "81"
+
+# Example 3
+assert number_power_sum("5 2") == "25"
+
+# Example 4
+assert number_power_sum("10 1") == "01"
 
 print("All test cases passed!")

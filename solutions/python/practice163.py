@@ -1,8 +1,45 @@
-# Mirror Distance of an Integer
-# Problem: Mirror Distance of an Integer
-# Source: https://leetcode.com/problems/mirror-distance-of-an-integer/
-# Note: Calculates the absolute difference between an integer and its reversed form.
+# Matrix Script
+# Problem: Matrix Script
+# Source: https://www.hackerrank.com/challenges/matrix-script/problem
+# Note: Decodes a matrix by reading its characters column-wise and replacing symbols between alphanumeric characters with spaces.
 
-class Solution(object):
-    def mirrorDistance(self, n):
-        return abs(n - int(str(n)[::-1]))
+first_multiple_input = input().rstrip().split()
+
+n = int(first_multiple_input[0])
+
+m = int(first_multiple_input[1])
+
+matrix = []
+
+for _ in range(n):
+    matrix_item = input()
+    matrix.append(matrix_item)
+
+res = ""
+
+for i in range(m):
+    for j in range(n):
+        res += matrix[j][i]
+
+final = ""
+prev = ""
+i = 0
+while i < len(res):
+    if res[i].isalpha():
+        final += res[i]
+        prev = res[i]
+    elif prev.isalpha():
+        j = i + 1
+        while j < len(res) and not res[j].isalpha():
+            j += 1
+        if j < len(res) and res[j].isalpha():
+            final += " "
+            i = j - 1
+        else:
+            final += res[i]
+    else:
+        final += res[i]
+    i += 1
+print(final.strip())
+
+assert final.strip() == "This is Matrix#  %!"

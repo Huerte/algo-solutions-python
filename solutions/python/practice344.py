@@ -1,13 +1,27 @@
-# Geeksforgeeks - Sort 0s, 1s and 2s
-# Problem: Sort 0s, 1s and 2s
-# Source: https://www.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s4231/1
-# Note: Sorts an array containing only 0s, 1s, and 2s in ascending order by counting their occurrences.
+# Geeksforgeeks - Kth Largest in a Stream
+# Problem: Kth Largest in a Stream
+# Source: https://www.geeksforgeeks.org/dsa/kth-largest-element-in-a-stream/
+# Note: Finds the kth largest element after each insertion using a min-heap of size k.
+import heapq
 class Solution:
-    def sort012(self, arr):
-        arr[:] = [0] * arr.count(0) + [1] * arr.count(1) + [2] * arr.count(2)
-        return arr
+    def kthLargest(self, arr, k):
+        heap = []
+        res = []
+        
+        for num in arr:
+            heapq.heappush(heap, num)
+            
+            if len(heap) > k:
+                heapq.heappop(heap)
+            
+            if len(heap) < k:
+                res.append(-1)
+            else:
+                res.append(heap[0])
+        
+        return res
 
 s = Solution()
-print(s.sort012([0, 1, 2, 0, 1, 2])) # [0, 0, 1, 1, 2, 2]
-print(s.sort012([2, 1, 0, 2, 1, 0])) # [0, 0, 1, 1, 2, 2]
-print(s.sort012([0, 0, 1, 1, 2, 2])) # [0, 0, 1, 1, 2, 2]
+print(s.kthLargest([1, 2, 3, 4, 5], 2)) # [-1, 1, 2, 3, 4]
+print(s.kthLargest([1, 2, 3, 4, 5], 3)) # [-1, -1, 1, 2, 3]
+print(s.kthLargest([1, 2, 3, 4, 5], 4)) # [-1, -1, -1, 1, 2]

@@ -1,15 +1,17 @@
-# Problem: Number of Steps to Reduce a Number to Zero
-# Source: https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/
+# Problem: Count Elements Smaller Than Current Element
+# Source: https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/
 
-n = int(input('Enter an integer: '))
+n = int(input('Enter the number of elements: '))
+print(f'Enter {n} integers:')
+arr = [int(input()) for _ in range(n)]
 
-stp = 0
+res = [0] * len(arr)
 
-while n > 0:
-    if n % 2 == 0:
-        n //= 2
-    else:
-        n -= 1
-    stp += 1
+for i in range(n):
+    for j in range(n):
+        if i == j:
+            continue
+        if arr[i] < arr[j]:
+            res[i] += 1
 
-print(f'Number of steps to reduce N to 0: {stp}')
+print(f'Results: {res}')

@@ -1,18 +1,16 @@
-# HackerRank - Number Line Jumps
-# Problem: Number Line Jumps
-# Source: https://www.hackerrank.com/challenges/kangaroo/problem
-# Note: Uses the difference in starting positions and jump distances to determine whether two kangaroos can meet at the same position after the same number of jumps.
-def kangaroo(x1, v1, x2, v2):
-    if v1 == v2:
-        return 'YES' if x1 == x2 else 'NO'
+# HackerRank - Find Digits
+# Problem: Find Digits
+# Source: https://www.hackerrank.com/challenges/find-digits/problem
+# Note: Extracts each digit from the number and counts how many non-zero digits divide the original number exactly.
+def findDigits(n):
+    div = n
+    count = 0
+    while n > 0:
+        cur = n % 10
+        if cur != 0 and div % cur == 0:
+            count += 1
+        n //= 10
+    
+    return count
 
-    diff_pos = x2 - x1
-    diff_vel = v1 - v2
-
-    if diff_vel == 0:
-        return 'NO'
-
-    if diff_pos % diff_vel == 0 and diff_pos / diff_vel >= 0:
-        return 'YES'
-
-    return 'NO'
+print(findDigits(12)) # 2

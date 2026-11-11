@@ -1,39 +1,79 @@
-# Problem: Number of Islands
-# Source: https://leetcode.com/problems/number-of-islands/
+# Problem: Valid Sudoku
+# Source: https://leetcode.com/problems/valid-sudoku/
 
 class Solution(object):
-    def numIslands(self, grid):
+    def isValidSudoku(self, board):
+
+        if sum([len(set(arr)) for arr in board]) == 9:
+            return True
         
-        def flood(i, j):
+        for col in range(len(board[0])):
+            seen = dict(zip(range(1, 10), [0] * 9))
+            for row in range(len(board)):
+                cur = board[row][col]
+                if cur.isdigit():
+                    seen[int(cur)] += 1
+            if any([v >= 2 for v in seen.values()]):
+                return False
             
-            if i < 0 or i >= len(grid) or j < 0 or j >= len(grid[0]) or grid[i][j] == '0':
-                return
-
-            grid[i][j] = '0'
-
-            flood(i + 1, j)
-            flood(i - 1, j)
-            flood(i, j + 1)
-            flood(i, j - 1)
-
-        count = 0
-        for i in range(len(grid)):
-            for j in range(len(grid[0])):
-                if grid[i][j] == '1':
-                    count += 1
-                    flood(i, j)
         
-        return count
+        for row in range(len(board)):
+            seen = dict(zip(range(1, 10), [0] * 9))
+            for col in range(len(board[0])):
+                cur = board[row][col]
+                if cur.isdigit():
+                    seen[int(cur)] += 1
+            if any([v >= 2 for v in seen.values()]):
+                return False
+        
+        for row in range(0, len(board), 3):
+            for col in range(0, len(board[0]), 3):
+                seen = dict(zip(range(1, 10), [0] * 9))
+                for i in range(row, row + 3):
+                    for j in range(col, col + 3):
+                        cur = board[i][j]
+                        if cur.isdigit():
+                            seen[int(cur)] += 1
+                if any(v >= 2 for v in seen.values()):
+                    return False
+                
+        return True
+
 
 s = Solution()
-print(s.numIslands([["1","1","1","1","0"],
-                      ["1","1","0","1","0"],
-                      ["1","1","0","0","0"],
-                      ["0","0","0","0","0"]])) # 1
-print(s.numIslands([["1","1","0","0","0"],
-                      ["1","1","0","0","0"],
-                      ["0","0","1","0","0"],
-                      ["0","0","0","1","1"]])) # 3
-print(s.numIslands([["1","1","1"],
-                    ["0","1","0"],
-                    ["1","1","1"]]))           # 1
+print(s.isValidSudoku([["5","3",".",".","7",".",".",".","."],
+                       ["6",".",".","1","9","5",".",".","."],
+                       [".","9","8",".",".",".",".","6","."],
+                       ["8",".",".",".","6",".",".",".","3"],
+                       ["4",".",".","8",".","3",".",".","1"],
+                       ["7",".",".",".","2",".",".",".","6"],
+                       [".","6",".",".",".",".","2","8","."],
+                       [".",".",".","4","1","9",".",".","5"],
+                       [".",".",".",".","8",".",".","7","9"]])) # True
+print(s.isValidSudoku([["8","3",".",".","7",".",".",".","."],
+                       ["6",".",".","1","9","5",".",".","."],
+                       [".","9","8",".",".",".",".","6","."],
+                       ["8",".",".",".","6",".",".",".","3"],
+                       ["4",".",".","8",".","3",".",".","1"],
+                       ["7",".",".",".","2",".",".",".","6"],
+                       [".","6",".",".",".",".","2","8","."],
+                       [".",".",".","4","1","9",".",".","5"],
+                       [".",".",".",".","8",".",".","7","9"]])) # False
+print(s.isValidSudoku([[".",".","5",".",".",".",".",".","6"],
+                       [".",".",".",".","1","4",".",".","."],
+                       [".",".",".",".",".",".",".",".","."],
+                       [".",".",".",".",".","9","2",".","."],
+                       ["5",".",".",".",".","2",".",".","."],
+                       [".",".",".",".",".",".",".","3","."],
+                       [".",".",".","5","4",".",".",".","."],
+                       ["3",".",".",".",".",".","4","2","."],
+                       [".",".",".","2","7",".","6",".","."]])) # True
+print(s.isValidSudoku([[".",".",".",".","5",".",".","1","."],
+                       [".","4",".","3",".",".",".",".","."],
+                       [".",".",".",".",".","3",".",".","1"],
+                       ["8",".",".",".",".",".",".","2","."],
+                       [".",".","2",".","7",".",".",".","."],
+                       [".","1","5",".",".",".",".",".","."],
+                       [".",".",".",".",".","2",".",".","."],
+                       [".","2",".","9",".",".",".",".","."],
+                       [".",".","4",".",".",".",".",".","."]])) # False

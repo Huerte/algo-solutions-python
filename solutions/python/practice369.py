@@ -1,26 +1,26 @@
-# Geeksforgeeks - Peak element
-# Problem: Peak Element
-# Source: https://www.geeksforgeeks.org/problems/peak-element/1
-# Note: Finds the index of any element that is strictly greater than its adjacent elements.
-class Solution:   
-    def peakElement(self, arr):
-        if len(arr) == 1:
-            return 0
+# Problem: Two Sum - Pair with Given Sum
+# Source: https://www.geeksforgeeks.org/problems/key-pair5616/1
+# Note: Checks whether two distinct elements in an array add up to the given target.
+
+class Solution:
+    def twoSum(self, arr, target):
+        arr.sort()
+        left = 0
+        right = len(arr) - 1
+        
+        while left < right:
+            res = arr[left] + arr[right]
+            if res == target:
+                return True
             
-        for i in range(len(arr)):
-            if i == 0:
-                if float('-inf') < arr[i] and arr[i] > arr[i + 1]:
-                    return i
-            elif i == len(arr) - 1:
-                if arr[i-1] < arr[i] and arr[i] > float('-inf'):
-                    return i
+            if res > target:
+                right -= 1
             else:
-                if arr[i-1] < arr[i] and i + 1 < len(arr) and arr[i] > arr[i+1]:
-                    return i
+                left += 1
+        
         return False
-    
+
 s = Solution()
-print(s.peakElement([1, 2, 4, 5, 7, 8, 3])) # True
-print(s.peakElement([1, 2, 3, 4, 5]))       # True
-print(s.peakElement([1, 2]))                # True
-print(s.peakElement([-1]))                  # True
+print(s.twoSum([1, 2, 3, 4, 5], 9))  # True
+print(s.twoSum([1, 2, 3, 4, 5], 10)) # False
+print(s.twoSum([1, 2, 3, 4, 5], 5))  # True

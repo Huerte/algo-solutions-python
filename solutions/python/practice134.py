@@ -1,26 +1,16 @@
-# Problem: Longest Substring Without Repeating Characters
-# Source: https://leetcode.com/problems/longest-substring-without-repeating-characters/
+# Problem: 3Sum Closest
+# Source: https://leetcode.com/problems/3sum-closest/
 
-def longest_substring(s):
+def three_sum(arr, target):
 
-    words = []
-    
-    temp = ""
-    for c in s:
-        if not temp:
-            temp += c
-            continue
-        
-        if c not in temp:
-            temp += c
-        else:
-            words.append(temp)
-            temp = c
+    nums = {}
 
-    return len(max(words, key=len))
+    for i in range(len(arr)):
+        nums[arr[i]] = abs(arr[i]) - abs(target)
 
+    res = sorted(nums, key=lambda x: nums[x])
 
-print(longest_substring("abcabcbb")) # == 3
-print(longest_substring("bbbbb"))    # == 1
-print(longest_substring("pwwkew"))   # == 3
-print(longest_substring("abcdac"))   # == 4
+    return sum(res[:3])
+
+print(three_sum([-1, 2, 1, -4], 1))
+print(three_sum([0, 0, 0], 1))

@@ -1,29 +1,15 @@
-# HackerRank - Between Two Sets
-# Problem: Between Two Sets
-# Source: https://www.hackerrank.com/challenges/between-two-sets/problem
-# Note: Counts integers that are divisible by every element in the first array and divide every element in the second array.
-def getTotalX(a, b):
-    ar = []
-    for i in range(a[-1], b[0] + 1):
-        div = True
-        
-        for num in a:
-            if i % num != 0:
-                div = False
-                break
-        if div:
-            ar.append(i)
+# HackerRank - Sequence Equation
+# Problem: Sequence Equation
+# Source: https://www.hackerrank.com/challenges/permutation-equation/problem
+# Note: Finds the position of each value and then the position of that position in the given permutation.
+def permutationEquation(p):
+    res = []
+    for i in range(1, len(p) + 1):
+        inner = p.index(i) + 1
+        outer = p.index(inner) + 1
+        res.append(outer)
+    return res
 
-    inc = []
-    for num in ar:
-        div = True
-        for n in b:
-            if n % num != 0:
-                div = False
-                break
-        if div:
-            inc.append(num)
-    
-    return len(inc)
-
-print(getTotalX([2,4], [16,32,96]))
+print(permutationEquation([5,2,1,3,4])) # [4,2,5,1,3]
+print(permutationEquation([4,3,5,1,2])) # [1,3,5,4,2]
+print(permutationEquation([2,3,1]))     # [2,3,1]

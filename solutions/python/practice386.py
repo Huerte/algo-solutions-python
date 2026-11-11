@@ -1,19 +1,10 @@
-# Problem: Pair of Gloves
-# Source: https://www.hackerrank.com/
-# Note: Counts matching pairs of gloves by color
-from collections import Counter
-def number_of_pairs(gloves):
-    count = Counter(gloves)
-    
-    tot = []
-    
-    for c, v in count.items():
-        pairs = v // 2
-        if pairs > 0:
-            tot.append([c, pairs])
+# CodeWars - Currying functions: multiply all elements in an array
+# Problem: Currying functions: multiply all elements in an array
+# Source: https://www.codewars.com/kata/586909e4c66d18dd1800009b
+# Note: Returns a function that multiplies every element of the original array by a given integer.
+def multiply_all(arr):
+    return lambda n: [x * n for x in arr]
 
-    return sum(pair for _, pair in tot) if tot else 0
-
-print(number_of_pairs(["red", "red", "red", "red", "red", "red"]))  # 3
-print(number_of_pairs(["red", "green", "red", "blue", "blue"]))     # 2
-print(number_of_pairs(["red", "green", "blue"]))                    # 0
+print(multiply_all([1, 2, 3])(4))  # [4, 8, 12] 
+print(multiply_all([1, 2, 3])(3))  # [3, 6, 9]
+print(multiply_all([1, 2, 3])(2))  # [2, 4, 6]

@@ -1,40 +1,19 @@
-# CodeWars - Playing with Passphrases
-# TODO
-# Problem: Playing with Passphrases
-# Source: https://www.codewars.com/kata/559536379512a64472000053
-# Note: Shifts letters, replaces digits with their complements to 9, alternates letter casing, and reverses the resulting string.
-def play_pass(s, n):
-    res = []
+# CodeWars - Sum of Odd Cubed Numbers
+# Problem: Sum of Odd Cubed Numbers
+# Source: https://www.codewars.com/kata/580dda86c40fa6c45f00028a
+# Note: Returns the sum of cubed odd integers, or None if the array contains a non-integer value.
+def cube_odd(arr):
+    res = 0
     
-    for word in s.split():
-        
-        temp = []
-        for c in word:
-            if c.isalpha():
-                temp.append(chr(ord(c) + n))
-            elif c.isdigit():
-                temp.append(str(abs(int(c) - 9)))
-            else:
-                temp.append(c)
-        res.append(''.join(temp[::-1]))
-
-    words = ' '.join(res)
-    final = []
-    temp = ""
-    for i in range(len(words)):
-        if words[i] == " ":
-            final.append(temp)
-            temp = ""
-            continue
-        if i % 2 == 0:
-            temp += words[i].upper()
+    for num in arr:
+        if type(num) == int:
+            if (num ** 3) % 2 != 0:
+                res += num ** 3
         else:
-            temp += words[i].lower()
-    final.append(temp)
+            return None
+    return res
 
-    print(final)
-    return ' '.join(final[::-1])
 
-print(play_pass("I LOVE YOU!!!", 1)) # "!!!vPz fWpM J"
-# print(play_pass("MY GRANMA CAME FROM NY ON THE 23RD OF APRIL 2015", 2)) # "4897 NkTrC Hq fT67 GjV Pq aP OqTh gOcE CoPcTi aO"
-# print(play_pass("BOY! YOU WANTED TO SEE HIM? IT'S YOUR FATHER:-)", 15)) # ")-:gTwIpU GjDn h'iX ?bXw tTh dI StIcPl jDn !NdQ"
+print(cube_odd([1, 2, 3, 4, 5])) # 153
+print(cube_odd([0, 1, False, 3, True, 5])) # None
+print(cube_odd([1, 2, 3, 4, 5, '7'])) # None

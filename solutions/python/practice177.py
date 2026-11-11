@@ -1,23 +1,21 @@
-# HackerRank - Validating Credit Card Numbers
-# Problem: Validating Credit Card Numbers
-# Source: https://www.hackerrank.com/challenges/validating-credit-card-number/problem
-# Note: Validates credit card numbers using regular expressions and checks for four or more consecutive repeated digits.
-import re
+# Water Bottles
+# Problem: Water Bottles
+# Source: https://leetcode.com/problems/water-bottles/
+# Note: Calculates the maximum number of water bottles that can be consumed through repeated exchanges of empty bottles.
+class Solution(object):
+    def numWaterBottles(self, numBottles, numExchange):
+        res = 0
+        empty = 0
+        
+        while numBottles > 0:
+            res += numBottles
+            empty += numBottles
+            numBottles = empty // numExchange
+            empty = empty % numExchange
 
-pattern = re.compile(r"^(?:[456]\d{15}|[456]\d{3}(-\d{4}){3})$")
+        return res
 
-n = int(input())
-for _ in range(n):
-    temp = input()
     
-    is_seq = False
-    arr = [num for num in temp if num.isdigit()]
-    for i in range(len(arr) - 4):
-        if len(set(arr[i+1:i+5])) == 1:
-            is_seq = True
-            break
-            
-    if is_seq:
-        print('Invalid')
-    else:
-        print(('Invalid', 'Valid')[bool(pattern.match(temp))])
+s = Solution()
+print(s.numWaterBottles(9, 3))  # 13
+print(s.numWaterBottles(15, 4)) # 19

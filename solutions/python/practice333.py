@@ -1,26 +1,30 @@
-# Problem: Jumping on the Clouds
-# Source: https://www.hackerrank.com/challenges/jumping-on-the-clouds/problem
+# Problem: Bigger is Greater
+# Source: https://www.hackerrank.com/challenges/bigger-is-greater/problem
 
-def jumpingOnClouds(c):
-    jumps = 0
-    
-    i = 0
-    while i < len(c):
-        
-        if i + 2 < len(c) and c[i + 2] == 0:
-            jumps += 1
-            i += 2
-            continue
-        if i + 1 < len(c) and c[i + 1] == 0:
-            jumps += 1
-            i += 1
-            continue
-        
-        jumps += 1
-        i += 2
-        
-    return jumps - 1
+# Not my Sol;
+def biggerIsGreater(w):
+    arr = list(w)
 
-print(jumpingOnClouds([0, 0, 1, 0, 0, 1, 0]))  # 4
-print(jumpingOnClouds([0, 0, 0, 1, 0, 0]))     # 3
-print(jumpingOnClouds([0, 0, 0, 0, 1, 0]))     # 3
+    pivot = -1
+    for i in range(len(arr) - 1, 0, -1):
+        if arr[i] > arr[i - 1]:
+            pivot = i - 1
+            break
+
+    if pivot == -1:
+        return 'no answer'
+
+    for i in range(len(arr) - 1, pivot, -1):
+        if arr[i] > arr[pivot]:
+            arr[i], arr[pivot] = arr[pivot], arr[i]
+            break
+
+    arr[pivot + 1:] = sorted(arr[pivot + 1:])
+
+    return ''.join(arr)
+
+
+print(biggerIsGreater("ab"))  # "ba"
+print(biggerIsGreater("bb"))  # "no answer"
+print(biggerIsGreater("hefg"))  # "hegf"
+print(biggerIsGreater("dkhc"))  # "hcdk"

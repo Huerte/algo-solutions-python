@@ -1,18 +1,21 @@
-# Problem: Coin Change (Minimum Coins)
-# Source: https://leetcode.com/problems/coin-change/
+# Merge Intervals
+# Problem: Merge Intervals
+# Source: https://leetcode.com/problems/merge-intervals/
+# Note: Sorts intervals by starting value and merges overlapping intervals by updating the ending value of the last merged interval.
+def intervals(arr):
+    arr = sorted(arr, key=lambda x: x[0])
+    new_arr = [arr[0]]
+    
+    for i in range(1, len(arr)):
+        cur = arr[i]
+        last = new_arr[-1]
 
-def change(n):
-    coins = [50, 20, 10, 5, 1]
-    change = []
-    while n > 0:
-        for coin in coins:
-            if coin <= n:
-                n -= coin
-                change.append(coin)
-                break
-    return change
+        if cur[0] <= last[1]:
+            last[1] = max(last[1], cur[1])
+        else:
+            new_arr.append(cur)
 
+    return new_arr
 
-print(change(25))
-print(change(15))
-print(change(45))
+print(intervals([[1,3],[2,6],[8,10],[15,18]])) # [[1,6],[8,10],[15,18]]
+

@@ -1,52 +1,67 @@
-# Problem: Valid Parentheses
-# Source: https://leetcode.com/problems/valid-parentheses/
-# Note: Validates bracket matching using stack-based mapping
-#
+# Problem: Clear Digits
+# Source: https://leetcode.com/problems/clear-digits/
+# Note: Removes each digit and the closest remaining non-digit character to its left.
 # Description:
-# Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the
-# input string is valid. An input string is valid if open brackets are closed by the same type of
-# brackets and in the correct order.
-# 
-# Example:
-# - Input: "()" → Output: true
-# - Input: "()[]{}" → Output: true
-# - Input: "(]" → Output: false
-# - Input: "([)]" → Output: false
-# 
+# Given a string s, remove all digits from the string. When a digit is encountered, 
+# remove the character that comes before it as well.
+# This appears to be a custom string manipulation problem.
+#
+# Input:
+# - A string `s` containing letters and digits
+#
+# Output:
+# - A string with digits and their preceding characters removed
+#
 # Status: ✅ SOLVED
 
-def is_valid_parentheses(s):
-    if not s:
-        return True
-    
-    # Map closing brackets to their corresponding opening brackets
-    brackets_map = {
-        '}': '{', 
-        ')': '(', 
-        ']': '['
-    }
-    
-    stack = []
-    
-    for char in s:
-        if char in brackets_map:
-            # Closing bracket
-            if not stack or stack.pop() != brackets_map[char]:
-                return False
-        else:
-            # Opening bracket
-            stack.append(char)
-    
-    return len(stack) == 0
+# def clearDigits(s):
+#     if not s:
+#         return ""
+        
+#     result = []
+#     for char in s:
+#         if char.isdigit():
+#             if result:  # Only pop if there's something to pop
+#                 result.pop()
+#         else:
+#             result.append(char)
+
+#     return ''.join(result)
+
+def clearDigits(s):
+    arr = []
+
+    for c in s:
+        if arr and c.isdigit():
+            arr.pop()
+        elif not c.isdigit():
+            arr.append(c)
+            
+    return ''.join(arr)
 
 # Test cases with assertions
-assert is_valid_parentheses("()") == True
-assert is_valid_parentheses("()[]{}") == True
-assert is_valid_parentheses("(]") == False
-assert is_valid_parentheses("([)]") == False
-assert is_valid_parentheses("{[]}") == True
-assert is_valid_parentheses("") == True
-assert is_valid_parentheses("(") == False
-assert is_valid_parentheses(")") == False
+# Example 1
+assert clearDigits("a1bc2d3") == "b"
+
+# Example 2
+assert clearDigits("abc123") == ""
+
+# Example 3
+assert clearDigits("a1b2c3") == ""
+
+# Example 4
+assert clearDigits("1a2b3c") == "c"
+
+# Example 5
+assert clearDigits("abc") == "abc"
+
+# Example 6
+assert clearDigits("a1b") == "b"
+
+# Edge cases
+assert clearDigits("") == ""
+assert clearDigits("1") == ""
+assert clearDigits("a") == "a"
+assert clearDigits("12") == ""
 
 print("All test cases passed!")

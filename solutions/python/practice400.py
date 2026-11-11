@@ -1,15 +1,25 @@
-# Problem: Sort Array by Increasing Frequency
-# Source: https://leetcode.com/problems/sort-array-by-increasing-frequency/
+# CodeWars - Return pyramids
+# Problem: Return pyramids
+# Source: https://www.codewars.com/kata/5803a6d8db07c59fff00015f
+# Note: Generates an ASCII pyramid with n floors and a trailing newline.
+def pyramid(n):
+    
+    sp = n - 1
+    mid = 0
+    
+    res = []
+    
+    for _ in range(n - 1):
+        
+        res.append(' ' * sp + '/' + ' ' * mid + '\\')
+        
+        sp -= 1
+        mid += 2
+    
+    res.append('/' + '_' * mid + '\\')
+    
+    return '\n'.join(res) + '\n'
 
-from collections import Counter
-class Solution(object):
-    def frequencySort(self, nums):
-        c = Counter(nums)
-        return sorted(nums, key=lambda x: (c[x], -x))
-
-
-
-s = Solution()
-print(s.frequencySort([-1,1,-6,4,5,-6,1,4,1])) # [5,-1,4,4,-6,-6,1,1,1]
-print(s.frequencySort([1,1,2,2,2,3])) # [3,1,1,2,2,2]
-print(s.frequencySort([2,3,1,3,2]))   # [1,3,3,2,2]
+print(pyramid(1)) # '/\\\n'
+print(pyramid(2)) # ' /\\\n/__\\\n'
+print(pyramid(3)) # '  /\\\n /  \\\n/____\\\n'

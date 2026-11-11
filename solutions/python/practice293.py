@@ -1,10 +1,24 @@
-# HackerRank - The Hurdle Race
-# Problem: The Hurdle Race
-# Source: https://www.hackerrank.com/challenges/the-hurdle-race/problem
-# Note: Calculates the minimum number of potion doses needed to clear the tallest hurdle.
-def hurdleRace(k, height):
-    return max(height) - k if k < max(height) else 0
+# Problem: Minimum Distance to the Target Element
+# Source: https://leetcode.com/problems/minimum-distance-to-the-target-element/
+# Note: Finds the minimum absolute distance between start and an index containing target.
+class Solution(object):
+    def getMinDistance(self, nums, target, start):
+        closest = float('inf')
+        for i in range(start, len(nums)):
+            if nums[i] == target:
+                closest = min(closest, abs(start - i))
+        
+        for i in range(start, -1, -1):
+            if nums[i] == target:
+                closest = min(closest, abs(start - i))
+        
+        return closest
+# Test cases
+sol = Solution()
+assert sol.getMinDistance([1, 2, 3, 4, 5], 5, 3) == 1
+assert sol.getMinDistance([1], 1, 0) == 0
+assert sol.getMinDistance([1, 1, 1, 1, 1], 1, 0) == 0
+assert sol.getMinDistance([5, 3, 6], 5, 2) == 2
+assert sol.getMinDistance([1, 2, 3, 4, 5, 3], 3, 4) == 1
 
-print(hurdleRace(7, [1,6,3,5,2])) # 0
-print(hurdleRace(4, [1,6,3,5,2])) # 2
-print(hurdleRace(2, [3,5,7,9,1])) # 7
+print("All test cases passed!")

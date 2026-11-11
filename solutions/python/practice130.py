@@ -1,25 +1,39 @@
-# Problem: Insert Interval
-# Source: https://leetcode.com/problems/insert-interval/
-# CONFUSE
+# Problem: Merge Intervals
+# Source: https://leetcode.com/problems/merge-intervals/
 
-def insert_interval(intervals, new_interval):
-    
-    res = []
+def merge_intervals(intervals):
 
-    for interval in intervals:
-        if interval[1] < new_interval[0]:
-            res.append(interval)
-        elif interval[0] > new_interval[1]:
-            res.append(new_interval)
-            new_interval = interval
-        
-        elif interval[1] >= new_interval[0] or interval[0] <= new_interval[1]:
-            new_interval = [min(interval[0], new_interval[0]), max(interval[1], new_interval[1])]
-    
-    res.append(new_interval)
-    
-    return res
+    sorted_intervals = sorted(intervals, key=lambda x: x[0])
 
+    merge_intervals = [sorted_intervals[0]]
 
-print(insert_interval([[1, 3], [6, 9]], [2, 5])) # == [[1, 5], [6, 9]]
-print(insert_interval([[1, 2], [3, 5], [6, 7], [8, 10], [12, 16]], [4, 8])) # == [[1, 2], [3, 10], [12, 16]]
+    for interval in sorted_intervals[1:]:
+        if interval[0] <= merge_intervals[-1][1]:
+            merge_intervals[-1] = [merge_intervals[-1][0], max(merge_intervals[-1][1], interval[1])]
+        else:
+            merge_intervals.append(interval)
+
+    return merge_intervals
+
+"""
+
+[[1, 3]]
+
+check -> [1, 3] == [2, 6] True
+
+[[1, 6]]
+
+check -> [1, 6] == [8, 10] False
+
+[[1, 6], [8, 10]]
+
+check -> [8, 10] == [15, 18] False
+
+[[1, 6], [8, 10], [15, 18]]
+
+end
+
+"""
+
+print(merge_intervals([[1, 3], [2, 6], [8, 10], [15, 18]])) # == [[1, 6], [8, 10], [15, 18]]
+print(merge_intervals([[1, 4], [4, 5]])) # == [[1, 5]]

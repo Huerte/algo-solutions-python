@@ -1,17 +1,13 @@
-# Problem: First Letter to Appear Twice
-# Source: https://leetcode.com/problems/first-letter-to-appear-twice/
+# Problem: Smallest Even Multiple
+# Source: https://leetcode.com/problems/smallest-even-multiple/
 
-s = input('Enter a string: ')
+n = int(input("Enter a positive integer: "))
 
-dis = {}
+i = 1
 res = None
-for c in s:
-    if c not in dis:
-        dis[c] = 1
-    else:
-        dis[c] += 1
-    
-    if dis[c] == 2:
-        res = c
+while True:
+    if i % 2 == 0 and i % n == 0:
+        res = i
         break
-print(f"The first letter to appear twice is: {res}")
+    i += 1
+print(f"Result: {res}")

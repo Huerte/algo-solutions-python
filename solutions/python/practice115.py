@@ -1,21 +1,25 @@
-# Problem: Check If All A's Appears Before All B's
-# Source: https://leetcode.com/problems/check-if-all-as-appears-before-all-bs/
+# Problem: Most Frequent Even Element
+# Source: https://leetcode.com/problems/most-frequent-even-element/
 
-s = input('Enter the string: ')
+n = int(input('Enter the number of integers: '))
+print(f'Enter {n} integers:')
 
-a_index = []
-b_index = []
+dis = {}
 
-for i in range(len(s)):
-    if s[i] == 'a':
-        a_index.append(i)
+for _ in range(n):
+    num = int(input())
+    if num not in dis:
+        dis[num] = 1
     else:
-        b_index.append(i)
+        dis[num] += 1
 
-res = False
-if not a_index or not b_index:
-    res = True
-elif max(a_index) < min(b_index):
-    res = True
+most_freq = [0, 0]
+for key, value in dis.items():
+    if key % 2 != 0:
+        continue
+    if value == most_freq[1]:
+        most_freq[0] = min(most_freq[0], key)
+    elif value > most_freq[1]:
+        most_freq = [key, value]
 
-print(res)
+print(f'Most frequent Even Element: {most_freq[0]}')

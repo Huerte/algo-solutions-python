@@ -1,34 +1,14 @@
-# Problem: Flood Fill
-# Source: https://leetcode.com/problems/flood-fill/
+# Problem: Longest Subarray with Sum K
+# Source: https://www.codechum.com/
+# Note: Finds longest subarray with sum equal to target k
+ln, r = map(int, input().split())
+arr = list(map(int, input().split()[:ln]))
 
-from collections import deque
+seen = []
 
-def bfs(grid, seen, r, c, row, column):
-    dir = [(0, 1), (0, -1), (1, 0), (-1, 0)]
-    queue = deque([(r, c)])
-    seen.add((r, c))
+for i in range(ln - 1):
+    for j in range(i + 1, ln):
+        if sum(arr[i:j+1]) == r:
+            seen.append(len(arr[i:j+1]))
 
-    while queue:
-
-        rd, cd = queue.popleft()
-
-        for dr, dc in dir:
-            nr, nc = rd + dr, cd + dc
-            if 0 <= nr < row and 0 <= nc < column:
-                if (nr, nc) not in seen and grid[nr][nc] == '1':
-                    queue.append((nr, nc))
-                    seen.add((nr, nc))
-
-
-row, column = map(int, input().split())
-grid = [input() for _ in range(row)]
-island = 0
-
-seen = set()
-for r in range(row):
-    for c in range(column):
-        if grid[r][c] == '1' and (r, c) not in seen:
-            bfs(grid, seen, r, c, row, column)
-            island += 1
-
-print(island)
+print(min(seen) if seen else 0)

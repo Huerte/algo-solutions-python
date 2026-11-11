@@ -1,20 +1,17 @@
-# Count Asterisks
-# Problem: Count Asterisks
-# Source: https://leetcode.com/problems/count-asterisks/
-# Note: Counts asterisks outside pairs of vertical bars.
+# Largest Local Values in a Matrix
+# Problem: Largest Local Values in a Matrix
+# Source: https://leetcode.com/problems/largest-local-values-in-a-matrix/
+# Note: Finds the maximum value in every contiguous 3x3 submatrix.
 
 class Solution(object):
-    def countAsterisks(self, s):
-        if '*' not in s:
-            return 0
-        elif '|' not in s:
-            return s.count('*')
-        
-        had_f = False
-        count = 0
-        for c in s:
-            if c == '|':
-                had_f = not had_f
-            elif not had_f and c == '*':
-                count += 1
-        return count
+    def largestLocal(self, grid):
+        n = len(grid)
+        res = [[0] * (n - 2) for _ in range(n - 2)]
+
+        for i in range(n - 2):
+            for j in range(n - 2):
+                for r in range(i, i + 3):
+                    for c in range(j, j + 3):
+                        res[i][j] = max(res[i][j], grid[r][c])
+
+        return res

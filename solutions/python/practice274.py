@@ -1,37 +1,17 @@
-# Keyboard Row
-# Problem: Keyboard Row
-# Source: https://leetcode.com/problems/keyboard-row/
-# Note: Checks whether all characters in each word belong to the same keyboard row and returns the words that satisfy this condition.
+# Uncommon Words from Two Sentences
+# Problem: Uncommon Words from Two Sentences
+# Source: https://leetcode.com/problems/uncommon-words-from-two-sentences/
+# Note: Combines both sentences, counts each word using Counter, and returns words that appear exactly once across both sentences.
+from collections import Counter
 class Solution(object):
-    def findWords(self, words):
-        row1="qwertyuiop"
-        row2="asdfghjkl"
-        row3="zxcvbnm"
+    def uncommonFromSentences(self, s1, s2):
         arr = []
-        for word in words:
-            cur = None
-            for c in word.lower():
-                if not cur:
-                    if c in row1:
-                        cur = 1
-                    elif c in row2:
-                        cur = 2
-                    elif c in row3:
-                        cur = 3
-                if cur == 1 and c not in row1:
-                    cur = None
-                    break
-                if cur == 2 and c not in row2:
-                    cur = None
-                    break
-                if cur == 3 and c not in row3:
-                    cur = None
-                    break
-            if cur:
-                arr.append(word)
+        c = Counter((s1 + " " + s2).split())
+        for key, val in c.items():
+            if val == 1:
+                arr.append(key)
         return arr
 
 s = Solution()
-print(s.findWords(["Aasdfghjkl","Qwertyuiop","zZxcvbnm"])) # ["Aasdfghjkl","Qwertyuiop","zZxcvbnm"]
-print(s.findWords(["Hello","Alaska","Dad","Peace"]))       # ["Alaska","Dad"]
-print(s.findWords(["adsdf","sfd"]))                        # ["adsdf","sfd"]
+print(s.uncommonFromSentences("this apple is sweet", "this apple is sour")) # ["sweet","sour"]
+print(s.uncommonFromSentences("apple apple", "banana"))                     # ["banana"]

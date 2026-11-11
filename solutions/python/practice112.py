@@ -1,17 +1,27 @@
-# Problem: Product of Array Except Self
-# Source: https://leetcode.com/problems/product-of-array-except-self/
+# Problem: Count CamelCase Words
+# Source: https://www.hackerrank.com/challenges/camelcase/problem
 
-n = int(input('Enter the number of elements: '))
-print(f"Enter {n} elements:")
-arr = list(map(int, input().split()))
-res = [1] * n
+s = input('Enter the CamelCase string: ')
 
-for i in range(n):
-    for j in range(n):
-        if i == j:
-            continue
+word = []
 
-        res[i] *= arr[j]
-
-print("Product array is:")
-print(" ".join(map(str, res)))
+i = 0
+while i < len(s):
+    temp = ""
+    if i == 0 and s[i].islower():
+        temp += s[i]
+        i += 1
+        while i < len(s) and s[i].islower():
+            temp += s[i]
+            i += 1
+        print(f'First Word: {temp}')
+        word.append(temp)
+    else:
+        temp += s[i]
+        i += 1
+        while i < len(s) and s[i].islower():
+            temp += s[i]
+            i += 1
+        print(f"Others: {temp}")
+        word.append(temp)
+print(len(word))

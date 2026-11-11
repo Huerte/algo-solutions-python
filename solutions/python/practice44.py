@@ -1,52 +1,26 @@
-# Problem: Character Percentage in String
-# Source: https://leetcode.com/problems/percentage-of-letter-in-string/
-# Note: Solves the Character Percentage in String problem
-# Description:
-# Given a string s and a character c, return the percentage of characters in s that equal c.
-# The percentage is rounded down to the nearest integer.
-#
-# Input:
-# - A string `s` where 1 <= s.length <= 100
-# - A character `c` to count in the string
-#
-# Output:
-# - An integer representing the percentage of characters equal to c
-#
-# Status: ✅ SOLVED
+# Problem: Word Pattern
+# Source: https://leetcode.com/problems/word-pattern/
 
-# def percentageString(s, c):
-#     if not s:
-#         return 0
+class Solution(object):
+    def wordPattern(self, pattern, s):
+        mapped = {}
+        words = s.split() if ' ' in s else list(s)
+        for i, l in enumerate(pattern):
+            if mapped:
+                if l in mapped and mapped[l] != words[i]:
+                    return False
+                
+                elif l not in mapped and words[i] in mapped.values():
+                    return False
+                
+            mapped[l] = words[i]
+
+        result = []
+        for ltr in pattern:
+            result.append(mapped[ltr])
         
-#     count = s.count(c)
-#     return int((count / len(s)) * 100)
+        return ' '.join(result) == s
 
-def percentageString(s, c):
-    if not s:
-        return 0
-    return int(s.count(c)/len(s) * 100)
-
-# Test cases with assertions
-# Example 1
-assert percentageString("hello", "l") == 40
-
-# Example 2
-assert percentageString("aabbcc", "a") == 33
-
-# Example 3
-assert percentageString("testcase", "t") == 25
-
-# Example 4
-assert percentageString("aaaaa", "a") == 100
-
-# Example 5
-assert percentageString("abcde", "z") == 0
-
-# Example 6
-assert percentageString("a", "a") == 100
-
-# Edge cases
-assert percentageString("", "a") == 0
-assert percentageString("abc", "a") == 33
-
-print("All test cases passed!")
+s = Solution()
+# print(s.wordPattern("abba", "dog cat cat dog"))
+print(s.wordPattern("jquery","jquery"))

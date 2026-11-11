@@ -1,19 +1,22 @@
-# Problem: Matrix Rotate 90deg Clockwise
+# Problem: Longest Subarray With Sum Less Than or Equal to S
 # Source: 
-# Note: Rotates square matrix clockwise by 90 degrees
-matrix = []
-for _ in range(3):
-    matrix.append(list(map(int, input().split())))
+# Note: Sliding window approach to find longest subarray with sum at most S
+n = int(input())
+arr = [int(i) for i in input().split()][:n]
 
-row = len(matrix)
-column = len(matrix[0])
+s = int(input())
 
-r = int(input()) % 4
-for _ in range(r):
-    result = [[0] * column for _ in range(row)]
-    for i in range(row):
-        for j in range(column):
-            result[j][row - 1 - i] = matrix[i][j]
-    matrix = result
+res = []
 
-print('\n'.join(map(str, matrix)))
+for num in arr:
+    if not res:
+        res.append(num)
+    
+    elif sum(res) + num <= s:
+        res.append(num)
+    else:
+        largest = max(res)
+        if num < largest:
+            res[res.index(largest)] = num
+
+print(len(res))

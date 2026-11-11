@@ -1,21 +1,26 @@
-# HackerRank - Cut the sticks
-# Problem: Cut the Sticks
-# Source: https://www.hackerrank.com/challenges/cut-the-sticks/problem
-# Note: Repeatedly removes the shortest sticks and records the number of sticks remaining before each cut.
-def cutTheSticks(arr):
-    count = [len(arr)]
+# HackerRank - Non-Divisible Subset
+# Problem: Non-Divisible Subset
+# Source: https://www.hackerrank.com/challenges/non-divisible-subset/problem
+# Note: Finds the largest subset in which no pair of elements has a sum divisible by k.
+# Other Sol
+def nonDivisibleSubset(k, s):
+    freq = [0] * k
+    for num in s:
+        freq[num % k] += 1
     
-    while arr:
-        temp = []
-        mn = min(arr)
-        for i in range(len(arr)):
-            if arr[i] - mn > 0:
-                temp.append(arr[i] - mn)
-        arr = temp
-        if arr:
-            count.append(len(arr))
+    count = 0
+
+    if freq[0] > 0:
+        count += 1
+
+    for i in range(1, k // 2 + 1):
+        if i == k - i:
+            if freq[i] > 0:
+                count += 1
+        else:
+            count += max(freq[i], freq[k - i])
     
     return count
 
-print(cutTheSticks([5,4,4,2,2,8]))     # [6,4,2,1]
-print(cutTheSticks([1,2,3,4,3,3,2,1])) # [8,6,4,1]
+
+print(nonDivisibleSubset(7, list(map(int, "278 576 496 727 410 124 338 149 209 702 282 718 771 575 436".split())))) # 11

@@ -1,10 +1,14 @@
-# Problem: Sum of Multiples of 3, 5, or 7
-# Source: https://leetcode.com/problems/sum-multiples/
+# Problem: Find Strings Containing a Specific Character
+# Source: https://leetcode.com/problems/find-words-containing-character/
 
-n = int(input('Enter a positive integer n: '))
-sums = 0
-for i in range(1, n+1):
-    if i % 3 == 0 or i % 5 == 0 or i % 7 == 0:
-        sums += i
+n = int(input('Enter the number of strings: '))
+print(f'Enter {n} strings:')
+arr = []
+for _ in range(n):
+    arr.append(input())
 
-print(f'Sum of all integers: {sums}')
+s = input('Enter the character to search for: ')
+print(f"Strings containing the character '{s}'")
+for w in arr:
+    if s in w:
+        print(w)

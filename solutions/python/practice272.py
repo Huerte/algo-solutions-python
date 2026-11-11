@@ -1,14 +1,14 @@
-# Backspaces in string
-# Problem: Backspaces in string
-# Source: https://www.codewars.com/kata/5727bb0fe81185ae62000ae3
-# Note: Uses a stack to process the string, removing the previous character whenever a '#' backspace character is encountered.
-def clean_string(s):
-    seen = []
-    
-    for c in s:
-        if seen and c == '#':
-            seen.pop()
-        elif c != '#':
-            seen.append(c)
-    
-    return ''.join(seen)
+# Distribute Candies
+# Problem: Distribute Candies
+# Source: https://leetcode.com/problems/distribute-candies/
+# Note: Counts the unique candy types using a set and returns the minimum of the unique types and half the total candies.
+class Solution(object):
+    def distributeCandies(self, candyType):
+        cd = len(set(candyType))
+        ce = len(candyType) // 2
+        return min(ce, cd)
+
+s = Solution()
+print(s.distributeCandies([1,1,2,2,3,3])) # 3
+print(s.distributeCandies([1,1,2,3]))     # 2
+print(s.distributeCandies([6,6,6,6]))     # 1

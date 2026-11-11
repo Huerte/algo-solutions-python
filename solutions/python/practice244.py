@@ -1,31 +1,12 @@
-# CodeWars - Human readable duration format
-# Problem: Human readable duration format
-# Source: https://www.codewars.com/kata/52742f58faf5485cae000b9a
-# Note: Converts seconds into a human-readable duration using years, days, hours, minutes and seconds.
-def format_duration(seconds):
-    m, s = divmod(seconds, 60)
-    h, m = divmod(m, 60)
-    d, h = divmod(h, 24)
-    y, d = divmod(d, 365)
+# CodeWars - Product of consecutive Fib numbers
+# Problem: Product of consecutive Fib numbers
+# Source: https://www.codewars.com/kata/5541f58a944b85ce6d00006a
+# Note: Generates consecutive Fibonacci numbers until their product is greater than or equal to the target, then returns the pair and a boolean indicating whether the product matches.
+def product_fib(_prod):
+    a, b = 0, 1
+    while a * b != _prod and a * b < _prod:
+        a, b = b, a + b
+    return [a, b, a * b == _prod]
 
-    res = ""
-    if y > 0:
-        res += f"{y} year{'s' if y > 1 else ''}{', ' if any([s,d,h,m]) else ''}"
-    if d > 0:
-        res += f"{'and ' if all([a<0 for a in [h,m,s]]) and y > 0 else ''}{d} day{'s' if d > 1 else ''}{', ' if any([s,h,m]) else ''}"
-    if h > 0:
-        res += f"{'and ' if all([a<0 for a in [m,s]]) and any([d, y]) else ''}{h} hour{'s' if h > 1 else ''}"
-        if m > 0:
-            res += ', ' if s > 0 else ' and '
-        elif s > 0:
-            res += ' '
-    if m > 0:
-        res += f"{'and ' if s < 0 and any([y,d,h]) else ''}{m} minute{'s' if m > 1 else ''}{' ' if s > 0 else ''}"
-    if s > 0:
-        res += f"{'and ' if any([y,d,h,m]) else ''}{s} second{'s' if s > 1 else ''}"
-
-    return res if res else 'now'
-
-print(format_duration(62))         # 1 minute and 2 seconds
-print(format_duration(31_556_926)) # 1 year and 1 second
-print(format_duration(132030240))  #"4 years, 68 days, 3 hours and 4 minutes"
+print(product_fib(4895)) # [55, 89,  True]
+print(product_fib(5895)) # [89, 144, False]

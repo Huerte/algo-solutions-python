@@ -1,25 +1,12 @@
-# Wildcard Matching
-# Problem: Wildcard Matching
-# Source: https://leetcode.com/problems/wildcard-matching/
-# Note: Checks whether a string matches a pattern where '?' matches one character and '*' matches any sequence of characters.
-# Other sol
+# Furthest Point From Origin
+# Problem: Furthest Point From Origin
+# Source: https://leetcode.com/problems/furthest-point-from-origin/
+# Note: Calculates the maximum distance from the origin by optimally assigning each '_' move to either left or right.
 class Solution:
-    def isMatch(self, s: str, p: str) -> bool:
-        m, n = len(s), len(p)
-
-        ar = [[False] * (n + 1) for _ in range(m + 1)]
-
-        ar[0][0] = True
-
-        for j in range(1, n + 1):
-            if p[j - 1] == '*':
-                ar[0][j] = ar[0][j - 1]
-        
-        for i in range(1, m + 1):
-            for j in range(1, n + 1):
-                if p[j - 1] == '*':
-                    ar[i][j] = ar[i - 1][j] or ar[i][j - 1]
-                elif p[j - 1] == '?' or s[i - 1] == p[j - 1]:
-                    ar[i][j] = ar[i - 1][j - 1]
-        
-        return ar[m][n]
+    def furthestDistanceFromOrigin(self, moves: str) -> int:
+        return abs(moves.count('R') - moves.count('L')) + moves.count('_')
+    
+s = Solution()
+print(s.furthestDistanceFromOrigin("L_RL__R")) # 3
+print(s.furthestDistanceFromOrigin("_R__LL_")) # 5
+print(s.furthestDistanceFromOrigin("_______")) # 7

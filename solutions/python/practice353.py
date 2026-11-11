@@ -1,21 +1,48 @@
-# GeeksforGeeks - Row with max 1s
-# Problem: Row with Max 1s
-# Source: https://www.geeksforgeeks.org/problems/row-with-max-1s0023/1
-# Note: Finds the index of the first row containing the maximum number of 1s in a row-wise sorted binary matrix.
+# GeeksforGeeks - Longest Palindrome in a String
+# Problem: Longest Palindrome in a String
+# Source: https://www.geeksforgeeks.org/problems/longest-palindrome-in-a-string3411/1
+# Note: Finds the longest palindromic substring, returning the first occurrence when multiple answers have the same length.
+# My Sol;
 class Solution:
-    def rowWithMax1s(self, arr):
-        max_ones = 0
-        ind = -1
+    def longestPalindrome(self, s):
+        palindrome = ""
+        n = len(s)
+        for i in range(n - 1):
+            right = n
+            while right > i:
+                temp = s[i:right]
+                if temp == temp[::-1] and len(temp) > len(palindrome):
+                    palindrome = temp
+                    break
+                right -= 1
+        return palindrome
+
+# Optimized Sol;
+class Solution:
+    def longestPalindrome(self, s: str) -> str:
+        if not s:
+            return ""
         
-        for i, row in enumerate(arr):
-            counts = row.count(1)
-            if counts > max_ones:
-                max_ones = counts
-                ind = i
+        res = ""
         
-        return ind
+        def expand(left, right):
+            while left >= 0 and right < len(s) and s[left] == s[right]:
+                left -= 1
+                right += 1
+            return s[left + 1:right]
+
+        for i in range(len(s)):
+            p1 = expand(i, i)
+            if len(p1) > len(res):
+                res = p1
+
+            p2 = expand(i, i + 1)
+            if len(p2) > len(res):
+                res = p2
+                
+        return res
 
 s = Solution()
-print(s.rowWithMax1s([[0, 1, 1], [0, 0, 1], [1, 1, 1]]))  # 2
-print(s.rowWithMax1s([[0, 0, 0], [0, 0, 0], [0, 0, 0]]))  # -1
-print(s.rowWithMax1s([[1, 1, 1], [0, 0, 0], [0, 0, 0]]))  # 0
+print(s.longestPalindrome("bswrhxboawtdfqggqfdtwyypwnssnwpyyaobxhrwsb")) # wtdfqggqfdtw
+print(s.longestPalindrome("aaaabbaa"))                                   # aabbaa
+print(s.longestPalindrome("ababa"))                                      # ababa

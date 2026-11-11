@@ -1,68 +1,51 @@
-# Problem: Rotate List by N Steps
+# Problem: String Unscrambling
 # Source: 
-# Note: Rotates elements of a list by n steps
-#     """Rotate the elements of lst by n steps.
+# Note: Solves the String Unscrambling problem
+# Description:
+# Given a scrambled string, unscramble it by taking characters at even indices first 
+# (0, 2, 4, ...) and then characters at odd indices in reverse order.
+# This appears to be a custom string manipulation problem.
+#
+# Input:
+# - A scrambled string `scrambled`
+#
+# Output:
+# - The unscrambled string
+#
+# Status: ✅ SOLVED
 
-#     A positive n indicates a right rotation, while a negative n indicates a left rotation.
-
-#     Args:
-#         lst (list): The list to be rotated.
-#         n (int): The number of steps to rotate the list.
-
-#     Returns:
-#         list: The rotated list.
-#     """
-
-#     if not lst:
-#         return lst
+def unscramble_string(scrambled):
+    result = ''
     
-#     arr = [0] * len(lst)
-
-#     for i in range(len(lst)):
-#         arr[(i + n) % len(lst)] = lst[i]
+    # Take characters at even indices first
+    for i in range(0, len(scrambled), 2):
+        result += scrambled[i]
     
-#     return arr
-
-def rotate(arr, n):
-    if not arr:
-        return []
+    # Take characters at odd indices in reverse order
+    for j in range(len(scrambled) - 2, 0, -2):
+        result += scrambled[j]
     
-    res = [0] * len(arr)
+    return result
 
-    for i in range(len(arr)):
-        res[(i + n) % len(arr)] = arr[i]
-    
-    return res
+# Test cases with assertions
+# Example 1
+scrambled1 = "H!e ldllor ow"
+assert unscramble_string(scrambled1) == "Hello world!"
 
-# --- TESTS ---
+# Example 2
+scrambled2 = "abcde"
+assert unscramble_string(scrambled2) == "acebd"
 
-# 1. basic right rotation
-assert rotate([1,2,3,4,5], 1) == [5,1,2,3,4]
-assert rotate([1,2,3,4,5], 2) == [4,5,1,2,3]
+# Example 3
+scrambled3 = "xyz"
+assert unscramble_string(scrambled3) == "xzy"
 
-# 2. basic left rotation (negative steps)
-assert rotate([1,2,3,4,5], -1) == [2,3,4,5,1]
-assert rotate([1,2,3,4,5], -2) == [3,4,5,1,2]
+# Example 4
+scrambled4 = "a"
+assert unscramble_string(scrambled4) == "a"
 
-# 3. full cycle (rotation equals length)
-assert rotate([1,2,3], 3) == [1,2,3]
-assert rotate([1,2,3], -3) == [1,2,3]
+# Example 5
+scrambled5 = "ab"
+assert unscramble_string(scrambled5) == "ab"
 
-# 4. rotation larger than list length
-assert rotate([1,2,3], 4) == [3,1,2]
-assert rotate([1,2,3], 5) == [2,3,1]
-assert rotate([1,2,3], -4) == [2,3,1]
-
-# 5. empty list
-assert rotate([], 10) == []
-
-# 6. single-element list
-assert rotate([9], 3) == [9]
-
-# 7. mixed data types
-assert rotate(['a','b','c'], 1) == ['c','a','b']
-
-# 8. zero rotation (no change)
-assert rotate([10,20,30], 0) == [10,20,30]
-
-print('Success')
+print("All test cases passed!")

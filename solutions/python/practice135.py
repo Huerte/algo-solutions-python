@@ -1,16 +1,8 @@
-# Problem: 3Sum Closest
-# Source: https://leetcode.com/problems/3sum-closest/
+# Problem: Remove Duplicates from Sorted Array
+# Source: https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 
-def three_sum(arr, target):
+def remove_duplicates(arr):
+    return len(set(arr))
 
-    nums = {}
-
-    for i in range(len(arr)):
-        nums[arr[i]] = abs(arr[i]) - abs(target)
-
-    res = sorted(nums, key=lambda x: nums[x])
-
-    return sum(res[:3])
-
-print(three_sum([-1, 2, 1, -4], 1))
-print(three_sum([0, 0, 0], 1))
+print(remove_duplicates([1, 1, 2]))
+print(remove_duplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]))

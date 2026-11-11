@@ -1,12 +1,15 @@
-# Number of 1 Bits
-# Problem: Number of 1 Bits
-# Source: https://leetcode.com/problems/number-of-1-bits/
-# Note: Converts an integer into its binary representation and counts the number of set bits (1s).
+# Smallest Range I
+# Problem: Smallest Range I
+# Source: https://leetcode.com/problems/smallest-range-i/
+# Note: Minimizes the difference between the maximum and minimum array values by adjusting each element by at most k.
 class Solution(object):
-    def hammingWeight(self, n):
-        return bin(n)[2:].count('1')
+    def smallestRangeI(self, nums, k):
+        maxt = max(nums) - k
+        mint = min(nums) + k
+        diff = maxt - mint
+        return diff if diff > 0 else 0
 
 s = Solution()
-print(s.hammingWeight(11)) # 3
-print(s.hammingWeight(128)) # 1
-print(s.hammingWeight(4294967293)) # 31
+print(s.smallestRangeI([1], 0)) # 0
+print(s.smallestRangeI([0, 10], 2)) # 6
+print(s.smallestRangeI([1, 3, 6], 3)) # 0

@@ -1,24 +1,15 @@
-# Problem: Minimum Distance to the Target Element
-# Source: https://leetcode.com/problems/minimum-distance-to-the-target-element/
-# Note: Finds the minimum absolute distance between start and an index containing target.
-class Solution(object):
-    def getMinDistance(self, nums, target, start):
-        closest = float('inf')
-        for i in range(start, len(nums)):
-            if nums[i] == target:
-                closest = min(closest, abs(start - i))
-        
-        for i in range(start, -1, -1):
-            if nums[i] == target:
-                closest = min(closest, abs(start - i))
-        
-        return closest
-# Test cases
-sol = Solution()
-assert sol.getMinDistance([1, 2, 3, 4, 5], 5, 3) == 1
-assert sol.getMinDistance([1], 1, 0) == 0
-assert sol.getMinDistance([1, 1, 1, 1, 1], 1, 0) == 0
-assert sol.getMinDistance([5, 3, 6], 5, 2) == 2
-assert sol.getMinDistance([1, 2, 3, 4, 5, 3], 3, 4) == 1
-
-print("All test cases passed!")
+# HackerRank - Day of the Programmer
+# Problem: Day of the Programmer
+# Source: https://www.hackerrank.com/challenges/day-of-the-programmer/problem
+# Note: Determines the 256th day of the year while accounting for Julian, Gregorian, and the 1918 calendar transition.
+def dayOfProgrammer(year):
+    if year < 1919:
+        days = 243 if year % 4 != 0 else 244
+    else:
+        if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:
+            days = 244
+        else:
+            days = 243
+    
+    if year == 1918:
+        days -= 13

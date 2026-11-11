@@ -1,15 +1,29 @@
-# HackerRank - Company Logo
-# Problem: Company Logo
-# Source: https://www.hackerrank.com/challenges/most-commons/problem
-# Note: Finds the three most frequent characters, sorting by descending frequency and alphabetical order for ties.
+# HackerRank - Maximize It!
+# Problem: Maximize It!
+# Source: https://www.hackerrank.com/challenges/maximize-it/problem
+# Note: Finds the maximum modulo value of the sum of squares by selecting one element from each list.
+k, m = map(int, input().split())
 
-from collections import Counter
-if __name__ == '__main__':
-    s = input()
-    
-    arr = Counter(s)
-    srt = sorted(arr, key=lambda x: (-arr[x], x))[:3]
-    
-    for ch in srt:
-        print(ch, arr[ch])
+arr = []
+for _ in range(k):
+    temp = list(map(int, input().split()))
+    x = temp[0]
+    arr.append(temp[1:x+1])
 
+result = [[]]
+
+for lst in arr:
+    new_comb = []
+    for ar in result:
+        for val in lst:
+            new_comb.append(ar + [val])
+    result = new_comb
+
+cur_max = float('-inf')
+for ar in result:
+    temp = []
+    for val in ar:
+        temp.append(val ** 2)
+    cur_max = max(cur_max, sum(temp) % m)
+
+print(cur_max)

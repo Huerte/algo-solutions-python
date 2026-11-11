@@ -1,59 +1,48 @@
-# Problem: Sqrt(x)
-# Source: https://leetcode.com/problems/sqrtx/
-# Note: Solves the Sqrt(x) problem
+# Problem: Time Limit Validator
+# Source: 
+# Note: Solves the Time Limit Validator problem
 # Description:
-# Given a non-negative integer x, return the square root of x rounded down to the nearest integer.
-# Since the return type is an integer, the decimal digits are truncated, and only the integer part of the result is returned.
-#
-# Input:
-# - A non-negative integer `x` where 0 <= x <= 2^31 - 1
-#
-# Output:
-# - An integer representing the square root of x rounded down
-#
+# Given a time limit in HH:MM:SS format and a list of time durations, determine if all the
+# durations can fit within the time limit. Return True if they fit, False otherwise.
+# 
+# Example:
+# - Input: limit="02:30:00", times=["00:45:00", "01:00:00", "00:30:00"]
+# - Output: True (total time: 2:15:00, which fits within 2:30:00)
+# 
 # Status: ✅ SOLVED
 
-class Solution(object):
-    def mySqrt(self, x):
-        if x == 0 or x == 1:
-            return x
-            
-        difference = 1
-        initial_guess = x / 2
-        prev_result = 0
+def is_valid(lim, lis):
+    def extract_sec(s):
+        a, b, c = map(int, s.split(':'))
+        return a * 3600 + b * 60 + c
 
-        while difference > 0.1:
-            initial_guess = (initial_guess + (x / initial_guess)) / 2
-            difference = abs(prev_result - initial_guess)
-            prev_result = initial_guess
+    time_limit = extract_sec(lim)
+    
+    for t in lis:
+        time_limit -= extract_sec(t)
 
-        return int(initial_guess)
-
+    if time_limit < 0:
+        return False
+    else:
+        return True
 
 # Test cases with assertions
-sol = Solution()
+# Test Case 1: Within limit
+assert is_valid("02:30:00", ["00:45:00", "01:00:00", "00:30:00"]) == True
 
-# Example 1
-assert sol.mySqrt(4) == 2
+# Test Case 2: Exactly reaching the limit
+assert is_valid("02:30:00", ["01:30:00", "01:00:00"]) == True
 
-# Example 2
-assert sol.mySqrt(8) == 2
+# Test Case 3: Exceeding the limit
+assert is_valid("02:30:00", ["01:45:00", "01:00:00", "00:30:00"]) == False
 
-# Example 3
-assert sol.mySqrt(16) == 4
+# Test Case 4: No times given (should return True)
+assert is_valid("01:00:00", []) == True
 
-# Example 4
-assert sol.mySqrt(25) == 5
+# Test Case 5: Single time exceeding the limit
+assert is_valid("01:00:00", ["01:30:00"]) == False
 
-# Example 5
-assert sol.mySqrt(0) == 0
-
-# Example 6
-assert sol.mySqrt(1) == 1
-
-# Edge cases
-assert sol.mySqrt(2) == 1
-assert sol.mySqrt(3) == 1
-assert sol.mySqrt(15) == 3
+# Test Case 6: Edge case (exact zero seconds remaining)
+assert is_valid("00:10:00", ["00:05:00", "00:05:00"]) == True
 
 print("All test cases passed!")

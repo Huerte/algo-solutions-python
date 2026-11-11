@@ -1,33 +1,17 @@
-# CodeWars - The Solar System - Lost Moons
-# Problem: The Solar System - Lost Moons
-# Source: https://www.codewars.com/kata/67e1768b5c64e7019dc30966
-# Note: Reconstructs each planet's moon list using the known moon order and the moons that have been found.
-planet_moons = {
-    'Mercury': [],
-    'Venus': [],
-    'Earth': ['Moon'],
-    'Mars': ['Deimos', 'Phobos'],
-    'Jupiter': ['Callisto', 'Europa', 'Ganymede', 'Io'],
-    'Saturn': ['Dione', 'Iapetus', 'Rhea', 'Tethys', 'Titan'],
-    'Uranus': ['Ariel', 'Miranda', 'Oberon', 'Titania', 'Umbriel'],
-    'Neptune': ['Nereid', 'Proteus', 'Triton']
-}
+# CodeWars - N-th Fibonacci
+# Problem: N-th Fibonacci
+# Source: https://www.codewars.com/kata/522551eee9abb932420004a0
+# Note: Calculates the N-th Fibonacci number iteratively using two variables to track the previous two values.
+def nth_fib(n):
+    a, b = 0, 1
+    count = 2
+    if n < 2:
+        return [a, b][n - 1]
+    while count < n:
+        a, b = b, a + b
+        count += 1
+    return b
 
-def lost_moons(planets, moons):
-    res = []
-    for planet in sorted(planets, key=lambda x: ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"].index(x)):
-        temp = [planet]
-        right = True
-        for moon in planet_moons[planet]:
-            if moon in moons:
-                if right:
-                    temp.append(moon)
-                else:
-                    temp.insert(0, moon)
-                right = not right
-        res.append(temp)
-    return res
-
-print(lost_moons(['Earth', 'Mars', 'Jupiter'], ['Moon', 'Phobos', 'Europa'])) # [['Earth', 'Moon'], ['Mars', 'Phobos'], ['Jupiter', 'Europa']]
-print(lost_moons(['Earth', 'Mars', 'Jupiter'], ['Deimos', 'Ganymede', 'Io'])) # [['Earth'], ['Mars', 'Deimos'], ['Jupiter', 'Ganymede', 'Io']]
-print(lost_moons(['Earth', 'Mars', 'Jupiter'], ['Callisto', 'Dione', 'Iapetus'])) # [['Earth'], ['Mars'], ['Jupiter', 'Callisto']]
+print(nth_fib(1)) # 0
+print(nth_fib(2)) # 1
+print(nth_fib(100)) # 218922995834555169026

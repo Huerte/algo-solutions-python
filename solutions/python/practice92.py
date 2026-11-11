@@ -1,21 +1,12 @@
-# Problem: Count Valid Pairs with Equal Values and Divisible Product of Indices
-# Source: https://leetcode.com/problems/count-equal-and-divisible-pairs-in-an-array/
-
+# Problem: Average of Array Excluding Minimum and Maximum
+# Source: 
+# Note: Calculates average excluding min and max values
 n = int(input('Enter the number of integers (N): '))
 print(f'Enter {n} integers:')
 
-res = 0
-
-nums = []
-
+arr = []
 for _ in range(n):
-    nums.append(int(input()))
+    arr.append(int(input()))
 
-k = int(input('Enter the integer K: '))
-
-for i in range(n - 1):
-    for j in range(i + 1, n):
-        if (i * j) % k == 0 and (nums[i] == nums[j]):
-            res += 1
-
-print(f'Number of valid pairs: {res}')
+res = sorted(arr)[1:-1]
+print(f'Average: {sum(res) / len(res):.2f}')

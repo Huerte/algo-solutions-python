@@ -1,11 +1,18 @@
-# Difference Between Element Sum and Digit Sum of an Array
-# Problem: Difference Between Element Sum and Digit Sum of an Array
-# Source: https://leetcode.com/problems/difference-between-element-sum-and-digit-sum-of-an-array/
-# Note: Calculates the absolute difference between the sum of array elements and the sum of all their individual digits.
+# Problem: Maximum 69 Number
+# Source: https://leetcode.com/problems/maximum-69-number/
+
 class Solution:
-    def differenceOfSum(self, nums) -> int:
-        return abs(sum(nums) - sum(map(int, ''.join(map(str, nums)))))
+    def maximum69Number (self, num: int) -> int:
+        cur = list(str(num))
+        maxs = num
+        for i in range(len(cur)):
+            if cur[i] == '6':
+                cur[i] = '9'
+                maxs = max(maxs, int(''.join(cur)))
+                cur[i] = '6'
+        return maxs
 
 s = Solution()
-print(s.differenceOfSum([1,15,6,3])) # 9
-print(s.differenceOfSum([1,2,3,4]))  # 0
+print(s.maximum69Number(9999)) # 9999
+print(s.maximum69Number(9996)) # 9999
+print(s.maximum69Number(9669)) # 9969

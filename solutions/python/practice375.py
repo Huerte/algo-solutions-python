@@ -1,10 +1,22 @@
-# Problem: Add Fractions
-# Source: https://www.codewars.com/
-# Note: Adds fractions and returns simplified sum using Fraction
-from fractions import Fraction
-def add_fracs(*args):
-    return str(Fraction(sum(eval(c) for c in args)).limit_denominator()) if args else ''
+# CodeWars - FizzBuzz++
+# Problem: FizzBuzz++
+# Source: https://www.codewars.com/kata/596925532f709fccf3000077
+# Note: Generates a FizzBuzz sequence using coprime divisors and their corresponding words until the pattern repeats.
+from math import gcd, prod
+def fizzbuzz_plusplus(nums, words):
+    arr = []
+    for i in range(1, prod(nums) + 1):
+        temp = ""
+        for j in range(len(nums)):
+            if i % nums[j] == 0:
+                temp += words[j]
+        if temp:
+            arr.append(temp)
+        else:
+            arr.append(i)
+                    
+    return arr
 
-print(add_fracs())                    # ''
-print(add_fracs('1/2', '3/4'))        # '5/4'
-print(add_fracs('1/2', '1/3', '1/4')) # '13/12'
+print(fizzbuzz_plusplus([2, 3, 5, 7], ["Fizz", "Buzz", "Bang", "Boom"])) # [1, 'Fizz', 'Buzz', 'Fizz', 'Bang', 'FizzBuzz', 'Boom', 'Fizz', 'Buzz', 'FizzBang', 11, 'Fizz', 13, 'FizzBuzz', 'Bang', 'FizzBoom', 17, 'Fizz', 'Buzz', 'Fizz', 'Bang', 'FizzBuzzBoom']
+print(fizzbuzz_plusplus([2, 3, 5], ["Fizz", "Buzz", "Bang"]))            # [1, 'Fizz', 'Buzz', 'Fizz', 'Bang', 'FizzBuzz', 7, 'Fizz', 'Buzz', 'FizzBang', 11, 'Fizz', 13, 'FizzBuzz', 'Bang']
+print(fizzbuzz_plusplus([3, 5], ["Fizz", "Buzz"]))                       # [1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'FizzBuzz']

@@ -1,11 +1,22 @@
-# HackerRank - Write a function
-# Problem: Write a function (Leap Year)
-# Source: https://www.hackerrank.com/challenges/write-a-function/problem
-# Note: Checks whether a year is a leap year using divisibility rules for 4, 100, and 400.
-def is_leap(year):
-    leap = False
+# HackerRank - The Minion Game
+# Problem: The Minion Game
+# Source: https://www.hackerrank.com/challenges/the-minion-game/problem
+# Note: Calculates Stuart's and Kevin's scores by counting all possible substrings starting at each character, based on whether that character is a consonant or vowel.
+def minion_game(string):
+    st = 0
+    ke = 0
     
-    if year % 4 == 0 and (year % 100 != 0 or year % 400  == 0):
-        leap = True
-    
-    return leap
+    for i in range(len(string)):
+        score = len(string) - i
+        
+        if string[i] in 'AEIOU':
+            ke += score
+        else:
+            st += score
+        
+    if st > ke:
+        print('Stuart', st)
+    elif st < ke:
+        print('Kevin', ke)
+    else:
+        print('Draw')

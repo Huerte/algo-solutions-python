@@ -1,15 +1,9 @@
-# HackerRank - Sequence Equation
-# Problem: Sequence Equation
-# Source: https://www.hackerrank.com/challenges/permutation-equation/problem
-# Note: Finds the position of each value and then the position of that position in the given permutation.
-def permutationEquation(p):
-    res = []
-    for i in range(1, len(p) + 1):
-        inner = p.index(i) + 1
-        outer = p.index(inner) + 1
-        res.append(outer)
-    return res
+# HackerRank - Equalize the Array
+# Problem: Equalize the Array
+# Source: https://www.hackerrank.com/challenges/equality-in-a-array/problem
+# Note: Finds the minimum number of elements to delete so that all remaining elements are equal.
+def equalizeArray(arr):
+    return len(arr) - arr.count(max(arr, key=lambda x: arr.count(x)))
 
-print(permutationEquation([5,2,1,3,4])) # [4,2,5,1,3]
-print(permutationEquation([4,3,5,1,2])) # [1,3,5,4,2]
-print(permutationEquation([2,3,1]))     # [2,3,1]
+print(equalizeArray([3,3,2,1,3]))       # 2
+print(equalizeArray([1,2,3,1,2,3,3,3])) # 4

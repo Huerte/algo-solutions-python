@@ -1,17 +1,10 @@
-# GeeksForGeeks - Kadane's Algorithm
-# Problem: Kadane's Algorithm
-# Source: https://www.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1
-# Note: Finds the maximum sum of a contiguous subarray using Kadane's Algorithm by tracking the current sum and maximum sum.
+# GeeksForGeeks - Array Search
+# Problem: Array Search
+# Source: https://www.geeksforgeeks.org/problems/search-an-element-in-an-array-1587115621/1
+# Note: Uses Python's inbuilt index() method to return the first occurrence of the target element, or -1 if it is not found.
 class Solution:
-    def maxSubarraySum(self, arr):
-        cur_max = float('-inf')
-        cur_sum = 0
-        for i in range(len(arr)):
-            cur_sum += arr[i]
-            cur_max = max(cur_max, cur_sum)
-            if cur_sum < 0:
-                cur_sum = 0
-        return cur_max
-    
+    def search(self, arr, x):
+        return arr.index(x) if x in arr else -1
+
 s = Solution()
-print(s.maxSubarraySum([-3, -2, -6, -1, -7, -4]))
+print(s.search([1,2,3,5,6], 3)) # 2

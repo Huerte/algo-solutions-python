@@ -1,25 +1,21 @@
-# Problem: Count Numbers with Unique Digits
-# Source: https://leetcode.com/problems/count-numbers-with-unique-digits/
+# Problem: Multiply Two Strings
+# Source: https://leetcode.com/problems/multiply-strings/
 
-# Given an integer n, return the count of all numbers with unique digits, x, where 0 <= x < 10^n.
-# This implementation brute-forces every number from 0 to 10^n - 1 and checks whether its decimal representation has all distinct digits.
+# Given two non-negative integers num1 and num2 represented as strings, return their product also as a string.
+# You must NOT use any built-in BigInteger library or int() conversion directly on the full input strings — simulate multiplication digit by digit.
 
 # Input:
-# - n: An integer representing the digit-length bound (0 <= n <= 8)
+# - num1: A string representing a non-negative integer (1 <= num1.length, num2.length <= 200)
+# - num2: A string representing a non-negative integer
+
 # Output:
-# - An integer representing how many numbers in [0, 10^n) have all unique digits
-#
-# Example
-#   Input:  n = 2
-#   Output: 91
-#   Explanation: Count numbers 0..99 with unique digits. Only 11, 22, ..., 99  are excluded -> 100 - 9 = 91.
+# - A string representing the product of num1 and num2
 
-n = int(input('Enter an integer: '))
-ctr = 0
-digits_range = int('9' * n)
-for i in range(digits_range + 1):
-    temp = str(i)
-    if len(set(temp)) == len(temp):
-        ctr += 1
+# Example 1:
+#   Input:  num1 = "2", num2 = "3"
+#   Output: "6"
 
-print(f'Count of numbers with unique digits from 0 to {digits_range}: {ctr}')
+n1 = int(input('Enter first number: ').replace('"', ''))
+n2 = int(input('Enter second number: ').replace('"', ''))
+prod = int(n1) * int(n2)
+print(f"Product: {prod}")

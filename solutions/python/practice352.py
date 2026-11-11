@@ -1,18 +1,21 @@
-# Geeksforgeeks - Smallest Positive Missing
-# Problem: Smallest Positive Missing
-# Source: https://www.geeksforgeeks.org/problems/missing-number-in-array1416/1
-# Note: Finds the smallest positive integer missing from an array after filtering non-positive values and sorting.
+# GeeksforGeeks - Row with max 1s
+# Problem: Row with Max 1s
+# Source: https://www.geeksforgeeks.org/problems/row-with-max-1s0023/1
+# Note: Finds the index of the first row containing the maximum number of 1s in a row-wise sorted binary matrix.
 class Solution:
-    def missingNumber(self, arr):
-        arr[:] = sorted([num for num in arr if num > 0])
-        if arr:
-            for i in range(1, max(arr)):
-                if i not in arr:
-                    return i
-        return max(arr) + 1 if arr else 1
+    def rowWithMax1s(self, arr):
+        max_ones = 0
+        ind = -1
+        
+        for i, row in enumerate(arr):
+            counts = row.count(1)
+            if counts > max_ones:
+                max_ones = counts
+                ind = i
+        
+        return ind
 
 s = Solution()
-print(s.missingNumber([7, 8, 9, 11, 12])) # 1
-print(s.missingNumber([3, 4, -1, 1]))     # 2
-print(s.missingNumber([1, 2, 0]))         # 3
-print(s.missingNumber([-12, 0]))          # 1
+print(s.rowWithMax1s([[0, 1, 1], [0, 0, 1], [1, 1, 1]]))  # 2
+print(s.rowWithMax1s([[0, 0, 0], [0, 0, 0], [0, 0, 0]]))  # -1
+print(s.rowWithMax1s([[1, 1, 1], [0, 0, 0], [0, 0, 0]]))  # 0

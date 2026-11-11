@@ -1,26 +1,35 @@
-# Remove Outermost Parentheses
-# Problem: Remove Outermost Parentheses
-# Source: https://leetcode.com/problems/remove-outermost-parentheses/
-# Note: Removes the outermost opening and closing parentheses from each primitive valid parentheses string.
+# Subarray Sum Equals K
+# Problem: Subarray Sum Equals K
+# Source: https://leetcode.com/problems/subarray-sum-equals-k/
+# Note: Counts the number of continuous subarrays whose sum equals the given target k.
 
+# My Solution
 class Solution(object):
-    def removeOuterParentheses(self, s):
+    def subarraySum(self, nums, k):
+        count = 0
+
+        for i in range(len(nums)):
+            for j in range(i + 1, len(nums) + 1):
+                if sum(nums[i:j]) == k:
+                    count += 1
         
-        seen = []
-        ans = ""
-        for c in s:
-            if not seen:
-                seen.append(c)
-            elif c == '(':
-                seen.append(c)
-                ans += c
-            elif c == ')':
-                seen.pop()
-                if seen:
-                    ans += c
-        
-        return ans
-    
+        return count
+
+# Accepted Solution
+class Solution(object):
+    def subarraySum(self, nums, k):
+        res = 0
+        curSum = 0
+        prefixSums = {0 : 1}
+
+        for n in nums:
+            curSum += n
+            diff = curSum - k
+
+            res += prefixSums.get(diff, 0)
+            prefixSums[curSum] = 1 + prefixSums.get(curSum, 0)
+        return res
+
 s = Solution()
-print(s.removeOuterParentheses("(()())(())"))           # Expected: "()()()"
-print(s.removeOuterParentheses("(()())(())(()(()))"))   # Expected: "()()()()(())"
+print(s.subarraySum([1, 1, 1], 2))   # Expected: 2
+# print(s.subarraySum([1, 2, 3], 3))   # Expected: 2

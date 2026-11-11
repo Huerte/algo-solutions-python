@@ -1,24 +1,23 @@
-# Problem: Minimum Distances
-# Source: https://www.hackerrank.com/challenges/minimum-distances/problem
+# Problem: Fair Rations
+# Source: https://www.hackerrank.com/challenges/fair-rations/problem
 
-def minimumDistances(a):
-    if len(set(a)) == len(a):
-        return -1
-        
-    d = {}
-    
-    for i in range(len(a)):
-        if a[i] in d:
-            d[a[i]].append(i)
-        else:
-            d[a[i]] = [i]
-    minN = float('inf')
-    for pairs in d.values():
-        if len(pairs) > 1:
-            minN = min(minN, abs(pairs[0] - pairs[1]))
-    
-    return minN
+def fairRations(B):
+    count = 0
+    for i in range(len(B)):
+        if B[i] % 2 != 0:
+            if i + 1 < len(B):
+                print(B)
+                B[i] += 1
+                B[i + 1] += 1
+                count += 2
+            else:
+                print(B)
+                break
+            print('=' * 20)
+    print(B)
+    if all(c % 2 == 0 for c in B):
+        return count
+    return 'NO'
 
-print(minimumDistances([7, 1, 3, 4, 1, 7])) # 3
-print(minimumDistances([1, 2, 3, 4, 5]))    # -1
-print(minimumDistances([1, 1]))             # 1
+print(fairRations([2, 3, 4, 5, 6])) # 2
+print(fairRations([1, 2]))    # NO
