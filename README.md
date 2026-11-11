@@ -83,8 +83,6 @@ Prefer video? Watch this: [How to contribute on GitHub (YouTube)](https://youtu.
 | Help without writing code | [`no-code-needed`](../../issues?q=is%3Aissue+is%3Aopen+label%3Ano-code-needed) |
 | Add a solution in any language | [`any-language`](../../issues?q=is%3Aissue+is%3Aopen+label%3Aany-language) |
 | Improve docs or explanations | [`documentation`](../../issues?q=is%3Aissue+is%3Aopen+label%3Adocumentation) |
-| Help with design | [`design`](../../issues?q=is%3Aissue+is%3Aopen+label%3Adesign) |
-| Translate the README | [`translation`](../../issues?q=is%3Aissue+is%3Aopen+label%3Atranslation) |
 | Spend only 5 minutes | [`5-minutes`](../../issues?q=is%3Aissue+is%3Aopen+label%3A5-minutes) |
 | Be mentored through my first PR | [`first-timers-only`](../../issues?q=is%3Aissue+is%3Aopen+label%3Afirst-timers-only) |
 
