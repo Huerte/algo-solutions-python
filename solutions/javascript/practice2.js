@@ -1,8 +1,7 @@
 // Problem: Calculate Alternating Digit Sum
 // Source: https://leetcode.com/problems/alternating-digit-sum/
+// Note: Add and subtract consecutive digits from left to right.
 // Ported from: python/practice101.py
-// Read the digits from left to right, adding the first, subtracting the next,
-// and continuing to alternate. For example, 521 becomes 5 - 2 + 1 = 4.
 // Time: O(d), where d is the number of digits.
 
 const readline = require('readline');
@@ -19,7 +18,7 @@ rl.question('Enter a positive integer: ', (input) => {
   let res = 0;
 
   for (const digit of n) {
-    const num = parseInt(digit);
+    const num = parseInt(digit, 10);
     res += plus ? num : -num;
     plus = !plus;
   }
