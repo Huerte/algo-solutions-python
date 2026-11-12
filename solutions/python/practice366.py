@@ -3,6 +3,7 @@
 
 class Solution(object):
     def reverseBits(self, n):
+        """ Reverse bits of a given 32 bits unsigned integer."""
         return int(f"{n:032b}"[::-1], 2)
 
 s = Solution()
