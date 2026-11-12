@@ -1,6 +1,6 @@
-# Problem: Keypad Phone Simulator
-# Source: 
-# Note: Simulates phone keypad text input
+# Problem: Keypad Phone Simulator (Multi-tap Keypad Text Entry)
+# Source: https://www.codewars.com/kata/54a2e93b22d236498400134b
+# Note: Simulates phone keypad text input (T9-style multi-tap)
 number_of_word = int(input())
 
 res = []
