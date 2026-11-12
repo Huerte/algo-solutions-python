@@ -3,43 +3,65 @@ let allSolutions = [];
 document.addEventListener('DOMContentLoaded', async () => {
     await loadSolutions();
     setupEventListeners();
-    displaySolutions(allSolutions);
+    populateTopicFilter();
+    filterAndDisplay();
 });
 
 async function loadSolutions() {
+    const container = document.getElementById('solutionsList');
     try {
         const response = await fetch('data.json');
-        if (!response.ok) throw new Error('Failed to load data');
-        allSolutions = await response.json();
-        console.log(`Loaded ${allSolutions.length} solutions`);
+        if (!response.ok) {
+            throw new Error(\`Failed to load solution index (\${response.status})\`);
+        }
+        const data = await response.json();
+        if (!Array.isArray(data)) {
+            throw new Error('The solution index must contain a JSON array');
+        }
+        allSolutions = data.map(solution => ({
+            ...solution,
+            topics: Array.isArray(solution.topics) && solution.topics.length
+                ? solution.topics
+                : ['General']
+        }));
     } catch (error) {
         console.error('Error loading solutions:', error);
-        document.getElementById('solutionsList').innerHTML =
-            '<div class="no-results"><h2>Error loading solutions</h2><p>Please try refreshing the page.</p></div>';
+        container.innerHTML = '<div class="no-results"><h2>Unable to load solutions</h2><p>Please refresh the page or try again later.</p></div>';
     }
 }
 
 function setupEventListeners() {
-    const searchInput = document.getElementById('searchInput');
-    const languageFilter = document.getElementById('languageFilter');
+    document.getElementById('searchInput').addEventListener('input', filterAndDisplay);
+    document.getElementById('languageFilter').addEventListener('change', filterAndDisplay);
+    document.getElementById('topicFilter').addEventListener('change', filterAndDisplay);
+}
 
-    searchInput.addEventListener('input', filterAndDisplay);
-    languageFilter.addEventListener('change', filterAndDisplay);
+function populateTopicFilter() {
+    const topicFilter = document.getElementById('topicFilter');
+    const topics = [...new Set(allSolutions.flatMap(solution => solution.topics))]
+        .filter(Boolean)
+        .sort((a, b) => a.localeCompare(b));
+
+    topicFilter.replaceChildren(new Option('All topics', ''));
+    topics.forEach(topic => topicFilter.add(new Option(topic, topic)));
 }
 
 function filterAndDisplay() {
-    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    const searchTerm = document.getElementById('searchInput').value.trim().toLocaleLowerCase();
     const selectedLanguage = document.getElementById('languageFilter').value;
+    const selectedTopic = document.getElementById('topicFilter').value;
 
     const filtered = allSolutions.filter(solution => {
-        const matchesSearch = !searchTerm ||
-            solution.problem.toLowerCase().includes(searchTerm) ||
-            solution.name.toLowerCase().includes(searchTerm) ||
-            solution.filename.toLowerCase().includes(searchTerm);
-
+        const searchableText = [
+            solution.problem,
+            solution.name,
+            solution.filename,
+            ...(solution.topics || [])
+        ].join(' ').toLocaleLowerCase();
+        const matchesSearch = !searchTerm || searchableText.includes(searchTerm);
         const matchesLanguage = !selectedLanguage || solution.language === selectedLanguage;
-
-        return matchesSearch && matchesLanguage;
+        const matchesTopic = !selectedTopic || solution.topics.includes(selectedTopic);
+        return matchesSearch && matchesLanguage && matchesTopic;
     });
 
     displaySolutions(filtered);
@@ -47,56 +69,59 @@ function filterAndDisplay() {
 
 function displaySolutions(solutions) {
     const container = document.getElementById('solutionsList');
-    const resultCount = document.getElementById('resultCount');
-
-    resultCount.textContent = solutions.length;
+    document.getElementById('resultCount').textContent = solutions.length;
 
     if (solutions.length === 0) {
-        container.innerHTML = `
-            <div class="no-results" style="grid-column: 1 / -1;">
-                <h2>No solutions found</h2>
-                <p>Try adjusting your search or filter criteria</p>
-            </div>
-        `;
+        container.innerHTML = '<div class="no-results"><h2>No solutions found</h2><p>Try adjusting your search or filter criteria.</p></div>';
         return;
     }
 
-    container.innerHTML = solutions.map(solution => createSolutionCard(solution)).join('');
+    container.innerHTML = solutions.map(createSolutionCard).join('');
 }
 
 function createSolutionCard(solution) {
     const sourceHtml = solution.source
-        ? `<div class="source-link"><a href="${solution.source}" target="_blank" rel="noopener noreferrer">📚 View Problem Source</a></div>`
+        ? \`<div class="source-link"><a href="\${escapeAttribute(solution.source)}" target="_blank" rel="noopener noreferrer">View problem source</a></div>\`
         : '';
+    const topicHtml = solution.topics.map(topic =>
+        \`<span class="topic-tag">\${escapeHtml(topic)}</span>\`
+    ).join('');
 
-    return `
-        <div class="solution-card">
-            <h3>${solution.name}</h3>
-            <div class="problem-name">${escapeHtml(solution.problem)}</div>
-            <div class="language-badge ${solution.language}">${capitalizeLanguage(solution.language)}</div>
-            <div><a href="https://github.com/Aaqibhafeezkhan/algo-solutions-python/blob/main/${solution.path}" target="_blank" rel="noopener noreferrer">📂 View File</a></div>
-            ${sourceHtml}
-        </div>
-    `;
+    return \`
+        <article class="solution-card">
+            <h3>\${escapeHtml(solution.problem)}</h3>
+            <p class="file-name">\${escapeHtml(solution.filename)}</p>
+            <div class="card-meta">
+                <span class="language-badge \${escapeAttribute(solution.language)}">\${capitalizeLanguage(solution.language)}</span>
+                <div class="topic-list" aria-label="Topics">\${topicHtml}</div>
+            </div>
+            <div><a href="https://github.com/Aaqibhafeezkhan/algo-solutions-python/blob/main/\${solution.path.split('/').map(encodeURIComponent).join('/')}" target="_blank" rel="noopener noreferrer">View solution file</a></div>
+            \${sourceHtml}
+        </article>
+    \`;
 }
 
-function capitalizeLanguage(lang) {
-    const map = {
-        'python': 'Python',
-        'javascript': 'JavaScript',
-        'cpp': 'C++',
-        'java': 'Java'
+function capitalizeLanguage(language) {
+    const labels = {
+        python: 'Python',
+        javascript: 'JavaScript',
+        cpp: 'C++',
+        java: 'Java',
+        typescript: 'TypeScript'
     };
-    return map[lang] || lang;
+    return labels[language] || language;
 }
 
-function escapeHtml(text) {
-    const map = {
+function escapeHtml(value) {
+    return String(value).replace(/[&<>"']/g, character => ({
         '&': '&amp;',
         '<': '&lt;',
         '>': '&gt;',
         '"': '&quot;',
         "'": '&#039;'
-    };
-    return text.replace(/[&<>"']/g, m => map[m]);
+    })[character]);
+}
+
+function escapeAttribute(value) {
+    return escapeHtml(value);
 }

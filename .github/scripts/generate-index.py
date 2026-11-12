@@ -1,94 +1,94 @@
 #!/usr/bin/env python3
-"""
-Generate index.json for GitHub Pages from solution files.
-Scans solutions directory and extracts problem information from file headers.
-"""
+"""Generate the searchable GitHub Pages index from solution headers."""
 
-import os
 import json
 import re
 from pathlib import Path
 
+LANGUAGE_EXTENSIONS = {
+    "python": {".py"},
+    "javascript": {".js"},
+    "cpp": {".cpp", ".cc", ".cxx"},
+    "java": {".java"},
+    "typescript": {".ts", ".tsx"},
+}
+
+TOPIC_RULES = [
+    ("Dynamic Programming", r"\b(dynamic programming|unique paths|minimum path|coin change|fibonacci|climbing stairs|longest increasing subsequence|wildcard matching|maximum subarray|kadane)\b"),
+    ("Graphs", r"\b(graph|islands|word ladder|shortest path|escape path|flood fill|connected component|course schedule)\b"),
+    ("Trees", r"\b(tree|bst|binary search tree|n-ary)\b"),
+    ("Linked Lists", r"\b(linked list|rotate list|add two numbers|merge two sorted lists|remove duplicates from sorted list)\b"),
+    ("Stack & Queue", r"\b(parentheses|braces|brackets|backspace|next greater element|queue|stack|parking system)\b"),
+    ("Backtracking", r"\b(n-queens|permutation|permutations|subsets|combinations|combination sum|generate parentheses)\b"),
+    ("Sliding Window", r"\b(longest substring|minimum window|subarray|sliding window|consecutive)\b"),
+    ("Two Pointers", r"\b(3sum|4sum|two sum|pair with given|palindrome|merge intervals|backspaces in string)\b"),
+    ("Matrix", r"\b(matrix|spiral|row with|max 1s|diagonal|rotate 90|flood fill)\b"),
+    ("Sorting", r"\b(sort|sorting|rank|median|kth largest|relative ranks|height checker|frequency sorting)\b"),
+    ("Searching", r"\b(search|missing number|missing element|find the difference|peak element|pivot index|nearest value)\b"),
+    ("Hash Table", r"\b(two sum|frequency|counter|anagram|duplicate|intersection|common characters|common elements|good pairs|word order|most frequent)\b"),
+    ("Strings", r"\b(string|word|sentence|character|vowel|consonant|camelcase|morse|regex|encryption|decode|encode|prefix|suffix|text|ip validation|phone number|credit card)\b"),
+    ("Arrays", r"\b(array|subarray|elements|indices|index|triplets|pairs|partition|running sum|rotate array|jump game|candies|missing)\b"),
+    ("Math", r"\b(number|digit|prime|factorial|gcd|multiple|sum|power|square root|binary to decimal|roman numeral|fibonacci|bits|xor|bitwise|area|duration|time delta|leap year)\b"),
+    ("Greedy", r"\b(jump game|minimum operations|largest number|maximum number|assign|distribute|water bottles|hurdle|buy and sell|best time)\b"),
+    ("Bit Manipulation", r"\b(bit|binary|xor|complement|set bits|ones|flips)\b"),
+    ("Simulation", r"\b(simulator|simulate|design parking|calendar|tic-tac-toe|bouncing balls|counting valleys|fizzbuzz|game|solar system)\b"),
+]
+
 def extract_header_info(filepath):
-    """Extract problem name and source from file header."""
-    try:
-        with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
-            lines = [f.readline() for _ in range(10)]
+    problem = None
+    source = None
+    topics = []
+    with filepath.open("r", encoding="utf-8", errors="ignore") as file:
+        for line in list(file)[:15]:
+            match = re.match(r"^\s*(?:#|//|/\*+|\*|<!--)\s*(Problem|Source|Topics?)\s*:\s*(.*?)\s*(?:\*/|-->)?\s*$", line, re.IGNORECASE)
+            if not match:
+                continue
+            key, value = match.group(1).lower(), match.group(2).strip()
+            if key == "problem":
+                problem = value
+            elif key == "source":
+                source = value
+            else:
+                topics.extend(item.strip() for item in re.split(r"[,;|]", value) if item.strip())
+    return problem, source, topics
 
-        problem = None
-        source = None
-
-        for line in lines:
-            # Match both # and // comment styles
-            if match := re.match(r'^[#/]+\s+Problem:\s*(.+)$', line.strip()):
-                problem = match.group(1).strip()
-            elif match := re.match(r'^[#/]+\s+Source:\s*(.+)$', line.strip()):
-                source = match.group(1).strip()
-
-        return problem, source
-    except Exception as e:
-        print(f"Warning: Error reading {filepath}: {e}")
-        return None, None
+def infer_topics(problem):
+    normalized = problem.lower()
+    matches = [topic for topic, pattern in TOPIC_RULES if re.search(pattern, normalized)]
+    return matches or ["General"]
 
 def generate_index():
-    """Generate complete solutions index."""
+    repo_root = Path(__file__).resolve().parents[2]
+    solutions_dir = repo_root / "solutions"
+    output_path = repo_root / "docs" / "data.json"
     solutions = []
-    languages = ['python', 'javascript', 'cpp', 'java']
 
-    repo_root = Path(__file__).parent.parent.parent
-    solutions_dir = repo_root / 'solutions'
-
-    print(f"Scanning solutions directory: {solutions_dir}")
-
-    for lang in languages:
-        lang_dir = solutions_dir / lang
-        if not lang_dir.exists():
+    for language, extensions in LANGUAGE_EXTENSIONS.items():
+        language_dir = solutions_dir / language
+        if not language_dir.is_dir():
             continue
-
-        print(f"Processing {lang}...")
-
-        for filepath in sorted(lang_dir.glob('practice*.py')) + \
-                        sorted(lang_dir.glob('practice*.js')) + \
-                        sorted(lang_dir.glob('practice*.cpp')) + \
-                        sorted(lang_dir.glob('practice*.java')):
-
-            if not filepath.is_file():
+        for filepath in sorted(language_dir.iterdir()):
+            if not filepath.is_file() or filepath.suffix.lower() not in extensions:
                 continue
-
-            problem, source = extract_header_info(filepath)
+            problem, source, topics = extract_header_info(filepath)
             problem = problem or filepath.stem
-
             solutions.append({
-                'name': filepath.stem,
-                'language': lang,
-                'filename': filepath.name,
-                'problem': problem,
-                'source': source or '',
-                'path': f'solutions/{lang}/{filepath.name}'
+                "name": filepath.stem,
+                "language": language,
+                "filename": filepath.name,
+                "problem": problem,
+                "source": source or "",
+                "topics": topics or infer_topics(problem),
+                "path": filepath.relative_to(repo_root).as_posix(),
             })
 
-    # Write index file
-    output_path = repo_root / 'docs' / 'data.json'
-    output_path.parent.mkdir(exist_ok=True)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(json.dumps(solutions, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    counts = {language: sum(item["language"] == language for item in solutions) for language in LANGUAGE_EXTENSIONS}
+    print(f"Generated {len(solutions)} solutions in {output_path}")
+    for language, count in counts.items():
+        if count:
+            print(f"  {language}: {count}")
 
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(solutions, f, indent=2)
-
-    # Print summary
-    print(f"\n✓ Index generated successfully!")
-    print(f"  Total solutions: {len(solutions)}")
-    print(f"  Output file: {output_path}")
-
-    # Group by language
-    by_lang = {}
-    for sol in solutions:
-        lang = sol['language']
-        by_lang[lang] = by_lang.get(lang, 0) + 1
-
-    print("\nSolutions by language:")
-    for lang in languages:
-        if lang in by_lang:
-            print(f"  {lang}: {by_lang[lang]}")
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     generate_index()

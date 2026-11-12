@@ -1,74 +1,72 @@
 # Algorithm Solutions - GitHub Pages
 
-A searchable, filterable web interface for browsing algorithm solutions by language and problem.
+A searchable, filterable web interface for browsing algorithm solutions by language, topic, and problem.
 
 ## Features
 
-- 🔍 **Search** by problem name or file name
-- 🏷️ **Filter** by programming language (Python, JavaScript, C++, Java)
-- 🔗 **Direct links** to problem sources and GitHub files
-- 📱 **Responsive design** - works on desktop and mobile
-- ⚫ **Dark mode support** - respects system preferences
-- 📦 **No build required** - works directly with GitHub Pages
+- Search by problem name or file name
+- Filter by programming language and algorithm topic
+- Direct links to problem sources and solution files
+- Responsive layout and system dark-mode support
+- No build step required for GitHub Pages
 
 ## How to Update the Solution Index
 
-When new solutions are added to the `solutions/` directory, the `data.json` file needs to be regenerated.
+The index is generated from solution file headers and problem names.
 
-### Automatic Method (CI/CD)
-The ideal solution is to add this to GitHub Actions so `data.json` is regenerated on every merge to main.
+### Automatic Method
+
+The GitHub Actions workflow regenerates `docs/data.json` when files under `solutions/` change on `main`. It has explicit permission to commit the generated index.
 
 ### Manual Method
-Run the included PowerShell script to regenerate the index:
+
+From the repository root, run the PowerShell wrapper:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File generate-index.ps1
+powershell -ExecutionPolicy Bypass -File .\\generate-index.ps1
 ```
 
-Or on Unix/macOS:
+On Linux or macOS, run the Python generator:
+
 ```bash
-node generate-index.js
+python3 .github/scripts/generate-index.py
 ```
+
+Both commands use the same generator, so the generated index stays consistent across platforms.
+
+## Topic Metadata
+
+Add an optional `Topics` header to a solution to override automatic topic detection. Separate multiple topics with commas.
+
+Python example:
+
+```python
+# Problem: Two Sum
+# Source: https://leetcode.com/problems/two-sum/
+# Topics: Arrays, Hash Table, Two Pointers
+```
+
+JavaScript/C++/Java example:
+
+```javascript
+// Problem: Valid Parentheses
+// Source: https://leetcode.com/problems/valid-parentheses/
+// Topics: Strings, Stack & Queue
+```
+
+When no `Topics` header is present, the generator assigns topics using the problem title. Unmatched titles are placed in **General** and can be given more specific topics through the header.
 
 ## File Structure
 
 ```
 docs/
-├── index.html      # Main page
-├── style.css       # Styling
-├── script.js       # JavaScript for filtering/searching
-├── data.json       # Solution index (auto-generated)
-└── README.md       # This file
+├── index.html
+├── style.css
+├── script.js
+├── data.json
+└── README.md
 ```
 
-## How It Works
-
-1. **data.json** is generated from the solution files by reading the headers
-2. **script.js** fetches data.json and provides filtering/searching in real-time
-3. **index.html** displays the results in a responsive grid
-
-Each solution card shows:
-- Problem name (from header comment)
-- File name
-- Programming language
-- Link to GitHub file
-- Link to problem source (if available)
-
-## Contributing
-
-To add solutions:
-1. Add your solution file to `solutions/<language>/practice<number>.<ext>`
-2. Include header comments with problem name and source link
-3. The index will be regenerated automatically
-
-## Example Header Format
-
-```python
-# Problem: Two Sum
-# Source: https://leetcode.com/problems/two-sum/
-# Note: Classic hash map solution
-```
-
----
+Each solution card shows its problem name, language, topics, source link (when available), and repository file link.
 
 **Site URL:** https://aaqibhafeezkhan.github.io/algo-solutions-python/
