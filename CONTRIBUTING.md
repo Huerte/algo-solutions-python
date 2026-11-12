@@ -2,7 +2,7 @@
 
 Welcome! First off, thank you for considering contributing to this repository. 
 
-This project is **open to everyone**—complete beginners, students, experienced developers, and people who don't write code at all. Whether this is your 100th pull request or your very first one, you are welcome here!
+This project is **open to everyone**: complete beginners, students, experienced developers, and people who don't write code at all. Whether this is your 100th pull request or your very first one, you are welcome here!
 
 ---
 
@@ -16,7 +16,7 @@ If you have never opened a Pull Request (PR) before, don't worry! Here are two g
 
 ## Quick Contribution Steps
 
-1. **Claim an issue:** Browse the [open issues](../../issues) and leave a comment on the one you want to work on so nobody else starts the same thing.
+1. **Claim an issue:** Browse the [open issues](https://github.com/Huerte/algo-solutions-python/issues) and leave a comment on the one you want to work on so nobody else starts the same thing.
 2. **Fork the repo:** Click the **Fork** button at the top-right of this repository to create your own copy.
 3. **Create a branch:** Clone your fork locally (or use the GitHub website directly) and create a new branch for your changes.
 4. **Make your change:** Add your solution, documentation, or improvement.
@@ -108,6 +108,6 @@ Stuck on a git command, unsure where a file goes, or confused by a review commen
 
 - **On an Issue:** Leave a comment directly on the issue you are working on.
 - **On a Pull Request:** Leave a comment on your open Pull Request if you get stuck midway through.
-- **General Questions:** Open a new [Issue](../../issues) with your question.
+- **General Questions:** Open a new [Issue](https://github.com/Huerte/algo-solutions-python/issues) with your question.
 
-Basic questions are always fine—everyone starts somewhere, and we are happy to help you through your contribution!
+Basic questions are always fine, everyone starts somewhere, and we are happy to help you through your contribution!

@@ -8,7 +8,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](#license)
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](#how-to-contribute)
-[![Good First Issues](https://img.shields.io/badge/good%20first-issues-7057ff.svg)](../../issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+[![Good First Issues](https://img.shields.io/badge/good%20first-issues-7057ff.svg)](https://github.com/Huerte/algo-solutions-python/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
 
 [![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?logo=LeetCode&logoColor=black)](https://leetcode.com)
 [![Codewars](https://img.shields.io/badge/Codewars-B1361E?logo=codewars&logoColor=white)](https://www.codewars.com)
@@ -69,7 +69,7 @@ Prefer video? Watch this: [How to contribute on GitHub (YouTube)](https://youtu.
 
 ### Quick steps
 
-1. Pick an [open issue](../../issues) and comment on it to claim it
+1. Pick an [open issue](https://github.com/Huerte/algo-solutions-python/issues) and comment on it to claim it
 2. Fork this repo
 3. Clone your fork and create a new branch
 4. Make your change
@@ -79,12 +79,12 @@ Prefer video? Watch this: [How to contribute on GitHub (YouTube)](https://youtu.
 
 | I want to... | Look for the label |
 |---|---|
-| Make my first contribution | [`good first issue`](../../issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) |
-| Help without writing code | [`no-code-needed`](../../issues?q=is%3Aissue+is%3Aopen+label%3Ano-code-needed) |
-| Add a solution in any language | [`any-language`](../../issues?q=is%3Aissue+is%3Aopen+label%3Aany-language) |
-| Improve docs or explanations | [`documentation`](../../issues?q=is%3Aissue+is%3Aopen+label%3Adocumentation) |
-| Spend only 5 minutes | [`5-minutes`](../../issues?q=is%3Aissue+is%3Aopen+label%3A5-minutes) |
-| Be mentored through my first PR | [`first-timers-only`](../../issues?q=is%3Aissue+is%3Aopen+label%3Afirst-timers-only) |
+| Make my first contribution | [`good first issue`](https://github.com/Huerte/algo-solutions-python/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) |
+| Help without writing code | [`no-code-needed`](https://github.com/Huerte/algo-solutions-python/issues?q=is%3Aissue+is%3Aopen+label%3Ano-code-needed) |
+| Add a solution in any language | [`any-language`](https://github.com/Huerte/algo-solutions-python/issues?q=is%3Aissue+is%3Aopen+label%3Aany-language) |
+| Improve docs or explanations | [`documentation`](https://github.com/Huerte/algo-solutions-python/issues?q=is%3Aissue+is%3Aopen+label%3Adocumentation) |
+| Spend only 5 minutes | [`5-minutes`](https://github.com/Huerte/algo-solutions-python/issues?q=is%3Aissue+is%3Aopen+label%3A5-minutes) |
+| Be mentored through my first PR | [`first-timers-only`](https://github.com/Huerte/algo-solutions-python/issues?q=is%3Aissue+is%3Aopen+label%3Afirst-timers-only) |
 
 ### Adding a solution
 
@@ -101,7 +101,7 @@ Don't see a folder for your language? Create it. You'll be the first contributor
 Thanks to everyone who helps this collection grow.
 
 <p align="center">
-  <a href="../../graphs/contributors">
+  <a href="https://github.com/Huerte/algo-solutions-python/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=Huerte/algo-solutions-python" alt="Contributors">
   </a>
 </p>

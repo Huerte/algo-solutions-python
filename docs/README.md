@@ -69,4 +69,4 @@ docs/
 
 Each solution card shows its problem name, language, topics, source link (when available), and repository file link.
 
-**Site URL:** https://aaqibhafeezkhan.github.io/algo-solutions-python/
+**Site URL:** https://huerte.github.io/algo-solutions-python/

@@ -95,7 +95,7 @@ function createSolutionCard(solution) {
                 <span class="language-badge ${escapeAttribute(solution.language)}">${capitalizeLanguage(solution.language)}</span>
                 <div class="topic-list" aria-label="Topics">${topicHtml}</div>
             </div>
-            <div><a href="https://github.com/Aaqibhafeezkhan/algo-solutions-python/blob/main/${solution.path.split('/').map(encodeURIComponent).join('/')}" target="_blank" rel="noopener noreferrer">View solution file</a></div>
+            <div><a href="https://github.com/Huerte/algo-solutions-python/blob/main/${solution.path.split('/').map(encodeURIComponent).join('/')}" target="_blank" rel="noopener noreferrer">View solution file</a></div>
             ${sourceHtml}
         </article>
     `;
