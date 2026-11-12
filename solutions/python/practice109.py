@@ -1,5 +1,6 @@
 # Problem: Find the Missing Number
 # Source: https://leetcode.com/problems/missing-number/
+# Note: Sorts the array, then scans neighbouring elements for the first gap; the missing number is one more than the element before the gap
 
 n = int(input('Enter the number of elements: '))
 print(f'Enter {n} elements (between 1 and {n + 1}): ')

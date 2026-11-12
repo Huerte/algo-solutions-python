@@ -1,5 +1,6 @@
 # Problem: Backspace String Compare
 # Source: https://leetcode.com/problems/backspace-string-compare/
+# Note: Builds the final text of s with a list as a stack ('#' pops the last character), then compares the result against t as entered
 
 s = input('Enter string s: ')
 t = input('Enter string t: ')
