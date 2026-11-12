@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search and browse algorithm solutions by problem, language, and topic.">
+    <title>Algorithm Solutions - Search & Filter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Algorithm Solutions</h1>
+            <p class="subtitle">Search and filter coding solutions by language and topic</p>
+        </header>
+
+        <section class="filters-section" aria-label="Solution filters">
+            <div class="search-box">
+                <label class="visually-hidden" for="searchInput">Search solutions</label>
+                <input type="search" id="searchInput" placeholder="Search by problem name or file..." class="search-input">
+            </div>
+
+            <div class="filter-group">
+                <label for="languageFilter">Language</label>
+                <select id="languageFilter" class="filter-select">
+                    <option value="">All languages</option>
+                    <option value="python">Python</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="cpp">C++</option>
+                    <option value="java">Java</option>
+                    <option value="typescript">TypeScript</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="topicFilter">Topic</label>
+                <select id="topicFilter" class="filter-select">
+                    <option value="">All topics</option>
+                </select>
+            </div>
+
+            <p class="stats" aria-live="polite"><span id="resultCount">0</span> solutions found</p>
+        </section>
+
+        <section id="solutionsList" class="solutions-grid" aria-live="polite">
+            <p class="loading">Loading solutions...</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

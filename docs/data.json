@@ -1,0 +1,4668 @@
+[
+  {
+    "problem": "practice1",
+    "name": "practice1",
+    "source": "",
+    "language": "cpp",
+    "path": "solutions/cpp/practice1.cpp",
+    "filename": "practice1.cpp",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "practice1",
+    "name": "practice1",
+    "source": "",
+    "language": "java",
+    "path": "solutions/java/practice1.java",
+    "filename": "practice1.java",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "practice1",
+    "name": "practice1",
+    "source": "",
+    "language": "javascript",
+    "path": "solutions/javascript/practice1.js",
+    "filename": "practice1.js",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "practice2",
+    "name": "practice2",
+    "source": "",
+    "language": "javascript",
+    "path": "solutions/javascript/practice2.js",
+    "filename": "practice2.js",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "N-Queens II",
+    "name": "practice1",
+    "source": "https://leetcode.com/problems/n-queens-ii/",
+    "language": "python",
+    "path": "solutions/python/practice1.py",
+    "filename": "practice1.py",
+    "topics": [
+      "Backtracking"
+    ]
+  },
+  {
+    "problem": "Maximum Subarray",
+    "name": "practice2",
+    "source": "https://leetcode.com/problems/maximum-subarray/",
+    "language": "python",
+    "path": "solutions/python/practice2.py",
+    "filename": "practice2.py",
+    "topics": [
+      "Dynamic Programming",
+      "Sliding Window",
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Cable Connection Optimization",
+    "name": "practice3",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice3.py",
+    "filename": "practice3.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Count Capital Letters in String",
+    "name": "practice4",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice4.py",
+    "filename": "practice4.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Spiral Matrix",
+    "name": "practice5",
+    "source": "https://leetcode.com/problems/spiral-matrix/",
+    "language": "python",
+    "path": "solutions/python/practice5.py",
+    "filename": "practice5.py",
+    "topics": [
+      "Matrix"
+    ]
+  },
+  {
+    "problem": "Jump Game",
+    "name": "practice6",
+    "source": "https://leetcode.com/problems/jump-game/",
+    "language": "python",
+    "path": "solutions/python/practice6.py",
+    "filename": "practice6.py",
+    "topics": [
+      "Arrays",
+      "Greedy",
+      "Simulation"
+    ]
+  },
+  {
+    "problem": "Merge Intervals",
+    "name": "practice7",
+    "source": "https://leetcode.com/problems/merge-intervals/",
+    "language": "python",
+    "path": "solutions/python/practice7.py",
+    "filename": "practice7.py",
+    "topics": [
+      "Two Pointers"
+    ]
+  },
+  {
+    "problem": "Insert Interval",
+    "name": "practice8",
+    "source": "https://leetcode.com/problems/insert-interval/",
+    "language": "python",
+    "path": "solutions/python/practice8.py",
+    "filename": "practice8.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Length of Last Word",
+    "name": "practice9",
+    "source": "https://leetcode.com/problems/length-of-last-word/",
+    "language": "python",
+    "path": "solutions/python/practice9.py",
+    "filename": "practice9.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "First Letter to Appear Twice",
+    "name": "practice10",
+    "source": "https://leetcode.com/problems/first-letter-to-appear-twice/",
+    "language": "python",
+    "path": "solutions/python/practice10.py",
+    "filename": "practice10.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Spiral Matrix II",
+    "name": "practice11",
+    "source": "https://leetcode.com/problems/spiral-matrix-ii/",
+    "language": "python",
+    "path": "solutions/python/practice11.py",
+    "filename": "practice11.py",
+    "topics": [
+      "Matrix"
+    ]
+  },
+  {
+    "problem": "Reverse String II",
+    "name": "practice12",
+    "source": "https://leetcode.com/problems/reverse-string-ii/",
+    "language": "python",
+    "path": "solutions/python/practice12.py",
+    "filename": "practice12.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Permutation Sequence",
+    "name": "practice13",
+    "source": "https://leetcode.com/problems/permutation-sequence/",
+    "language": "python",
+    "path": "solutions/python/practice13.py",
+    "filename": "practice13.py",
+    "topics": [
+      "Backtracking"
+    ]
+  },
+  {
+    "problem": "Rotate List",
+    "name": "practice14",
+    "source": "https://leetcode.com/problems/rotate-list/",
+    "language": "python",
+    "path": "solutions/python/practice14.py",
+    "filename": "practice14.py",
+    "topics": [
+      "Linked Lists"
+    ]
+  },
+  {
+    "problem": "Unique Paths",
+    "name": "practice15",
+    "source": "https://leetcode.com/problems/unique-paths/",
+    "language": "python",
+    "path": "solutions/python/practice15.py",
+    "filename": "practice15.py",
+    "topics": [
+      "Dynamic Programming"
+    ]
+  },
+  {
+    "problem": "Rank Transform of an Array",
+    "name": "practice16",
+    "source": "https://leetcode.com/problems/rank-transform-of-an-array/",
+    "language": "python",
+    "path": "solutions/python/practice16.py",
+    "filename": "practice16.py",
+    "topics": [
+      "Sorting",
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Palindrome Number",
+    "name": "practice17",
+    "source": "https://leetcode.com/problems/palindrome-number/",
+    "language": "python",
+    "path": "solutions/python/practice17.py",
+    "filename": "practice17.py",
+    "topics": [
+      "Two Pointers",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Unique Paths II",
+    "name": "practice18",
+    "source": "https://leetcode.com/problems/unique-paths-ii/",
+    "language": "python",
+    "path": "solutions/python/practice18.py",
+    "filename": "practice18.py",
+    "topics": [
+      "Dynamic Programming"
+    ]
+  },
+  {
+    "problem": "Minimum Path Sum",
+    "name": "practice19",
+    "source": "https://leetcode.com/problems/minimum-path-sum/",
+    "language": "python",
+    "path": "solutions/python/practice19.py",
+    "filename": "practice19.py",
+    "topics": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Valid Number",
+    "name": "practice20",
+    "source": "https://leetcode.com/problems/valid-number/",
+    "language": "python",
+    "path": "solutions/python/practice20.py",
+    "filename": "practice20.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Smallest Multiple That is Even",
+    "name": "practice21",
+    "source": "https://leetcode.com/problems/smallest-even-multiple/",
+    "language": "python",
+    "path": "solutions/python/practice21.py",
+    "filename": "practice21.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Pascal Triangle",
+    "name": "practice22",
+    "source": "https://leetcode.com/problems/pascals-triangle/",
+    "language": "python",
+    "path": "solutions/python/practice22.py",
+    "filename": "practice22.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Smallest possible sum",
+    "name": "practice23",
+    "source": "https://www.codewars.com/kata/52f677797c461daaf7000740",
+    "language": "python",
+    "path": "solutions/python/practice23.py",
+    "filename": "practice23.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Equal Sides Of An Array",
+    "name": "practice24",
+    "source": "https://www.codewars.com/kata/5679aa472b8f57fb8c000047",
+    "language": "python",
+    "path": "solutions/python/practice24.py",
+    "filename": "practice24.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Sum of Ones in Binary",
+    "name": "practice25",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice25.py",
+    "filename": "practice25.py",
+    "topics": [
+      "Math",
+      "Bit Manipulation"
+    ]
+  },
+  {
+    "problem": "Integer to Roman",
+    "name": "practice26",
+    "source": "https://leetcode.com/problems/integer-to-roman/",
+    "language": "python",
+    "path": "solutions/python/practice26.py",
+    "filename": "practice26.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Binary Palindrome",
+    "name": "practice27",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice27.py",
+    "filename": "practice27.py",
+    "topics": [
+      "Two Pointers",
+      "Bit Manipulation"
+    ]
+  },
+  {
+    "problem": "Reverse Integer",
+    "name": "practice28",
+    "source": "https://leetcode.com/problems/reverse-integer/",
+    "language": "python",
+    "path": "solutions/python/practice28.py",
+    "filename": "practice28.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Digit Power Sum",
+    "name": "practice29",
+    "source": "https://projecteuler.net/problem=119",
+    "language": "python",
+    "path": "solutions/python/practice29.py",
+    "filename": "practice29.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Alternating Digit Sum",
+    "name": "practice30",
+    "source": "https://leetcode.com/problems/alternating-digit-sum/",
+    "language": "python",
+    "path": "solutions/python/practice30.py",
+    "filename": "practice30.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Generate Palindrome ASCII",
+    "name": "practice31",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice31.py",
+    "filename": "practice31.py",
+    "topics": [
+      "Two Pointers"
+    ]
+  },
+  {
+    "problem": "Best Time to Buy and Sell Stock",
+    "name": "practice32",
+    "source": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+    "language": "python",
+    "path": "solutions/python/practice32.py",
+    "filename": "practice32.py",
+    "topics": [
+      "Greedy"
+    ]
+  },
+  {
+    "problem": "Strictly Palindromic Number",
+    "name": "practice33",
+    "source": "https://leetcode.com/problems/strictly-palindromic-number/",
+    "language": "python",
+    "path": "solutions/python/practice33.py",
+    "filename": "practice33.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Sort an array containing 0s, 1s and 2s",
+    "name": "practice34",
+    "source": "GeeksforGeeks, Sort an array of 0s, 1s and 2s",
+    "language": "python",
+    "path": "solutions/python/practice34.py",
+    "filename": "practice34.py",
+    "topics": [
+      "Sorting",
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Grading Students",
+    "name": "practice35",
+    "source": "https://www.hackerrank.com/challenges/grading/problem",
+    "language": "python",
+    "path": "solutions/python/practice35.py",
+    "filename": "practice35.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Frequency Sorting",
+    "name": "practice36",
+    "source": "https://py.checkio.org/mission/frequency-sorting/",
+    "language": "python",
+    "path": "solutions/python/practice36.py",
+    "filename": "practice36.py",
+    "topics": [
+      "Sorting",
+      "Hash Table"
+    ]
+  },
+  {
+    "problem": "Add Two Numbers",
+    "name": "practice37",
+    "source": "https://leetcode.com/problems/add-two-numbers/",
+    "language": "python",
+    "path": "solutions/python/practice37.py",
+    "filename": "practice37.py",
+    "topics": [
+      "Linked Lists"
+    ]
+  },
+  {
+    "problem": "Merge Two Sorted Lists",
+    "name": "practice38",
+    "source": "https://leetcode.com/problems/merge-two-sorted-lists/",
+    "language": "python",
+    "path": "solutions/python/practice38.py",
+    "filename": "practice38.py",
+    "topics": [
+      "Linked Lists"
+    ]
+  },
+  {
+    "problem": "Better Days",
+    "name": "practice39",
+    "source": "https://leetcode.com/problems/daily-temperatures/",
+    "language": "python",
+    "path": "solutions/python/practice39.py",
+    "filename": "practice39.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Create Phone Number",
+    "name": "practice40",
+    "source": "https://www.codewars.com/kata/525f50e3b73515a6db000b83",
+    "language": "python",
+    "path": "solutions/python/practice40.py",
+    "filename": "practice40.py",
+    "topics": [
+      "Strings",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Remove Duplicates from Sorted List",
+    "name": "practice41",
+    "source": "https://leetcode.com/problems/remove-duplicates-from-sorted-list/",
+    "language": "python",
+    "path": "solutions/python/practice41.py",
+    "filename": "practice41.py",
+    "topics": [
+      "Linked Lists"
+    ]
+  },
+  {
+    "problem": "Sum of Multiples of 3 and 5",
+    "name": "practice42",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice42.py",
+    "filename": "practice42.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Character Percentage in String",
+    "name": "practice43",
+    "source": "https://leetcode.com/problems/percentage-of-letter-in-string/",
+    "language": "python",
+    "path": "solutions/python/practice43.py",
+    "filename": "practice43.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Word Pattern",
+    "name": "practice44",
+    "source": "https://leetcode.com/problems/word-pattern/",
+    "language": "python",
+    "path": "solutions/python/practice44.py",
+    "filename": "practice44.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Valid Parentheses",
+    "name": "practice45",
+    "source": "https://leetcode.com/problems/valid-parentheses/",
+    "language": "python",
+    "path": "solutions/python/practice45.py",
+    "filename": "practice45.py",
+    "topics": [
+      "Stack & Queue"
+    ]
+  },
+  {
+    "problem": "Unique Morse Code Words",
+    "name": "practice46",
+    "source": "https://leetcode.com/problems/unique-morse-code-words/",
+    "language": "python",
+    "path": "solutions/python/practice46.py",
+    "filename": "practice46.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Rotate List by N Steps",
+    "name": "practice47",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice47.py",
+    "filename": "practice47.py",
+    "topics": [
+      "Linked Lists"
+    ]
+  },
+  {
+    "problem": "String Unscrambling",
+    "name": "practice48",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice48.py",
+    "filename": "practice48.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Singly Linked List Implementation",
+    "name": "practice49",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice49.py",
+    "filename": "practice49.py",
+    "topics": [
+      "Linked Lists"
+    ]
+  },
+  {
+    "problem": "Longest Common Prefix",
+    "name": "practice50",
+    "source": "https://leetcode.com/problems/longest-common-prefix/",
+    "language": "python",
+    "path": "solutions/python/practice50.py",
+    "filename": "practice50.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Equal and Divisible Pairs",
+    "name": "practice51",
+    "source": "https://leetcode.com/problems/count-equal-and-divisible-pairs-in-an-array/",
+    "language": "python",
+    "path": "solutions/python/practice51.py",
+    "filename": "practice51.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Maximum Area of Longest Diagonal Rectangle",
+    "name": "practice52",
+    "source": "https://leetcode.com/problems/maximum-area-of-longest-diagonal-rectangle/",
+    "language": "python",
+    "path": "solutions/python/practice52.py",
+    "filename": "practice52.py",
+    "topics": [
+      "Matrix",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Two Sum",
+    "name": "practice53",
+    "source": "https://leetcode.com/problems/two-sum/",
+    "language": "python",
+    "path": "solutions/python/practice53.py",
+    "filename": "practice53.py",
+    "topics": [
+      "Two Pointers",
+      "Hash Table",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Average Without Min and Max",
+    "name": "practice54",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice54.py",
+    "filename": "practice54.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Non-unique Elements",
+    "name": "practice55",
+    "source": "https://py.checkio.org/en/mission/non-unique-elements/",
+    "language": "python",
+    "path": "solutions/python/practice55.py",
+    "filename": "practice55.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Number Power Sum",
+    "name": "practice56",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice56.py",
+    "filename": "practice56.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "String Split Check",
+    "name": "practice57",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice57.py",
+    "filename": "practice57.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Backspace String Compare",
+    "name": "practice58",
+    "source": "https://leetcode.com/problems/backspace-string-compare/",
+    "language": "python",
+    "path": "solutions/python/practice58.py",
+    "filename": "practice58.py",
+    "topics": [
+      "Stack & Queue",
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Buddy Strings",
+    "name": "practice59",
+    "source": "https://leetcode.com/problems/buddy-strings/",
+    "language": "python",
+    "path": "solutions/python/practice59.py",
+    "filename": "practice59.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Pascal's Triangle",
+    "name": "practice60",
+    "source": "https://leetcode.com/problems/pascals-triangle/",
+    "language": "python",
+    "path": "solutions/python/practice60.py",
+    "filename": "practice60.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Largest Number At Least Twice of Others",
+    "name": "practice61",
+    "source": "https://leetcode.com/problems/largest-number-at-least-twice-of-others/",
+    "language": "python",
+    "path": "solutions/python/practice61.py",
+    "filename": "practice61.py",
+    "topics": [
+      "Math",
+      "Greedy"
+    ]
+  },
+  {
+    "problem": "Changing direction",
+    "name": "practice62",
+    "source": "https://py.checkio.org/en/mission/changing-direction/",
+    "language": "python",
+    "path": "solutions/python/practice62.py",
+    "filename": "practice62.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Bigger Price",
+    "name": "practice63",
+    "source": "https://py.checkio.org/en/mission/bigger-price/",
+    "language": "python",
+    "path": "solutions/python/practice63.py",
+    "filename": "practice63.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Longest Substring Without Repeating Characters",
+    "name": "practice64",
+    "source": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+    "language": "python",
+    "path": "solutions/python/practice64.py",
+    "filename": "practice64.py",
+    "topics": [
+      "Sliding Window"
+    ]
+  },
+  {
+    "problem": "Frequency Counter",
+    "name": "practice65",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice65.py",
+    "filename": "practice65.py",
+    "topics": [
+      "Hash Table"
+    ]
+  },
+  {
+    "problem": "Sum of Multiples",
+    "name": "practice66",
+    "source": "https://leetcode.com/problems/sum-multiples/",
+    "language": "python",
+    "path": "solutions/python/practice66.py",
+    "filename": "practice66.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Filter Strings by Substring",
+    "name": "practice67",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice67.py",
+    "filename": "practice67.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Fibonacci Sequence Generator",
+    "name": "practice68",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice68.py",
+    "filename": "practice68.py",
+    "topics": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  {
+    "problem": "String Jump Decoder",
+    "name": "practice69",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice69.py",
+    "filename": "practice69.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Most Frequent Even Number",
+    "name": "practice70",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice70.py",
+    "filename": "practice70.py",
+    "topics": [
+      "Hash Table",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Valid Parentheses",
+    "name": "practice71",
+    "source": "https://leetcode.com/problems/valid-parentheses/",
+    "language": "python",
+    "path": "solutions/python/practice71.py",
+    "filename": "practice71.py",
+    "topics": [
+      "Stack & Queue"
+    ]
+  },
+  {
+    "problem": "Clear Digits",
+    "name": "practice72",
+    "source": "https://leetcode.com/problems/clear-digits/",
+    "language": "python",
+    "path": "solutions/python/practice72.py",
+    "filename": "practice72.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "10,001st Prime",
+    "name": "practice73",
+    "source": "https://projecteuler.net/problem=7",
+    "language": "python",
+    "path": "solutions/python/practice73.py",
+    "filename": "practice73.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Nearest Value",
+    "name": "practice74",
+    "source": "https://py.checkio.org/mission/nearest-value/",
+    "language": "python",
+    "path": "solutions/python/practice74.py",
+    "filename": "practice74.py",
+    "topics": [
+      "Searching"
+    ]
+  },
+  {
+    "problem": "Persistent Bugger.",
+    "name": "practice75",
+    "source": "https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec",
+    "language": "python",
+    "path": "solutions/python/practice75.py",
+    "filename": "practice75.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Sqrt(x)",
+    "name": "practice76",
+    "source": "https://leetcode.com/problems/sqrtx/",
+    "language": "python",
+    "path": "solutions/python/practice76.py",
+    "filename": "practice76.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Time Limit Validator",
+    "name": "practice77",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice77.py",
+    "filename": "practice77.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Sum of Digits / Digital Root",
+    "name": "practice78",
+    "source": "https://www.codewars.com/kata/541c8630095125aba6000c00",
+    "language": "python",
+    "path": "solutions/python/practice78.py",
+    "filename": "practice78.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Character Triangle Pattern",
+    "name": "practice79",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice79.py",
+    "filename": "practice79.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Check if All Arrays Have Same Elements",
+    "name": "practice80",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice80.py",
+    "filename": "practice80.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Fibonacci Number",
+    "name": "practice81",
+    "source": "https://leetcode.com/problems/fibonacci-number/",
+    "language": "python",
+    "path": "solutions/python/practice81.py",
+    "filename": "practice81.py",
+    "topics": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Pow(x, n)",
+    "name": "practice82",
+    "source": "https://leetcode.com/problems/powx-n/",
+    "language": "python",
+    "path": "solutions/python/practice82.py",
+    "filename": "practice82.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Count Numbers with Even Number of Digits",
+    "name": "practice83",
+    "source": "https://leetcode.com/problems/find-numbers-with-even-number-of-digits/",
+    "language": "python",
+    "path": "solutions/python/practice83.py",
+    "filename": "practice83.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "N-Queens",
+    "name": "practice84",
+    "source": "https://leetcode.com/problems/n-queens/",
+    "language": "python",
+    "path": "solutions/python/practice84.py",
+    "filename": "practice84.py",
+    "topics": [
+      "Backtracking"
+    ]
+  },
+  {
+    "problem": "Maximum Area of Longest Diagonal Rectangle",
+    "name": "practice85",
+    "source": "https://leetcode.com/problems/maximum-area-of-longest-diagonal-rectangle/",
+    "language": "python",
+    "path": "solutions/python/practice85.py",
+    "filename": "practice85.py",
+    "topics": [
+      "Matrix",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Clear Digits",
+    "name": "practice86",
+    "source": "https://leetcode.com/problems/clear-digits/",
+    "language": "python",
+    "path": "solutions/python/practice86.py",
+    "filename": "practice86.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Count Integers with Even Number of Digits",
+    "name": "practice87",
+    "source": "https://leetcode.com/problems/find-numbers-with-even-number-of-digits/",
+    "language": "python",
+    "path": "solutions/python/practice87.py",
+    "filename": "practice87.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Sum of Multiples of 3, 5, or 7",
+    "name": "practice88",
+    "source": "https://leetcode.com/problems/sum-multiples/",
+    "language": "python",
+    "path": "solutions/python/practice88.py",
+    "filename": "practice88.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Find Strings Containing a Specific Character",
+    "name": "practice89",
+    "source": "https://leetcode.com/problems/find-words-containing-character/",
+    "language": "python",
+    "path": "solutions/python/practice89.py",
+    "filename": "practice89.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Replace All Digits with Characters",
+    "name": "practice90",
+    "source": "https://leetcode.com/problems/replace-all-digits-with-characters/",
+    "language": "python",
+    "path": "solutions/python/practice90.py",
+    "filename": "practice90.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Count Valid Pairs with Equal Values and Divisible Product of Indices",
+    "name": "practice91",
+    "source": "https://leetcode.com/problems/count-equal-and-divisible-pairs-in-an-array/",
+    "language": "python",
+    "path": "solutions/python/practice91.py",
+    "filename": "practice91.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Average of Array Excluding Minimum and Maximum",
+    "name": "practice92",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice92.py",
+    "filename": "practice92.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Minimum Operations to Make Integers Divisible by 3",
+    "name": "practice93",
+    "source": "https://leetcode.com/problems/find-minimum-operations-to-make-all-elements-divisible-by-three/",
+    "language": "python",
+    "path": "solutions/python/practice93.py",
+    "filename": "practice93.py",
+    "topics": [
+      "Greedy"
+    ]
+  },
+  {
+    "problem": "Running Sum of 1D Array",
+    "name": "practice94",
+    "source": "https://leetcode.com/problems/running-sum-of-1d-array/",
+    "language": "python",
+    "path": "solutions/python/practice94.py",
+    "filename": "practice94.py",
+    "topics": [
+      "Arrays",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Number of Steps to Reduce a Number to Zero",
+    "name": "practice95",
+    "source": "https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/",
+    "language": "python",
+    "path": "solutions/python/practice95.py",
+    "filename": "practice95.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Count Elements Smaller Than Current Element",
+    "name": "practice96",
+    "source": "https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/",
+    "language": "python",
+    "path": "solutions/python/practice96.py",
+    "filename": "practice96.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Beautiful Days at the Movies",
+    "name": "practice97",
+    "source": "https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem",
+    "language": "python",
+    "path": "solutions/python/practice97.py",
+    "filename": "practice97.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Days to Wait for a Luckier Day",
+    "name": "practice98",
+    "source": "https://leetcode.com/problems/daily-temperatures/",
+    "language": "python",
+    "path": "solutions/python/practice98.py",
+    "filename": "practice98.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Calculate H-Index",
+    "name": "practice99",
+    "source": "https://leetcode.com/problems/h-index/",
+    "language": "python",
+    "path": "solutions/python/practice99.py",
+    "filename": "practice99.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "A Number After a Double Reversal",
+    "name": "practice100",
+    "source": "https://leetcode.com/problems/a-number-after-a-double-reversal/",
+    "language": "python",
+    "path": "solutions/python/practice100.py",
+    "filename": "practice100.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Calculate Alternating Digit Sum",
+    "name": "practice101",
+    "source": "https://leetcode.com/problems/alternating-digit-sum/",
+    "language": "python",
+    "path": "solutions/python/practice101.py",
+    "filename": "practice101.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Calculate Percentage of Letter in String",
+    "name": "practice102",
+    "source": "https://leetcode.com/problems/percentage-of-letter-in-string/",
+    "language": "python",
+    "path": "solutions/python/practice102.py",
+    "filename": "practice102.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Count Numbers with Unique Digits",
+    "name": "practice103",
+    "source": "https://leetcode.com/problems/count-numbers-with-unique-digits/",
+    "language": "python",
+    "path": "solutions/python/practice103.py",
+    "filename": "practice103.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Multiply Two Strings",
+    "name": "practice104",
+    "source": "https://leetcode.com/problems/multiply-strings/",
+    "language": "python",
+    "path": "solutions/python/practice104.py",
+    "filename": "practice104.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Minimum Operations to Reduce Number to One",
+    "name": "practice105",
+    "source": "https://www.geeksforgeeks.org/dsa/reduce-a-number-to-1-by-performing-given-operations/",
+    "language": "python",
+    "path": "solutions/python/practice105.py",
+    "filename": "practice105.py",
+    "topics": [
+      "Math",
+      "Greedy"
+    ]
+  },
+  {
+    "problem": "Backspace String Compare",
+    "name": "practice106",
+    "source": "https://leetcode.com/problems/backspace-string-compare/",
+    "language": "python",
+    "path": "solutions/python/practice106.py",
+    "filename": "practice106.py",
+    "topics": [
+      "Stack & Queue",
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Buddy Strings Challenge",
+    "name": "practice107",
+    "source": "https://leetcode.com/problems/buddy-strings/",
+    "language": "python",
+    "path": "solutions/python/practice107.py",
+    "filename": "practice107.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Largest Number At Least Twice of Others",
+    "name": "practice108",
+    "source": "https://leetcode.com/problems/largest-number-at-least-twice-of-others/",
+    "language": "python",
+    "path": "solutions/python/practice108.py",
+    "filename": "practice108.py",
+    "topics": [
+      "Math",
+      "Greedy"
+    ]
+  },
+  {
+    "problem": "Find the Missing Number",
+    "name": "practice109",
+    "source": "https://leetcode.com/problems/missing-number/",
+    "language": "python",
+    "path": "solutions/python/practice109.py",
+    "filename": "practice109.py",
+    "topics": [
+      "Searching",
+      "Arrays",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Intersection of Two Arrays",
+    "name": "practice110",
+    "source": "https://leetcode.com/problems/intersection-of-two-arrays/",
+    "language": "python",
+    "path": "solutions/python/practice110.py",
+    "filename": "practice110.py",
+    "topics": [
+      "Hash Table"
+    ]
+  },
+  {
+    "problem": "Product of Array Except Self",
+    "name": "practice111",
+    "source": "https://leetcode.com/problems/product-of-array-except-self/",
+    "language": "python",
+    "path": "solutions/python/practice111.py",
+    "filename": "practice111.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Count CamelCase Words",
+    "name": "practice112",
+    "source": "https://www.hackerrank.com/challenges/camelcase/problem",
+    "language": "python",
+    "path": "solutions/python/practice112.py",
+    "filename": "practice112.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Rank Elements in an Array",
+    "name": "practice113",
+    "source": "https://leetcode.com/problems/rank-transform-of-an-array/",
+    "language": "python",
+    "path": "solutions/python/practice113.py",
+    "filename": "practice113.py",
+    "topics": [
+      "Sorting",
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Check If All A's Appears Before All B's",
+    "name": "practice114",
+    "source": "https://leetcode.com/problems/check-if-all-as-appears-before-all-bs/",
+    "language": "python",
+    "path": "solutions/python/practice114.py",
+    "filename": "practice114.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Most Frequent Even Element",
+    "name": "practice115",
+    "source": "https://leetcode.com/problems/most-frequent-even-element/",
+    "language": "python",
+    "path": "solutions/python/practice115.py",
+    "filename": "practice115.py",
+    "topics": [
+      "Hash Table"
+    ]
+  },
+  {
+    "problem": "First Letter to Appear Twice",
+    "name": "practice116",
+    "source": "https://leetcode.com/problems/first-letter-to-appear-twice/",
+    "language": "python",
+    "path": "solutions/python/practice116.py",
+    "filename": "practice116.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Smallest Even Multiple",
+    "name": "practice117",
+    "source": "https://leetcode.com/problems/smallest-even-multiple/",
+    "language": "python",
+    "path": "solutions/python/practice117.py",
+    "filename": "practice117.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Is Prime Number",
+    "name": "practice118",
+    "source": "https://www.geeksforgeeks.org/problems/prime-number2314/1",
+    "language": "python",
+    "path": "solutions/python/practice118.py",
+    "filename": "practice118.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Sort Characters By Frequency",
+    "name": "practice119",
+    "source": "https://leetcode.com/problems/sort-characters-by-frequency/",
+    "language": "python",
+    "path": "solutions/python/practice119.py",
+    "filename": "practice119.py",
+    "topics": [
+      "Sorting",
+      "Hash Table"
+    ]
+  },
+  {
+    "problem": "Even Fibonacci Numbers Sum",
+    "name": "practice120",
+    "source": "https://projecteuler.net/problem=2",
+    "language": "python",
+    "path": "solutions/python/practice120.py",
+    "filename": "practice120.py",
+    "topics": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Spiral Matrix Display",
+    "name": "practice121",
+    "source": "https://leetcode.com/problems/spiral-matrix/description/",
+    "language": "python",
+    "path": "solutions/python/practice121.py",
+    "filename": "practice121.py",
+    "topics": [
+      "Matrix"
+    ]
+  },
+  {
+    "problem": "Keypad Phone Simulator (Multi-tap Keypad Text Entry)",
+    "name": "practice122",
+    "source": "https://www.codewars.com/kata/54a2e93b22d236498400134b",
+    "language": "python",
+    "path": "solutions/python/practice122.py",
+    "filename": "practice122.py",
+    "topics": [
+      "Strings",
+      "Simulation"
+    ]
+  },
+  {
+    "problem": "1000-digit Fibonacci Number",
+    "name": "practice123",
+    "source": "https://projecteuler.net/problem=25",
+    "language": "python",
+    "path": "solutions/python/practice123.py",
+    "filename": "practice123.py",
+    "topics": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Two Sum",
+    "name": "practice124",
+    "source": "https://leetcode.com/problems/two-sum/",
+    "language": "python",
+    "path": "solutions/python/practice124.py",
+    "filename": "practice124.py",
+    "topics": [
+      "Two Pointers",
+      "Hash Table",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Add Two Numbers",
+    "name": "practice125",
+    "source": "https://leetcode.com/problems/add-two-numbers/",
+    "language": "python",
+    "path": "solutions/python/practice125.py",
+    "filename": "practice125.py",
+    "topics": [
+      "Linked Lists"
+    ]
+  },
+  {
+    "problem": "Spiral Matrix 2",
+    "name": "practice126",
+    "source": "https://leetcode.com/problems/spiral-matrix-ii/",
+    "language": "python",
+    "path": "solutions/python/practice126.py",
+    "filename": "practice126.py",
+    "topics": [
+      "Matrix"
+    ]
+  },
+  {
+    "problem": "Permutation Sequence",
+    "name": "practice127",
+    "source": "https://leetcode.com/problems/permutation-sequence/",
+    "language": "python",
+    "path": "solutions/python/practice127.py",
+    "filename": "practice127.py",
+    "topics": [
+      "Backtracking"
+    ]
+  },
+  {
+    "problem": "Length of Last Word",
+    "name": "practice128",
+    "source": "https://leetcode.com/problems/length-of-last-word/",
+    "language": "python",
+    "path": "solutions/python/practice128.py",
+    "filename": "practice128.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Insert Interval",
+    "name": "practice129",
+    "source": "https://leetcode.com/problems/insert-interval/",
+    "language": "python",
+    "path": "solutions/python/practice129.py",
+    "filename": "practice129.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Merge Intervals",
+    "name": "practice130",
+    "source": "https://leetcode.com/problems/merge-intervals/",
+    "language": "python",
+    "path": "solutions/python/practice130.py",
+    "filename": "practice130.py",
+    "topics": [
+      "Two Pointers"
+    ]
+  },
+  {
+    "problem": "Spiral Matrix",
+    "name": "practice131",
+    "source": "https://leetcode.com/problems/spiral-matrix/",
+    "language": "python",
+    "path": "solutions/python/practice131.py",
+    "filename": "practice131.py",
+    "topics": [
+      "Matrix"
+    ]
+  },
+  {
+    "problem": "Jump Game",
+    "name": "practice132",
+    "source": "https://leetcode.com/problems/jump-game/",
+    "language": "python",
+    "path": "solutions/python/practice132.py",
+    "filename": "practice132.py",
+    "topics": [
+      "Arrays",
+      "Greedy",
+      "Simulation"
+    ]
+  },
+  {
+    "problem": "Longest Substring Without Repeating Characters",
+    "name": "practice133",
+    "source": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+    "language": "python",
+    "path": "solutions/python/practice133.py",
+    "filename": "practice133.py",
+    "topics": [
+      "Sliding Window"
+    ]
+  },
+  {
+    "problem": "3Sum Closest",
+    "name": "practice134",
+    "source": "https://leetcode.com/problems/3sum-closest/",
+    "language": "python",
+    "path": "solutions/python/practice134.py",
+    "filename": "practice134.py",
+    "topics": [
+      "Two Pointers"
+    ]
+  },
+  {
+    "problem": "Remove Duplicates from Sorted Array",
+    "name": "practice135",
+    "source": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/",
+    "language": "python",
+    "path": "solutions/python/practice135.py",
+    "filename": "practice135.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Maximum Substrings With Distinct Start",
+    "name": "practice136",
+    "source": "https://leetcode.com/problems/maximum-substrings-with-distinct-start/",
+    "language": "python",
+    "path": "solutions/python/practice136.py",
+    "filename": "practice136.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Valid Parentheses",
+    "name": "practice137",
+    "source": "https://leetcode.com/problems/valid-parentheses/",
+    "language": "python",
+    "path": "solutions/python/practice137.py",
+    "filename": "practice137.py",
+    "topics": [
+      "Stack & Queue"
+    ]
+  },
+  {
+    "problem": "Char Code Calculation",
+    "name": "practice138",
+    "source": "https://www.codewars.com/kata/char-code-calculation/",
+    "language": "python",
+    "path": "solutions/python/practice138.py",
+    "filename": "practice138.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Matrix Rotate 90deg Clockwise",
+    "name": "practice139",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice139.py",
+    "filename": "practice139.py",
+    "topics": [
+      "Matrix"
+    ]
+  },
+  {
+    "problem": "Longest Subarray With Sum Less Than or Equal to S",
+    "name": "practice140",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice140.py",
+    "filename": "practice140.py",
+    "topics": [
+      "Sliding Window",
+      "Arrays",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Generate Permutations",
+    "name": "practice141",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice141.py",
+    "filename": "practice141.py",
+    "topics": [
+      "Backtracking"
+    ]
+  },
+  {
+    "problem": "Majority Element",
+    "name": "practice142",
+    "source": "https://www.geeksforgeeks.org/problems/majority-element-1587115620/1",
+    "language": "python",
+    "path": "solutions/python/practice142.py",
+    "filename": "practice142.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Subsets",
+    "name": "practice143",
+    "source": "https://leetcode.com/problems/subsets/",
+    "language": "python",
+    "path": "solutions/python/practice143.py",
+    "filename": "practice143.py",
+    "topics": [
+      "Backtracking"
+    ]
+  },
+  {
+    "problem": "Array Partition",
+    "name": "practice144",
+    "source": "https://leetcode.com/problems/array-partition/",
+    "language": "python",
+    "path": "solutions/python/practice144.py",
+    "filename": "practice144.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Left and Right Sum Differences",
+    "name": "practice145",
+    "source": "https://leetcode.com/problems/left-and-right-sum-differences/",
+    "language": "python",
+    "path": "solutions/python/practice145.py",
+    "filename": "practice145.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Number of Employees Who Met the Target",
+    "name": "practice146",
+    "source": "https://leetcode.com/problems/number-of-employees-who-met-the-target/",
+    "language": "python",
+    "path": "solutions/python/practice146.py",
+    "filename": "practice146.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Permutation Difference between Two Strings",
+    "name": "practice147",
+    "source": "https://leetcode.com/problems/permutation-difference-between-two-strings/",
+    "language": "python",
+    "path": "solutions/python/practice147.py",
+    "filename": "practice147.py",
+    "topics": [
+      "Backtracking"
+    ]
+  },
+  {
+    "problem": "Kids With the Greatest Number of Candies",
+    "name": "practice148",
+    "source": "https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/",
+    "language": "python",
+    "path": "solutions/python/practice148.py",
+    "filename": "practice148.py",
+    "topics": [
+      "Arrays",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Count Pairs Whose Sum is Less than Target",
+    "name": "practice149",
+    "source": "https://leetcode.com/problems/count-pairs-whose-sum-is-less-than-target/",
+    "language": "python",
+    "path": "solutions/python/practice149.py",
+    "filename": "practice149.py",
+    "topics": [
+      "Arrays",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Count Asterisks",
+    "name": "practice150",
+    "source": "https://leetcode.com/problems/count-asterisks/",
+    "language": "python",
+    "path": "solutions/python/practice150.py",
+    "filename": "practice150.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Largest Local Values in a Matrix",
+    "name": "practice151",
+    "source": "https://leetcode.com/problems/largest-local-values-in-a-matrix/",
+    "language": "python",
+    "path": "solutions/python/practice151.py",
+    "filename": "practice151.py",
+    "topics": [
+      "Matrix"
+    ]
+  },
+  {
+    "problem": "Decode the Message",
+    "name": "practice152",
+    "source": "https://leetcode.com/problems/decode-the-message/",
+    "language": "python",
+    "path": "solutions/python/practice152.py",
+    "filename": "practice152.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "How Many Numbers Are Smaller Than the Current Number",
+    "name": "practice153",
+    "source": "https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/",
+    "language": "python",
+    "path": "solutions/python/practice153.py",
+    "filename": "practice153.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Running Sum of 1d Array",
+    "name": "practice154",
+    "source": "https://leetcode.com/problems/running-sum-of-1d-array/",
+    "language": "python",
+    "path": "solutions/python/practice154.py",
+    "filename": "practice154.py",
+    "topics": [
+      "Arrays",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Unique Morse Code Words",
+    "name": "practice155",
+    "source": "https://leetcode.com/problems/unique-morse-code-words/",
+    "language": "python",
+    "path": "solutions/python/practice155.py",
+    "filename": "practice155.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Split a String in Balanced Strings",
+    "name": "practice156",
+    "source": "https://leetcode.com/problems/split-a-string-in-balanced-strings/",
+    "language": "python",
+    "path": "solutions/python/practice156.py",
+    "filename": "practice156.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Count Number of Maximum Bitwise-OR Subsets",
+    "name": "practice157",
+    "source": "https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/",
+    "language": "python",
+    "path": "solutions/python/practice157.py",
+    "filename": "practice157.py",
+    "topics": [
+      "Backtracking",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Contains Duplicate",
+    "name": "practice158",
+    "source": "https://leetcode.com/problems/contains-duplicate/",
+    "language": "python",
+    "path": "solutions/python/practice158.py",
+    "filename": "practice158.py",
+    "topics": [
+      "Hash Table"
+    ]
+  },
+  {
+    "problem": "Shuffle String",
+    "name": "practice159",
+    "source": "https://leetcode.com/problems/shuffle-string/",
+    "language": "python",
+    "path": "solutions/python/practice159.py",
+    "filename": "practice159.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Insert Greatest Common Divisors in Linked List",
+    "name": "practice160",
+    "source": "https://leetcode.com/problems/insert-greatest-common-divisors-in-linked-list/",
+    "language": "python",
+    "path": "solutions/python/practice160.py",
+    "filename": "practice160.py",
+    "topics": [
+      "Linked Lists"
+    ]
+  },
+  {
+    "problem": "Find Closest Person",
+    "name": "practice161",
+    "source": "https://leetcode.com/problems/find-closest-person/",
+    "language": "python",
+    "path": "solutions/python/practice161.py",
+    "filename": "practice161.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Mirror Distance of an Integer",
+    "name": "practice162",
+    "source": "https://leetcode.com/problems/mirror-distance-of-an-integer/",
+    "language": "python",
+    "path": "solutions/python/practice162.py",
+    "filename": "practice162.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Matrix Script",
+    "name": "practice163",
+    "source": "https://www.hackerrank.com/challenges/matrix-script/problem",
+    "language": "python",
+    "path": "solutions/python/practice163.py",
+    "filename": "practice163.py",
+    "topics": [
+      "Matrix"
+    ]
+  },
+  {
+    "problem": "Remove Outermost Parentheses",
+    "name": "practice164",
+    "source": "https://leetcode.com/problems/remove-outermost-parentheses/",
+    "language": "python",
+    "path": "solutions/python/practice164.py",
+    "filename": "practice164.py",
+    "topics": [
+      "Stack & Queue"
+    ]
+  },
+  {
+    "problem": "Subarray Sum Equals K",
+    "name": "practice165",
+    "source": "https://leetcode.com/problems/subarray-sum-equals-k/",
+    "language": "python",
+    "path": "solutions/python/practice165.py",
+    "filename": "practice165.py",
+    "topics": [
+      "Sliding Window",
+      "Arrays",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Display the First Three Rows",
+    "name": "practice166",
+    "source": "https://leetcode.com/problems/display-the-first-three-rows/",
+    "language": "python",
+    "path": "solutions/python/practice166.py",
+    "filename": "practice166.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "XOR Operation in an Array",
+    "name": "practice167",
+    "source": "https://leetcode.com/problems/xor-operation-in-an-array/",
+    "language": "python",
+    "path": "solutions/python/practice167.py",
+    "filename": "practice167.py",
+    "topics": [
+      "Arrays",
+      "Math",
+      "Bit Manipulation"
+    ]
+  },
+  {
+    "problem": "Vowel Recognition",
+    "name": "practice168",
+    "source": "https://www.codewars.com/kata/5bed96b9a68c19d394000b1d",
+    "language": "python",
+    "path": "solutions/python/practice168.py",
+    "filename": "practice168.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "How Broke Are You?",
+    "name": "practice169",
+    "source": "https://www.codewars.com/kata/699583ba5ca289725b496ad4",
+    "language": "python",
+    "path": "solutions/python/practice169.py",
+    "filename": "practice169.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "collections.Counter()",
+    "name": "practice170",
+    "source": "https://www.hackerrank.com/challenges/collections-counter/problem",
+    "language": "python",
+    "path": "solutions/python/practice170.py",
+    "filename": "practice170.py",
+    "topics": [
+      "Hash Table"
+    ]
+  },
+  {
+    "problem": "Company Logo",
+    "name": "practice171",
+    "source": "https://www.hackerrank.com/challenges/most-commons/problem",
+    "language": "python",
+    "path": "solutions/python/practice171.py",
+    "filename": "practice171.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Maximize It!",
+    "name": "practice172",
+    "source": "https://www.hackerrank.com/challenges/maximize-it/problem",
+    "language": "python",
+    "path": "solutions/python/practice172.py",
+    "filename": "practice172.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Merge the Tools!",
+    "name": "practice173",
+    "source": "https://www.hackerrank.com/challenges/merge-the-tools/problem",
+    "language": "python",
+    "path": "solutions/python/practice173.py",
+    "filename": "practice173.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Decorators 2 - Name Directory",
+    "name": "practice174",
+    "source": "https://www.hackerrank.com/challenges/decorators-2-name-directory/problem",
+    "language": "python",
+    "path": "solutions/python/practice174.py",
+    "filename": "practice174.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Regex Substitution",
+    "name": "practice175",
+    "source": "https://www.hackerrank.com/challenges/re-sub-regex-substitution/problem",
+    "language": "python",
+    "path": "solutions/python/practice175.py",
+    "filename": "practice175.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Validating Credit Card Numbers",
+    "name": "practice176",
+    "source": "https://www.hackerrank.com/challenges/validating-credit-card-number/problem",
+    "language": "python",
+    "path": "solutions/python/practice176.py",
+    "filename": "practice176.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Water Bottles",
+    "name": "practice177",
+    "source": "https://leetcode.com/problems/water-bottles/",
+    "language": "python",
+    "path": "solutions/python/practice177.py",
+    "filename": "practice177.py",
+    "topics": [
+      "Greedy"
+    ]
+  },
+  {
+    "problem": "First Matching Character From Both Ends",
+    "name": "practice178",
+    "source": "https://leetcode.com/problems/first-matching-character-from-both-ends/",
+    "language": "python",
+    "path": "solutions/python/practice178.py",
+    "filename": "practice178.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Truncate Sentence",
+    "name": "practice179",
+    "source": "https://leetcode.com/problems/truncate-sentence/",
+    "language": "python",
+    "path": "solutions/python/practice179.py",
+    "filename": "practice179.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Squares of a Sorted Array",
+    "name": "practice180",
+    "source": "https://leetcode.com/problems/squares-of-a-sorted-array/",
+    "language": "python",
+    "path": "solutions/python/practice180.py",
+    "filename": "practice180.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Next Greater Element I",
+    "name": "practice181",
+    "source": "https://leetcode.com/problems/next-greater-element-i/",
+    "language": "python",
+    "path": "solutions/python/practice181.py",
+    "filename": "practice181.py",
+    "topics": [
+      "Stack & Queue"
+    ]
+  },
+  {
+    "problem": "Number Complement",
+    "name": "practice182",
+    "source": "https://leetcode.com/problems/number-complement/",
+    "language": "python",
+    "path": "solutions/python/practice182.py",
+    "filename": "practice182.py",
+    "topics": [
+      "Math",
+      "Bit Manipulation"
+    ]
+  },
+  {
+    "problem": "Minimum Bit Flips to Convert Number",
+    "name": "practice183",
+    "source": "https://leetcode.com/problems/minimum-bit-flips-to-convert-number/",
+    "language": "python",
+    "path": "solutions/python/practice183.py",
+    "filename": "practice183.py",
+    "topics": [
+      "Math",
+      "Bit Manipulation"
+    ]
+  },
+  {
+    "problem": "Range Sum of BST",
+    "name": "practice184",
+    "source": "https://leetcode.com/problems/range-sum-of-bst/",
+    "language": "python",
+    "path": "solutions/python/practice184.py",
+    "filename": "practice184.py",
+    "topics": [
+      "Trees",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Sum of Multiples",
+    "name": "practice185",
+    "source": "https://leetcode.com/problems/sum-multiples/",
+    "language": "python",
+    "path": "solutions/python/practice185.py",
+    "filename": "practice185.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Count the Digits That Divide a Number",
+    "name": "practice186",
+    "source": "https://leetcode.com/problems/count-the-digits-that-divide-a-number/",
+    "language": "python",
+    "path": "solutions/python/practice186.py",
+    "filename": "practice186.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Maximum Number of Words Found in Sentences",
+    "name": "practice187",
+    "source": "https://leetcode.com/problems/maximum-number-of-words-found-in-sentences/",
+    "language": "python",
+    "path": "solutions/python/practice187.py",
+    "filename": "practice187.py",
+    "topics": [
+      "Math",
+      "Greedy"
+    ]
+  },
+  {
+    "problem": "Count Good Triplets",
+    "name": "practice188",
+    "source": "https://leetcode.com/problems/count-good-triplets/",
+    "language": "python",
+    "path": "solutions/python/practice188.py",
+    "filename": "practice188.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Find Indices of Stable Mountains",
+    "name": "practice189",
+    "source": "https://leetcode.com/problems/find-indices-of-stable-mountains/",
+    "language": "python",
+    "path": "solutions/python/practice189.py",
+    "filename": "practice189.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Sort the People",
+    "name": "practice190",
+    "source": "https://leetcode.com/problems/sort-the-people/",
+    "language": "python",
+    "path": "solutions/python/practice190.py",
+    "filename": "practice190.py",
+    "topics": [
+      "Sorting"
+    ]
+  },
+  {
+    "problem": "GCD of Odd and Even Sums",
+    "name": "practice191",
+    "source": "https://leetcode.com/problems/gcd-of-odd-and-even-sums/",
+    "language": "python",
+    "path": "solutions/python/practice191.py",
+    "filename": "practice191.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Ho Ho Ho with Functions!",
+    "name": "practice192",
+    "source": "https://www.codewars.com/kata/52af1f150fcae8d33d0009bc",
+    "language": "python",
+    "path": "solutions/python/practice192.py",
+    "filename": "practice192.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Cancellable Item Transactions",
+    "name": "practice193",
+    "source": "https://www.codewars.com/kata/cancellable-item-transactions",
+    "language": "python",
+    "path": "solutions/python/practice193.py",
+    "filename": "practice193.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Sort by binary ones",
+    "name": "practice194",
+    "source": "https://www.codewars.com/kata/59eb28fb0a2bffafbb0000d6",
+    "language": "python",
+    "path": "solutions/python/practice194.py",
+    "filename": "practice194.py",
+    "topics": [
+      "Sorting",
+      "Bit Manipulation"
+    ]
+  },
+  {
+    "problem": "Bouncing Balls",
+    "name": "practice195",
+    "source": "https://www.codewars.com/kata/5544c7a5cb454edb3c000047",
+    "language": "python",
+    "path": "solutions/python/practice195.py",
+    "filename": "practice195.py",
+    "topics": [
+      "Simulation"
+    ]
+  },
+  {
+    "problem": "Are they the \"same\"?",
+    "name": "practice196",
+    "source": "https://www.codewars.com/kata/550498447451fbbd7600041c",
+    "language": "python",
+    "path": "solutions/python/practice196.py",
+    "filename": "practice196.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Valid Braces",
+    "name": "practice197",
+    "source": "https://www.codewars.com/kata/5277c8a221e209d3f6000b56",
+    "language": "python",
+    "path": "solutions/python/practice197.py",
+    "filename": "practice197.py",
+    "topics": [
+      "Stack & Queue"
+    ]
+  },
+  {
+    "problem": "Find the Number of Good Pairs I",
+    "name": "practice198",
+    "source": "https://leetcode.com/problems/find-the-number-of-good-pairs-i/",
+    "language": "python",
+    "path": "solutions/python/practice198.py",
+    "filename": "practice198.py",
+    "topics": [
+      "Hash Table",
+      "Arrays",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Create Target Array in the Given Order",
+    "name": "practice199",
+    "source": "https://leetcode.com/problems/create-target-array-in-the-given-order/",
+    "language": "python",
+    "path": "solutions/python/practice199.py",
+    "filename": "practice199.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Final Array State After K Multiplication Operations I",
+    "name": "practice200",
+    "source": "https://leetcode.com/problems/final-array-state-after-k-multiplication-operations-i/",
+    "language": "python",
+    "path": "solutions/python/practice200.py",
+    "filename": "practice200.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Number of Steps to Reduce a Number to Zero",
+    "name": "practice201",
+    "source": "https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/",
+    "language": "python",
+    "path": "solutions/python/practice201.py",
+    "filename": "practice201.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Counting Valleys",
+    "name": "practice202",
+    "source": "https://www.hackerrank.com/challenges/counting-valleys/problem",
+    "language": "python",
+    "path": "solutions/python/practice202.py",
+    "filename": "practice202.py",
+    "topics": [
+      "Simulation"
+    ]
+  },
+  {
+    "problem": "Time Delta",
+    "name": "practice203",
+    "source": "https://www.hackerrank.com/challenges/python-time-delta/problem",
+    "language": "python",
+    "path": "solutions/python/practice203.py",
+    "filename": "practice203.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Word Order",
+    "name": "practice204",
+    "source": "https://www.hackerrank.com/challenges/word-order/problem",
+    "language": "python",
+    "path": "solutions/python/practice204.py",
+    "filename": "practice204.py",
+    "topics": [
+      "Hash Table",
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Words Score",
+    "name": "practice205",
+    "source": "https://www.hackerrank.com/challenges/words-score/problem",
+    "language": "python",
+    "path": "solutions/python/practice205.py",
+    "filename": "practice205.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Compress the String!",
+    "name": "practice206",
+    "source": "https://www.hackerrank.com/challenges/compress-the-string/problem",
+    "language": "python",
+    "path": "solutions/python/practice206.py",
+    "filename": "practice206.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Mexican Wave",
+    "name": "practice207",
+    "source": "https://www.codewars.com/kata/58f5c63f1e26ecda7e000029",
+    "language": "python",
+    "path": "solutions/python/practice207.py",
+    "filename": "practice207.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "The Supermarket Queue",
+    "name": "practice208",
+    "source": "https://www.codewars.com/kata/57b06f90e298a7b53d000a86",
+    "language": "python",
+    "path": "solutions/python/practice208.py",
+    "filename": "practice208.py",
+    "topics": [
+      "Stack & Queue"
+    ]
+  },
+  {
+    "problem": "WeIrD StRiNg CaSe",
+    "name": "practice209",
+    "source": "https://www.codewars.com/kata/52b757663a95b11b3d00062d",
+    "language": "python",
+    "path": "solutions/python/practice209.py",
+    "filename": "practice209.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Multiplication table",
+    "name": "practice210",
+    "source": "https://www.codewars.com/kata/534d2f5b5371ecf8d2000a08",
+    "language": "python",
+    "path": "solutions/python/practice210.py",
+    "filename": "practice210.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "IP Validation",
+    "name": "practice211",
+    "source": "https://www.codewars.com/kata/515decfd9dcfc23bb6000006",
+    "language": "python",
+    "path": "solutions/python/practice211.py",
+    "filename": "practice211.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Take a Number And Sum Its Digits Raised To The Consecutive Powers And ....Â¡Eureka!!",
+    "name": "practice212",
+    "source": "https://www.codewars.com/kata/5626b561280a42ecc50000d1",
+    "language": "python",
+    "path": "solutions/python/practice212.py",
+    "filename": "practice212.py",
+    "topics": [
+      "Sliding Window",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Simple Encryption #1 - Alternating Split",
+    "name": "practice213",
+    "source": "https://www.codewars.com/kata/57814d79a56c88e3e0000786",
+    "language": "python",
+    "path": "solutions/python/practice213.py",
+    "filename": "practice213.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Roman Numerals Decoder",
+    "name": "practice214",
+    "source": "https://www.codewars.com/kata/51b6249c4612257ac0000005",
+    "language": "python",
+    "path": "solutions/python/practice214.py",
+    "filename": "practice214.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Title Case",
+    "name": "practice215",
+    "source": "https://www.codewars.com/kata/5202ef17a402dd033c000009",
+    "language": "python",
+    "path": "solutions/python/practice215.py",
+    "filename": "practice215.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Good vs Evil",
+    "name": "practice216",
+    "source": "https://www.codewars.com/kata/52761ee4cffbc69732000738",
+    "language": "python",
+    "path": "solutions/python/practice216.py",
+    "filename": "practice216.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Data Reverse",
+    "name": "practice217",
+    "source": "https://www.codewars.com/kata/569d488d61b812a0f7000015",
+    "language": "python",
+    "path": "solutions/python/practice217.py",
+    "filename": "practice217.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "The Vowel Code",
+    "name": "practice218",
+    "source": "https://www.codewars.com/kata/53697be005f803751e0015aa",
+    "language": "python",
+    "path": "solutions/python/practice218.py",
+    "filename": "practice218.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Highest Rank Number in an Array",
+    "name": "practice219",
+    "source": "https://www.codewars.com/kata/5420fc9bb5b2c7fd57000004",
+    "language": "python",
+    "path": "solutions/python/practice219.py",
+    "filename": "practice219.py",
+    "topics": [
+      "Sorting",
+      "Arrays",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Pyramid Array",
+    "name": "practice220",
+    "source": "https://www.codewars.com/kata/515f51d438015969f7000013",
+    "language": "python",
+    "path": "solutions/python/practice220.py",
+    "filename": "practice220.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Playing with Passphrases",
+    "name": "practice221",
+    "source": "https://www.codewars.com/kata/559536379512a64472000053",
+    "language": "python",
+    "path": "solutions/python/practice221.py",
+    "filename": "practice221.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Sum of Odd Cubed Numbers",
+    "name": "practice222",
+    "source": "https://www.codewars.com/kata/580dda86c40fa6c45f00028a",
+    "language": "python",
+    "path": "solutions/python/practice222.py",
+    "filename": "practice222.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Chain me",
+    "name": "practice223",
+    "source": "https://www.codewars.com/kata/54fb853b2c8785dd5e000957",
+    "language": "python",
+    "path": "solutions/python/practice223.py",
+    "filename": "practice223.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "4Sum",
+    "name": "practice224",
+    "source": "https://leetcode.com/problems/4sum/",
+    "language": "python",
+    "path": "solutions/python/practice224.py",
+    "filename": "practice224.py",
+    "topics": [
+      "Two Pointers"
+    ]
+  },
+  {
+    "problem": "Convert an Array Into a 2D Array With Conditions",
+    "name": "practice225",
+    "source": "https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions/",
+    "language": "python",
+    "path": "solutions/python/practice225.py",
+    "filename": "practice225.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Relative Ranks",
+    "name": "practice226",
+    "source": "https://leetcode.com/problems/relative-ranks/",
+    "language": "python",
+    "path": "solutions/python/practice226.py",
+    "filename": "practice226.py",
+    "topics": [
+      "Sorting"
+    ]
+  },
+  {
+    "problem": "Stressful Subject",
+    "name": "practice227",
+    "source": "https://py.checkio.org/en/mission/stressful-subject/",
+    "language": "python",
+    "path": "solutions/python/practice227.py",
+    "filename": "practice227.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "The Solar System - Lost Moons",
+    "name": "practice228",
+    "source": "https://www.codewars.com/kata/67e1768b5c64e7019dc30966",
+    "language": "python",
+    "path": "solutions/python/practice228.py",
+    "filename": "practice228.py",
+    "topics": [
+      "Simulation"
+    ]
+  },
+  {
+    "problem": "N-th Fibonacci",
+    "name": "practice229",
+    "source": "https://www.codewars.com/kata/522551eee9abb932420004a0",
+    "language": "python",
+    "path": "solutions/python/practice229.py",
+    "filename": "practice229.py",
+    "topics": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Consonant value",
+    "name": "practice230",
+    "source": "https://www.codewars.com/kata/59c633e7dcc4053512000073",
+    "language": "python",
+    "path": "solutions/python/practice230.py",
+    "filename": "practice230.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Validate Credit Card Number",
+    "name": "practice231",
+    "source": "https://www.codewars.com/kata/5418a1dd6d8216e18a0012b2",
+    "language": "python",
+    "path": "solutions/python/practice231.py",
+    "filename": "practice231.py",
+    "topics": [
+      "Strings",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Number of 1 Bits",
+    "name": "practice232",
+    "source": "https://leetcode.com/problems/number-of-1-bits/",
+    "language": "python",
+    "path": "solutions/python/practice232.py",
+    "filename": "practice232.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Smallest Range I",
+    "name": "practice233",
+    "source": "https://leetcode.com/problems/smallest-range-i/",
+    "language": "python",
+    "path": "solutions/python/practice233.py",
+    "filename": "practice233.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Find Common Characters",
+    "name": "practice234",
+    "source": "https://leetcode.com/problems/find-common-characters/",
+    "language": "python",
+    "path": "solutions/python/practice234.py",
+    "filename": "practice234.py",
+    "topics": [
+      "Hash Table"
+    ]
+  },
+  {
+    "problem": "Sum of Variable Length Subarrays",
+    "name": "practice235",
+    "source": "https://leetcode.com/problems/sum-of-variable-length-subarrays/",
+    "language": "python",
+    "path": "solutions/python/practice235.py",
+    "filename": "practice235.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Clear Digits",
+    "name": "practice236",
+    "source": "https://leetcode.com/problems/clear-digits/",
+    "language": "python",
+    "path": "solutions/python/practice236.py",
+    "filename": "practice236.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Character Year Count Mapping",
+    "name": "practice237",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice237.py",
+    "filename": "practice237.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Monkey Typing",
+    "name": "practice238",
+    "source": "https://py.checkio.org/mission/monkey-typing/",
+    "language": "python",
+    "path": "solutions/python/practice238.py",
+    "filename": "practice238.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Decode XORed Array",
+    "name": "practice239",
+    "source": "https://leetcode.com/problems/decode-xored-array/",
+    "language": "python",
+    "path": "solutions/python/practice239.py",
+    "filename": "practice239.py",
+    "topics": [
+      "Strings",
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Design Parking System",
+    "name": "practice240",
+    "source": "https://leetcode.com/problems/design-parking-system/",
+    "language": "python",
+    "path": "solutions/python/practice240.py",
+    "filename": "practice240.py",
+    "topics": [
+      "Stack & Queue",
+      "Simulation"
+    ]
+  },
+  {
+    "problem": "Count Digit Appearances",
+    "name": "practice241",
+    "source": "https://leetcode.com/problems/count-digit-appearances/",
+    "language": "python",
+    "path": "solutions/python/practice241.py",
+    "filename": "practice241.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Height Checker",
+    "name": "practice242",
+    "source": "https://leetcode.com/problems/height-checker/",
+    "language": "python",
+    "path": "solutions/python/practice242.py",
+    "filename": "practice242.py",
+    "topics": [
+      "Sorting"
+    ]
+  },
+  {
+    "problem": "Human readable duration format",
+    "name": "practice243",
+    "source": "https://www.codewars.com/kata/52742f58faf5485cae000b9a",
+    "language": "python",
+    "path": "solutions/python/practice243.py",
+    "filename": "practice243.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Product of consecutive Fib numbers",
+    "name": "practice244",
+    "source": "https://www.codewars.com/kata/5541f58a944b85ce6d00006a",
+    "language": "python",
+    "path": "solutions/python/practice244.py",
+    "filename": "practice244.py",
+    "topics": [
+      "Sliding Window"
+    ]
+  },
+  {
+    "problem": "String incrementer",
+    "name": "practice245",
+    "source": "https://www.codewars.com/kata/54a91a4883a7de5d7800009c",
+    "language": "python",
+    "path": "solutions/python/practice245.py",
+    "filename": "practice245.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Number of trailing zeros of N!",
+    "name": "practice246",
+    "source": "https://www.codewars.com/kata/number-of-trailing-zeros-of-n",
+    "language": "python",
+    "path": "solutions/python/practice246.py",
+    "filename": "practice246.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Return the Missing Element",
+    "name": "practice247",
+    "source": "https://www.codewars.com/kata/5299413901337c637e000004",
+    "language": "python",
+    "path": "solutions/python/practice247.py",
+    "filename": "practice247.py",
+    "topics": [
+      "Searching",
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Two Sum",
+    "name": "practice248",
+    "source": "https://leetcode.com/problems/two-sum/",
+    "language": "python",
+    "path": "solutions/python/practice248.py",
+    "filename": "practice248.py",
+    "topics": [
+      "Two Pointers",
+      "Hash Table",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Valid Palindrome",
+    "name": "practice249",
+    "source": "https://leetcode.com/problems/valid-palindrome/",
+    "language": "python",
+    "path": "solutions/python/practice249.py",
+    "filename": "practice249.py",
+    "topics": [
+      "Two Pointers"
+    ]
+  },
+  {
+    "problem": "Maximum subarray sum",
+    "name": "practice250",
+    "source": "https://www.codewars.com/kata/54521e9ec8e60bc4de000d6c",
+    "language": "python",
+    "path": "solutions/python/practice250.py",
+    "filename": "practice250.py",
+    "topics": [
+      "Dynamic Programming",
+      "Sliding Window",
+      "Arrays",
+      "Math"
+    ]
+  },
+  {
+    "problem": "FizzBuzz with Twist",
+    "name": "practice251",
+    "source": "https://leetcode.com/problems/fizz-buzz/",
+    "language": "python",
+    "path": "solutions/python/practice251.py",
+    "filename": "practice251.py",
+    "topics": [
+      "Simulation"
+    ]
+  },
+  {
+    "problem": "Longest Substring Without Repeating Characters",
+    "name": "practice252",
+    "source": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+    "language": "python",
+    "path": "solutions/python/practice252.py",
+    "filename": "practice252.py",
+    "topics": [
+      "Sliding Window"
+    ]
+  },
+  {
+    "problem": "Number of Islands",
+    "name": "practice253",
+    "source": "https://leetcode.com/problems/number-of-islands/",
+    "language": "python",
+    "path": "solutions/python/practice253.py",
+    "filename": "practice253.py",
+    "topics": [
+      "Graphs",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Coin Change (Minimum Coins)",
+    "name": "practice254",
+    "source": "https://leetcode.com/problems/coin-change/",
+    "language": "python",
+    "path": "solutions/python/practice254.py",
+    "filename": "practice254.py",
+    "topics": [
+      "Dynamic Programming"
+    ]
+  },
+  {
+    "problem": "Merge Intervals",
+    "name": "practice255",
+    "source": "https://leetcode.com/problems/merge-intervals/",
+    "language": "python",
+    "path": "solutions/python/practice255.py",
+    "filename": "practice255.py",
+    "topics": [
+      "Two Pointers"
+    ]
+  },
+  {
+    "problem": "Word Ladder",
+    "name": "practice256",
+    "source": "https://leetcode.com/problems/word-ladder/",
+    "language": "python",
+    "path": "solutions/python/practice256.py",
+    "filename": "practice256.py",
+    "topics": [
+      "Graphs",
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Count of Matches in Tournament",
+    "name": "practice257",
+    "source": "https://leetcode.com/problems/count-of-matches-in-tournament/",
+    "language": "python",
+    "path": "solutions/python/practice257.py",
+    "filename": "practice257.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Decompress Run-Length Encoded List",
+    "name": "practice258",
+    "source": "https://leetcode.com/problems/decompress-run-length-encoded-list/",
+    "language": "python",
+    "path": "solutions/python/practice258.py",
+    "filename": "practice258.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Count Items Matching a Rule",
+    "name": "practice259",
+    "source": "https://leetcode.com/problems/count-items-matching-a-rule/",
+    "language": "python",
+    "path": "solutions/python/practice259.py",
+    "filename": "practice259.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Count Number of Pairs With Absolute Difference K",
+    "name": "practice260",
+    "source": "https://leetcode.com/problems/count-number-of-pairs-with-absolute-difference-k/",
+    "language": "python",
+    "path": "solutions/python/practice260.py",
+    "filename": "practice260.py",
+    "topics": [
+      "Arrays",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Matrix Diagonal Sum",
+    "name": "practice261",
+    "source": "https://leetcode.com/problems/matrix-diagonal-sum/",
+    "language": "python",
+    "path": "solutions/python/practice261.py",
+    "filename": "practice261.py",
+    "topics": [
+      "Matrix",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Find Common Elements Between Two Arrays",
+    "name": "practice262",
+    "source": "https://leetcode.com/problems/find-common-elements-between-two-arrays/",
+    "language": "python",
+    "path": "solutions/python/practice262.py",
+    "filename": "practice262.py",
+    "topics": [
+      "Hash Table",
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Indexes of Subarray Sum",
+    "name": "practice263",
+    "source": "https://www.geeksforgeeks.org/problems/subarray-with-given-sum-1587115621/1",
+    "language": "python",
+    "path": "solutions/python/practice263.py",
+    "filename": "practice263.py",
+    "topics": [
+      "Sliding Window",
+      "Arrays",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Kadane's Algorithm",
+    "name": "practice264",
+    "source": "https://www.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1",
+    "language": "python",
+    "path": "solutions/python/practice264.py",
+    "filename": "practice264.py",
+    "topics": [
+      "Dynamic Programming"
+    ]
+  },
+  {
+    "problem": "Array Search",
+    "name": "practice265",
+    "source": "https://www.geeksforgeeks.org/problems/search-an-element-in-an-array-1587115621/1",
+    "language": "python",
+    "path": "solutions/python/practice265.py",
+    "filename": "practice265.py",
+    "topics": [
+      "Searching",
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Next Greater Element I",
+    "name": "practice266",
+    "source": "https://leetcode.com/problems/next-greater-element-i/",
+    "language": "python",
+    "path": "solutions/python/practice266.py",
+    "filename": "practice266.py",
+    "topics": [
+      "Stack & Queue"
+    ]
+  },
+  {
+    "problem": "Number Complement",
+    "name": "practice267",
+    "source": "https://leetcode.com/problems/number-complement/",
+    "language": "python",
+    "path": "solutions/python/practice267.py",
+    "filename": "practice267.py",
+    "topics": [
+      "Math",
+      "Bit Manipulation"
+    ]
+  },
+  {
+    "problem": "Self Dividing Numbers",
+    "name": "practice268",
+    "source": "https://leetcode.com/problems/self-dividing-numbers/",
+    "language": "python",
+    "path": "solutions/python/practice268.py",
+    "filename": "practice268.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Help the bookseller!",
+    "name": "practice269",
+    "source": "https://www.codewars.com/kata/54dc6f5a224c26032800005c",
+    "language": "python",
+    "path": "solutions/python/practice269.py",
+    "filename": "practice269.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Meeting",
+    "name": "practice270",
+    "source": "https://www.codewars.com/kata/59df2f8f08c6cec835000012",
+    "language": "python",
+    "path": "solutions/python/practice270.py",
+    "filename": "practice270.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Backspaces in string",
+    "name": "practice271",
+    "source": "https://www.codewars.com/kata/5727bb0fe81185ae62000ae3",
+    "language": "python",
+    "path": "solutions/python/practice271.py",
+    "filename": "practice271.py",
+    "topics": [
+      "Two Pointers",
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Distribute Candies",
+    "name": "practice272",
+    "source": "https://leetcode.com/problems/distribute-candies/",
+    "language": "python",
+    "path": "solutions/python/practice272.py",
+    "filename": "practice272.py",
+    "topics": [
+      "Arrays",
+      "Greedy"
+    ]
+  },
+  {
+    "problem": "Keyboard Row",
+    "name": "practice273",
+    "source": "https://leetcode.com/problems/keyboard-row/",
+    "language": "python",
+    "path": "solutions/python/practice273.py",
+    "filename": "practice273.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Uncommon Words from Two Sentences",
+    "name": "practice274",
+    "source": "https://leetcode.com/problems/uncommon-words-from-two-sentences/",
+    "language": "python",
+    "path": "solutions/python/practice274.py",
+    "filename": "practice274.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Count Binary Substrings",
+    "name": "practice275",
+    "source": "https://leetcode.com/problems/count-binary-substrings/",
+    "language": "python",
+    "path": "solutions/python/practice275.py",
+    "filename": "practice275.py",
+    "topics": [
+      "Bit Manipulation"
+    ]
+  },
+  {
+    "problem": "Number of Lines To Write String",
+    "name": "practice276",
+    "source": "https://leetcode.com/problems/number-of-lines-to-write-string/",
+    "language": "python",
+    "path": "solutions/python/practice276.py",
+    "filename": "practice276.py",
+    "topics": [
+      "Strings",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Check if the Sentence Is Pangram",
+    "name": "practice277",
+    "source": "https://leetcode.com/problems/check-if-the-sentence-is-pangram/",
+    "language": "python",
+    "path": "solutions/python/practice277.py",
+    "filename": "practice277.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Calendar Module",
+    "name": "practice278",
+    "source": "https://www.hackerrank.com/challenges/calendar-module/problem",
+    "language": "python",
+    "path": "solutions/python/practice278.py",
+    "filename": "practice278.py",
+    "topics": [
+      "Simulation"
+    ]
+  },
+  {
+    "problem": "Write a function (Leap Year)",
+    "name": "practice279",
+    "source": "https://www.hackerrank.com/challenges/write-a-function/problem",
+    "language": "python",
+    "path": "solutions/python/practice279.py",
+    "filename": "practice279.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "The Minion Game",
+    "name": "practice280",
+    "source": "https://www.hackerrank.com/challenges/the-minion-game/problem",
+    "language": "python",
+    "path": "solutions/python/practice280.py",
+    "filename": "practice280.py",
+    "topics": [
+      "Simulation"
+    ]
+  },
+  {
+    "problem": "Number Line Jumps",
+    "name": "practice281",
+    "source": "https://www.hackerrank.com/challenges/kangaroo/problem",
+    "language": "python",
+    "path": "solutions/python/practice281.py",
+    "filename": "practice281.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Find Digits",
+    "name": "practice282",
+    "source": "https://www.hackerrank.com/challenges/find-digits/problem",
+    "language": "python",
+    "path": "solutions/python/practice282.py",
+    "filename": "practice282.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Repeated String",
+    "name": "practice283",
+    "source": "https://www.hackerrank.com/challenges/repeated-string/problem",
+    "language": "python",
+    "path": "solutions/python/practice283.py",
+    "filename": "practice283.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Punctuation Score",
+    "name": "practice284",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice284.py",
+    "filename": "practice284.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Subarray Division (Birthday Chocolate)",
+    "name": "practice285",
+    "source": "https://www.hackerrank.com/challenges/the-birthday-bar/problem",
+    "language": "python",
+    "path": "solutions/python/practice285.py",
+    "filename": "practice285.py",
+    "topics": [
+      "Sliding Window",
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Migratory Birds",
+    "name": "practice286",
+    "source": "https://www.hackerrank.com/challenges/migratory-birds/problem",
+    "language": "python",
+    "path": "solutions/python/practice286.py",
+    "filename": "practice286.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Counting Valleys",
+    "name": "practice287",
+    "source": "https://www.hackerrank.com/challenges/counting-valleys/problem",
+    "language": "python",
+    "path": "solutions/python/practice287.py",
+    "filename": "practice287.py",
+    "topics": [
+      "Simulation"
+    ]
+  },
+  {
+    "problem": "Electronics Shop",
+    "name": "practice288",
+    "source": "https://www.hackerrank.com/challenges/electronics-shop/problem",
+    "language": "python",
+    "path": "solutions/python/practice288.py",
+    "filename": "practice288.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Angry Professor",
+    "name": "practice289",
+    "source": "https://www.hackerrank.com/challenges/angry-professor/problem",
+    "language": "python",
+    "path": "solutions/python/practice289.py",
+    "filename": "practice289.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Find the Median",
+    "name": "practice290",
+    "source": "https://www.hackerrank.com/challenges/find-the-median/problem",
+    "language": "python",
+    "path": "solutions/python/practice290.py",
+    "filename": "practice290.py",
+    "topics": [
+      "Sorting"
+    ]
+  },
+  {
+    "problem": "Append and Delete",
+    "name": "practice291",
+    "source": "https://www.hackerrank.com/challenges/append-and-delete/problem",
+    "language": "python",
+    "path": "solutions/python/practice291.py",
+    "filename": "practice291.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "The Hurdle Race",
+    "name": "practice292",
+    "source": "https://www.hackerrank.com/challenges/the-hurdle-race/problem",
+    "language": "python",
+    "path": "solutions/python/practice292.py",
+    "filename": "practice292.py",
+    "topics": [
+      "Greedy"
+    ]
+  },
+  {
+    "problem": "Minimum Distance to the Target Element",
+    "name": "practice293",
+    "source": "https://leetcode.com/problems/minimum-distance-to-the-target-element/",
+    "language": "python",
+    "path": "solutions/python/practice293.py",
+    "filename": "practice293.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Day of the Programmer",
+    "name": "practice294",
+    "source": "https://www.hackerrank.com/challenges/day-of-the-programmer/problem",
+    "language": "python",
+    "path": "solutions/python/practice294.py",
+    "filename": "practice294.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Utopian Tree",
+    "name": "practice295",
+    "source": "https://www.hackerrank.com/challenges/utopian-tree/problem",
+    "language": "python",
+    "path": "solutions/python/practice295.py",
+    "filename": "practice295.py",
+    "topics": [
+      "Trees"
+    ]
+  },
+  {
+    "problem": "Designer PDF Viewer",
+    "name": "practice296",
+    "source": "https://www.hackerrank.com/challenges/designer-pdf-viewer/problem",
+    "language": "python",
+    "path": "solutions/python/practice296.py",
+    "filename": "practice296.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Picking Numbers",
+    "name": "practice297",
+    "source": "https://www.hackerrank.com/challenges/picking-numbers/problem",
+    "language": "python",
+    "path": "solutions/python/practice297.py",
+    "filename": "practice297.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Between Two Sets",
+    "name": "practice298",
+    "source": "https://www.hackerrank.com/challenges/between-two-sets/problem",
+    "language": "python",
+    "path": "solutions/python/practice298.py",
+    "filename": "practice298.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Sequence Equation",
+    "name": "practice299",
+    "source": "https://www.hackerrank.com/challenges/permutation-equation/problem",
+    "language": "python",
+    "path": "solutions/python/practice299.py",
+    "filename": "practice299.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Equalize the Array",
+    "name": "practice300",
+    "source": "https://www.hackerrank.com/challenges/equality-in-a-array/problem",
+    "language": "python",
+    "path": "solutions/python/practice300.py",
+    "filename": "practice300.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Viral Advertising",
+    "name": "practice301",
+    "source": "https://www.hackerrank.com/challenges/strange-advertising/problem",
+    "language": "python",
+    "path": "solutions/python/practice301.py",
+    "filename": "practice301.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "The Longest Increasing Subsequence",
+    "name": "practice302",
+    "source": "https://www.hackerrank.com/challenges/longest-increasing-subsequent/problem",
+    "language": "python",
+    "path": "solutions/python/practice302.py",
+    "filename": "practice302.py",
+    "topics": [
+      "Dynamic Programming"
+    ]
+  },
+  {
+    "problem": "Minimum Average of Smallest and Largest Elements",
+    "name": "practice303",
+    "source": "https://leetcode.com/problems/minimum-average-of-smallest-and-largest-elements/",
+    "language": "python",
+    "path": "solutions/python/practice303.py",
+    "filename": "practice303.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Sorting the Sentence",
+    "name": "practice304",
+    "source": "https://leetcode.com/problems/sorting-the-sentence/",
+    "language": "python",
+    "path": "solutions/python/practice304.py",
+    "filename": "practice304.py",
+    "topics": [
+      "Sorting",
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Sum of All Odd Length Subarrays",
+    "name": "practice305",
+    "source": "https://leetcode.com/problems/sum-of-all-odd-length-subarrays/",
+    "language": "python",
+    "path": "solutions/python/practice305.py",
+    "filename": "practice305.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Find Missing Elements",
+    "name": "practice306",
+    "source": "https://leetcode.com/problems/find-missing-elements/",
+    "language": "python",
+    "path": "solutions/python/practice306.py",
+    "filename": "practice306.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Drawing Book",
+    "name": "practice307",
+    "source": "https://www.hackerrank.com/challenges/drawing-book/problem",
+    "language": "python",
+    "path": "solutions/python/practice307.py",
+    "filename": "practice307.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Not In Place",
+    "name": "practice308",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice308.py",
+    "filename": "practice308.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Cut the Sticks",
+    "name": "practice309",
+    "source": "https://www.hackerrank.com/challenges/cut-the-sticks/problem",
+    "language": "python",
+    "path": "solutions/python/practice309.py",
+    "filename": "practice309.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Non-Divisible Subset",
+    "name": "practice310",
+    "source": "https://www.hackerrank.com/challenges/non-divisible-subset/problem",
+    "language": "python",
+    "path": "solutions/python/practice310.py",
+    "filename": "practice310.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Multiply Strings",
+    "name": "practice311",
+    "source": "https://leetcode.com/problems/multiply-strings/",
+    "language": "python",
+    "path": "solutions/python/practice311.py",
+    "filename": "practice311.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Sort Colors",
+    "name": "practice312",
+    "source": "https://leetcode.com/problems/sort-colors/",
+    "language": "python",
+    "path": "solutions/python/practice312.py",
+    "filename": "practice312.py",
+    "topics": [
+      "Sorting"
+    ]
+  },
+  {
+    "problem": "Weighted Word Mapping",
+    "name": "practice313",
+    "source": "https://leetcode.com/problems/weighted-word-mapping/",
+    "language": "python",
+    "path": "solutions/python/practice313.py",
+    "filename": "practice313.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Group Anagrams",
+    "name": "practice314",
+    "source": "https://leetcode.com/problems/group-anagrams/",
+    "language": "python",
+    "path": "solutions/python/practice314.py",
+    "filename": "practice314.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Count and Say",
+    "name": "practice315",
+    "source": "https://leetcode.com/problems/count-and-say/",
+    "language": "python",
+    "path": "solutions/python/practice315.py",
+    "filename": "practice315.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Wildcard Matching",
+    "name": "practice316",
+    "source": "https://leetcode.com/problems/wildcard-matching/",
+    "language": "python",
+    "path": "solutions/python/practice316.py",
+    "filename": "practice316.py",
+    "topics": [
+      "Dynamic Programming"
+    ]
+  },
+  {
+    "problem": "Furthest Point From Origin",
+    "name": "practice317",
+    "source": "https://leetcode.com/problems/furthest-point-from-origin/",
+    "language": "python",
+    "path": "solutions/python/practice317.py",
+    "filename": "practice317.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Find Numbers with Even Number of Digits",
+    "name": "practice318",
+    "source": "https://leetcode.com/problems/find-numbers-with-even-number-of-digits/",
+    "language": "python",
+    "path": "solutions/python/practice318.py",
+    "filename": "practice318.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Remove Trailing Zeros From a String",
+    "name": "practice319",
+    "source": "https://leetcode.com/problems/remove-trailing-zeros-from-a-string/",
+    "language": "python",
+    "path": "solutions/python/practice319.py",
+    "filename": "practice319.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Trim Trailing Vowels",
+    "name": "practice320",
+    "source": "https://leetcode.com/problems/trim-trailing-vowels/",
+    "language": "python",
+    "path": "solutions/python/practice320.py",
+    "filename": "practice320.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Split the Array",
+    "name": "practice321",
+    "source": "https://leetcode.com/problems/split-the-array/",
+    "language": "python",
+    "path": "solutions/python/practice321.py",
+    "filename": "practice321.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Difference Between Element Sum and Digit Sum of an Array",
+    "name": "practice322",
+    "source": "https://leetcode.com/problems/difference-between-element-sum-and-digit-sum-of-an-array/",
+    "language": "python",
+    "path": "solutions/python/practice322.py",
+    "filename": "practice322.py",
+    "topics": [
+      "Arrays",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Maximum 69 Number",
+    "name": "practice323",
+    "source": "https://leetcode.com/problems/maximum-69-number/",
+    "language": "python",
+    "path": "solutions/python/practice323.py",
+    "filename": "practice323.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Sum of Values at Indices With K Set Bits",
+    "name": "practice324",
+    "source": "https://leetcode.com/problems/sum-of-values-at-indices-with-k-set-bits/",
+    "language": "python",
+    "path": "solutions/python/practice324.py",
+    "filename": "practice324.py",
+    "topics": [
+      "Arrays",
+      "Math",
+      "Bit Manipulation"
+    ]
+  },
+  {
+    "problem": "Counting Words With a Given Prefix",
+    "name": "practice325",
+    "source": "https://leetcode.com/problems/counting-words-with-a-given-prefix/",
+    "language": "python",
+    "path": "solutions/python/practice325.py",
+    "filename": "practice325.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Minimum Sum of Four Digit Number After Splitting Digits",
+    "name": "practice326",
+    "source": "https://leetcode.com/problems/minimum-sum-of-four-digit-number-after-splitting-digits/",
+    "language": "python",
+    "path": "solutions/python/practice326.py",
+    "filename": "practice326.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Finding 3-Digit Even Numbers",
+    "name": "practice327",
+    "source": "https://leetcode.com/problems/finding-3-digit-even-numbers/",
+    "language": "python",
+    "path": "solutions/python/practice327.py",
+    "filename": "practice327.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Max Consecutive Ones",
+    "name": "practice328",
+    "source": "https://leetcode.com/problems/max-consecutive-ones/",
+    "language": "python",
+    "path": "solutions/python/practice328.py",
+    "filename": "practice328.py",
+    "topics": [
+      "Sliding Window",
+      "Bit Manipulation"
+    ]
+  },
+  {
+    "problem": "Print in Order",
+    "name": "practice329",
+    "source": "https://leetcode.com/problems/print-in-order/",
+    "language": "python",
+    "path": "solutions/python/practice329.py",
+    "filename": "practice329.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Find the Difference of Two Arrays",
+    "name": "practice330",
+    "source": "https://leetcode.com/problems/find-the-difference-of-two-arrays/",
+    "language": "python",
+    "path": "solutions/python/practice330.py",
+    "filename": "practice330.py",
+    "topics": [
+      "Searching"
+    ]
+  },
+  {
+    "problem": "Circular Array Rotation",
+    "name": "practice331",
+    "source": "https://www.hackerrank.com/challenges/circular-array-rotation/problem",
+    "language": "python",
+    "path": "solutions/python/practice331.py",
+    "filename": "practice331.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Jumping on the Clouds",
+    "name": "practice332",
+    "source": "https://www.hackerrank.com/challenges/jumping-on-the-clouds/problem",
+    "language": "python",
+    "path": "solutions/python/practice332.py",
+    "filename": "practice332.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Bigger is Greater",
+    "name": "practice333",
+    "source": "https://www.hackerrank.com/challenges/bigger-is-greater/problem",
+    "language": "python",
+    "path": "solutions/python/practice333.py",
+    "filename": "practice333.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Jump Game II",
+    "name": "practice334",
+    "source": "https://leetcode.com/problems/jump-game-ii/",
+    "language": "python",
+    "path": "solutions/python/practice334.py",
+    "filename": "practice334.py",
+    "topics": [
+      "Arrays",
+      "Greedy",
+      "Simulation"
+    ]
+  },
+  {
+    "problem": "Sort an array of 0s, 1s and 2s without using any sorting algorithm.",
+    "name": "practice335",
+    "source": "https://leetcode.com/problems/sort-colors/",
+    "language": "python",
+    "path": "solutions/python/practice335.py",
+    "filename": "practice335.py",
+    "topics": [
+      "Sorting",
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Happy Number",
+    "name": "practice336",
+    "source": "https://leetcode.com/problems/happy-number/",
+    "language": "python",
+    "path": "solutions/python/practice336.py",
+    "filename": "practice336.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Merge Intervals",
+    "name": "practice337",
+    "source": "https://leetcode.com/problems/merge-intervals/",
+    "language": "python",
+    "path": "solutions/python/practice337.py",
+    "filename": "practice337.py",
+    "topics": [
+      "Two Pointers"
+    ]
+  },
+  {
+    "problem": "Maximum Subarray",
+    "name": "practice338",
+    "source": "https://leetcode.com/problems/maximum-subarray/",
+    "language": "python",
+    "path": "solutions/python/practice338.py",
+    "filename": "practice338.py",
+    "topics": [
+      "Dynamic Programming",
+      "Sliding Window",
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Find the Difference",
+    "name": "practice339",
+    "source": "https://leetcode.com/problems/find-the-difference/",
+    "language": "python",
+    "path": "solutions/python/practice339.py",
+    "filename": "practice339.py",
+    "topics": [
+      "Searching"
+    ]
+  },
+  {
+    "problem": "Spiral Matrix II",
+    "name": "practice340",
+    "source": "https://leetcode.com/problems/spiral-matrix-ii/",
+    "language": "python",
+    "path": "solutions/python/practice340.py",
+    "filename": "practice340.py",
+    "topics": [
+      "Matrix"
+    ]
+  },
+  {
+    "problem": "Generate Parentheses",
+    "name": "practice341",
+    "source": "https://leetcode.com/problems/generate-parentheses/",
+    "language": "python",
+    "path": "solutions/python/practice341.py",
+    "filename": "practice341.py",
+    "topics": [
+      "Stack & Queue",
+      "Backtracking"
+    ]
+  },
+  {
+    "problem": "Rank Transform of an Array",
+    "name": "practice342",
+    "source": "https://leetcode.com/problems/rank-transform-of-an-array/",
+    "language": "python",
+    "path": "solutions/python/practice342.py",
+    "filename": "practice342.py",
+    "topics": [
+      "Sorting",
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Sort 0s, 1s and 2s",
+    "name": "practice343",
+    "source": "https://www.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s4231/1",
+    "language": "python",
+    "path": "solutions/python/practice343.py",
+    "filename": "practice343.py",
+    "topics": [
+      "Sorting"
+    ]
+  },
+  {
+    "problem": "Kth Largest in a Stream",
+    "name": "practice344",
+    "source": "https://www.geeksforgeeks.org/dsa/kth-largest-element-in-a-stream/",
+    "language": "python",
+    "path": "solutions/python/practice344.py",
+    "filename": "practice344.py",
+    "topics": [
+      "Sorting"
+    ]
+  },
+  {
+    "problem": "Count Even Letters",
+    "name": "practice345",
+    "source": "https://www.geeksforgeeks.org/",
+    "language": "python",
+    "path": "solutions/python/practice345.py",
+    "filename": "practice345.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Binary to Decimal",
+    "name": "practice346",
+    "source": "https://www.geeksforgeeks.org/problems/binary-number-to-decimal-number3525/1",
+    "language": "python",
+    "path": "solutions/python/practice346.py",
+    "filename": "practice346.py",
+    "topics": [
+      "Math",
+      "Bit Manipulation"
+    ]
+  },
+  {
+    "problem": "Counting Bits",
+    "name": "practice347",
+    "source": "https://leetcode.com/problems/counting-bits/",
+    "language": "python",
+    "path": "solutions/python/practice347.py",
+    "filename": "practice347.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Print n to 1 without loop",
+    "name": "practice348",
+    "source": "https://www.geeksforgeeks.org/problems/print-n-to-1-without-loop/1",
+    "language": "python",
+    "path": "solutions/python/practice348.py",
+    "filename": "practice348.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Longest Subarray with Sum K",
+    "name": "practice349",
+    "source": "https://www.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1",
+    "language": "python",
+    "path": "solutions/python/practice349.py",
+    "filename": "practice349.py",
+    "topics": [
+      "Sliding Window",
+      "Arrays",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Rotate Array",
+    "name": "practice350",
+    "source": "https://www.geeksforgeeks.org/problems/rotate-array-by-n-elements-1587115621/1",
+    "language": "python",
+    "path": "solutions/python/practice350.py",
+    "filename": "practice350.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Smallest Positive Missing",
+    "name": "practice351",
+    "source": "https://www.geeksforgeeks.org/problems/missing-number-in-array1416/1",
+    "language": "python",
+    "path": "solutions/python/practice351.py",
+    "filename": "practice351.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Row with Max 1s",
+    "name": "practice352",
+    "source": "https://www.geeksforgeeks.org/problems/row-with-max-1s0023/1",
+    "language": "python",
+    "path": "solutions/python/practice352.py",
+    "filename": "practice352.py",
+    "topics": [
+      "Matrix"
+    ]
+  },
+  {
+    "problem": "Longest Palindrome in a String",
+    "name": "practice353",
+    "source": "https://www.geeksforgeeks.org/problems/longest-palindrome-in-a-string3411/1",
+    "language": "python",
+    "path": "solutions/python/practice353.py",
+    "filename": "practice353.py",
+    "topics": [
+      "Two Pointers",
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Implement Atoi",
+    "name": "practice354",
+    "source": "https://www.geeksforgeeks.org/problems/implement-atoi/1",
+    "language": "python",
+    "path": "solutions/python/practice354.py",
+    "filename": "practice354.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Vowel and Consonant Counter",
+    "name": "practice355",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice355.py",
+    "filename": "practice355.py",
+    "topics": [
+      "Hash Table",
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Minimum Distances",
+    "name": "practice356",
+    "source": "https://www.hackerrank.com/challenges/minimum-distances/problem",
+    "language": "python",
+    "path": "solutions/python/practice356.py",
+    "filename": "practice356.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Fair Rations",
+    "name": "practice357",
+    "source": "https://www.hackerrank.com/challenges/fair-rations/problem",
+    "language": "python",
+    "path": "solutions/python/practice357.py",
+    "filename": "practice357.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "ACM ICPC Team",
+    "name": "practice358",
+    "source": "https://www.hackerrank.com/challenges/acm-icpc-team/problem",
+    "language": "python",
+    "path": "solutions/python/practice358.py",
+    "filename": "practice358.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Two Characters",
+    "name": "practice359",
+    "source": "https://www.hackerrank.com/challenges/two-characters/problem",
+    "language": "python",
+    "path": "solutions/python/practice359.py",
+    "filename": "practice359.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Alternating Characters",
+    "name": "practice360",
+    "source": "https://www.hackerrank.com/challenges/alternating-characters/problem",
+    "language": "python",
+    "path": "solutions/python/practice360.py",
+    "filename": "practice360.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Number of Islands",
+    "name": "practice361",
+    "source": "https://leetcode.com/problems/number-of-islands/",
+    "language": "python",
+    "path": "solutions/python/practice361.py",
+    "filename": "practice361.py",
+    "topics": [
+      "Graphs",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Valid Sudoku",
+    "name": "practice362",
+    "source": "https://leetcode.com/problems/valid-sudoku/",
+    "language": "python",
+    "path": "solutions/python/practice362.py",
+    "filename": "practice362.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Combinations",
+    "name": "practice363",
+    "source": "https://leetcode.com/problems/combinations/",
+    "language": "python",
+    "path": "solutions/python/practice363.py",
+    "filename": "practice363.py",
+    "topics": [
+      "Backtracking"
+    ]
+  },
+  {
+    "problem": "Valid Number",
+    "name": "practice364",
+    "source": "https://leetcode.com/problems/valid-number/",
+    "language": "python",
+    "path": "solutions/python/practice364.py",
+    "filename": "practice364.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Remove Duplicates from Sorted List II",
+    "name": "practice365",
+    "source": "https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/",
+    "language": "python",
+    "path": "solutions/python/practice365.py",
+    "filename": "practice365.py",
+    "topics": [
+      "Linked Lists"
+    ]
+  },
+  {
+    "problem": "Reverse Bits",
+    "name": "practice366",
+    "source": "https://leetcode.com/problems/reverse-bits/",
+    "language": "python",
+    "path": "solutions/python/practice366.py",
+    "filename": "practice366.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Minimum Absolute Difference",
+    "name": "practice367",
+    "source": "https://leetcode.com/problems/minimum-absolute-difference/",
+    "language": "python",
+    "path": "solutions/python/practice367.py",
+    "filename": "practice367.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Peak Element",
+    "name": "practice368",
+    "source": "https://www.geeksforgeeks.org/problems/peak-element/1",
+    "language": "python",
+    "path": "solutions/python/practice368.py",
+    "filename": "practice368.py",
+    "topics": [
+      "Searching"
+    ]
+  },
+  {
+    "problem": "Two Sum - Pair with Given Sum",
+    "name": "practice369",
+    "source": "https://www.geeksforgeeks.org/problems/key-pair5616/1",
+    "language": "python",
+    "path": "solutions/python/practice369.py",
+    "filename": "practice369.py",
+    "topics": [
+      "Two Pointers",
+      "Hash Table",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Maximum Product Subarray",
+    "name": "practice370",
+    "source": "https://www.geeksforgeeks.org/dsa/maximum-product-subarray/",
+    "language": "python",
+    "path": "solutions/python/practice370.py",
+    "filename": "practice370.py",
+    "topics": [
+      "Sliding Window",
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Power of 2",
+    "name": "practice371",
+    "source": "https://www.geeksforgeeks.org/problems/power-of-2-1587115620/1",
+    "language": "python",
+    "path": "solutions/python/practice371.py",
+    "filename": "practice371.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Square Root",
+    "name": "practice372",
+    "source": "https://www.geeksforgeeks.org/problems/square-root/1",
+    "language": "python",
+    "path": "solutions/python/practice372.py",
+    "filename": "practice372.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Rotate Array by One",
+    "name": "practice373",
+    "source": "https://www.geeksforgeeks.org/problems/cyclically-rotate-an-array-by-one2614/1",
+    "language": "python",
+    "path": "solutions/python/practice373.py",
+    "filename": "practice373.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Add Fractions",
+    "name": "practice374",
+    "source": "https://www.codewars.com/",
+    "language": "python",
+    "path": "solutions/python/practice374.py",
+    "filename": "practice374.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "FizzBuzz++",
+    "name": "practice375",
+    "source": "https://www.codewars.com/kata/596925532f709fccf3000077",
+    "language": "python",
+    "path": "solutions/python/practice375.py",
+    "filename": "practice375.py",
+    "topics": [
+      "Simulation"
+    ]
+  },
+  {
+    "problem": "Sort arrays - 1",
+    "name": "practice376",
+    "source": "https://www.codewars.com/kata/51f41b98e8f176e70d0002a8",
+    "language": "python",
+    "path": "solutions/python/practice376.py",
+    "filename": "practice376.py",
+    "topics": [
+      "Sorting"
+    ]
+  },
+  {
+    "problem": "Rotate List",
+    "name": "practice377",
+    "source": "https://leetcode.com/problems/rotate-list/",
+    "language": "python",
+    "path": "solutions/python/practice377.py",
+    "filename": "practice377.py",
+    "topics": [
+      "Linked Lists"
+    ]
+  },
+  {
+    "problem": "Find Pivot Index",
+    "name": "practice378",
+    "source": "https://leetcode.com/problems/find-pivot-index/",
+    "language": "python",
+    "path": "solutions/python/practice378.py",
+    "filename": "practice378.py",
+    "topics": [
+      "Searching",
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Spiral Matrix",
+    "name": "practice379",
+    "source": "https://leetcode.com/problems/spiral-matrix/",
+    "language": "python",
+    "path": "solutions/python/practice379.py",
+    "filename": "practice379.py",
+    "topics": [
+      "Matrix"
+    ]
+  },
+  {
+    "problem": "Valid Phone Number",
+    "name": "practice380",
+    "source": "https://www.codewars.com/",
+    "language": "python",
+    "path": "solutions/python/practice380.py",
+    "filename": "practice380.py",
+    "topics": [
+      "Strings",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Plus One Array",
+    "name": "practice381",
+    "source": "https://www.codewars.com/kata/5514e5b77e6b2f38e0000ca9",
+    "language": "python",
+    "path": "solutions/python/practice381.py",
+    "filename": "practice381.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "CamelCase",
+    "name": "practice382",
+    "source": "https://www.hackerrank.com/challenges/camelcase/problem",
+    "language": "python",
+    "path": "solutions/python/practice382.py",
+    "filename": "practice382.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Running Time of Algorithms",
+    "name": "practice383",
+    "source": "https://www.hackerrank.com/challenges/runningtime/problem",
+    "language": "python",
+    "path": "solutions/python/practice383.py",
+    "filename": "practice383.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Counting Sort 1",
+    "name": "practice384",
+    "source": "https://www.hackerrank.com/challenges/countingsort1/problem",
+    "language": "python",
+    "path": "solutions/python/practice384.py",
+    "filename": "practice384.py",
+    "topics": [
+      "Sorting"
+    ]
+  },
+  {
+    "problem": "Pair of Gloves",
+    "name": "practice385",
+    "source": "https://www.hackerrank.com/",
+    "language": "python",
+    "path": "solutions/python/practice385.py",
+    "filename": "practice385.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Currying functions: multiply all elements in an array",
+    "name": "practice386",
+    "source": "https://www.codewars.com/kata/586909e4c66d18dd1800009b",
+    "language": "python",
+    "path": "solutions/python/practice386.py",
+    "filename": "practice386.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Polish Alphabet Converter",
+    "name": "practice387",
+    "source": "https://www.codewars.com/kata/57ab2d6072292dbf7c000039",
+    "language": "python",
+    "path": "solutions/python/practice387.py",
+    "filename": "practice387.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Strip Comments",
+    "name": "practice388",
+    "source": "https://www.codewars.com/kata/strip-comments",
+    "language": "python",
+    "path": "solutions/python/practice388.py",
+    "filename": "practice388.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Next bigger number with the same digits",
+    "name": "practice389",
+    "source": "https://www.codewars.com/kata/next-bigger-number-with-the-same-digits",
+    "language": "python",
+    "path": "solutions/python/practice389.py",
+    "filename": "practice389.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "Count IP Addresses",
+    "name": "practice390",
+    "source": "https://www.codewars.com/kata/count-ip-addresses",
+    "language": "python",
+    "path": "solutions/python/practice390.py",
+    "filename": "practice390.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Most frequently used words in a text",
+    "name": "practice391",
+    "source": "https://www.codewars.com/kata/most-frequently-used-words-in-a-text",
+    "language": "python",
+    "path": "solutions/python/practice391.py",
+    "filename": "practice391.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Convert PascalCase string into snake_case",
+    "name": "practice392",
+    "source": "https://www.codewars.com/kata/529b418d533b76924600085d",
+    "language": "python",
+    "path": "solutions/python/practice392.py",
+    "filename": "practice392.py",
+    "topics": [
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Tic-Tac-Toe Checker",
+    "name": "practice393",
+    "source": "https://www.codewars.com/kata/tic-tac-toe-checker",
+    "language": "python",
+    "path": "solutions/python/practice393.py",
+    "filename": "practice393.py",
+    "topics": [
+      "Simulation"
+    ]
+  },
+  {
+    "problem": "The Highest Building",
+    "name": "practice394",
+    "source": "https://py.checkio.org/",
+    "language": "python",
+    "path": "solutions/python/practice394.py",
+    "filename": "practice394.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Cookies",
+    "name": "practice395",
+    "source": "https://py.checkio.org/",
+    "language": "python",
+    "path": "solutions/python/practice395.py",
+    "filename": "practice395.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Common Words",
+    "name": "practice396",
+    "source": "https://py.checkio.org/mission/common-words/",
+    "language": "python",
+    "path": "solutions/python/practice396.py",
+    "filename": "practice396.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Combination Sum",
+    "name": "practice397",
+    "source": "https://leetcode.com/problems/combination-sum/",
+    "language": "python",
+    "path": "solutions/python/practice397.py",
+    "filename": "practice397.py",
+    "topics": [
+      "Backtracking",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Integer to Roman",
+    "name": "practice398",
+    "source": "https://leetcode.com/problems/integer-to-roman/",
+    "language": "python",
+    "path": "solutions/python/practice398.py",
+    "filename": "practice398.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Sort Array by Increasing Frequency",
+    "name": "practice399",
+    "source": "https://leetcode.com/problems/sort-array-by-increasing-frequency/",
+    "language": "python",
+    "path": "solutions/python/practice399.py",
+    "filename": "practice399.py",
+    "topics": [
+      "Sorting",
+      "Hash Table",
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Return pyramids",
+    "name": "practice400",
+    "source": "https://www.codewars.com/kata/5803a6d8db07c59fff00015f",
+    "language": "python",
+    "path": "solutions/python/practice400.py",
+    "filename": "practice400.py",
+    "topics": [
+      "General"
+    ]
+  },
+  {
+    "problem": "Area of a Square",
+    "name": "practice401",
+    "source": "https://www.codewars.com/kata/5748838ce2fab90b86001b1a",
+    "language": "python",
+    "path": "solutions/python/practice401.py",
+    "filename": "practice401.py",
+    "topics": [
+      "Math"
+    ]
+  },
+  {
+    "problem": "So Many Permutations!",
+    "name": "practice402",
+    "source": "https://www.codewars.com/kata/5254ca2719453dcc0b00027d",
+    "language": "python",
+    "path": "solutions/python/practice402.py",
+    "filename": "practice402.py",
+    "topics": [
+      "Backtracking"
+    ]
+  },
+  {
+    "problem": "Sum of Pairs",
+    "name": "practice403",
+    "source": "https://www.codewars.com/kata/54d81488b981293527000c8f",
+    "language": "python",
+    "path": "solutions/python/practice403.py",
+    "filename": "practice403.py",
+    "topics": [
+      "Arrays",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Shortest Escape Path",
+    "name": "practice404",
+    "source": "",
+    "language": "python",
+    "path": "solutions/python/practice404.py",
+    "filename": "practice404.py",
+    "topics": [
+      "Graphs"
+    ]
+  },
+  {
+    "problem": "Flood Fill",
+    "name": "practice405",
+    "source": "https://leetcode.com/problems/flood-fill/",
+    "language": "python",
+    "path": "solutions/python/practice405.py",
+    "filename": "practice405.py",
+    "topics": [
+      "Graphs",
+      "Matrix"
+    ]
+  },
+  {
+    "problem": "Longest Subarray with Sum K",
+    "name": "practice406",
+    "source": "https://www.codechum.com/",
+    "language": "python",
+    "path": "solutions/python/practice406.py",
+    "filename": "practice406.py",
+    "topics": [
+      "Sliding Window",
+      "Arrays",
+      "Math"
+    ]
+  },
+  {
+    "problem": "Word Ladder",
+    "name": "practice407",
+    "source": "https://leetcode.com/problems/word-ladder/",
+    "language": "python",
+    "path": "solutions/python/practice407.py",
+    "filename": "practice407.py",
+    "topics": [
+      "Graphs",
+      "Strings"
+    ]
+  },
+  {
+    "problem": "Count Triplets",
+    "name": "practice408",
+    "source": "https://www.hackerrank.com/challenges/count-triplets-1/problem",
+    "language": "python",
+    "path": "solutions/python/practice408.py",
+    "filename": "practice408.py",
+    "topics": [
+      "Arrays"
+    ]
+  },
+  {
+    "problem": "Valid Parentheses",
+    "name": "practice409",
+    "source": "https://leetcode.com/problems/valid-parentheses/",
+    "language": "python",
+    "path": "solutions/python/practice409.py",
+    "filename": "practice409.py",
+    "topics": [
+      "Stack & Queue"
+    ]
+  },
+  {
+    "name": "practice1",
+    "language": "typescript",
+    "filename": "practice1.ts",
+    "problem": "Valid Parentheses",
+    "source": "https://leetcode.com/problems/valid-parentheses/",
+    "topics": [
+      "Stack & Queue",
+      "Strings"
+    ],
+    "path": "solutions/typescript/practice1.ts"
+  }
+]

@@ -1,0 +1,38 @@
+name: Update Solutions Index
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'solutions/**'
+      - '.github/scripts/generate-index.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-index:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Generate solutions index
+        run: python3 .github/scripts/generate-index.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet -- docs/data.json; then
+            echo "No changes to index"
+          else
+            git add docs/data.json
+            git commit -m "chore: update solutions index [skip ci]"
+            git push
+          fi

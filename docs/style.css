@@ -1,0 +1,47 @@
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.file-name {
+    color: var(--text-light);
+    font-size: 0.85em;
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}
+
+.card-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.topic-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.topic-tag {
+    display: inline-block;
+    padding: 3px 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    color: var(--text-light);
+    background: var(--bg-light);
+    font-size: 0.78em;
+}
+
+.solution-card .source-link {
+    margin-top: 10px;
+}
