@@ -1,5 +1,6 @@
 # Problem: Minimum Operations to Reduce Number to One
 # Source: https://www.geeksforgeeks.org/dsa/reduce-a-number-to-1-by-performing-given-operations/
+# Note: Greedy loop: halve even numbers; for odd numbers subtract 1, unless (n - 1) / 2 is odd and not 1, where adding 1 reaches a shorter chain of halvings
 
 n = int(input('Enter a positive integer: '))
 op = 0

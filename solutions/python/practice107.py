@@ -1,5 +1,6 @@
 # Problem: Buddy Strings Challenge
 # Source: https://leetcode.com/problems/buddy-strings/
+# Note: Brute force: tries swapping every pair of positions in a and checks whether the swapped string equals b
 
 a = input('Enter string A: ')
 b = input('Enter string B: ')

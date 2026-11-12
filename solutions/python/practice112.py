@@ -1,5 +1,6 @@
 # Problem: Count CamelCase Words
 # Source: https://www.hackerrank.com/challenges/camelcase/problem
+# Note: Walks the string once, starting a new word at each uppercase letter, and prints how many words were found
 
 s = input('Enter the CamelCase string: ')
 

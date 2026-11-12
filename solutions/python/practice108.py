@@ -1,5 +1,6 @@
 # Problem: Largest Number At Least Twice of Others
 # Source: https://leetcode.com/problems/largest-number-at-least-twice-of-others/
+# Note: Finds the maximum, then checks that every other element is at most half of it; prints the maximum's index if all pass, otherwise -1
 
 n = int(input('Enter the number of integers: '))
 print('Enter the integers:')

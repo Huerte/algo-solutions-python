@@ -1,5 +1,6 @@
 # Problem: Intersection of Two Arrays
 # Source: https://leetcode.com/problems/intersection-of-two-arrays/
+# Note: Converts both arrays to sets and prints their intersection, so each common element appears once
 
 n = int(input('Enter the size of the first array: '))
 print(f"Enter {n} elements of the first array (sorted):")
