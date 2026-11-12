@@ -278,7 +278,7 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Group Anagrams | python | [practice314.py](solutions/python/practice314.py) | Complete |
 | Integer to Roman | python | [practice26.py](solutions/python/practice26.py) | Complete |
 | Integer to Roman | python | [practice398.py](solutions/python/practice398.py) | Complete |
-| Keypad Phone Simulator | python | [practice122.py](solutions/python/practice122.py) | Complete |
+| Keypad Phone Simulator (Multi-tap Keypad Text Entry) | python | [practice122.py](solutions/python/practice122.py) | Complete |
 | Length of Last Word | python | [practice128.py](solutions/python/practice128.py) | Complete |
 | Length of Last Word | python | [practice9.py](solutions/python/practice9.py) | Complete |
 | Longest Common Prefix | python | [practice50.py](solutions/python/practice50.py) | Complete |
