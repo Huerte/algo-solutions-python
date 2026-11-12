@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Solutions - Search & Filter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Algorithm Solutions</h1>
+            <p class="subtitle">Search and filter coding solutions by language and topic</p>
+        </header>
+
+        <div class="filters-section">
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search by problem name..."
+                    class="search-input"
+                >
+            </div>
+
+            <div class="filter-group">
+                <label for="languageFilter">Filter by Language:</label>
+                <select id="languageFilter" class="filter-select">
+                    <option value="">All Languages</option>
+                    <option value="python">Python</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="cpp">C++</option>
+                    <option value="java">Java</option>
+                </select>
+            </div>
+
+            <div class="stats">
+                <span id="resultCount">0</span> solutions found
+            </div>
+        </div>
+
+        <div id="solutionsList" class="solutions-grid">
+            <div class="loading">Loading solutions...</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
