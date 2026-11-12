@@ -23,7 +23,7 @@ The GitHub Actions workflow regenerates `docs/data.json` when files under `solut
 From the repository root, run the PowerShell wrapper:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\\generate-index.ps1
+powershell -ExecutionPolicy Bypass -File .\generate-index.ps1
 ```
 
 On Linux or macOS, run the Python generator:

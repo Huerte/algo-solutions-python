@@ -12,7 +12,7 @@ async function loadSolutions() {
     try {
         const response = await fetch('data.json');
         if (!response.ok) {
-            throw new Error(\`Failed to load solution index (\${response.status})\`);
+            throw new Error(`Failed to load solution index (${response.status})`);
         }
         const data = await response.json();
         if (!Array.isArray(data)) {
@@ -81,24 +81,24 @@ function displaySolutions(solutions) {
 
 function createSolutionCard(solution) {
     const sourceHtml = solution.source
-        ? \`<div class="source-link"><a href="\${escapeAttribute(solution.source)}" target="_blank" rel="noopener noreferrer">View problem source</a></div>\`
+        ? `<div class="source-link"><a href="${escapeAttribute(solution.source)}" target="_blank" rel="noopener noreferrer">View problem source</a></div>`
         : '';
     const topicHtml = solution.topics.map(topic =>
-        \`<span class="topic-tag">\${escapeHtml(topic)}</span>\`
+        `<span class="topic-tag">${escapeHtml(topic)}</span>`
     ).join('');
 
-    return \`
+    return `
         <article class="solution-card">
-            <h3>\${escapeHtml(solution.problem)}</h3>
-            <p class="file-name">\${escapeHtml(solution.filename)}</p>
+            <h3>${escapeHtml(solution.problem)}</h3>
+            <p class="file-name">${escapeHtml(solution.filename)}</p>
             <div class="card-meta">
-                <span class="language-badge \${escapeAttribute(solution.language)}">\${capitalizeLanguage(solution.language)}</span>
-                <div class="topic-list" aria-label="Topics">\${topicHtml}</div>
+                <span class="language-badge ${escapeAttribute(solution.language)}">${capitalizeLanguage(solution.language)}</span>
+                <div class="topic-list" aria-label="Topics">${topicHtml}</div>
             </div>
-            <div><a href="https://github.com/Aaqibhafeezkhan/algo-solutions-python/blob/main/\${solution.path.split('/').map(encodeURIComponent).join('/')}" target="_blank" rel="noopener noreferrer">View solution file</a></div>
-            \${sourceHtml}
+            <div><a href="https://github.com/Aaqibhafeezkhan/algo-solutions-python/blob/main/${solution.path.split('/').map(encodeURIComponent).join('/')}" target="_blank" rel="noopener noreferrer">View solution file</a></div>
+            ${sourceHtml}
         </article>
-    \`;
+    `;
 }
 
 function capitalizeLanguage(language) {
