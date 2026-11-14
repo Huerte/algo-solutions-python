@@ -329,7 +329,7 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Vowel Recognition | python | [practice168.py](solutions/python/practice168.py) | Complete |
 | Weighted Word Mapping | python | [practice313.py](solutions/python/practice313.py) | Complete |
 | WeIrD StRiNg CaSe | python | [practice209.py](solutions/python/practice209.py) | Complete |
-| Word Ladder | python | [practice256.py](solutions/python/practice256.py) | In Progress / Needs Work |
+| Word Ladder | python | [practice256.py](solutions/python/practice256.py) | Complete |
 | Word Ladder | python | [practice407.py](solutions/python/practice407.py) | Complete |
 | Word Order | python | [practice204.py](solutions/python/practice204.py) | Complete |
 | Word Pattern | python | [practice44.py](solutions/python/practice44.py) | Complete |
@@ -478,7 +478,7 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Wildcard Matching | python | [practice316.py](solutions/python/practice316.py) | Complete |
 | Write a function (Leap Year) | python | [practice279.py](solutions/python/practice279.py) | Complete |
 
-## Solutions Needing Attention (10)
+## Solutions Needing Attention (9)
 
 These solutions need headers, test cases, or implementation fixes. They are ideal for contributor PRs.
 
@@ -493,4 +493,3 @@ These solutions need headers, test cases, or implementation fixes. They are idea
 | Unknown Problem | __pycache__ | [practice111.cpython-312.pyc](solutions/python/__pycache__/practice111.cpython-312.pyc) | Missing Header |
 | Unknown Problem | __pycache__ | [practice112.cpython-312.pyc](solutions/python/__pycache__/practice112.cpython-312.pyc) | Missing Header |
 | Playing with Passphrases | python | [practice221.py](solutions/python/practice221.py) | In Progress / Needs Work |
-| Word Ladder | python | [practice256.py](solutions/python/practice256.py) | In Progress / Needs Work |
