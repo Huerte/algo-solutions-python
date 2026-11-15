@@ -58,6 +58,7 @@
 # Status: SOLVED
 
 def totalNQueens(n):
+    """Return the number of ways to place n non-attacking queens on an n x n board."""
     def is_safe(board, row, col):
         # Check row
         for j in range(n):
