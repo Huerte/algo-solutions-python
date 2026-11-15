@@ -3,6 +3,7 @@
 
 class Solution:
     def prefixCount(self, words, pref: str) -> int:
+        """Return the number of words that start with the given prefix."""
         count = 0
         for word in words:
             if word.startswith(pref):
