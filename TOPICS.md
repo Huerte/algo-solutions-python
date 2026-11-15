@@ -437,7 +437,7 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Permutation Sequence | python | [practice127.py](solutions/python/practice127.py) | Complete |
 | Permutation Sequence | python | [practice13.py](solutions/python/practice13.py) | Complete |
 | Persistent Bugger. | python | [practice75.py](solutions/python/practice75.py) | Complete |
-| Playing with Passphrases | python | [practice221.py](solutions/python/practice221.py) | In Progress / Needs Work |
+| Playing with Passphrases | python | [practice221.py](solutions/python/practice221.py) | Complete |
 | Polish Alphabet Converter | python | [practice387.py](solutions/python/practice387.py) | Complete |
 | Pow(x, n) | python | [practice82.py](solutions/python/practice82.py) | Complete |
 | Print n to 1 without loop | python | [practice348.py](solutions/python/practice348.py) | Complete |
@@ -478,7 +478,7 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Wildcard Matching | python | [practice316.py](solutions/python/practice316.py) | Complete |
 | Write a function (Leap Year) | python | [practice279.py](solutions/python/practice279.py) | Complete |
 
-## Solutions Needing Attention (9)
+## Solutions Needing Attention (8)
 
 These solutions need headers, test cases, or implementation fixes. They are ideal for contributor PRs.
 
@@ -492,4 +492,3 @@ These solutions need headers, test cases, or implementation fixes. They are idea
 | Unknown Problem | __pycache__ | [practice110.cpython-312.pyc](solutions/python/__pycache__/practice110.cpython-312.pyc) | Missing Header |
 | Unknown Problem | __pycache__ | [practice111.cpython-312.pyc](solutions/python/__pycache__/practice111.cpython-312.pyc) | Missing Header |
 | Unknown Problem | __pycache__ | [practice112.cpython-312.pyc](solutions/python/__pycache__/practice112.cpython-312.pyc) | Missing Header |
-| Playing with Passphrases | python | [practice221.py](solutions/python/practice221.py) | In Progress / Needs Work |
