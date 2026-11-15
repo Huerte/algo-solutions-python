@@ -1,40 +1,27 @@
 # Problem: Playing with Passphrases
 # Source: https://www.codewars.com/kata/559536379512a64472000053
-# Note: Shifts letters, replaces digits with their complements to 9, alternates letter casing, and reverses the resulting string.
-# Status: 🔄 IN PROGRESS - Incomplete implementation
-# TODO: Fix alternate casing logic and letter wrapping
+# Note: Shifts each word by its position and alternates the case of its letters.
+# Status: ✅ Done
 def play_pass(s, n):
-    res = []
-    
-    for word in s.split():
-        
-        temp = []
-        for c in word:
-            if c.isalpha():
-                temp.append(chr(ord(c) + n))
-            elif c.isdigit():
-                temp.append(str(abs(int(c) - 9)))
+    words = s.split(" ")
+    transformed = []
+
+    for word_index, word in enumerate(words):
+        shift = (n * word_index) % 26
+        result = []
+        letter_index = 0
+
+        for char in word:
+            if char.isalpha() and char.isascii():
+                base = ord("A") if char.isupper() else ord("a")
+                shifted = chr((ord(char) - base + shift) % 26 + base)
+                result.append(
+                    shifted.upper() if letter_index % 2 == 0 else shifted.lower()
+                )
+                letter_index += 1
             else:
-                temp.append(c)
-        res.append(''.join(temp[::-1]))
+                result.append(char)
 
-    words = ' '.join(res)
-    final = []
-    temp = ""
-    for i in range(len(words)):
-        if words[i] == " ":
-            final.append(temp)
-            temp = ""
-            continue
-        if i % 2 == 0:
-            temp += words[i].upper()
-        else:
-            temp += words[i].lower()
-    final.append(temp)
+        transformed.append("".join(result))
 
-    print(final)
-    return ' '.join(final[::-1])
-
-print(play_pass("I LOVE YOU!!!", 1)) # "!!!vPz fWpM J"
-# print(play_pass("MY GRANMA CAME FROM NY ON THE 23RD OF APRIL 2015", 2)) # "4897 NkTrC Hq fT67 GjV Pq aP OqTh gOcE CoPcTi aO"
-# print(play_pass("BOY! YOU WANTED TO SEE HIM? IT'S YOUR FATHER:-)", 15)) # ")-:gTwIpU GjDn h'iX ?bXw tTh dI StIcPl jDn !NdQ"
+    return " ".join(transformed)
