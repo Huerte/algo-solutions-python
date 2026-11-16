@@ -140,7 +140,14 @@ def parse_solution_file(path: Path) -> dict[str, str]:
 
 def generate_topics_markdown() -> str:
     """Build markdown catalog content from all solutions dynamically."""
-    solution_files = sorted(SOLUTIONS_DIR.rglob("practice*.*"), key=lambda item: item.name)
+    _SKIP_SUFFIXES = {".pyc", ".pyo", ".pyd"}
+    all_files = (
+        path for path in SOLUTIONS_DIR.rglob("practice*.*")
+        if path.is_file()
+        and "__pycache__" not in path.parts
+        and path.suffix not in _SKIP_SUFFIXES
+    )
+    solution_files = sorted(all_files, key=lambda item: item.name)
     records = [parse_solution_file(path) for path in solution_files]
 
     by_category: dict[str, list[dict[str, str]]] = defaultdict(list)
