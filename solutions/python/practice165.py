@@ -1,7 +1,6 @@
-# Subarray Sum Equals K
 # Problem: Subarray Sum Equals K
 # Source: https://leetcode.com/problems/subarray-sum-equals-k/
-# Note: Counts the number of continuous subarrays whose sum equals the given target k.
+# Note: Count earlier running totals that are exactly k below the current total.
 
 # My Solution
 class Solution(object):
@@ -16,6 +15,10 @@ class Solution(object):
         return count
 
 # Accepted Solution
+# Each earlier match marks a starting point, so the map stores frequencies.
+# The initial zero handles subarrays that start at the first element. Look up
+# matches before storing the current total so an empty subarray never counts.
+# Expected O(n) time and O(n) extra space.
 class Solution(object):
     def subarraySum(self, nums, k):
         res = 0
