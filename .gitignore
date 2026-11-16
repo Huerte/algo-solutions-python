@@ -1,6 +1,469 @@
-.chronotab/
+# =============================================================================
+# OS & system
+# =============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V8
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
 
+# =============================================================================
+# Editors & IDEs
+# =============================================================================
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains (IntelliJ, PyCharm, WebStorm, CLion, GoLand, RubyMine, etc.)
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Vim / Neovim
+*.swp
+*.swo
+*~
+Session.vim
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+.\#*
+*.elc
+auto-save-list
+tramp
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+# Eclipse
+.project
+.classpath
+.settings/
+.factorypath
+
+# NetBeans
+nbproject/
+nbbuild/
+dist/
+nbdist/
+nb-configuration.xml
+
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+xcuserdata/
+DerivedData/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+
+# =============================================================================
+# Antigravity / Chronotab
+# =============================================================================
+.chronotab/
+.gemini/
+
+# =============================================================================
 # Python
+# =============================================================================
 __pycache__/
 *.py[cod]
 *.pyo
+*.pyd
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+htmlcov/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+*.ipynb_checkpoints/
+profile_default/
+ipython_config.py
+
+# =============================================================================
+# JavaScript / TypeScript / Node
+# =============================================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm
+.yarn/
+.pnp.*
+.node_repl_history
+*.tsbuildinfo
+.next/
+.nuxt/
+.cache/
+dist/
+.parcel-cache/
+
+# =============================================================================
+# Java
+# =============================================================================
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+target/
+.mvn/
+mvnw
+mvnw.cmd
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+.gradletasknamecache
+build/
+
+# =============================================================================
+# C / C++
+# =============================================================================
+*.o
+*.obj
+*.lo
+*.la
+*.al
+*.libs
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+*.d
+*.ko
+*.mod.c
+*.cmd
+*.smod
+*.su
+
+# =============================================================================
+# C#
+# =============================================================================
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+*.aps
+*.pidb
+*.svclog
+*.scc
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.db
+*.VC.VC.opendb
+*.publishsettings
+orleans.codegen.cs
+*.[Cc]ache
+!*.[Cc]ache/
+packages/
+!packages/build/
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+*.nuspec
+csx/
+*.build.csdef
+ecf/
+rcf/
+AppPackages/
+BundleArtifacts/
+Package.StoreAssociation.xml
+_pkginfo.txt
+*.appx
+*.appxbundle
+*.appxupload
+*_i.c
+*_p.c
+*_h.h
+*.ilk
+*.meta
+*.obj
+*.iobj
+*.pch
+*.pdb
+*.ipdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp_proj
+*_wpftmp.csproj
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+_Chutzpah*
+
+# =============================================================================
+# Go
+# =============================================================================
+*.exe
+*.exe~
+*.test
+*.out
+vendor/
+go.sum
+
+# =============================================================================
+# Rust
+# =============================================================================
+target/
+Cargo.lock
+**/*.rs.bk
+*.pdb
+
+# =============================================================================
+# Kotlin
+# =============================================================================
+*.class
+.kotlin/
+kotlin-js-store/
+
+# =============================================================================
+# Swift
+# =============================================================================
+.build/
+Packages/
+*.resolved
+*.xcodeproj/
+xcuserdata/
+Package.pins
+.swiftpm/
+
+# =============================================================================
+# PHP
+# =============================================================================
+vendor/
+composer.phar
+composer.lock
+.env
+.env.*
+!.env.example
+phpunit.result.cache
+.phpunit.result.cache
+
+# =============================================================================
+# Ruby
+# =============================================================================
+*.gem
+*.rbc
+/.config
+/coverage/
+/InstalledFiles
+/pkg/
+/spec/reports/
+/spec/examples.txt
+/test/tmp/
+/test/version_tmp/
+/tmp/
+.byebug_history
+.bundle/
+vendor/bundle
+lib/bundler/man/
+Gemfile.lock
+.ruby-version
+.ruby-gemset
+.rvmrc
+.yardoc/
+_yardoc/
+doc/gems/
+
+# =============================================================================
+# Dart / Flutter
+# =============================================================================
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+build/
+pubspec.lock
+
+# =============================================================================
+# Scala
+# =============================================================================
+*.class
+*.log
+target/
+dist/
+.cache/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+.history
+.scala_dependencies
+.worksheet
+
+# =============================================================================
+# Haskell
+# =============================================================================
+dist/
+dist-newstyle/
+.cabal-sandbox/
+cabal.sandbox.config
+.HTF/
+.ghc.environment.*
+*.hi
+*.chi
+*.chs.h
+*.dyn_hi
+*.dyn_o
+*.o
+*.prof
+*.aux
+*.hp
+*.eventlog
+cabal.project.local
+cabal.project.local~
+.stack-work/
+stack.yaml.lock
+
+# =============================================================================
+# Elixir
+# =============================================================================
+_build/
+cover/
+deps/
+doc/
+*.ez
+erl_crash.dump
+*.beam
+.fetch
+
+# =============================================================================
+# Lua
+# =============================================================================
+luac.out
+*.luac
+
+# =============================================================================
+# R
+# =============================================================================
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# =============================================================================
+# Julia
+# =============================================================================
+Manifest.toml
+*.jl.cov
+*.jl.*.cov
+*.jl.mem
+deps/deps.jl
+docs/build/
+docs/site/
+
+# =============================================================================
+# Zig
+# =============================================================================
+zig-cache/
+zig-out/
+
+# =============================================================================
+# Logs & temp files
+# =============================================================================
+*.log
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
