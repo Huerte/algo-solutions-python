@@ -1,4 +1,3 @@
-# CodeWars - Consonant Value
 # Problem: Consonant value
 # Source: https://www.codewars.com/kata/59c633e7dcc4053512000073
 # Note: Finds consecutive consonant substrings, calculates their alphabetical values, and returns the maximum sum.

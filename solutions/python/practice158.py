@@ -1,4 +1,3 @@
-# Contains Duplicate
 # Problem: Contains Duplicate
 # Source: https://leetcode.com/problems/contains-duplicate/
 # Note: Checks whether an array contains any duplicate elements using a set.

@@ -1,4 +1,3 @@
-# HackerRank - Counting Valleys
 # Problem: Counting Valleys
 # Source: https://www.hackerrank.com/challenges/counting-valleys/problem
 # Note: Counts valleys by detecting when the hiker climbs back to sea level from below it.

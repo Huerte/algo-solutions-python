@@ -1,4 +1,3 @@
-# Count Asterisks
 # Problem: Count Asterisks
 # Source: https://leetcode.com/problems/count-asterisks/
 # Note: Counts asterisks outside pairs of vertical bars.

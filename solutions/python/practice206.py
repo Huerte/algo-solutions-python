@@ -1,4 +1,3 @@
-# HackerRank - Compress the String!
 # Problem: Compress the String!
 # Source: https://www.hackerrank.com/challenges/compress-the-string/problem
 # Note: Compresses consecutive occurrences of digits into tuples containing their frequency and value.

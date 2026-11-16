@@ -1,4 +1,3 @@
-# Minimum Bit Flips to Convert Number
 # Problem: Minimum Bit Flips to Convert Number
 # Source: https://leetcode.com/problems/minimum-bit-flips-to-convert-number/
 # Note: Counts the number of differing binary bits between start and goal to determine the minimum flips required.

@@ -1,4 +1,3 @@
-# Design Parking System
 # Problem: Design Parking System
 # Source: https://leetcode.com/problems/design-parking-system/
 # Note: Tracks available parking spaces for each car type and decrements the corresponding count when a car parks successfully.

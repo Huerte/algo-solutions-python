@@ -1,4 +1,3 @@
-# CodeWars - Data Reverse
 # Problem: Data Reverse
 # Source: https://www.codewars.com/kata/569d488d61b812a0f7000015
 # Note: Reverses the order of 8-bit data blocks while preserving the order of bits within each block.

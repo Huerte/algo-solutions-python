@@ -1,4 +1,3 @@
-# HackerRank - Electronics Shop
 # Problem: Electronics Shop
 # Source: https://www.hackerrank.com/challenges/electronics-shop/problem
 # Note: Finds the maximum combined price of one keyboard and one USB drive within the given budget.

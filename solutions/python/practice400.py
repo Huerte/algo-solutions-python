@@ -1,4 +1,3 @@
-# CodeWars - Return pyramids
 # Problem: Return pyramids
 # Source: https://www.codewars.com/kata/5803a6d8db07c59fff00015f
 # Note: Generates an ASCII pyramid with n floors and a trailing newline.

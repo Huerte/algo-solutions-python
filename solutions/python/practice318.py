@@ -1,4 +1,3 @@
-# Find Numbers with Even Number of Digits
 # Problem: Find Numbers with Even Number of Digits
 # Source: https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
 # Note: Counts the numbers in an array that contain an even number of digits using logarithms.

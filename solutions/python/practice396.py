@@ -1,4 +1,3 @@
-# py.checkio - Common Words
 # Problem: Common Words
 # Source: https://py.checkio.org/mission/common-words/
 # Note: Finds words common to two comma-separated strings and returns them in alphabetical order.

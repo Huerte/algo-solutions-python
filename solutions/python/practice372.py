@@ -1,4 +1,3 @@
-# Geeksforgeeks -Square Root
 # Problem: Square Root
 # Source: https://www.geeksforgeeks.org/problems/square-root/1
 # Note: Returns the floor value of the square root of a given positive integer.

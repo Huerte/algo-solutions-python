@@ -1,4 +1,3 @@
-# Check if the Sentence Is Pangram
 # Problem: Check if the Sentence Is Pangram
 # Source: https://leetcode.com/problems/check-if-the-sentence-is-pangram/
 # Note: Checks whether every letter from a to z appears at least once in the given sentence.

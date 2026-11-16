@@ -1,4 +1,3 @@
-# Find Missing Elements
 # Problem: Find Missing Elements
 # Source: https://leetcode.com/problems/find-missing-elements/
 # Note: Finds all missing integers between the minimum and maximum values in the array.

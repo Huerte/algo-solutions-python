@@ -1,4 +1,3 @@
-# Squares of a Sorted Array
 # Problem: Squares of a Sorted Array
 # Source: https://leetcode.com/problems/squares-of-a-sorted-array/
 # Note: Squares each element of a sorted array and returns the squared values in ascending order using two pointers.

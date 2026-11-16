@@ -1,4 +1,3 @@
-# Number Complement
 # Problem: Number Complement
 # Source: https://leetcode.com/problems/number-complement/
 # Note: Converts the number to binary, flips each bit (0 to 1 and 1 to 0), and converts the resulting binary string back to an integer.

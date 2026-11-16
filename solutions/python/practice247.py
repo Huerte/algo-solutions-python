@@ -1,4 +1,3 @@
-# CodeWars - Return the Missing Element
 # Problem: Return the Missing Element
 # Source: https://www.codewars.com/kata/5299413901337c637e000004
 # Note: Finds the missing digit from a sequence containing digits 0 through 9 using sorting or the difference between the expected and actual sums.

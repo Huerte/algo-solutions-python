@@ -1,4 +1,3 @@
-# Remove Outermost Parentheses
 # Problem: Remove Outermost Parentheses
 # Source: https://leetcode.com/problems/remove-outermost-parentheses/
 # Note: Removes the outermost opening and closing parentheses from each primitive valid parentheses string.

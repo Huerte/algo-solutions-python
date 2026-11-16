@@ -1,4 +1,3 @@
-# Smallest Range I
 # Problem: Smallest Range I
 # Source: https://leetcode.com/problems/smallest-range-i/
 # Note: Minimizes the difference between the maximum and minimum array values by adjusting each element by at most k.

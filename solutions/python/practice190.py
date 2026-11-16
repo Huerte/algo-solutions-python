@@ -1,4 +1,3 @@
-# Sort the People
 # Problem: Sort the People
 # Source: https://leetcode.com/problems/sort-the-people/
 # Note: Sorts people's names in descending order of their corresponding heights.

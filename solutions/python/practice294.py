@@ -1,4 +1,3 @@
-# HackerRank - Day of the Programmer
 # Problem: Day of the Programmer
 # Source: https://www.hackerrank.com/challenges/day-of-the-programmer/problem
 # Note: Determines the 256th day of the year while accounting for Julian, Gregorian, and the 1918 calendar transition.

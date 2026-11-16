@@ -1,4 +1,3 @@
-# Left and Right Sum Differences
 # Problem: Left and Right Sum Differences
 # Source: https://leetcode.com/problems/left-and-right-sum-differences/
 # Note: Calculates the absolute difference between the sum of elements to the left and right of each index.

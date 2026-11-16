@@ -1,4 +1,3 @@
-# Palindrome Check (Ignoring Non-Alphanumeric)
 # Problem: Valid Palindrome
 # Source: https://leetcode.com/problems/valid-palindrome/
 # Note: Removes non-alphanumeric characters, converts the remaining characters to lowercase, and checks whether the resulting string reads the same forwards and backwards.

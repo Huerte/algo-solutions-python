@@ -1,4 +1,3 @@
-# Sorting the Sentence
 # Problem: Sorting the Sentence
 # Source: https://leetcode.com/problems/sorting-the-sentence/
 # Note: Reconstructs the original sentence by sorting words according to the position number appended to each word.

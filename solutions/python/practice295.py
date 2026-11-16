@@ -1,4 +1,3 @@
-# HackerRank - Utopian Tree
 # Problem: Utopian Tree
 # Source: https://www.hackerrank.com/challenges/utopian-tree/problem
 # Note: Calculates tree height after n growth cycles, doubling in spring and increasing by 1 in summer.

@@ -1,4 +1,3 @@
-# Number of Lines To Write String
 # Problem: Number of Lines To Write String
 # Source: https://leetcode.com/problems/number-of-lines-to-write-string/
 # Note: Maps each lowercase letter to its pixel width and simulates writing the string across lines with a maximum width of 100 pixels.

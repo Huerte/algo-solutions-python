@@ -1,4 +1,3 @@
-# Geeksfor Geeks - Bits Counting
 # Problem: Counting Bits
 # Source: https://leetcode.com/problems/counting-bits/
 # Note: Returns an array containing the number of set bits in the binary representation of every integer from 0 to n.

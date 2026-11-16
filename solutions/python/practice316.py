@@ -1,4 +1,3 @@
-# Wildcard Matching
 # Problem: Wildcard Matching
 # Source: https://leetcode.com/problems/wildcard-matching/
 # Note: Checks whether a string matches a pattern where '?' matches one character and '*' matches any sequence of characters.

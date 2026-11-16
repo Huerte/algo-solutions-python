@@ -1,4 +1,3 @@
-# Count Beautiful Days in a Range
 # Problem: Beautiful Days at the Movies
 # Source: https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem
 # Note: Counts numbers in a range whose difference from their reverse is divisible by a given divisor.

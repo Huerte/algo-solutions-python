@@ -1,4 +1,3 @@
-# Find the Number of Good Pairs I
 # Problem: Find the Number of Good Pairs I
 # Source: https://leetcode.com/problems/find-the-number-of-good-pairs-i/
 # Note: Counts pairs where an element in nums1 is divisible by the corresponding element in nums2 multiplied by k.

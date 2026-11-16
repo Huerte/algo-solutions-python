@@ -3906,6 +3906,17 @@
     "path": "solutions/python/practice41.py"
   },
   {
+    "name": "practice410",
+    "language": "python",
+    "filename": "practice410.py",
+    "problem": "The Speed of Letters",
+    "source": "https://www.codewars.com/kata/5fc7caa854783c002196f2cb",
+    "topics": [
+      "General"
+    ],
+    "path": "solutions/python/practice410.py"
+  },
+  {
     "name": "practice42",
     "language": "python",
     "filename": "practice42.py",

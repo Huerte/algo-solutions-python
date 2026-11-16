@@ -1,4 +1,3 @@
-# CodeWars - IP Validation
 # Problem: IP Validation
 # Source: https://www.codewars.com/kata/515decfd9dcfc23bb6000006
 # Note: Validates IPv4 addresses by checking four numeric octets, their valid range, and the absence of leading zeros.

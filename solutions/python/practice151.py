@@ -1,4 +1,3 @@
-# Largest Local Values in a Matrix
 # Problem: Largest Local Values in a Matrix
 # Source: https://leetcode.com/problems/largest-local-values-in-a-matrix/
 # Note: Finds the maximum value in every contiguous 3x3 submatrix.

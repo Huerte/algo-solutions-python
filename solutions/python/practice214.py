@@ -1,4 +1,3 @@
-# CodeWars - Roman Numerals Decoder
 # Problem: Roman Numerals Decoder
 # Source: https://www.codewars.com/kata/51b6249c4612257ac0000005
 # Note: Decodes Roman numerals into integers using subtraction when a smaller value precedes a larger value.

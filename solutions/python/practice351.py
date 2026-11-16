@@ -1,4 +1,3 @@
-# Geeksforgeeks - Smallest Positive Missing
 # Problem: Smallest Positive Missing
 # Source: https://www.geeksforgeeks.org/problems/missing-number-in-array1416/1
 # Note: Finds the smallest positive integer missing from an array after filtering non-positive values and sorting.

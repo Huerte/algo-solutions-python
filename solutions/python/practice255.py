@@ -1,4 +1,3 @@
-# Merge Intervals
 # Problem: Merge Intervals
 # Source: https://leetcode.com/problems/merge-intervals/
 # Note: Sorts intervals by starting value and merges overlapping intervals by updating the ending value of the last merged interval.

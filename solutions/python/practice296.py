@@ -1,4 +1,3 @@
-# HackerRank - Designer PDF Viewer
 # Problem: Designer PDF Viewer
 # Source: https://www.hackerrank.com/challenges/designer-pdf-viewer/problem
 # Note: Calculates the highlighted area using the tallest letter in the word multiplied by the word's length.

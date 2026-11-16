@@ -1,4 +1,3 @@
-# Count Number of Pairs With Absolute Difference K
 # Problem: Count Number of Pairs With Absolute Difference K
 # Source: https://leetcode.com/problems/count-number-of-pairs-with-absolute-difference-k/
 # Note: Uses nested loops to check every pair of indices and counts pairs whose absolute difference equals k.

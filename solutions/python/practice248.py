@@ -1,4 +1,3 @@
-# Two Sum Variant
 # Problem: Two Sum
 # Source: https://leetcode.com/problems/two-sum/
 # Note: Finds two indices whose corresponding elements add up to the target using a hash map for efficient lookup.

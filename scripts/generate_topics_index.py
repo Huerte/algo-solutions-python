@@ -68,49 +68,98 @@ def clean_problem_title(raw_title: str) -> str:
     return cleaned
 
 
+COMMENT_PREFIX = r"^(?:#|//|--)\s*"
+
+
 def parse_solution_file(path: Path) -> dict[str, str]:
     """Parse metadata, header fields, and status from a solution file."""
     content = path.read_text(encoding="utf-8-sig", errors="replace")
     lines = [line.strip() for line in content.splitlines()]
     non_empty = [line for line in lines if line]
 
+    # Detect comment style for this file
+    comment_pat = COMMENT_PREFIX
+
     status = "Complete"
     if not non_empty:
         status = "Empty (0 bytes)"
     elif len(non_empty) < 5:
-        # Check if it has executable code or just placeholder comments
-        code_lines = [l for l in non_empty if not l.startswith(("#", "//"))]
+        code_lines = [l for l in non_empty if not re.match(comment_pat, l)]
         if not code_lines:
             status = "Stub (<5 lines)"
 
     problem = ""
     source = ""
+    note = ""
     declared_topic = ""
+    found_problem_line = False
+    found_source_line = False
+    found_note_line = False
 
     for line in lines:
-        if not problem:
-            prob_match = re.match(r"^(?:#|//)\s*(?:📜\s*)?Problem(?:\s*[:\-—–]+\s*|\s+)(.*)$", line, re.IGNORECASE)
+        if not found_problem_line:
+            prob_match = re.match(
+                comment_pat + r"(?:📜\s*)?Problem(?:\s*[:\-—–]+\s*|\s+)(.*)$",
+                line, re.IGNORECASE,
+            )
             if prob_match:
+                found_problem_line = True
                 problem = clean_problem_title(prob_match.group(1))
-        if not source:
-            source_match = re.match(r"^(?:#|//)\s*Source:\s*(.*)$", line, re.IGNORECASE)
+        if not found_source_line:
+            source_match = re.match(comment_pat + r"Source:\s*(.*)$", line, re.IGNORECASE)
             if source_match:
+                found_source_line = True
                 source = source_match.group(1).strip()
+        if not found_note_line:
+            note_match = re.match(comment_pat + r"Note:\s*(.*)$", line, re.IGNORECASE)
+            if note_match:
+                found_note_line = True
+                note = note_match.group(1).strip()
         if not declared_topic:
-            topic_match = re.match(r"^(?:#|//)\s*Topic:\s*(.*)$", line, re.IGNORECASE)
+            topic_match = re.match(comment_pat + r"Topic:\s*(.*)$", line, re.IGNORECASE)
             if topic_match:
                 declared_topic = topic_match.group(1).strip()
-        if re.search(r"(?:#|//)\s*(?:Status:\s*.*(?:in progress|needs|incomplete)|TODO\b).*", line, re.IGNORECASE):
+        if re.search(
+            comment_pat + r"(?:Status:\s*.*(?:in progress|needs|incomplete)|TODO\b).*",
+            line, re.IGNORECASE,
+        ):
             if not re.search(r"solved|complete", line, re.IGNORECASE):
                 status = "In Progress / Needs Work"
 
-    if not problem:
-        for candidate in non_empty[:4]:
-            if re.match(r"^(?:#|//)\s*[A-Za-z0-9]", candidate) and not re.search(r"(?:source|note|status|topic|description):", candidate, re.IGNORECASE):
-                cleaned = re.sub(r"^(?:#|//)\s*(?:📜\s*)?", "", candidate)
-                cleaned = re.sub(r"^(?:CodeWars|HackerRank|CodeChum|Geeksforgeeks|py\.checkio|LeetCode)\s*-\s*", "", cleaned, flags=re.IGNORECASE)
+    # Determine what is actually code (non-comment, non-blank)
+    code_lines = [l for l in non_empty if not re.match(comment_pat, l)]
+    has_code = bool(code_lines)
+
+    # Flag files whose headers are present but empty
+    if status not in ("In Progress / Needs Work", "Empty (0 bytes)", "Stub (<5 lines)"):
+        missing_parts = []
+        if found_source_line and not source:
+            missing_parts.append("Source (blank)")
+        if found_note_line and not note:
+            missing_parts.append("Note (blank)")
+        # Also flag fields that are entirely absent when the file has code
+        if has_code:
+            if not found_source_line:
+                missing_parts.append("Source (missing)")
+            if not found_note_line:
+                missing_parts.append("Note (missing)")
+        if missing_parts:
+            status = f"Incomplete Header ({', '.join(missing_parts)})"
+
+    # Fallback: try to extract problem title from first comment lines
+    if not found_problem_line or not problem:
+        for candidate in non_empty[:6]:
+            if re.match(comment_pat + r"[A-Za-z0-9]", candidate) and not re.search(
+                r"(?:source|note|status|topic|description):", candidate, re.IGNORECASE
+            ):
+                cleaned = re.sub(comment_pat + r"(?:📜\s*)?", "", candidate)
+                cleaned = re.sub(
+                    r"^(?:CodeWars|HackerRank|CodeChum|Geeksforgeeks|py\.checkio|LeetCode)\s*-\s*",
+                    "", cleaned, flags=re.IGNORECASE,
+                )
                 problem = clean_problem_title(cleaned)
                 break
+        # Only mark Missing Header if we genuinely could not extract any title
         if not problem:
             problem = "Unknown Problem"
             if status == "Complete":

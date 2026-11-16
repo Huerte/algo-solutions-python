@@ -1,4 +1,3 @@
-# Geeksforgeeks - Binary to Decimal
 # Problem: Binary to Decimal
 # Source: https://www.geeksforgeeks.org/problems/binary-number-to-decimal-number3525/1
 # Note: Converts a binary number represented as a string into its decimal equivalent using Python's int() function.

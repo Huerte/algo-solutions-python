@@ -1,4 +1,3 @@
-# HackerRank - Company Logo
 # Problem: Company Logo
 # Source: https://www.hackerrank.com/challenges/most-commons/problem
 # Note: Finds the three most frequent characters, sorting by descending frequency and alphabetical order for ties.

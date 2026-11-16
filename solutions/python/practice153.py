@@ -1,4 +1,3 @@
-# How Many Numbers Are Smaller Than the Current Number
 # Problem: How Many Numbers Are Smaller Than the Current Number
 # Source: https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/
 # Note: Counts how many elements in the array are strictly smaller than each element.

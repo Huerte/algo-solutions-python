@@ -1,4 +1,3 @@
-# How Broke Are You?
 # Problem: How Broke Are You?
 # Source: https://www.codewars.com/kata/699583ba5ca289725b496ad4
 # Note: Counts broke events based on daily expenditure thresholds over 1, 3, or 7 consecutive days.

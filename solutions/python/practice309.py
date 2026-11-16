@@ -1,4 +1,3 @@
-# HackerRank - Cut the sticks
 # Problem: Cut the Sticks
 # Source: https://www.hackerrank.com/challenges/cut-the-sticks/problem
 # Note: Repeatedly removes the shortest sticks and records the number of sticks remaining before each cut.

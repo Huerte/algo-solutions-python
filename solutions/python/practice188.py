@@ -1,4 +1,3 @@
-# Count Good Triplets
 # Problem: Count Good Triplets
 # Source: https://leetcode.com/problems/count-good-triplets/
 # Note: Counts triplets satisfying the given index and absolute-difference conditions.

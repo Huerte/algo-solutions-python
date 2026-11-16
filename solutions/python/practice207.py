@@ -1,4 +1,3 @@
-# CodeWars - Mexican Wave
 # Problem: Mexican Wave
 # Source: https://www.codewars.com/kata/58f5c63f1e26ecda7e000029
 # Note: Generates a Mexican wave by capitalizing one alphabetic character at a time while preserving spaces.

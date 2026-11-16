@@ -1,4 +1,3 @@
-# HackerRank - Write a function
 # Problem: Write a function (Leap Year)
 # Source: https://www.hackerrank.com/challenges/write-a-function/problem
 # Note: Checks whether a year is a leap year using divisibility rules for 4, 100, and 400.

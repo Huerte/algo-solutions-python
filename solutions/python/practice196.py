@@ -1,4 +1,3 @@
-# Are they the "same"?
 # Problem: Are they the "same"?
 # Source: https://www.codewars.com/kata/550498447451fbbd7600041c
 # Note: Checks whether the second array contains the squares of all elements in the first array, preserving duplicate counts regardless of order.

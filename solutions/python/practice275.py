@@ -1,4 +1,3 @@
-# Count Binary Substrings
 # Problem: Count Binary Substrings
 # Source: https://leetcode.com/problems/count-binary-substrings/
 # Note: Counts substrings containing equal consecutive groups of 0s and 1s using substring checking and consecutive-group counting approaches.

@@ -1,4 +1,3 @@
-# HackerRank - Drawing Book
 # Problem: Drawing Book
 # Source: https://www.hackerrank.com/challenges/drawing-book/problem
 # Note: Finds the minimum number of page turns needed to reach a target page from either the front or the back of a book.

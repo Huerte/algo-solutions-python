@@ -1,4 +1,3 @@
-# Keyboard Row
 # Problem: Keyboard Row
 # Source: https://leetcode.com/problems/keyboard-row/
 # Note: Checks whether all characters in each word belong to the same keyboard row and returns the words that satisfy this condition.

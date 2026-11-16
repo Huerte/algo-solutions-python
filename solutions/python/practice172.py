@@ -1,4 +1,3 @@
-# HackerRank - Maximize It!
 # Problem: Maximize It!
 # Source: https://www.hackerrank.com/challenges/maximize-it/problem
 # Note: Finds the maximum modulo value of the sum of squares by selecting one element from each list.

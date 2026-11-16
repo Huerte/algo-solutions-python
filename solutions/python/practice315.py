@@ -1,4 +1,3 @@
-# Count and Say
 # Problem: Count and Say
 # Source: https://leetcode.com/problems/count-and-say/
 # Note: Generates the nth sequence term by counting consecutive repeated digits in the previous term.

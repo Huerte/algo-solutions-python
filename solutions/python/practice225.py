@@ -1,4 +1,3 @@
-# Convert an Array Into a 2D Array With Conditions
 # Problem: Convert an Array Into a 2D Array With Conditions
 # Source: https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions/
 # Note: Distributes array elements into rows while ensuring each row contains distinct integers and the total number of rows is minimized.

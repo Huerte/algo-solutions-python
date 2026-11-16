@@ -1,4 +1,3 @@
-# Range Sum of BST
 # Problem: Range Sum of BST
 # Source: https://leetcode.com/problems/range-sum-of-bst/
 # Note: Calculates the sum of all BST node values within the inclusive range [low, high] using BFS traversal.

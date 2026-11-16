@@ -1,4 +1,3 @@
-# Generate All Subsets
 # Problem: Subsets
 # Source: https://leetcode.com/problems/subsets/
 # Note: Generates all possible subsets of an array using an iterative approach.

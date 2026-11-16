@@ -1,4 +1,3 @@
-# Create Target Array in the Given Order
 # Problem: Create Target Array in the Given Order
 # Source: https://leetcode.com/problems/create-target-array-in-the-given-order/
 # Note: Creates a target array by inserting each number at its corresponding index in the given order.

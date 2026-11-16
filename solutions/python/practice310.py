@@ -1,4 +1,3 @@
-# HackerRank - Non-Divisible Subset
 # Problem: Non-Divisible Subset
 # Source: https://www.hackerrank.com/challenges/non-divisible-subset/problem
 # Note: Finds the largest subset in which no pair of elements has a sum divisible by k.

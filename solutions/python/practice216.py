@@ -1,4 +1,3 @@
-# CodeWars - Good vs Evil
 # Problem: Good vs Evil
 # Source: https://www.codewars.com/kata/52761ee4cffbc69732000738
 # Note: Calculates the total worth of Good and Evil armies and determines the winner by comparing their scores.

@@ -1,4 +1,3 @@
-# Height Checker
 # Problem: Height Checker
 # Source: https://leetcode.com/problems/height-checker/
 # Note: Counts the positions where the original height order differs from the sorted expected order.

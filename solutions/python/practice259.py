@@ -1,4 +1,3 @@
-# Count Items Matching a Rule
 # Problem: Count Items Matching a Rule
 # Source: https://leetcode.com/problems/count-items-matching-a-rule/
 # Note: Uses a dictionary to map rule keys to item indices and counts items whose corresponding attribute matches the given rule value.

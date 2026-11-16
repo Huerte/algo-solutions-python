@@ -1,4 +1,3 @@
-# HackerRank - collections.Counter()
 # Problem: collections.Counter()
 # Source: https://www.hackerrank.com/challenges/collections-counter/problem
 # Note: Tracks available shoe sizes and calculates total earnings from customer purchases.

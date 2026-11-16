@@ -1,4 +1,3 @@
-# Count Pairs Whose Sum is Less than Target
 # Problem: Count Pairs Whose Sum is Less than Target
 # Source: https://leetcode.com/problems/count-pairs-whose-sum-is-less-than-target/
 # Note: Counts pairs of elements whose sum is strictly less than the target.

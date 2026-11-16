@@ -1,4 +1,3 @@
-# Multiply Strings
 # Problem: Multiply Strings
 # Source: https://leetcode.com/problems/multiply-strings/
 # Note: Multiplies two non-negative integers represented as strings and returns their product as a string.

@@ -1,4 +1,3 @@
-# HackerRank - Calendar Module
 # Problem: Calendar Module
 # Source: https://www.hackerrank.com/challenges/calendar-module/problem
 # Note: Converts the given month, day, and year into a date object and determines the weekday using datetime, then prints the day in uppercase.

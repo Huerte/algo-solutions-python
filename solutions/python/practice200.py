@@ -1,4 +1,3 @@
-# Final Array State After K Multiplication Operations I
 # Problem: Final Array State After K Multiplication Operations I
 # Source: https://leetcode.com/problems/final-array-state-after-k-multiplication-operations-i/
 # Note: Repeatedly multiplies the first occurrence of the minimum array element by the given multiplier for k operations.

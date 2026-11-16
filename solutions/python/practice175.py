@@ -1,4 +1,3 @@
-# HackerRank - Regex Substitution
 # Problem: Regex Substitution
 # Source: https://www.hackerrank.com/challenges/re-sub-regex-substitution/problem
 # Note: Replaces && with and and || with or when surrounded by spaces using regular expressions.

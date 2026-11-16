@@ -1,4 +1,3 @@
-# HackerRank - Word Score
 # Problem: Words Score
 # Source: https://www.hackerrank.com/challenges/words-score/problem
 # Note: Calculates the total score of words based on whether each word contains an even or odd number of vowels.

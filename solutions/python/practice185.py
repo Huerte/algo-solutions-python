@@ -1,4 +1,3 @@
-# Sum of Multiples
 # Problem: Sum of Multiples
 # Source: https://leetcode.com/problems/sum-multiples/
 # Note: Calculates the sum of all numbers from 1 to n that are divisible by 3, 5, or 7.

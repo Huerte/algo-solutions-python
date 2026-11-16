@@ -1,4 +1,3 @@
-# Sum of All Odd Length Subarrays
 # Problem: Sum of All Odd Length Subarrays
 # Source: https://leetcode.com/problems/sum-of-all-odd-length-subarrays/
 # Note: Calculates the sum of all contiguous subarrays having odd lengths.

@@ -1,4 +1,3 @@
-# Longest Increasing Subsequence
 # Problem: The Longest Increasing Subsequence
 # Source: https://www.hackerrank.com/challenges/longest-increasing-subsequent/problem
 # Note: Finds the length of the longest strictly increasing subsequence in an array.

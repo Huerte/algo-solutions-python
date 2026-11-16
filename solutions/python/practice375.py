@@ -1,4 +1,3 @@
-# CodeWars - FizzBuzz++
 # Problem: FizzBuzz++
 # Source: https://www.codewars.com/kata/596925532f709fccf3000077
 # Note: Generates a FizzBuzz sequence using coprime divisors and their corresponding words until the pattern repeats.

@@ -1,4 +1,3 @@
-# Geeksforgeeks - Sort 0s, 1s and 2s
 # Problem: Sort 0s, 1s and 2s
 # Source: https://www.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s4231/1
 # Note: Sorts an array containing only 0s, 1s, and 2s in ascending order by counting their occurrences.

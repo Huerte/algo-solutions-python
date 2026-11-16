@@ -1,4 +1,3 @@
-# Cancellable Item Transactions
 # Problem: Cancellable Item Transactions
 # Source: https://www.codewars.com/kata/cancellable-item-transactions
 # Note: Calculates the total transaction value while supporting cancellation of the most recent purchase of each item.

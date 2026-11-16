@@ -1,4 +1,3 @@
-# Maximum Number of Words Found in Sentences
 # Problem: Maximum Number of Words Found in Sentences
 # Source: https://leetcode.com/problems/maximum-number-of-words-found-in-sentences/
 # Note: Finds the maximum number of words present in any sentence using string splitting.

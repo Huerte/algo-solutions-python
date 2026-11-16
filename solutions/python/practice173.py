@@ -1,4 +1,3 @@
-# HackerRank - Merge the Tools!
 # Problem: Merge the Tools!
 # Source: https://www.hackerrank.com/challenges/merge-the-tools/problem
 # Note: Splits a string into substrings of length k and removes duplicate characters while preserving their original order.

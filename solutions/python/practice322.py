@@ -1,4 +1,3 @@
-# Difference Between Element Sum and Digit Sum of an Array
 # Problem: Difference Between Element Sum and Digit Sum of an Array
 # Source: https://leetcode.com/problems/difference-between-element-sum-and-digit-sum-of-an-array/
 # Note: Calculates the absolute difference between the sum of array elements and the sum of all their individual digits.

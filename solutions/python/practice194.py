@@ -1,4 +1,3 @@
-# Sort by binary ones
 # Problem: Sort by binary ones
 # Source: https://www.codewars.com/kata/59eb28fb0a2bffafbb0000d6
 # Note: Sorts numbers by descending count of binary ones, then by binary length and numeric value.

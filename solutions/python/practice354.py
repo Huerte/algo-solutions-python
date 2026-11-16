@@ -1,4 +1,3 @@
-# GeeksforGeeks - Implement Atoi
 # Problem: Implement Atoi
 # Source: https://www.geeksforgeeks.org/problems/implement-atoi/1
 # Note: Converts a numeric string to a 32-bit signed integer, handling signs, whitespace, invalid characters and overflow.

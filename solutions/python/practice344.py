@@ -1,4 +1,3 @@
-# Geeksforgeeks - Kth Largest in a Stream
 # Problem: Kth Largest in a Stream
 # Source: https://www.geeksforgeeks.org/dsa/kth-largest-element-in-a-stream/
 # Note: Finds the kth largest element after each insertion using a min-heap of size k.

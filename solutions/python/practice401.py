@@ -1,4 +1,3 @@
-# CodeWars - Area of a Square
 # Problem: Area of a Square
 # Source: https://www.codewars.com/kata/5748838ce2fab90b86001b1a
 # Note: Calculates the area of a square using the circumference of its circumscribed circle.
