@@ -127,7 +127,7 @@ Prefer video? Watch this: [How to contribute on GitHub (YouTube)](https://youtu.
 If this repo helps you or you like where it is going, a [star](https://github.com/{repo}) is a nice way to say thanks and helps other people find it. Entirely optional, and you do not need it to contribute.
 """
 
-    labels = "bug,help wanted,good first issue,beginner-friendly,30-minutes,hacktoberfest"
+    labels = "bug,help wanted,good first issue,beginner-friendly,30-minutes"
     cmd = [
         "gh", "issue", "create",
         "--repo", repo,
