@@ -77,7 +77,7 @@ Prefer video? Watch this: [How to contribute on GitHub (YouTube)](https://youtu.
 
 ### Ways to help
 
-| I want to... | Look for the label |
+| I want to... | Look for the label or resource |
 |---|---|
 | Make my first contribution | [`good first issue`](https://github.com/Huerte/algo-solutions-python/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) |
 | Help without writing code | [`no-code-needed`](https://github.com/Huerte/algo-solutions-python/issues?q=is%3Aissue+is%3Aopen+label%3Ano-code-needed) |
@@ -85,6 +85,7 @@ Prefer video? Watch this: [How to contribute on GitHub (YouTube)](https://youtu.
 | Improve docs or explanations | [`documentation`](https://github.com/Huerte/algo-solutions-python/issues?q=is%3Aissue+is%3Aopen+label%3Adocumentation) |
 | Spend only 5 minutes | [`5-minutes`](https://github.com/Huerte/algo-solutions-python/issues?q=is%3Aissue+is%3Aopen+label%3A5-minutes) |
 | Be mentored through my first PR | [`first-timers-only`](https://github.com/Huerte/algo-solutions-python/issues?q=is%3Aissue+is%3Aopen+label%3Afirst-timers-only) |
+| Help document existing Python solutions | [Solutions Needing Attention](https://github.com/Huerte/algo-solutions-python/blob/main/TOPICS.md#solutions-needing-attention-9) |
 
 ### Adding a solution
 
