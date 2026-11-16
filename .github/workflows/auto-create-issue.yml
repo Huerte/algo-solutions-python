@@ -21,85 +21,13 @@ jobs:
         with:
           fetch-depth: 2
 
-      - name: Find newly merged in-progress solution files
-        id: find
-        run: |
-          # Files added or modified in the latest commit that are in solutions/
-          changed=$(git diff --name-only --diff-filter=AM HEAD~1 HEAD -- solutions/)
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
 
-          flagged=""
-          for file in $changed; do
-            if [ -f "$file" ]; then
-              # Match: # Status: 🔄 IN PROGRESS  (or any variant with IN PROGRESS / in progress)
-              if grep -qiE "^\s*(#|//)\s*Status:.*in.?progress" "$file"; then
-                flagged="$flagged $file"
-              fi
-            fi
-          done
-
-          echo "flagged=$flagged" >> "$GITHUB_OUTPUT"
-
-      - name: Create an issue for each flagged file
-        if: steps.find.outputs.flagged != ''
+      - name: Check for in-progress solutions and create issues
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO: ${{ github.repository }}
-        run: |
-          for file in ${{ steps.find.outputs.flagged }}; do
-            # Pull problem name from header if present
-            problem=$(grep -m1 -iE "^\s*(#|//)\s*Problem:" "$file" | sed 's/.*Problem:\s*//' | xargs)
-            if [ -z "$problem" ]; then
-              problem="$file"
-            fi
-
-            filename=$(basename "$file")
-            lang=$(echo "$file" | cut -d'/' -f2)
-
-            title="Fix and complete the ${problem} solution (${filename})"
-
-            body="## Fix and complete the \`${problem}\` solution
-
-The file \`${file}\` was merged with \`# Status: 🔄 IN PROGRESS\`, which means the implementation is unfinished or has known issues.
-
-**File:** [\`${filename}\`](https://github.com/${REPO}/blob/main/${file})
-**Language:** ${lang}
-
-### Task
-
-- [ ] Open \`${file}\`
-- [ ] Review the existing code and comments for what is incomplete or broken
-- [ ] Fix or complete the implementation
-- [ ] Remove the \`# Status: 🔄 IN PROGRESS\` comment and replace it with \`# Status: ✅ Done\`
-- [ ] Open a Pull Request
-
-No new file needed. Fix the existing file in place.
-
----
-
-## Open for everyone
-
-This issue is open for everyone: beginners, experienced developers, students, and people who don't code at all. Any language, any level, no experience required. If you want to help, you are welcome here.
-
-## How to contribute
-
-1. Fork this repo
-2. Clone your fork and create a new branch
-3. Make your change
-4. Commit, push, and open a Pull Request
-
-New to open source? Start here before anything else:
-
-**[First Contributions - github.com/firstcontributions/first-contributions](https://github.com/firstcontributions/first-contributions)**
-
-Prefer video? Watch this: [How to contribute on GitHub (YouTube)](https://youtu.be/WldXhauP024?si=9u5wErqvnz9ZZRAv)
-
-<!-- star-note -->
-If this repo helps you or you like where it is going, a [star](https://github.com/${REPO}) is a nice way to say thanks and helps other people find it. Entirely optional, and you do not need it to contribute."
-
-            gh issue create \
-              --title "$title" \
-              --body "$body" \
-              --label "bug,help wanted,good first issue,beginner-friendly,30-minutes,hacktoberfest" \
-              --repo "$REPO"
-          done
-
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python3 .github/scripts/create_in_progress_issues.py
