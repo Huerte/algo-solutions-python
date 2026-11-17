@@ -145,7 +145,7 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 |---|---|---|---|
 | 10,001st Prime | python | [practice73.py](solutions/python/practice73.py) | Complete |
 | 1000-digit Fibonacci Number | python | [practice123.py](solutions/python/practice123.py) | Incomplete Header (Note (missing)) |
-| 4Sum | python | [practice224.py](solutions/python/practice224.py) | In Progress / Needs Work |
+| 4Sum | python | [practice224.py](solutions/python/practice224.py) | Complete |
 | A Number After a Double Reversal | python | [practice100.py](solutions/python/practice100.py) | Incomplete Header (Note (missing)) |
 | Add Two Numbers | python | [practice125.py](solutions/python/practice125.py) | Complete |
 | Add Two Numbers | python | [practice37.py](solutions/python/practice37.py) | Complete |
@@ -474,7 +474,7 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Wildcard Matching | python | [practice316.py](solutions/python/practice316.py) | Complete |
 | Write a function (Leap Year) | python | [practice279.py](solutions/python/practice279.py) | Complete |
 
-## Solutions Needing Attention (124)
+## Solutions Needing Attention (123)
 
 These solutions need headers, test cases, or implementation fixes. They are ideal for contributor PRs.
 
@@ -513,7 +513,6 @@ These solutions need headers, test cases, or implementation fixes. They are idea
 | Number Complement | python | [practice182.py](solutions/python/practice182.py) | Incomplete Header (Note (missing)) |
 | Counting Valleys | python | [practice202.py](solutions/python/practice202.py) | Incomplete Header (Note (missing)) |
 | Pascal Triangle | python | [practice22.py](solutions/python/practice22.py) | Incomplete Header (Note (missing)) |
-| 4Sum | python | [practice224.py](solutions/python/practice224.py) | In Progress / Needs Work |
 | Stressful Subject | python | [practice227.py](solutions/python/practice227.py) | Incomplete Header (Note (missing)) |
 | Character Year Count Mapping | python | [practice237.py](solutions/python/practice237.py) | Incomplete Header (Source (blank)) |
 | Sum of Ones in Binary | python | [practice25.py](solutions/python/practice25.py) | Incomplete Header (Source (blank)) |
