@@ -474,7 +474,7 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Wildcard Matching | python | [practice316.py](solutions/python/practice316.py) | Complete |
 | Write a function (Leap Year) | python | [practice279.py](solutions/python/practice279.py) | Complete |
 
-## Solutions Needing Attention (123)
+## Solutions Needing Attention
 
 These solutions need headers, test cases, or implementation fixes. They are ideal for contributor PRs.
 
