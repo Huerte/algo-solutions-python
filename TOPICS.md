@@ -165,7 +165,7 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Count Numbers with Unique Digits | python | [practice103.py](solutions/python/practice103.py) | Incomplete Header (Note (missing)) |
 | Count Pairs Whose Sum is Less than Target | python | [practice149.py](solutions/python/practice149.py) | Complete |
 | Count the Digits That Divide a Number | python | [practice186.py](solutions/python/practice186.py) | Complete |
-| Digit Frequency Score | python | [practice411.py](solutions/python/practice411.py) | In Progress / Needs Work |
+| Digit Frequency Score | python | [practice411.py](solutions/python/practice411.py) | Complete |
 | Digit Power Sum | python | [practice29.py](solutions/python/practice29.py) | Complete |
 | Even Fibonacci Numbers Sum | python | [practice120.py](solutions/python/practice120.py) | Incomplete Header (Note (missing)) |
 | Fibonacci Number | python | [practice81.py](solutions/python/practice81.py) | Complete |
@@ -477,6 +477,7 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 ## Solutions Needing Attention
 
 These solutions need headers, test cases, or implementation fixes. They are ideal for contributor PRs.
+**Total needing attention:** 122
 
 | Problem | Language | File | Needs |
 |---|---|---|---|
@@ -571,7 +572,6 @@ These solutions need headers, test cases, or implementation fixes. They are idea
 | Shortest Escape Path | python | [practice404.py](solutions/python/practice404.py) | Incomplete Header (Source (blank)) |
 | Flood Fill | python | [practice405.py](solutions/python/practice405.py) | Incomplete Header (Note (missing)) |
 | Word Ladder | python | [practice407.py](solutions/python/practice407.py) | Incomplete Header (Note (missing)) |
-| Digit Frequency Score | python | [practice411.py](solutions/python/practice411.py) | In Progress / Needs Work |
 | Sum of Multiples of 3 and 5 | python | [practice42.py](solutions/python/practice42.py) | Incomplete Header (Source (blank)) |
 | Word Pattern | python | [practice44.py](solutions/python/practice44.py) | Incomplete Header (Note (missing)) |
 | Valid Parentheses | python | [practice45.py](solutions/python/practice45.py) | Incomplete Header (Note (missing)) |
