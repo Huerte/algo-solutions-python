@@ -241,9 +241,10 @@ def generate_topics_markdown() -> str:
     incomplete = [record for record in records if record["status"] != "Complete"]
     if incomplete:
         lines.extend([
-            f"## Solutions Needing Attention ({len(incomplete)})",
+            f"## Solutions Needing Attention",
             "",
             "These solutions need headers, test cases, or implementation fixes. They are ideal for contributor PRs.",
+            f"**Total needing attention:** {len(incomplete)}",
             "",
             "| Problem | Language | File | Needs |",
             "|---|---|---|---|",
