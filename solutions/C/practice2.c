@@ -1,7 +1,7 @@
 /**
  * Problem: Maximum Subarry
  * Source: https://leetcode.com/problems/maximum-subarray/
- * @author Ben Rappleye
+ * Note: simply solution in C. Probably not the fastest though.
  */
 
 int maxSubArray(int *nums, int numsSize){
