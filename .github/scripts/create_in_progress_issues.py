@@ -37,7 +37,7 @@ def is_in_progress(path: Path) -> bool:
         return False
 
     for line in content.splitlines()[:20]:
-        if re.search(r"^\s*(?:#|//)\s*Status:\s*.*in.?progress", line, re.IGNORECASE):
+        if re.search(r"^\s*(?:#|//|--|/\*+|\*)\s*Status:\s*.*in.?progress", line, re.IGNORECASE):
             return True
     return False
 
@@ -50,7 +50,7 @@ def extract_problem_name(path: Path) -> str:
         return path.name
 
     for line in content.splitlines()[:15]:
-        match = re.match(r"^\s*(?:#|//)\s*(?:📜\s*)?Problem(?:\s*[:\-—–]+\s*|\s+)(.*)$", line, re.IGNORECASE)
+        match = re.match(r"^\s*(?:#|//|--|/\*+|\*)\s*(?:📜\s*)?Problem(?:\s*[:\-—–]+\s*|\s+)(.*?)\s*(?:\*/)?$", line, re.IGNORECASE)
         if match:
             cleaned = match.group(1).strip()
             if cleaned:

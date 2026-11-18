@@ -4703,6 +4703,41 @@
   },
   {
     "name": "practice1",
+    "language": "typescript",
+    "filename": "practice1.ts",
+    "problem": "Valid Parentheses",
+    "source": "https://leetcode.com/problems/valid-parentheses/",
+    "topics": [
+      "Stack & Queue"
+    ],
+    "path": "solutions/typescript/practice1.ts"
+  },
+  {
+    "name": "practice1",
+    "language": "c",
+    "filename": "practice1.c",
+    "problem": "N-Queens II",
+    "source": "https://leetcode.com/problems/n-queens-ii/",
+    "topics": [
+      "Backtracking"
+    ],
+    "path": "solutions/c/practice1.c"
+  },
+  {
+    "name": "practice2",
+    "language": "c",
+    "filename": "practice2.c",
+    "problem": "Maximum Subarray",
+    "source": "https://leetcode.com/problems/maximum-subarray/",
+    "topics": [
+      "Dynamic Programming",
+      "Sliding Window",
+      "Arrays"
+    ],
+    "path": "solutions/c/practice2.c"
+  },
+  {
+    "name": "practice1",
     "language": "cpp",
     "filename": "practice1.cpp",
     "problem": "practice1",
@@ -4722,16 +4757,5 @@
       "Stack & Queue"
     ],
     "path": "solutions/java/practice1.java"
-  },
-  {
-    "name": "practice1",
-    "language": "typescript",
-    "filename": "practice1.ts",
-    "problem": "Valid Parentheses",
-    "source": "https://leetcode.com/problems/valid-parentheses/",
-    "topics": [
-      "Stack & Queue"
-    ],
-    "path": "solutions/typescript/practice1.ts"
   }
 ]

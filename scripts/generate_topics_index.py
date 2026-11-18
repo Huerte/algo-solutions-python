@@ -68,7 +68,7 @@ def clean_problem_title(raw_title: str) -> str:
     return cleaned
 
 
-COMMENT_PREFIX = r"^(?:#|//|--)\s*"
+COMMENT_PREFIX = r"^(?:#|//|--|/\*+|\*)\s*"
 
 
 def parse_solution_file(path: Path) -> dict[str, str]:
@@ -99,24 +99,24 @@ def parse_solution_file(path: Path) -> dict[str, str]:
     for line in lines:
         if not found_problem_line:
             prob_match = re.match(
-                comment_pat + r"(?:📜\s*)?Problem(?:\s*[:\-—–]+\s*|\s+)(.*)$",
+                comment_pat + r"(?:📜\s*)?Problem(?:\s*[:\-—–]+\s*|\s+)(.*?)\s*(?:\*/)?$",
                 line, re.IGNORECASE,
             )
             if prob_match:
                 found_problem_line = True
                 problem = clean_problem_title(prob_match.group(1))
         if not found_source_line:
-            source_match = re.match(comment_pat + r"Source:\s*(.*)$", line, re.IGNORECASE)
+            source_match = re.match(comment_pat + r"Source:\s*(.*?)\s*(?:\*/)?$", line, re.IGNORECASE)
             if source_match:
                 found_source_line = True
                 source = source_match.group(1).strip()
         if not found_note_line:
-            note_match = re.match(comment_pat + r"Note:\s*(.*)$", line, re.IGNORECASE)
+            note_match = re.match(comment_pat + r"Note:\s*(.*?)\s*(?:\*/)?$", line, re.IGNORECASE)
             if note_match:
                 found_note_line = True
                 note = note_match.group(1).strip()
         if not declared_topic:
-            topic_match = re.match(comment_pat + r"Topic:\s*(.*)$", line, re.IGNORECASE)
+            topic_match = re.match(comment_pat + r"Topic:\s*(.*?)\s*(?:\*/)?$", line, re.IGNORECASE)
             if topic_match:
                 declared_topic = topic_match.group(1).strip()
         if re.search(

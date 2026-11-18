@@ -10,7 +10,7 @@ import sys
 from pathlib import Path
 
 HEADER_FIELDS = ("Problem", "Source", "Note")
-HEADER_LINE = r"^\s*(?:#|//)\s*{field}:\s*\S.*$"
+HEADER_PATTERN = r"^\s*(?:#|//|--|/\*+|\*)\s*{field}:\s*(\S.*?)\s*(?:\*/)?$"
 SOLUTION_FILENAME = re.compile(r"practice\d+\.[A-Za-z0-9]+$")
 
 
@@ -48,16 +48,17 @@ def validate_file(path: Path) -> list[str]:
 
     try:
         with path.open("r", encoding="utf-8-sig") as solution:
-            header = [solution.readline().rstrip("\r\n") for _ in HEADER_FIELDS]
+            top_lines = [solution.readline().rstrip("\r\n") for _ in range(15)]
     except (OSError, UnicodeError) as error:
         return [f"could not read file: {error}"]
 
-    for line_number, field in enumerate(HEADER_FIELDS, start=1):
-        pattern = re.compile(HEADER_LINE.format(field=re.escape(field)))
-        if not pattern.fullmatch(header[line_number - 1]):
+    for field in HEADER_FIELDS:
+        pattern = re.compile(HEADER_PATTERN.format(field=re.escape(field)), re.IGNORECASE)
+        found = any(pattern.match(line) for line in top_lines)
+        if not found:
             errors.append(
-                f"line {line_number} must be a non-empty {field}: comment "
-                "using # or //"
+                f"missing or empty required header field '{field}:' "
+                "(supported comment prefixes: #, //, --, or block comment *)"
             )
 
     return errors

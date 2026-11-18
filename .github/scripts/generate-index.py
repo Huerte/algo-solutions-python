@@ -8,9 +8,17 @@ from pathlib import Path
 LANGUAGE_EXTENSIONS = {
     "python": {".py"},
     "javascript": {".js"},
+    "typescript": {".ts", ".tsx"},
+    "c": {".c", ".h"},
     "cpp": {".cpp", ".cc", ".cxx"},
     "java": {".java"},
-    "typescript": {".ts", ".tsx"},
+    "csharp": {".cs"},
+    "go": {".go"},
+    "rust": {".rs"},
+    "kotlin": {".kt"},
+    "swift": {".swift"},
+    "php": {".php"},
+    "ruby": {".rb"},
 }
 
 TOPIC_RULES = [
