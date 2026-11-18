@@ -1,7 +1,7 @@
 name: Celebrate Merged PR
 
 on:
-  pull_request:
+  pull_request_target:
     types: [closed]
     branches: [main]
     paths:
@@ -33,7 +33,7 @@ jobs:
               body: [
                 `@${author} thank you for your first contribution! Appreciated a lot.`,
                 ``,
-                `Your avatar is now in the [contributors section](https://github.com/${owner}/${repo}#contributors) — the README updates automatically after every merge.`
+                `Your avatar is now in the [contributors section](https://github.com/${owner}/${repo}#contributors). The README updates automatically after every merge.`
               ].join('\n')
             });
 
