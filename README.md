@@ -32,6 +32,7 @@ I'm growing it into a place where the **same problem is solved in many languages
 
 Built by people like you. Every avatar below started with a first pull request.
 
+<!-- CONTRIBUTORS:START -->
 <p align="center">
   <a href="https://github.com/Huerte" title="Huerte"><img src="https://avatars.githubusercontent.com/u/155604992?v=4&s=32" width="32" height="32" alt="Huerte" style="border-radius:50%;margin:2px"></a>
   <a href="https://github.com/Kaliyugalaxmi" title="Kaliyugalaxmi"><img src="https://avatars.githubusercontent.com/u/185312647?v=4&s=32" width="32" height="32" alt="Kaliyugalaxmi" style="border-radius:50%;margin:2px"></a>
@@ -56,6 +57,7 @@ Built by people like you. Every avatar below started with a first pull request.
   <a href="https://github.com/morrosusso" title="morrosusso"><img src="https://avatars.githubusercontent.com/u/207383850?v=4&s=32" width="32" height="32" alt="morrosusso" style="border-radius:50%;margin:2px"></a>
   <a href="https://github.com/mxrfp" title="mxrfp"><img src="https://avatars.githubusercontent.com/u/212945045?v=4&s=32" width="32" height="32" alt="mxrfp" style="border-radius:50%;margin:2px"></a>
 </p>
+<!-- CONTRIBUTORS:END -->
 
 **Want to see your face here?** Pick a [`good first issue`](https://github.com/Huerte/algo-solutions-python/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) and open a PR. No code needed for [`no-code-needed`](https://github.com/Huerte/algo-solutions-python/issues?q=is%3Aissue+is%3Aopen+label%3Ano-code-needed) issues.
 
