@@ -21,8 +21,8 @@ README_PATH = os.environ.get("README_PATH", "README.md")
 MARKER_START = "<!-- CONTRIBUTORS:START -->"
 MARKER_END = "<!-- CONTRIBUTORS:END -->"
 
-AVATAR_SIZE = 48
-AVATAR_MARGIN = 1
+AVATAR_SIZE = 64
+AVATAR_MARGIN = 2
 
 
 def fetch_contributors() -> list[dict]:
