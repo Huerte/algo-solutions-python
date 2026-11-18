@@ -28,34 +28,17 @@ This started as my personal collection of Python solutions to problems from Leet
 
 I'm growing it into a place where the **same problem is solved in many languages**, so learners can compare styles side by side. Most solutions are in Python for now, and I'd love your help adding more languages.
 
-## Structure
+## Contributors
 
-Solutions are organized by language. Each file is named `practice<n>` in the order it was solved within that language's folder.
+Built by people like you. Every avatar below started with a first pull request.
 
-```
-algo-solutions-python/
-├── solutions/
-│   ├── python/
-│   │   ├── practice1.py
-│   │   ├── practice2.py
-│   │   └── ...
-│   └── <your language>/        # any language is welcome
-│       └── practice1.js
-├── assets/
-├── README.md
-├── TOPICS.md
-└── LICENSE
-```
+<p align="center">
+  <a href="https://github.com/Huerte/algo-solutions-python/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=Huerte/algo-solutions-python" alt="Contributors">
+  </a>
+</p>
 
-For problems classified by topic, see [TOPICS.md](TOPICS.md).
-
-Each file includes the problem source and a short note at the top as a comment:
-
-```python
-# Problem: Two Sum
-# Source: https://leetcode.com/problems/two-sum
-# Note: Used a dictionary for O(n) lookup
-```
+**Want to see your face here?** Pick a [`good first issue`](https://github.com/Huerte/algo-solutions-python/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) and open a PR. No code needed for [`no-code-needed`](https://github.com/Huerte/algo-solutions-python/issues?q=is%3Aissue+is%3Aopen+label%3Ano-code-needed) issues.
 
 ## How to contribute
 
@@ -97,15 +80,34 @@ Prefer video? Watch this: [How to contribute on GitHub (YouTube)](https://youtu.
 
 Don't see a folder for your language? Create it. You'll be the first contributor for it, and I'll credit you here.
 
-## Contributors
+## Structure
 
-Thanks to everyone who helps this collection grow.
+Solutions are organized by language. Each file is named `practice<n>` in the order it was solved within that language's folder.
 
-<p align="center">
-  <a href="https://github.com/Huerte/algo-solutions-python/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=Huerte/algo-solutions-python" alt="Contributors">
-  </a>
-</p>
+```
+algo-solutions-python/
+├── solutions/
+│   ├── python/
+│   │   ├── practice1.py
+│   │   ├── practice2.py
+│   │   └── ...
+│   └── <your language>/        # any language is welcome
+│       └── practice1.js
+├── assets/
+├── README.md
+├── TOPICS.md
+└── LICENSE
+```
+
+For problems classified by topic, see [TOPICS.md](TOPICS.md).
+
+Each file includes the problem source and a short note at the top as a comment:
+
+```python
+# Problem: Two Sum
+# Source: https://leetcode.com/problems/two-sum
+# Note: Used a dictionary for O(n) lookup
+```
 
 ## Platforms
 
@@ -116,6 +118,7 @@ Thanks to everyone who helps this collection grow.
 | [HackerRank](https://www.hackerrank.com/) | Structured skill tracks (algorithms, data structures, SQL) and company screening assessments. | [Solve Me First](https://www.hackerrank.com/challenges/solve-me-first/problem) |
 | [CheckiO](https://checkio.org/) | Game-driven coding adventures with interactive Python and TypeScript mission islands. | [Multiply (Intro)](https://py.checkio.org/mission/multiply-intro/) |
 | [GeeksforGeeks](https://www.geeksforgeeks.org/) | Comprehensive DSA concepts, company interview archives, and school-level problem ladders. | [Missing Number in Array](https://www.geeksforgeeks.org/problems/missing-number-in-array1416/1) |
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for details.
