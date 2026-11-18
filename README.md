@@ -32,11 +32,11 @@ I'm growing it into a place where the **same problem is solved in many languages
 
 Built by people like you. Every avatar below started with a first pull request.
 
+<!-- CONTRIBUTORS:START -->
 <p align="center">
-  <a href="https://github.com/Huerte/algo-solutions-python/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=Huerte/algo-solutions-python" alt="Contributors">
-  </a>
+  <em>Loading contributors&hellip; (updated automatically after each merged PR)</em>
 </p>
+<!-- CONTRIBUTORS:END -->
 
 **Want to see your face here?** Pick a [`good first issue`](https://github.com/Huerte/algo-solutions-python/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) and open a PR. No code needed for [`no-code-needed`](https://github.com/Huerte/algo-solutions-python/issues?q=is%3Aissue+is%3Aopen+label%3Ano-code-needed) issues.
 

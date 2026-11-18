@@ -1,0 +1,37 @@
+name: Celebrate Merged PR
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+    paths:
+      - "solutions/**"
+
+permissions:
+  pull-requests: write
+
+jobs:
+  celebrate:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Post thank-you comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const author = context.payload.pull_request.user.login;
+            const pr = context.payload.pull_request.number;
+            const { owner, repo } = context.repo;
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: pr,
+              body: [
+                `@${author} your solution is merged.`,
+                ``,
+                `Your avatar will appear in the [contributors section](https://github.com/${owner}/${repo}#contributors) shortly — the README updates automatically after each merge.`,
+                ``,
+                `You can also check the [live contributor graph](https://github.com/${owner}/${repo}/graphs/contributors) right now.`
+              ].join('\n')
+            });
