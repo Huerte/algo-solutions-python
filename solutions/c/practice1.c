@@ -1,7 +1,7 @@
 /**
  * Problem: N-Queens II
  * Source: https://leetcode.com/problems/n-queens-ii/
- * Note: A simple colution in C. There is probably room to optimize though.
+ * Note: A simple solution in C. There is probably room to optimize though.
  */
 
 int valid_placement(char board[9][9], int row, int col, int n) {
