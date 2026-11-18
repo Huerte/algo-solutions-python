@@ -467,8 +467,8 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Time Limit Validator | python | [practice77.py](solutions/python/practice77.py) | Incomplete Header (Source (blank)) |
 | Title Case | python | [practice215.py](solutions/python/practice215.py) | Complete |
 | Truncate Sentence | python | [practice179.py](solutions/python/practice179.py) | Complete |
-| Unknown Problem | C | [practice1.c](solutions/C/practice1.c) | Incomplete Header (Source (missing), Note (missing)) |
-| Unknown Problem | C | [practice2.c](solutions/C/practice2.c) | Incomplete Header (Source (missing), Note (missing)) |
+| Unknown Problem | c | [practice1.c](solutions/c/practice1.c) | Incomplete Header (Source (missing), Note (missing)) |
+| Unknown Problem | c | [practice2.c](solutions/c/practice2.c) | Incomplete Header (Source (missing), Note (missing)) |
 | Valid Braces | python | [practice197.py](solutions/python/practice197.py) | Complete |
 | Valid Sudoku | python | [practice362.py](solutions/python/practice362.py) | Incomplete Header (Note (missing)) |
 | Viral Advertising | python | [practice301.py](solutions/python/practice301.py) | Complete |
@@ -483,7 +483,7 @@ These solutions need headers, test cases, or implementation fixes. They are idea
 
 | Problem | Language | File | Needs |
 |---|---|---|---|
-| Unknown Problem | C | [practice1.c](solutions/C/practice1.c) | Incomplete Header (Source (missing), Note (missing)) |
+| Unknown Problem | c | [practice1.c](solutions/c/practice1.c) | Incomplete Header (Source (missing), Note (missing)) |
 | Two Sum | haskell | [practice1.hs](solutions/haskell/practice1.hs) | Incomplete Header (Note (missing)) |
 | A Number After a Double Reversal | python | [practice100.py](solutions/python/practice100.py) | Incomplete Header (Note (missing)) |
 | Calculate Alternating Digit Sum | python | [practice101.py](solutions/python/practice101.py) | Incomplete Header (Note (missing)) |
@@ -515,7 +515,7 @@ These solutions need headers, test cases, or implementation fixes. They are idea
 | Generate Permutations | python | [practice141.py](solutions/python/practice141.py) | Incomplete Header (Source (blank)) |
 | Next Greater Element I | python | [practice181.py](solutions/python/practice181.py) | Incomplete Header (Note (missing)) |
 | Number Complement | python | [practice182.py](solutions/python/practice182.py) | Incomplete Header (Note (missing)) |
-| Unknown Problem | C | [practice2.c](solutions/C/practice2.c) | Incomplete Header (Source (missing), Note (missing)) |
+| Unknown Problem | c | [practice2.c](solutions/c/practice2.c) | Incomplete Header (Source (missing), Note (missing)) |
 | Counting Valleys | python | [practice202.py](solutions/python/practice202.py) | Incomplete Header (Note (missing)) |
 | Pascal Triangle | python | [practice22.py](solutions/python/practice22.py) | Incomplete Header (Note (missing)) |
 | Stressful Subject | python | [practice227.py](solutions/python/practice227.py) | Incomplete Header (Note (missing)) |
