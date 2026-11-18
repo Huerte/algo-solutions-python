@@ -20,12 +20,29 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const association = context.payload.pull_request.author_association;
-            if (association !== 'FIRST_TIME_CONTRIBUTOR') return;
-
             const author = context.payload.pull_request.user.login;
             const pr = context.payload.pull_request.number;
             const { owner, repo } = context.repo;
+
+            // Count merged PRs by this author in the repo.
+            // author_association is unreliable here because on the `closed` event
+            // the author's commits are already in main, so GitHub upgrades them
+            // from FIRST_TIME_CONTRIBUTOR to CONTRIBUTOR before the check runs.
+            let mergedCount = 0;
+            let page = 1;
+            while (true) {
+              const { data } = await github.rest.pulls.list({
+                owner, repo, state: 'closed', per_page: 100, page
+              });
+              if (data.length === 0) break;
+              mergedCount += data.filter(p => p.user.login === author && p.merged_at).length;
+              if (data.length < 100) break;
+              page++;
+            }
+
+            // Only post for the author's very first merged PR
+            if (mergedCount !== 1) return;
+
             await github.rest.issues.createComment({
               owner,
               repo,
