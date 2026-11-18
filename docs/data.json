@@ -3940,6 +3940,39 @@
     "path": "solutions/python/practice411.py"
   },
   {
+    "name": "practice412",
+    "language": "python",
+    "filename": "practice412.py",
+    "problem": "Container With Most Water",
+    "source": "https://leetcode.com/problems/container-with-most-water/",
+    "topics": [
+      "General"
+    ],
+    "path": "solutions/python/practice412.py"
+  },
+  {
+    "name": "practice413",
+    "language": "python",
+    "filename": "practice413.py",
+    "problem": "Daily Temperatures",
+    "source": "https://leetcode.com/problems/daily-temperatures/",
+    "topics": [
+      "General"
+    ],
+    "path": "solutions/python/practice413.py"
+  },
+  {
+    "name": "practice414",
+    "language": "python",
+    "filename": "practice414.py",
+    "problem": "Gas Station",
+    "source": "https://leetcode.com/problems/gas-station/",
+    "topics": [
+      "General"
+    ],
+    "path": "solutions/python/practice414.py"
+  },
+  {
     "name": "practice42",
     "language": "python",
     "filename": "practice42.py",
