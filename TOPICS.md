@@ -413,7 +413,7 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | FizzBuzz++ | python | [practice375.py](solutions/python/practice375.py) | Complete |
 | Flood Fill | python | [practice405.py](solutions/python/practice405.py) | Incomplete Header (Note (missing)) |
 | Furthest Point From Origin | python | [practice317.py](solutions/python/practice317.py) | Complete |
-| Gas Station | python | [practice414.py](solutions/python/practice414.py) | In Progress / Needs Work |
+| Gas Station | python | [practice414.py](solutions/python/practice414.py) | Complete |
 | Generate Permutations | python | [practice141.py](solutions/python/practice141.py) | Incomplete Header (Source (blank)) |
 | Good vs Evil | python | [practice216.py](solutions/python/practice216.py) | Complete |
 | Grading Students | python | [practice35.py](solutions/python/practice35.py) | Complete |
@@ -486,7 +486,7 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 ## Solutions Needing Attention
 
 These solutions need headers, test cases, or implementation fixes. They are ideal for contributor PRs.
-**Total needing attention:** 125
+**Total needing attention:** 124
 
 | Problem | Language | File | Needs |
 |---|---|---|---|
@@ -583,7 +583,6 @@ These solutions need headers, test cases, or implementation fixes. They are idea
 | Word Ladder | python | [practice407.py](solutions/python/practice407.py) | Incomplete Header (Note (missing)) |
 | Container With Most Water | python | [practice412.py](solutions/python/practice412.py) | In Progress / Needs Work |
 | Daily Temperatures | python | [practice413.py](solutions/python/practice413.py) | In Progress / Needs Work |
-| Gas Station | python | [practice414.py](solutions/python/practice414.py) | In Progress / Needs Work |
 | Sum of Multiples of 3 and 5 | python | [practice42.py](solutions/python/practice42.py) | Incomplete Header (Source (blank)) |
 | Word Pattern | python | [practice44.py](solutions/python/practice44.py) | Incomplete Header (Note (missing)) |
 | Valid Parentheses | python | [practice45.py](solutions/python/practice45.py) | Incomplete Header (Note (missing)) |
