@@ -21,8 +21,8 @@ README_PATH = os.environ.get("README_PATH", "README.md")
 MARKER_START = "<!-- CONTRIBUTORS:START -->"
 MARKER_END = "<!-- CONTRIBUTORS:END -->"
 
-AVATAR_SIZE = 32
-AVATAR_MARGIN = 2
+AVATAR_SIZE = 48
+AVATAR_MARGIN = 1
 
 
 def fetch_contributors() -> list[dict]:
@@ -50,22 +50,23 @@ def fetch_contributors() -> list[dict]:
 
 
 def build_html(contributors: list[dict]) -> str:
-    lines = ['<p align="center">']
+    anchors: list[str] = []
     for c in contributors:
         if c.get("type") == "Bot":
             continue
         login = c["login"]
         avatar = c["avatar_url"]
         profile = c["html_url"]
-        lines.append(
-            f'  <a href="{profile}" title="{login}">'
+        anchors.append(
+            f'<a href="{profile}" title="{login}">'
             f'<img src="{avatar}&s={AVATAR_SIZE}" '
             f'width="{AVATAR_SIZE}" height="{AVATAR_SIZE}" '
             f'alt="{login}" style="border-radius:50%;margin:{AVATAR_MARGIN}px">'
             f"</a>"
         )
-    lines.append("</p>")
-    return "\n".join(lines)
+    # No whitespace between anchors — prevents GitHub from inserting a space
+    # character between each avatar when rendering inline HTML.
+    return '<p align="center">\n' + "".join(anchors) + "\n</p>"
 
 
 def update_readme(html: str) -> bool:
