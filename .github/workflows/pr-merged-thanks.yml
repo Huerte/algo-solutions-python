@@ -31,7 +31,7 @@ jobs:
               repo,
               issue_number: pr,
               body: [
-                `@${author} thank you for your first contribution — it means a lot.`,
+                `@${author} thank you for your first contribution! Appreciated a lot.`,
                 ``,
                 `Your avatar is now in the [contributors section](https://github.com/${owner}/${repo}#contributors) — the README updates automatically after every merge.`
               ].join('\n')

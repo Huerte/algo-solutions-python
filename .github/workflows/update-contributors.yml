@@ -40,3 +40,4 @@ jobs:
           git add README.md
           git diff --staged --quiet || git commit -m "chore: update contributors list"
           git push
+
