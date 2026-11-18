@@ -4757,5 +4757,29 @@
       "Stack & Queue"
     ],
     "path": "solutions/java/practice1.java"
+  },
+  {
+    "name": "practice2",
+    "language": "java",
+    "filename": "practice2.java",
+    "problem": "Two Sum",
+    "source": "https://leetcode.com/problems/two-sum/",
+    "topics": [
+      "Two Pointers",
+      "Hash Table",
+      "Math"
+    ],
+    "path": "solutions/java/practice2.java"
+  },
+  {
+    "name": "practice3",
+    "language": "java",
+    "filename": "practice3.java",
+    "problem": "Best Time to Buy and Sell Stock",
+    "source": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+    "topics": [
+      "Greedy"
+    ],
+    "path": "solutions/java/practice3.java"
   }
 ]
