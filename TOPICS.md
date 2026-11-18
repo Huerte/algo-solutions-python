@@ -436,7 +436,6 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Monkey Typing | python | [practice238.py](solutions/python/practice238.py) | Complete |
 | Multiplication table | python | [practice210.py](solutions/python/practice210.py) | Complete |
 | N-Queens | python | [practice84.py](solutions/python/practice84.py) | Complete |
-| N-Queens II | c | [practice1.c](solutions/c/practice1.c) | Complete |
 | N-Queens II | python | [practice1.py](solutions/python/practice1.py) | Complete |
 | N-Queens II (bitmask optimization) | python | [practice1_v2.py](solutions/python/practice1_v2.py) | Complete |
 | Nearest Value | python | [practice74.py](solutions/python/practice74.py) | Complete |
@@ -471,6 +470,7 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Time Limit Validator | python | [practice77.py](solutions/python/practice77.py) | Incomplete Header (Source (blank)) |
 | Title Case | python | [practice215.py](solutions/python/practice215.py) | Complete |
 | Truncate Sentence | python | [practice179.py](solutions/python/practice179.py) | Complete |
+| Unknown Problem | c | [practice1.c](solutions/c/practice1.c) | Incomplete Header (Source (missing), Note (missing)) |
 | Unknown Problem | c | [practice2.c](solutions/c/practice2.c) | Incomplete Header (Source (missing), Note (missing)) |
 | Valid Braces | python | [practice197.py](solutions/python/practice197.py) | Complete |
 | Valid Sudoku | python | [practice362.py](solutions/python/practice362.py) | Incomplete Header (Note (missing)) |
@@ -482,10 +482,11 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 ## Solutions Needing Attention
 
 These solutions need headers, test cases, or implementation fixes. They are ideal for contributor PRs.
-**Total needing attention:** 126
+**Total needing attention:** 127
 
 | Problem | Language | File | Needs |
 |---|---|---|---|
+| Unknown Problem | c | [practice1.c](solutions/c/practice1.c) | Incomplete Header (Source (missing), Note (missing)) |
 | Two Sum | haskell | [practice1.hs](solutions/haskell/practice1.hs) | Incomplete Header (Note (missing)) |
 | A Number After a Double Reversal | python | [practice100.py](solutions/python/practice100.py) | Incomplete Header (Note (missing)) |
 | Calculate Alternating Digit Sum | python | [practice101.py](solutions/python/practice101.py) | Incomplete Header (Note (missing)) |
