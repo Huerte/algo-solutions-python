@@ -1,0 +1,27 @@
+# Problem: Gas Station
+# Source: https://leetcode.com/problems/gas-station/
+# Note: Greedy tracking resets start index on deficit but forgets to verify if total gas covers total cost.
+# Status: In Progress (Logic Error)
+
+
+class Solution(object):
+    def canCompleteCircuit(self, gas, cost):
+        total_stations = len(gas)
+        current_tank = 0
+        start_index = 0
+
+        for i in range(total_stations):
+            current_tank += gas[i] - cost[i]
+            if current_tank < 0:
+                start_index = i + 1
+                current_tank = 0
+
+        return start_index
+
+
+if __name__ == "__main__":
+    solution = Solution()
+    assert solution.canCompleteCircuit([1, 2, 3, 4, 5], [3, 4, 5, 1, 2]) == 3
+    result = solution.canCompleteCircuit([2, 3, 4], [3, 4, 3])
+    print("Result:", result)
+    assert result == -1, f"Expected -1, got {result}"
