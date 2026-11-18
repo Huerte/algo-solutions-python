@@ -1,7 +1,7 @@
 # Problem: Gas Station
 # Source: https://leetcode.com/problems/gas-station/
-# Note: Greedy tracking resets start index on deficit but forgets to verify if total gas covers total cost.
-# Status: In Progress (Logic Error)
+# Note: Greedy tracking resets start index on deficit; a global gas/cost check rejects impossible circuits.
+# Status: ✅ Done
 
 
 class Solution(object):
@@ -15,6 +15,11 @@ class Solution(object):
             if current_tank < 0:
                 start_index = i + 1
                 current_tank = 0
+
+        # A circuit exists only if total gas covers total cost; the greedy
+        # scan above finds its start when that holds.
+        if sum(gas) < sum(cost):
+            return -1
 
         return start_index
 
