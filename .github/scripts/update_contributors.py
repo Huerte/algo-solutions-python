@@ -18,8 +18,15 @@ REPO = os.environ.get("GITHUB_REPOSITORY", "Huerte/algo-solutions-python")
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 README_PATH = os.environ.get("README_PATH", "README.md")
 
+BOT_PATTERNS = re.compile(r"\[bot\]|(-bot$)|(^bot-)", re.IGNORECASE)
+
 MARKER_START = "<!-- CONTRIBUTORS:START -->"
 MARKER_END = "<!-- CONTRIBUTORS:END -->"
+
+
+def is_bot(user: dict) -> bool:
+    login = user.get("login", "")
+    return user.get("type") == "Bot" or bool(BOT_PATTERNS.search(login))
 
 AVATAR_SIZE = 64
 AVATAR_MARGIN = 2
@@ -30,7 +37,8 @@ def fetch_contributors() -> list[dict]:
     if TOKEN:
         headers["Authorization"] = f"Bearer {TOKEN}"
 
-    all_contributors: list[dict] = []
+    # Pull from /contributors (commit-based, may lag a few minutes after a merge)
+    commit_contributors: dict[str, dict] = {}
     page = 1
     while True:
         resp = requests.get(
@@ -43,16 +51,54 @@ def fetch_contributors() -> list[dict]:
         batch = resp.json()
         if not batch:
             break
-        all_contributors.extend(batch)
+        for c in batch:
+            login = c.get("login", "")
+            if login and not is_bot(c):
+                commit_contributors[login] = c
         page += 1
 
-    return all_contributors
+    # Also pull merged PR authors — real-time, no lag.
+    # This catches contributors whose commits haven't propagated to the
+    # /contributors endpoint yet (e.g. immediately after a first merge).
+    pr_contributors: dict[str, dict] = {}
+    page = 1
+    while True:
+        resp = requests.get(
+            f"https://api.github.com/repos/{REPO}/pulls",
+            headers=headers,
+            params={"state": "closed", "per_page": 100, "page": page},
+            timeout=15,
+        )
+        resp.raise_for_status()
+        batch = resp.json()
+        if not batch:
+            break
+        for pr in batch:
+            if not pr.get("merged_at"):
+                continue
+            user = pr.get("user") or {}
+            login = user.get("login", "")
+            if not login or is_bot(user):
+                continue
+            if login not in pr_contributors and login not in commit_contributors:
+                pr_contributors[login] = {
+                    "login": login,
+                    "avatar_url": user.get("avatar_url", ""),
+                    "html_url": user.get("html_url", f"https://github.com/{login}"),
+                    "type": "User",
+                }
+        page += 1
+
+    # Merge: commit_contributors first (sorted by commit count), then any
+    # PR-only authors who aren't in the commit list yet.
+    merged = list(commit_contributors.values()) + list(pr_contributors.values())
+    return merged
 
 
 def build_html(contributors: list[dict]) -> str:
     anchors: list[str] = []
     for c in contributors:
-        if c.get("type") == "Bot":
+        if is_bot(c):
             continue
         login = c["login"]
         avatar = c["avatar_url"]
@@ -103,6 +149,8 @@ def main() -> None:
     contributors = fetch_contributors()
     humans = [c for c in contributors if c.get("type") != "Bot"]
     print(f"Found {len(humans)} human contributor(s).")
+    for c in humans:
+        print(f"  - {c['login']}")
 
     html = build_html(contributors)
     changed = update_readme(html)

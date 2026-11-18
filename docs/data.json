@@ -4713,6 +4713,28 @@
     "path": "solutions/typescript/practice1.ts"
   },
   {
+    "name": "practice2",
+    "language": "typescript",
+    "filename": "practice2.ts",
+    "problem": "practice2",
+    "source": "https://leetcode.com/problems/two-sum/",
+    "topics": [
+      "General"
+    ],
+    "path": "solutions/typescript/practice2.ts"
+  },
+  {
+    "name": "practice3",
+    "language": "typescript",
+    "filename": "practice3.ts",
+    "problem": "practice3",
+    "source": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+    "topics": [
+      "General"
+    ],
+    "path": "solutions/typescript/practice3.ts"
+  },
+  {
     "name": "practice1",
     "language": "c",
     "filename": "practice1.c",
