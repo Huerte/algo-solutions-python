@@ -28,10 +28,11 @@ jobs:
               repo,
               issue_number: pr,
               body: [
-                `@${author} your solution is merged.`,
+                `@${author} merged. Thanks for contributing.`,
                 ``,
-                `Your avatar will appear in the [contributors section](https://github.com/${owner}/${repo}#contributors) shortly — the README updates automatically after each merge.`,
+                `Your avatar is in (or will appear shortly in) the [contributors section](https://github.com/${owner}/${repo}#contributors) — the README updates automatically after every merge.`,
                 ``,
-                `You can also check the [live contributor graph](https://github.com/${owner}/${repo}/graphs/contributors) right now.`
+                `You can also check the [live contributor graph](https://github.com/${owner}/${repo}/graphs/contributors).`
               ].join('\n')
             });
+

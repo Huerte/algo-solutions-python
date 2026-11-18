@@ -21,8 +21,8 @@ README_PATH = os.environ.get("README_PATH", "README.md")
 MARKER_START = "<!-- CONTRIBUTORS:START -->"
 MARKER_END = "<!-- CONTRIBUTORS:END -->"
 
-AVATAR_SIZE = 52
-AVATAR_MARGIN = 4
+AVATAR_SIZE = 32
+AVATAR_MARGIN = 2
 
 
 def fetch_contributors() -> list[dict]:
@@ -114,3 +114,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
