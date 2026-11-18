@@ -1,7 +1,7 @@
 # Problem: Daily Temperatures
 # Source: https://leetcode.com/problems/daily-temperatures/
-# Note: Stack implementation mistakenly uses an if-statement instead of a while-loop, resolving at most one pending day.
-# Status: In Progress (Logic Error)
+# Note: Use a monotonic stack to find the next warmer day in O(n) time.
+# Status: ✅ Done
 
 
 class Solution(object):
@@ -11,7 +11,7 @@ class Solution(object):
         stack = []
 
         for i in range(n):
-            if stack and temperatures[i] > temperatures[stack[-1]]:
+            while stack and temperatures[i] > temperatures[stack[-1]]:
                 prev_index = stack.pop()
                 answer[prev_index] = i - prev_index
 
