@@ -20,6 +20,9 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
+            const association = context.payload.pull_request.author_association;
+            if (association !== 'FIRST_TIME_CONTRIBUTOR') return;
+
             const author = context.payload.pull_request.user.login;
             const pr = context.payload.pull_request.number;
             const { owner, repo } = context.repo;
@@ -28,11 +31,9 @@ jobs:
               repo,
               issue_number: pr,
               body: [
-                `@${author} merged. Thanks for contributing.`,
+                `@${author} first PR merged. Welcome.`,
                 ``,
-                `Your avatar is in (or will appear shortly in) the [contributors section](https://github.com/${owner}/${repo}#contributors) — the README updates automatically after every merge.`,
-                ``,
-                `You can also check the [live contributor graph](https://github.com/${owner}/${repo}/graphs/contributors).`
+                `Your avatar is now in the [contributors section](https://github.com/${owner}/${repo}#contributors) — the README updates automatically after every merge.`
               ].join('\n')
             });
 
