@@ -391,7 +391,7 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Counting Valleys | python | [practice202.py](solutions/python/practice202.py) | Incomplete Header (Note (missing)) |
 | Counting Valleys | python | [practice287.py](solutions/python/practice287.py) | Complete |
 | Cut the Sticks | python | [practice309.py](solutions/python/practice309.py) | Complete |
-| Daily Temperatures | python | [practice413.py](solutions/python/practice413.py) | In Progress / Needs Work |
+| Daily Temperatures | python | [practice413.py](solutions/python/practice413.py) | Complete |
 | Day of the Programmer | python | [practice294.py](solutions/python/practice294.py) | Complete |
 | Days to Wait for a Luckier Day | python | [practice98.py](solutions/python/practice98.py) | Incomplete Header (Note (missing)) |
 | Decode the Message | python | [practice152.py](solutions/python/practice152.py) | Complete |
@@ -486,7 +486,7 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 ## Solutions Needing Attention
 
 These solutions need headers, test cases, or implementation fixes. They are ideal for contributor PRs.
-**Total needing attention:** 124
+**Total needing attention:** 123
 
 | Problem | Language | File | Needs |
 |---|---|---|---|
@@ -582,7 +582,6 @@ These solutions need headers, test cases, or implementation fixes. They are idea
 | Flood Fill | python | [practice405.py](solutions/python/practice405.py) | Incomplete Header (Note (missing)) |
 | Word Ladder | python | [practice407.py](solutions/python/practice407.py) | Incomplete Header (Note (missing)) |
 | Container With Most Water | python | [practice412.py](solutions/python/practice412.py) | In Progress / Needs Work |
-| Daily Temperatures | python | [practice413.py](solutions/python/practice413.py) | In Progress / Needs Work |
 | Sum of Multiples of 3 and 5 | python | [practice42.py](solutions/python/practice42.py) | Incomplete Header (Source (blank)) |
 | Word Pattern | python | [practice44.py](solutions/python/practice44.py) | Incomplete Header (Note (missing)) |
 | Valid Parentheses | python | [practice45.py](solutions/python/practice45.py) | Incomplete Header (Note (missing)) |
