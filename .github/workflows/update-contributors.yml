@@ -4,39 +4,160 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
+  pull_request_target:
+    types:
+      - closed
+  workflow_dispatch: {}
+
+# Guard: queue concurrent runs — never let two runs push at the same time.
+# cancel-in-progress: false ensures every merged PR eventually gets recorded.
+concurrency:
+  group: update-contributors
+  cancel-in-progress: false
 
 permissions:
   contents: write
 
 jobs:
   update-contributors:
-    if: github.actor != 'github-actions[bot]'
+    # Guard: on pull_request_target, only run when the PR was actually merged.
+    # On push/workflow_dispatch, always run.
+    # Guard: ignore commits made by the bot itself to prevent infinite loops
+    # (belt-and-suspenders alongside the [skip ci] tag in the commit message).
+    if: >
+      github.actor != 'github-actions[bot]' &&
+      (
+        github.event_name == 'workflow_dispatch' ||
+        github.event_name == 'push' ||
+        (github.event_name == 'pull_request_target' && github.event.pull_request.merged == true)
+      )
+
     runs-on: ubuntu-latest
+    timeout-minutes: 10  # Guard: kill runaway jobs; never hang forever.
 
     steps:
-      - uses: actions/checkout@v4
+      # ── Checkout ────────────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
+          # Guard: full history required — shallow clones break git rebase.
+          fetch-depth: 0
+          # Guard: always land on main explicitly, not a detached HEAD.
+          ref: main
           persist-credentials: true
 
-      - uses: actions/setup-python@v5
+      # ── Validate git state ──────────────────────────────────────────────────
+      - name: Configure git and validate state
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Guard: abort if checked-out branch is not main.
+          BRANCH=$(git rev-parse --abbrev-ref HEAD)
+          if [ "$BRANCH" != "main" ]; then
+            echo "ERROR: Expected branch 'main', got '$BRANCH'. Aborting."
+            exit 1
+          fi
+
+          # Guard: abort if the remote is unreachable before doing any work.
+          if ! git ls-remote --exit-code origin > /dev/null 2>&1; then
+            echo "ERROR: Remote 'origin' is unreachable. Aborting."
+            exit 1
+          fi
+
+      # ── Python setup ────────────────────────────────────────────────────────
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
       - name: Install dependencies
         run: pip install requests
 
+      # ── Run contributor script ───────────────────────────────────────────────
       - name: Update contributors in README
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           README_PATH: README.md
-        run: python .github/scripts/update_contributors.py
-
-      - name: Commit if changed
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git diff --staged --quiet || (git commit -m "chore: update contributors list [skip ci]" && git push)
+          # Guard: set -euo pipefail so any unhandled error or unbound variable
+          # fails the step immediately instead of silently continuing.
+          set -euo pipefail
+          python .github/scripts/update_contributors.py
 
+      # ── Detect changes ───────────────────────────────────────────────────────
+      - name: Check for changes
+        id: changes
+        run: |
+          git add README.md
+
+          # Guard: skip commit + push entirely when README.md is unchanged.
+          if git diff --cached --quiet; then
+            echo "README.md already up to date — nothing to commit."
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "Changes detected in README.md."
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # ── Commit ───────────────────────────────────────────────────────────────
+      - name: Commit changes
+        if: steps.changes.outputs.has_changes == 'true'
+        run: |
+          git commit -m "chore: update contributors list [skip ci]"
+
+      # ── Push with rebase-retry loop ──────────────────────────────────────────
+      # Guard: the core fix. Handles the race condition where another commit
+      # lands on main between our checkout and our push. Retries up to 5 times
+      # with exponential backoff (5 → 10 → 20 → 40 → 80 seconds).
+      - name: Push (with rebase retry on rejection)
+        if: steps.changes.outputs.has_changes == 'true'
+        run: |
+          set -euo pipefail
+
+          MAX_RETRIES=5
+          ATTEMPT=0
+          WAIT=5
+
+          while [ $ATTEMPT -lt $MAX_RETRIES ]; do
+            ATTEMPT=$((ATTEMPT + 1))
+            echo "Push attempt $ATTEMPT / $MAX_RETRIES..."
+
+            # Pull latest remote commits and replay ours on top.
+            if git pull --rebase --autostash origin main; then
+              echo "Rebase succeeded."
+            else
+              # Guard: if rebase itself fails (e.g. a conflict), abort cleanly
+              # so the repo is never left mid-rebase.
+              echo "WARNING: Rebase failed on attempt $ATTEMPT. Aborting rebase."
+              git rebase --abort 2>/dev/null || true
+              sleep $WAIT
+              WAIT=$((WAIT * 2))
+              continue
+            fi
+
+            if git push origin main; then
+              echo "Push succeeded on attempt $ATTEMPT."
+              exit 0
+            fi
+
+            echo "WARNING: Push rejected on attempt $ATTEMPT. Retrying after ${WAIT}s..."
+            sleep $WAIT
+            WAIT=$((WAIT * 2))
+          done
+
+          echo "ERROR: Push failed after $MAX_RETRIES attempts."
+          exit 1
+
+      # ── Job summary ──────────────────────────────────────────────────────────
+      - name: Write job summary
+        if: always()
+        run: |
+          if [ "${{ steps.changes.outputs.has_changes }}" = "true" ]; then
+            echo "### ✅ Contributors Updated" >> "$GITHUB_STEP_SUMMARY"
+            echo "README.md was updated and pushed to \`main\`." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "### ℹ️ No Update Needed" >> "$GITHUB_STEP_SUMMARY"
+            echo "README.md is already up to date." >> "$GITHUB_STEP_SUMMARY"
+          fi
