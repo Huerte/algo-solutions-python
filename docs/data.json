@@ -3973,6 +3973,63 @@
     "path": "solutions/python/practice414.py"
   },
   {
+    "name": "practice415",
+    "language": "python",
+    "filename": "practice415.py",
+    "problem": "Character Frequency Counter",
+    "source": "Practice problem",
+    "topics": [
+      "Hash Table",
+      "Strings"
+    ],
+    "path": "solutions/python/practice415.py"
+  },
+  {
+    "name": "practice416",
+    "language": "python",
+    "filename": "practice416.py",
+    "problem": "Second Largest Distinct Number",
+    "source": "https://www.hackerrank.com/challenges/find-second-maximum-number-in-a-list/problem",
+    "topics": [
+      "Math"
+    ],
+    "path": "solutions/python/practice416.py"
+  },
+  {
+    "name": "practice417",
+    "language": "python",
+    "filename": "practice417.py",
+    "problem": "Palindrome Number",
+    "source": "https://leetcode.com/problems/palindrome-number/",
+    "topics": [
+      "Two Pointers",
+      "Math"
+    ],
+    "path": "solutions/python/practice417.py"
+  },
+  {
+    "name": "practice418",
+    "language": "python",
+    "filename": "practice418.py",
+    "problem": "Rank Records",
+    "source": "",
+    "topics": [
+      "Sorting"
+    ],
+    "path": "solutions/python/practice418.py"
+  },
+  {
+    "name": "practice419",
+    "language": "python",
+    "filename": "practice419.py",
+    "problem": "Sum of Even and Odd Numbers",
+    "source": "",
+    "topics": [
+      "Math"
+    ],
+    "path": "solutions/python/practice419.py"
+  },
+  {
     "name": "practice42",
     "language": "python",
     "filename": "practice42.py",
