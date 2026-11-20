@@ -308,7 +308,7 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Palindrome Number | python | [practice417.py](solutions/python/practice417.py) | Incomplete Header (Note (missing)) |
 | Permutation Difference between Two Strings | python | [practice147.py](solutions/python/practice147.py) | Complete |
 | Remove Outermost Parentheses | python | [practice164.py](solutions/python/practice164.py) | Complete |
-| Remove the parentheses | python | [practice420.py](solutions/python/practice420.py) | Incomplete Header (Note (blank)) |
+| Remove the parentheses | python | [practice420.py](solutions/python/practice420.py) | In Progress / Needs Work |
 | Remove Trailing Zeros From a String | python | [practice319.py](solutions/python/practice319.py) | Complete |
 | Repeated String | python | [practice283.py](solutions/python/practice283.py) | Complete |
 | Replace All Digits with Characters | python | [practice90.py](solutions/python/practice90.py) | Complete |
@@ -593,7 +593,7 @@ These solutions need headers, test cases, or implementation fixes. They are idea
 | Rank Records | python | [practice418.py](solutions/python/practice418.py) | Incomplete Header (Source (blank)) |
 | Sum of Even and Odd Numbers | python | [practice419.py](solutions/python/practice419.py) | Incomplete Header (Source (blank)) |
 | Sum of Multiples of 3 and 5 | python | [practice42.py](solutions/python/practice42.py) | Incomplete Header (Source (blank)) |
-| Remove the parentheses | python | [practice420.py](solutions/python/practice420.py) | Incomplete Header (Note (blank)) |
+| Remove the parentheses | python | [practice420.py](solutions/python/practice420.py) | In Progress / Needs Work |
 | Word Pattern | python | [practice44.py](solutions/python/practice44.py) | Incomplete Header (Note (missing)) |
 | Valid Parentheses | python | [practice45.py](solutions/python/practice45.py) | Incomplete Header (Note (missing)) |
 | Unique Morse Code Words | python | [practice46.py](solutions/python/practice46.py) | Incomplete Header (Note (missing)) |
