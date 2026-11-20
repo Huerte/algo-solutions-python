@@ -448,8 +448,8 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Multiplication table | python | [practice210.py](solutions/python/practice210.py) | Complete |
 | N-Queens | python | [practice84.py](solutions/python/practice84.py) | Complete |
 | N-Queens II | c | [practice1.c](solutions/c/practice1.c) | Complete |
-| N-Queens II | python | [practice1.py](solutions/python/practice1.py) | Complete |
 | N-Queens II (bitmask optimization) | python | [practice1_v2.py](solutions/python/practice1_v2.py) | Complete |
+| N-Queens II (count solutions) | python | [practice1.py](solutions/python/practice1.py) | Complete |
 | Nearest Value | python | [practice74.py](solutions/python/practice74.py) | Complete |
 | Not In Place | python | [practice308.py](solutions/python/practice308.py) | Incomplete Header (Source (blank)) |
 | Pair of Gloves | python | [practice385.py](solutions/python/practice385.py) | Complete |
