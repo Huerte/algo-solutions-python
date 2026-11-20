@@ -14,13 +14,10 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 SOLUTIONS_DIR = REPO_ROOT / "solutions"
 
 IN_PROGRESS_PATTERN = re.compile(
-    r"""
-    ^\s*(?:#|//|--|/\*+|\*)\s*               # Comment indicator
-    (?:[^\w\s]\s*)?                          # Optional leading emoji (e.g. 🔄, 🚧, ⏳)
-    (?:status\s*[:\-—–]?\s*.*?)?             # Optional 'status:' prefix
-    \b(in[-_\s]?progress|wip|work[-_\s]in[-_\s]progress|needs[-_\s]work|incomplete|unfinished|unsolved|todo)\b
-    """,
-    re.IGNORECASE | re.VERBOSE,
+    r"^\s*(?:#|//|--|/\*+|\*)\s*(?:[^\w\s]\s*)?"
+    r"(?:status\s*[:\-\u2014\u2013]?\s*.*?)?"
+    r"\b(in[-_\s]?progress|wip|work[-_\s]in[-_\s]progress|needs[-_\s]work|incomplete|unfinished|unsolved|todo)\b",
+    re.IGNORECASE,
 )
 
 SOLVED_PATTERN = re.compile(
