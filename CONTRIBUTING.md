@@ -50,23 +50,30 @@ algo-solutions/
 
 ## 2. Header Comment Format
 
-Every solution file must start with a 3-line header comment at the very top that includes:
+Every solution file must start with a header comment at the very top that includes:
 1. **Problem:** The name of the problem.
 2. **Source:** A direct link to the problem (LeetCode, Codewars, HackerRank, CheckiO, GeeksforGeeks, etc.).
-3. **Note:** A short, one-line note explaining your approach or key takeaway.
+3. **Note** or **Topic:** Either a short note about your approach, or the topic/category tags — at least one of the two.
 
 ### Python Example (`#`):
 ```python
 # Problem: Two Sum
-# Source: [https://leetcode.com/problems/two-sum](https://leetcode.com/problems/two-sum)
+# Source: https://leetcode.com/problems/two-sum
+# Topic: Hash Table, Arrays
+```
+
+Or with Note instead:
+```python
+# Problem: Two Sum
+# Source: https://leetcode.com/problems/two-sum
 # Note: Used a dictionary for O(n) lookup
 ```
 
 ### JavaScript / C++ / Java / Go / Rust Example (`//`):
 ```javascript
 // Problem: Two Sum
-// Source: [https://leetcode.com/problems/two-sum](https://leetcode.com/problems/two-sum)
-// Note: Used a hash map to store seen numbers and their indices
+// Source: https://leetcode.com/problems/two-sum
+// Topic: Hash Table, Arrays
 ```
 
 ---

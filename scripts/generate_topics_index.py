@@ -95,6 +95,7 @@ def parse_solution_file(path: Path) -> dict[str, str]:
     found_problem_line = False
     found_source_line = False
     found_note_line = False
+    found_topic_line = False
 
     for line in lines:
         if not found_problem_line:
@@ -115,9 +116,10 @@ def parse_solution_file(path: Path) -> dict[str, str]:
             if note_match:
                 found_note_line = True
                 note = note_match.group(1).strip()
-        if not declared_topic:
-            topic_match = re.match(comment_pat + r"Topic:\s*(.*?)\s*(?:\*/)?$", line, re.IGNORECASE)
+        if not found_topic_line and not declared_topic:
+            topic_match = re.match(comment_pat + r"Topics?:\s*(.*?)\s*(?:\*/)?$", line, re.IGNORECASE)
             if topic_match:
+                found_topic_line = True
                 declared_topic = topic_match.group(1).strip()
         if re.search(
             comment_pat + r"(?:Status:\s*.*(?:in progress|needs|incomplete)|TODO\b).*",
@@ -130,19 +132,22 @@ def parse_solution_file(path: Path) -> dict[str, str]:
     code_lines = [l for l in non_empty if not re.match(comment_pat, l)]
     has_code = bool(code_lines)
 
-    # Flag files whose headers are present but empty
+    # A file satisfies the third header requirement with EITHER Note or Topic.
+    has_third_field = (found_note_line and note) or (found_topic_line and declared_topic)
+
+    # Flag files whose headers are present but empty or missing
     if status not in ("In Progress / Needs Work", "Empty (0 bytes)", "Stub (<5 lines)"):
         missing_parts = []
         if found_source_line and not source:
             missing_parts.append("Source (blank)")
-        if found_note_line and not note:
+        if found_note_line and not note and not found_topic_line:
             missing_parts.append("Note (blank)")
         # Also flag fields that are entirely absent when the file has code
         if has_code:
             if not found_source_line:
                 missing_parts.append("Source (missing)")
-            if not found_note_line:
-                missing_parts.append("Note (missing)")
+            if not has_third_field:
+                missing_parts.append("Note or Topic (missing)")
         if missing_parts:
             status = f"Incomplete Header ({', '.join(missing_parts)})"
 

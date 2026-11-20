@@ -10,8 +10,13 @@ import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-HEADER_FIELDS = ("Problem", "Source", "Note")
-HEADER_PATTERN = r"^\s*(?:#|//|--|/\*+|\*)\s*{field}:\s*(\S.*?)\s*(?:\*/)?$"
+
+# Problem and Source are always required individually.
+# The third field is satisfied by EITHER Note OR Topic — whichever is present.
+REQUIRED_FIELDS = ("Problem", "Source")
+THIRD_FIELD_ALTERNATIVES = ("Note", "Topic")
+
+HEADER_PATTERN = r"^\s*(?:#|//|--|/\*+|\*)\s*{field}s?:\s*(\S.*?)\s*(?:\*/)?$"
 SOLUTION_FILENAME = re.compile(r"practice\d+\.[A-Za-z0-9]+$")
 
 
@@ -73,20 +78,35 @@ def validate_file(path: Path) -> list[str]:
     except (OSError, UnicodeError) as error:
         return [f"could not read file: {error}"]
 
-    for field in HEADER_FIELDS:
+    # Check Problem and Source individually
+    for field in REQUIRED_FIELDS:
         pattern = re.compile(HEADER_PATTERN.format(field=re.escape(field)), re.IGNORECASE)
-        found = False
-        for line in top_lines:
-            match = pattern.match(line)
-            if match and match.group(1).strip():
-                found = True
-                break
-
+        found = any(
+            (m := pattern.match(line)) and m.group(1).strip()
+            for line in top_lines
+        )
         if not found:
             errors.append(
                 f"missing or empty required header field '{field}:' "
                 "(supported comment prefixes: #, //, --, or block comment *)"
             )
+
+    # Check that at least one of Note or Topic is present and non-empty
+    third_found = False
+    for field in THIRD_FIELD_ALTERNATIVES:
+        pattern = re.compile(HEADER_PATTERN.format(field=re.escape(field)), re.IGNORECASE)
+        if any(
+            (m := pattern.match(line)) and m.group(1).strip()
+            for line in top_lines
+        ):
+            third_found = True
+            break
+
+    if not third_found:
+        errors.append(
+            "missing or empty 'Note:' or 'Topic:' header field — include at least one "
+            "(supported comment prefixes: #, //, --, or block comment *)"
+        )
 
     return errors
 
@@ -124,8 +144,12 @@ def main() -> int:
             for error in errors:
                 print(f"    - {error}")
         print(
-            "\nEach solution must begin with three comment lines in this order: "
-            "Problem, Source, and Note."
+            "\nEach solution must begin with these comment lines: "
+            "Problem, Source, and either Note or Topic (at least one of the two).\n"
+            "Example:\n"
+            "  # Problem: Two Sum\n"
+            "  # Source: https://leetcode.com/problems/two-sum\n"
+            "  # Topic: Hash Table, Arrays"
         )
         return 1
 

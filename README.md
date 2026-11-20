@@ -101,13 +101,15 @@ algo-solutions/
 
 For problems classified by topic, see [TOPICS.md](TOPICS.md).
 
-Each file includes the problem source and a short note at the top as a comment:
+Each file includes the problem source and a topic or note at the top as a comment:
 
 ```python
 # Problem: Two Sum
 # Source: https://leetcode.com/problems/two-sum
-# Note: Used a dictionary for O(n) lookup
+# Topic: Hash Table, Arrays
 ```
+
+Or with `Note:` instead of `Topic:` — both are accepted.
 
 ## Platforms
 

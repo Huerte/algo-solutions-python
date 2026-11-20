@@ -187,7 +187,7 @@ def create_issue(path: Path, repo: str) -> bool:
 
     body = f"""## Fix and complete the `{problem_clean}` solution
 
-The file `{rel_path}` was merged with `# Status: 🔄 IN PROGRESS`, which means the implementation is unfinished or has known issues.
+The file `{rel_path}` was merged with an in-progress status marker (`IN PROGRESS`, `WIP`, `TODO`, `NEEDS WORK`, or similar), which means the implementation is unfinished or has known issues.
 
 **File:** [`{filename}`](https://github.com/{repo}/blob/main/{rel_path})
 **Language:** {lang}
