@@ -20,7 +20,7 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 
 | Problem | Language | File | Status |
 |---|---|---|---|
-| 3Sum Closest | python | [practice134.py](solutions/python/practice134.py) | Incomplete Header (Note (missing)) |
+| 3Sum Closest | python | [practice134.py](solutions/python/practice134.py) | Incomplete Header (Note or Topic (missing)) |
 | Array Partition | python | [practice144.py](solutions/python/practice144.py) | Complete |
 | Array Search | python | [practice265.py](solutions/python/practice265.py) | Complete |
 | Average of Array Excluding Minimum and Maximum | python | [practice92.py](solutions/python/practice92.py) | Incomplete Header (Source (blank)) |
@@ -31,7 +31,7 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Circular Array Rotation | python | [practice331.py](solutions/python/practice331.py) | Complete |
 | Contains Duplicate | python | [practice158.py](solutions/python/practice158.py) | Complete |
 | Convert an Array Into a 2D Array With Conditions | python | [practice225.py](solutions/python/practice225.py) | Complete |
-| Count Elements Smaller Than Current Element | python | [practice96.py](solutions/python/practice96.py) | Incomplete Header (Note (missing)) |
+| Count Elements Smaller Than Current Element | python | [practice96.py](solutions/python/practice96.py) | Incomplete Header (Note or Topic (missing)) |
 | Create Target Array in the Given Order | python | [practice199.py](solutions/python/practice199.py) | Complete |
 | Currying functions: multiply all elements in an array | python | [practice386.py](solutions/python/practice386.py) | Complete |
 | Decode XORed Array | python | [practice239.py](solutions/python/practice239.py) | Complete |
@@ -41,15 +41,15 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Final Array State After K Multiplication Operations I | python | [practice200.py](solutions/python/practice200.py) | Complete |
 | Find Common Elements Between Two Arrays | python | [practice262.py](solutions/python/practice262.py) | Complete |
 | Find Missing Elements | python | [practice306.py](solutions/python/practice306.py) | Complete |
-| Find Pivot Index | python | [practice378.py](solutions/python/practice378.py) | Incomplete Header (Note (missing)) |
-| Find the Difference of Two Arrays | python | [practice330.py](solutions/python/practice330.py) | Incomplete Header (Note (missing)) |
+| Find Pivot Index | python | [practice378.py](solutions/python/practice378.py) | Incomplete Header (Note or Topic (missing)) |
+| Find the Difference of Two Arrays | python | [practice330.py](solutions/python/practice330.py) | Incomplete Header (Note or Topic (missing)) |
 | Highest Rank Number in an Array | python | [practice219.py](solutions/python/practice219.py) | Complete |
 | Indexes of Subarray Sum | python | [practice263.py](solutions/python/practice263.py) | Complete |
 | Insert Interval | python | [practice8.py](solutions/python/practice8.py) | Complete |
 | Intersection of Two Arrays | python | [practice110.py](solutions/python/practice110.py) | Complete |
-| Jump Game | python | [practice132.py](solutions/python/practice132.py) | Incomplete Header (Note (missing)) |
+| Jump Game | python | [practice132.py](solutions/python/practice132.py) | Incomplete Header (Note or Topic (missing)) |
 | Jump Game | python | [practice6.py](solutions/python/practice6.py) | Complete |
-| Jump Game II | python | [practice334.py](solutions/python/practice334.py) | Incomplete Header (Note (missing)) |
+| Jump Game II | python | [practice334.py](solutions/python/practice334.py) | Incomplete Header (Note or Topic (missing)) |
 | Largest Local Values in a Matrix | python | [practice151.py](solutions/python/practice151.py) | Complete |
 | Longest Subarray with Sum K | python | [practice349.py](solutions/python/practice349.py) | Complete |
 | Longest Subarray with Sum K | python | [practice406.py](solutions/python/practice406.py) | Complete |
@@ -59,55 +59,55 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Matrix Rotate 90deg Clockwise | python | [practice139.py](solutions/python/practice139.py) | Incomplete Header (Source (blank)) |
 | Matrix Script | python | [practice163.py](solutions/python/practice163.py) | Complete |
 | Maximum Area of Longest Diagonal Rectangle | python | [practice52.py](solutions/python/practice52.py) | Complete |
-| Maximum Area of Longest Diagonal Rectangle | python | [practice85.py](solutions/python/practice85.py) | Incomplete Header (Note (missing)) |
+| Maximum Area of Longest Diagonal Rectangle | python | [practice85.py](solutions/python/practice85.py) | Incomplete Header (Note or Topic (missing)) |
 | Maximum Product Subarray | python | [practice370.py](solutions/python/practice370.py) | Complete |
 | Maximum Subarray | c | [practice2.c](solutions/c/practice2.c) | Complete |
 | Maximum Subarray | python | [practice2.py](solutions/python/practice2.py) | Complete |
-| Maximum Subarray | python | [practice338.py](solutions/python/practice338.py) | Incomplete Header (Note (missing)) |
+| Maximum Subarray | python | [practice338.py](solutions/python/practice338.py) | Incomplete Header (Note or Topic (missing)) |
 | Maximum subarray sum | python | [practice250.py](solutions/python/practice250.py) | Complete |
-| Merge Intervals | python | [practice130.py](solutions/python/practice130.py) | Incomplete Header (Note (missing)) |
+| Merge Intervals | python | [practice130.py](solutions/python/practice130.py) | Incomplete Header (Note or Topic (missing)) |
 | Merge Intervals | python | [practice255.py](solutions/python/practice255.py) | Complete |
-| Merge Intervals | python | [practice337.py](solutions/python/practice337.py) | Incomplete Header (Note (missing)) |
+| Merge Intervals | python | [practice337.py](solutions/python/practice337.py) | Incomplete Header (Note or Topic (missing)) |
 | Merge Intervals | python | [practice7.py](solutions/python/practice7.py) | Complete |
 | Minimum Average of Smallest and Largest Elements | python | [practice303.py](solutions/python/practice303.py) | Complete |
 | Minimum Distance to the Target Element | python | [practice293.py](solutions/python/practice293.py) | Complete |
-| Most Frequent Even Element | python | [practice115.py](solutions/python/practice115.py) | Incomplete Header (Note (missing)) |
-| Next Greater Element I | python | [practice181.py](solutions/python/practice181.py) | Incomplete Header (Note (missing)) |
+| Most Frequent Even Element | python | [practice115.py](solutions/python/practice115.py) | Incomplete Header (Note or Topic (missing)) |
+| Next Greater Element I | python | [practice181.py](solutions/python/practice181.py) | Incomplete Header (Note or Topic (missing)) |
 | Next Greater Element I | python | [practice266.py](solutions/python/practice266.py) | Complete |
 | Non-unique Elements | python | [practice55.py](solutions/python/practice55.py) | Complete |
-| Pascal Triangle | python | [practice22.py](solutions/python/practice22.py) | Incomplete Header (Note (missing)) |
+| Pascal Triangle | python | [practice22.py](solutions/python/practice22.py) | Incomplete Header (Note or Topic (missing)) |
 | Pascal's Triangle | python | [practice60.py](solutions/python/practice60.py) | Complete |
 | Peak Element | python | [practice368.py](solutions/python/practice368.py) | Complete |
 | Plus One Array | python | [practice381.py](solutions/python/practice381.py) | Complete |
 | Product of Array Except Self | python | [practice111.py](solutions/python/practice111.py) | Complete |
 | Pyramid Array | python | [practice220.py](solutions/python/practice220.py) | Complete |
 | Range Sum of BST | python | [practice184.py](solutions/python/practice184.py) | Complete |
-| Rank Elements in an Array | python | [practice113.py](solutions/python/practice113.py) | Incomplete Header (Note (missing)) |
+| Rank Elements in an Array | python | [practice113.py](solutions/python/practice113.py) | Incomplete Header (Note or Topic (missing)) |
 | Rank Transform of an Array | python | [practice16.py](solutions/python/practice16.py) | Complete |
 | Rank Transform of an Array | python | [practice342.py](solutions/python/practice342.py) | Complete |
-| Remove Duplicates from Sorted Array | python | [practice135.py](solutions/python/practice135.py) | Incomplete Header (Note (missing)) |
+| Remove Duplicates from Sorted Array | python | [practice135.py](solutions/python/practice135.py) | Incomplete Header (Note or Topic (missing)) |
 | Remove Duplicates from Sorted List | python | [practice41.py](solutions/python/practice41.py) | Complete |
-| Remove Duplicates from Sorted List II | python | [practice365.py](solutions/python/practice365.py) | Incomplete Header (Note (missing)) |
+| Remove Duplicates from Sorted List II | python | [practice365.py](solutions/python/practice365.py) | Incomplete Header (Note or Topic (missing)) |
 | Return the Missing Element | python | [practice247.py](solutions/python/practice247.py) | Complete |
 | Rotate Array | python | [practice350.py](solutions/python/practice350.py) | Complete |
 | Rotate Array by One | python | [practice373.py](solutions/python/practice373.py) | Complete |
 | Rotate List | python | [practice14.py](solutions/python/practice14.py) | Complete |
-| Rotate List | python | [practice377.py](solutions/python/practice377.py) | Incomplete Header (Note (missing)) |
+| Rotate List | python | [practice377.py](solutions/python/practice377.py) | Incomplete Header (Note or Topic (missing)) |
 | Rotate List by N Steps | python | [practice47.py](solutions/python/practice47.py) | Incomplete Header (Source (blank)) |
 | Running Sum of 1d Array | python | [practice154.py](solutions/python/practice154.py) | Complete |
-| Running Sum of 1D Array | python | [practice94.py](solutions/python/practice94.py) | Incomplete Header (Note (missing)) |
+| Running Sum of 1D Array | python | [practice94.py](solutions/python/practice94.py) | Incomplete Header (Note or Topic (missing)) |
 | Smallest Range I | python | [practice233.py](solutions/python/practice233.py) | Complete |
 | Sort an array containing 0s, 1s and 2s | python | [practice34.py](solutions/python/practice34.py) | Complete |
-| Sort an array of 0s, 1s and 2s without using any sorting algorithm. | python | [practice335.py](solutions/python/practice335.py) | Incomplete Header (Note (missing)) |
-| Sort Array by Increasing Frequency | python | [practice399.py](solutions/python/practice399.py) | Incomplete Header (Note (missing)) |
+| Sort an array of 0s, 1s and 2s without using any sorting algorithm. | python | [practice335.py](solutions/python/practice335.py) | Incomplete Header (Note or Topic (missing)) |
+| Sort Array by Increasing Frequency | python | [practice399.py](solutions/python/practice399.py) | Incomplete Header (Note or Topic (missing)) |
 | Sort arrays - 1 | python | [practice376.py](solutions/python/practice376.py) | Complete |
-| Spiral Matrix | python | [practice131.py](solutions/python/practice131.py) | Incomplete Header (Note (missing)) |
-| Spiral Matrix | python | [practice379.py](solutions/python/practice379.py) | Incomplete Header (Note (missing)) |
+| Spiral Matrix | python | [practice131.py](solutions/python/practice131.py) | Incomplete Header (Note or Topic (missing)) |
+| Spiral Matrix | python | [practice379.py](solutions/python/practice379.py) | Incomplete Header (Note or Topic (missing)) |
 | Spiral Matrix | python | [practice5.py](solutions/python/practice5.py) | Complete |
-| Spiral Matrix 2 | python | [practice126.py](solutions/python/practice126.py) | Incomplete Header (Note (missing)) |
+| Spiral Matrix 2 | python | [practice126.py](solutions/python/practice126.py) | Incomplete Header (Note or Topic (missing)) |
 | Spiral Matrix Display | python | [practice121.py](solutions/python/practice121.py) | Complete |
 | Spiral Matrix II | python | [practice11.py](solutions/python/practice11.py) | Complete |
-| Spiral Matrix II | python | [practice340.py](solutions/python/practice340.py) | Incomplete Header (Note (missing)) |
+| Spiral Matrix II | python | [practice340.py](solutions/python/practice340.py) | Incomplete Header (Note or Topic (missing)) |
 | Split the Array | python | [practice321.py](solutions/python/practice321.py) | Complete |
 | Squares of a Sorted Array | python | [practice180.py](solutions/python/practice180.py) | Complete |
 | Subarray Division (Birthday Chocolate) | python | [practice285.py](solutions/python/practice285.py) | Complete |
@@ -115,8 +115,8 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Sum of All Odd Length Subarrays | python | [practice305.py](solutions/python/practice305.py) | Complete |
 | Sum of Variable Length Subarrays | python | [practice235.py](solutions/python/practice235.py) | Complete |
 | Two Sum | cpp | [practice1.cpp](solutions/cpp/practice1.cpp) | Complete |
-| Two Sum | haskell | [practice1.hs](solutions/haskell/practice1.hs) | Incomplete Header (Note (missing)) |
-| Two Sum | python | [practice124.py](solutions/python/practice124.py) | Incomplete Header (Note (missing)) |
+| Two Sum | haskell | [practice1.hs](solutions/haskell/practice1.hs) | Incomplete Header (Note or Topic (missing)) |
+| Two Sum | python | [practice124.py](solutions/python/practice124.py) | Incomplete Header (Note or Topic (missing)) |
 | Two Sum | java | [practice2.java](solutions/java/practice2.java) | Complete |
 | Two Sum | typescript | [practice2.ts](solutions/typescript/practice2.ts) | Complete |
 | Two Sum | python | [practice248.py](solutions/python/practice248.py) | Complete |
@@ -128,7 +128,7 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 
 | Problem | Language | File | Status |
 |---|---|---|---|
-| Coin Change (Minimum Coins) | python | [practice254.py](solutions/python/practice254.py) | Incomplete Header (Note (missing)) |
+| Coin Change (Minimum Coins) | python | [practice254.py](solutions/python/practice254.py) | Incomplete Header (Note or Topic (missing)) |
 | The Longest Increasing Subsequence | python | [practice302.py](solutions/python/practice302.py) | Complete |
 | Unique Paths | python | [practice15.py](solutions/python/practice15.py) | Complete |
 | Unique Paths II | python | [practice18.py](solutions/python/practice18.py) | Complete |
@@ -149,72 +149,72 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Problem | Language | File | Status |
 |---|---|---|---|
 | 10,001st Prime | python | [practice73.py](solutions/python/practice73.py) | Complete |
-| 1000-digit Fibonacci Number | python | [practice123.py](solutions/python/practice123.py) | Incomplete Header (Note (missing)) |
+| 1000-digit Fibonacci Number | python | [practice123.py](solutions/python/practice123.py) | Incomplete Header (Note or Topic (missing)) |
 | 4Sum | python | [practice224.py](solutions/python/practice224.py) | Complete |
-| A Number After a Double Reversal | python | [practice100.py](solutions/python/practice100.py) | Incomplete Header (Note (missing)) |
+| A Number After a Double Reversal | python | [practice100.py](solutions/python/practice100.py) | Incomplete Header (Note or Topic (missing)) |
 | Add Two Numbers | python | [practice125.py](solutions/python/practice125.py) | Complete |
 | Add Two Numbers | python | [practice37.py](solutions/python/practice37.py) | Complete |
 | Alternating Digit Sum | python | [practice30.py](solutions/python/practice30.py) | Complete |
 | Area of a Square | python | [practice401.py](solutions/python/practice401.py) | Complete |
-| Calculate Alternating Digit Sum | python | [practice101.py](solutions/python/practice101.py) | Incomplete Header (Note (missing)) |
+| Calculate Alternating Digit Sum | python | [practice101.py](solutions/python/practice101.py) | Incomplete Header (Note or Topic (missing)) |
 | Calculate Alternating Digit Sum | javascript | [practice2.js](solutions/javascript/practice2.js) | Complete |
 | Clear Digits | python | [practice236.py](solutions/python/practice236.py) | Complete |
 | Clear Digits | python | [practice72.py](solutions/python/practice72.py) | Complete |
-| Clear Digits | python | [practice86.py](solutions/python/practice86.py) | Incomplete Header (Note (missing)) |
-| Combination Sum | python | [practice397.py](solutions/python/practice397.py) | Incomplete Header (Note (missing)) |
+| Clear Digits | python | [practice86.py](solutions/python/practice86.py) | Incomplete Header (Note or Topic (missing)) |
+| Combination Sum | python | [practice397.py](solutions/python/practice397.py) | Incomplete Header (Note or Topic (missing)) |
 | Count Digit Appearances | python | [practice241.py](solutions/python/practice241.py) | Complete |
-| Count Integers with Even Number of Digits | python | [practice87.py](solutions/python/practice87.py) | Incomplete Header (Note (missing)) |
+| Count Integers with Even Number of Digits | python | [practice87.py](solutions/python/practice87.py) | Incomplete Header (Note or Topic (missing)) |
 | Count Number of Maximum Bitwise-OR Subsets | python | [practice157.py](solutions/python/practice157.py) | Complete |
 | Count Number of Pairs With Absolute Difference K | python | [practice260.py](solutions/python/practice260.py) | Complete |
 | Count Numbers with Even Number of Digits | python | [practice83.py](solutions/python/practice83.py) | Complete |
-| Count Numbers with Unique Digits | python | [practice103.py](solutions/python/practice103.py) | Incomplete Header (Note (missing)) |
+| Count Numbers with Unique Digits | python | [practice103.py](solutions/python/practice103.py) | Incomplete Header (Note or Topic (missing)) |
 | Count Pairs Whose Sum is Less than Target | python | [practice149.py](solutions/python/practice149.py) | Complete |
 | Count the Digits That Divide a Number | python | [practice186.py](solutions/python/practice186.py) | Complete |
 | Digit Frequency Score | python | [practice411.py](solutions/python/practice411.py) | Complete |
 | Digit Power Sum | python | [practice29.py](solutions/python/practice29.py) | Complete |
-| Even Fibonacci Numbers Sum | python | [practice120.py](solutions/python/practice120.py) | Incomplete Header (Note (missing)) |
+| Even Fibonacci Numbers Sum | python | [practice120.py](solutions/python/practice120.py) | Incomplete Header (Note or Topic (missing)) |
 | Fibonacci Number | python | [practice81.py](solutions/python/practice81.py) | Complete |
 | Fibonacci Sequence Generator | python | [practice68.py](solutions/python/practice68.py) | Incomplete Header (Source (blank)) |
 | Find Digits | python | [practice282.py](solutions/python/practice282.py) | Complete |
 | Find Numbers with Even Number of Digits | python | [practice318.py](solutions/python/practice318.py) | Complete |
 | Find the Missing Number | python | [practice109.py](solutions/python/practice109.py) | Complete |
 | Find the Number of Good Pairs I | python | [practice198.py](solutions/python/practice198.py) | Complete |
-| Finding 3-Digit Even Numbers | python | [practice327.py](solutions/python/practice327.py) | Incomplete Header (Note (missing)) |
+| Finding 3-Digit Even Numbers | python | [practice327.py](solutions/python/practice327.py) | Incomplete Header (Note or Topic (missing)) |
 | GCD of Odd and Even Sums | python | [practice191.py](solutions/python/practice191.py) | Complete |
-| Happy Number | python | [practice336.py](solutions/python/practice336.py) | Incomplete Header (Note (missing)) |
+| Happy Number | python | [practice336.py](solutions/python/practice336.py) | Incomplete Header (Note or Topic (missing)) |
 | How Many Numbers Are Smaller Than the Current Number | python | [practice153.py](solutions/python/practice153.py) | Complete |
 | Is Prime Number | python | [practice118.py](solutions/python/practice118.py) | Complete |
 | Kids With the Greatest Number of Candies | python | [practice148.py](solutions/python/practice148.py) | Complete |
 | Largest Number At Least Twice of Others | python | [practice108.py](solutions/python/practice108.py) | Complete |
 | Largest Number At Least Twice of Others | python | [practice61.py](solutions/python/practice61.py) | Complete |
 | Left and Right Sum Differences | python | [practice145.py](solutions/python/practice145.py) | Complete |
-| Maximum 69 Number | python | [practice323.py](solutions/python/practice323.py) | Incomplete Header (Note (missing)) |
+| Maximum 69 Number | python | [practice323.py](solutions/python/practice323.py) | Incomplete Header (Note or Topic (missing)) |
 | Minimum Bit Flips to Convert Number | python | [practice183.py](solutions/python/practice183.py) | Complete |
-| Minimum Operations to Make Integers Divisible by 3 | python | [practice93.py](solutions/python/practice93.py) | Incomplete Header (Note (missing)) |
+| Minimum Operations to Make Integers Divisible by 3 | python | [practice93.py](solutions/python/practice93.py) | Incomplete Header (Note or Topic (missing)) |
 | Minimum Operations to Reduce Number to One | python | [practice105.py](solutions/python/practice105.py) | Complete |
 | Minimum Path Sum | python | [practice19.py](solutions/python/practice19.py) | Complete |
-| Minimum Sum of Four Digit Number After Splitting Digits | python | [practice326.py](solutions/python/practice326.py) | Incomplete Header (Note (missing)) |
+| Minimum Sum of Four Digit Number After Splitting Digits | python | [practice326.py](solutions/python/practice326.py) | Incomplete Header (Note or Topic (missing)) |
 | Mirror Distance of an Integer | python | [practice162.py](solutions/python/practice162.py) | Complete |
 | Most Frequent Even Number | python | [practice70.py](solutions/python/practice70.py) | Incomplete Header (Source (blank)) |
 | N-th Fibonacci | python | [practice229.py](solutions/python/practice229.py) | Complete |
-| Next bigger number with the same digits | python | [practice389.py](solutions/python/practice389.py) | Incomplete Header (Note (missing)) |
-| Number Complement | python | [practice182.py](solutions/python/practice182.py) | Incomplete Header (Note (missing)) |
+| Next bigger number with the same digits | python | [practice389.py](solutions/python/practice389.py) | Incomplete Header (Note or Topic (missing)) |
+| Number Complement | python | [practice182.py](solutions/python/practice182.py) | Incomplete Header (Note or Topic (missing)) |
 | Number Complement | python | [practice267.py](solutions/python/practice267.py) | Complete |
 | Number Line Jumps | python | [practice281.py](solutions/python/practice281.py) | Complete |
 | Number of 1 Bits | python | [practice232.py](solutions/python/practice232.py) | Complete |
 | Number of Employees Who Met the Target | python | [practice146.py](solutions/python/practice146.py) | Complete |
 | Number of Islands | python | [practice253.py](solutions/python/practice253.py) | Complete |
-| Number of Islands | python | [practice361.py](solutions/python/practice361.py) | Incomplete Header (Note (missing)) |
+| Number of Islands | python | [practice361.py](solutions/python/practice361.py) | Incomplete Header (Note or Topic (missing)) |
 | Number of Steps to Reduce a Number to Zero | python | [practice201.py](solutions/python/practice201.py) | Complete |
-| Number of Steps to Reduce a Number to Zero | python | [practice95.py](solutions/python/practice95.py) | Incomplete Header (Note (missing)) |
+| Number of Steps to Reduce a Number to Zero | python | [practice95.py](solutions/python/practice95.py) | Incomplete Header (Note or Topic (missing)) |
 | Number of trailing zeros of N! | python | [practice246.py](solutions/python/practice246.py) | Complete |
 | Number Power Sum | python | [practice56.py](solutions/python/practice56.py) | Incomplete Header (Source (blank)) |
 | Picking Numbers | python | [practice297.py](solutions/python/practice297.py) | Complete |
 | Power of 2 | python | [practice371.py](solutions/python/practice371.py) | Complete |
 | Product of consecutive Fib numbers | python | [practice244.py](solutions/python/practice244.py) | Complete |
-| Second Largest Distinct Number | python | [practice416.py](solutions/python/practice416.py) | Incomplete Header (Note (missing)) |
+| Second Largest Distinct Number | python | [practice416.py](solutions/python/practice416.py) | Incomplete Header (Note or Topic (missing)) |
 | Self Dividing Numbers | python | [practice268.py](solutions/python/practice268.py) | Complete |
-| Smallest Even Multiple | python | [practice117.py](solutions/python/practice117.py) | Incomplete Header (Note (missing)) |
+| Smallest Even Multiple | python | [practice117.py](solutions/python/practice117.py) | Incomplete Header (Note or Topic (missing)) |
 | Smallest Multiple That is Even | python | [practice21.py](solutions/python/practice21.py) | Complete |
 | Smallest possible sum | python | [practice23.py](solutions/python/practice23.py) | Complete |
 | Sqrt(x) | python | [practice76.py](solutions/python/practice76.py) | Complete |
@@ -225,14 +225,14 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Sum of Multiples | python | [practice185.py](solutions/python/practice185.py) | Complete |
 | Sum of Multiples | python | [practice66.py](solutions/python/practice66.py) | Complete |
 | Sum of Multiples of 3 and 5 | python | [practice42.py](solutions/python/practice42.py) | Incomplete Header (Source (blank)) |
-| Sum of Multiples of 3, 5, or 7 | python | [practice88.py](solutions/python/practice88.py) | Incomplete Header (Note (missing)) |
+| Sum of Multiples of 3, 5, or 7 | python | [practice88.py](solutions/python/practice88.py) | Incomplete Header (Note or Topic (missing)) |
 | Sum of Odd Cubed Numbers | python | [practice222.py](solutions/python/practice222.py) | Complete |
 | Sum of Ones in Binary | python | [practice25.py](solutions/python/practice25.py) | Incomplete Header (Source (blank)) |
 | Sum of Pairs | python | [practice403.py](solutions/python/practice403.py) | Complete |
-| Sum of Values at Indices With K Set Bits | python | [practice324.py](solutions/python/practice324.py) | Incomplete Header (Note (missing)) |
+| Sum of Values at Indices With K Set Bits | python | [practice324.py](solutions/python/practice324.py) | Incomplete Header (Note or Topic (missing)) |
 | Take a Number And Sum Its Digits Raised To The Consecutive Powers And ....¡Eureka!! | python | [practice212.py](solutions/python/practice212.py) | Complete |
 | Valid Number | python | [practice20.py](solutions/python/practice20.py) | Complete |
-| Valid Number | python | [practice364.py](solutions/python/practice364.py) | Incomplete Header (Note (missing)) |
+| Valid Number | python | [practice364.py](solutions/python/practice364.py) | Incomplete Header (Note or Topic (missing)) |
 | Validate Credit Card Number | python | [practice231.py](solutions/python/practice231.py) | Complete |
 | Validating Credit Card Numbers | python | [practice176.py](solutions/python/practice176.py) | Complete |
 
@@ -240,9 +240,9 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 
 | Problem | Language | File | Status |
 |---|---|---|---|
-| Counting Sort 1 | python | [practice384.py](solutions/python/practice384.py) | Incomplete Header (Note (missing)) |
+| Counting Sort 1 | python | [practice384.py](solutions/python/practice384.py) | Incomplete Header (Note or Topic (missing)) |
 | Merge Two Sorted Lists | python | [practice38.py](solutions/python/practice38.py) | Complete |
-| Print in Order | python | [practice329.py](solutions/python/practice329.py) | Incomplete Header (Note (missing)) |
+| Print in Order | python | [practice329.py](solutions/python/practice329.py) | Incomplete Header (Note or Topic (missing)) |
 | Rank Records | python | [practice418.py](solutions/python/practice418.py) | Incomplete Header (Source (blank)) |
 | Relative Ranks | python | [practice226.py](solutions/python/practice226.py) | Complete |
 | Sort 0s, 1s and 2s | python | [practice343.py](solutions/python/practice343.py) | Complete |
@@ -255,16 +255,16 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 
 | Problem | Language | File | Status |
 |---|---|---|---|
-| Alternating Characters | python | [practice360.py](solutions/python/practice360.py) | Incomplete Header (Note (missing)) |
+| Alternating Characters | python | [practice360.py](solutions/python/practice360.py) | Incomplete Header (Note or Topic (missing)) |
 | Backspace String Compare | python | [practice106.py](solutions/python/practice106.py) | Complete |
 | Backspace String Compare | python | [practice58.py](solutions/python/practice58.py) | Complete |
 | Backspaces in string | python | [practice271.py](solutions/python/practice271.py) | Complete |
 | Binary Palindrome | python | [practice27.py](solutions/python/practice27.py) | Incomplete Header (Source (blank)) |
 | Buddy Strings | python | [practice59.py](solutions/python/practice59.py) | Complete |
 | Buddy Strings Challenge | python | [practice107.py](solutions/python/practice107.py) | Complete |
-| Calculate Percentage of Letter in String | python | [practice102.py](solutions/python/practice102.py) | Incomplete Header (Note (missing)) |
-| CamelCase | python | [practice382.py](solutions/python/practice382.py) | Incomplete Header (Note (missing)) |
-| Character Frequency Counter | python | [practice415.py](solutions/python/practice415.py) | Incomplete Header (Note (missing)) |
+| Calculate Percentage of Letter in String | python | [practice102.py](solutions/python/practice102.py) | Incomplete Header (Note or Topic (missing)) |
+| CamelCase | python | [practice382.py](solutions/python/practice382.py) | Incomplete Header (Note or Topic (missing)) |
+| Character Frequency Counter | python | [practice415.py](solutions/python/practice415.py) | Incomplete Header (Note or Topic (missing)) |
 | Character Percentage in String | python | [practice43.py](solutions/python/practice43.py) | Complete |
 | Character Triangle Pattern | python | [practice79.py](solutions/python/practice79.py) | Incomplete Header (Source (blank)) |
 | Character Year Count Mapping | python | [practice237.py](solutions/python/practice237.py) | Incomplete Header (Source (blank)) |
@@ -276,43 +276,43 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Count CamelCase Words | python | [practice112.py](solutions/python/practice112.py) | Complete |
 | Count Capital Letters in String | python | [practice4.py](solutions/python/practice4.py) | Incomplete Header (Source (blank)) |
 | Count Even Letters | python | [practice345.py](solutions/python/practice345.py) | Complete |
-| Counting Words With a Given Prefix | python | [practice325.py](solutions/python/practice325.py) | Incomplete Header (Note (missing)) |
+| Counting Words With a Given Prefix | python | [practice325.py](solutions/python/practice325.py) | Incomplete Header (Note or Topic (missing)) |
 | Create Phone Number | python | [practice40.py](solutions/python/practice40.py) | Complete |
 | Data Reverse | python | [practice217.py](solutions/python/practice217.py) | Complete |
 | Filter Strings by Substring | python | [practice67.py](solutions/python/practice67.py) | Incomplete Header (Source (blank)) |
 | Find Common Characters | python | [practice234.py](solutions/python/practice234.py) | Complete |
-| Find Strings Containing a Specific Character | python | [practice89.py](solutions/python/practice89.py) | Incomplete Header (Note (missing)) |
+| Find Strings Containing a Specific Character | python | [practice89.py](solutions/python/practice89.py) | Incomplete Header (Note or Topic (missing)) |
 | First Letter to Appear Twice | python | [practice10.py](solutions/python/practice10.py) | Complete |
-| First Letter to Appear Twice | python | [practice116.py](solutions/python/practice116.py) | Incomplete Header (Note (missing)) |
+| First Letter to Appear Twice | python | [practice116.py](solutions/python/practice116.py) | Incomplete Header (Note or Topic (missing)) |
 | First Matching Character From Both Ends | python | [practice178.py](solutions/python/practice178.py) | Complete |
 | Generate Palindrome ASCII | python | [practice31.py](solutions/python/practice31.py) | Incomplete Header (Source (blank)) |
-| Generate Parentheses | python | [practice341.py](solutions/python/practice341.py) | Incomplete Header (Note (missing)) |
+| Generate Parentheses | python | [practice341.py](solutions/python/practice341.py) | Incomplete Header (Note or Topic (missing)) |
 | Group Anagrams | python | [practice314.py](solutions/python/practice314.py) | Complete |
 | Integer to Roman | python | [practice26.py](solutions/python/practice26.py) | Complete |
-| Integer to Roman | python | [practice398.py](solutions/python/practice398.py) | Incomplete Header (Note (missing)) |
+| Integer to Roman | python | [practice398.py](solutions/python/practice398.py) | Incomplete Header (Note or Topic (missing)) |
 | Keypad Phone Simulator | python | [practice122.py](solutions/python/practice122.py) | Incomplete Header (Source (blank)) |
-| Length of Last Word | python | [practice128.py](solutions/python/practice128.py) | Incomplete Header (Note (missing)) |
+| Length of Last Word | python | [practice128.py](solutions/python/practice128.py) | Incomplete Header (Note or Topic (missing)) |
 | Length of Last Word | python | [practice9.py](solutions/python/practice9.py) | Complete |
 | Longest Common Prefix | python | [practice50.py](solutions/python/practice50.py) | Complete |
 | Longest Palindrome in a String | python | [practice353.py](solutions/python/practice353.py) | Complete |
-| Longest Substring Without Repeating Characters | python | [practice133.py](solutions/python/practice133.py) | Incomplete Header (Note (missing)) |
+| Longest Substring Without Repeating Characters | python | [practice133.py](solutions/python/practice133.py) | Incomplete Header (Note or Topic (missing)) |
 | Longest Substring Without Repeating Characters | python | [practice252.py](solutions/python/practice252.py) | Complete |
 | Longest Substring Without Repeating Characters | python | [practice64.py](solutions/python/practice64.py) | Complete |
 | Maximum Number of Words Found in Sentences | python | [practice187.py](solutions/python/practice187.py) | Complete |
 | Maximum Substrings With Distinct Start | python | [practice136.py](solutions/python/practice136.py) | Complete |
-| Most frequently used words in a text | python | [practice391.py](solutions/python/practice391.py) | Incomplete Header (Note (missing)) |
+| Most frequently used words in a text | python | [practice391.py](solutions/python/practice391.py) | Incomplete Header (Note or Topic (missing)) |
 | Multiply Strings | python | [practice311.py](solutions/python/practice311.py) | Complete |
-| Multiply Two Strings | python | [practice104.py](solutions/python/practice104.py) | Incomplete Header (Note (missing)) |
+| Multiply Two Strings | python | [practice104.py](solutions/python/practice104.py) | Incomplete Header (Note or Topic (missing)) |
 | Number of Lines To Write String | python | [practice276.py](solutions/python/practice276.py) | Complete |
 | Palindrome Number | python | [practice17.py](solutions/python/practice17.py) | Complete |
-| Palindrome Number | python | [practice417.py](solutions/python/practice417.py) | Incomplete Header (Note (missing)) |
+| Palindrome Number | python | [practice417.py](solutions/python/practice417.py) | Incomplete Header (Note or Topic (missing)) |
 | Permutation Difference between Two Strings | python | [practice147.py](solutions/python/practice147.py) | Complete |
 | Remove Outermost Parentheses | python | [practice164.py](solutions/python/practice164.py) | Complete |
 | Remove the parentheses | python | [practice420.py](solutions/python/practice420.py) | In Progress / Needs Work |
 | Remove Trailing Zeros From a String | python | [practice319.py](solutions/python/practice319.py) | Complete |
 | Repeated String | python | [practice283.py](solutions/python/practice283.py) | Complete |
 | Replace All Digits with Characters | python | [practice90.py](solutions/python/practice90.py) | Complete |
-| Reverse Bits | python | [practice366.py](solutions/python/practice366.py) | Incomplete Header (Note (missing)) |
+| Reverse Bits | python | [practice366.py](solutions/python/practice366.py) | Incomplete Header (Note or Topic (missing)) |
 | Reverse Integer | python | [practice28.py](solutions/python/practice28.py) | Complete |
 | Reverse String II | python | [practice12.py](solutions/python/practice12.py) | Complete |
 | Roman Numerals Decoder | python | [practice214.py](solutions/python/practice214.py) | Complete |
@@ -326,7 +326,7 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | The Speed of Letters | python | [practice410.py](solutions/python/practice410.py) | Complete |
 | The Vowel Code | python | [practice218.py](solutions/python/practice218.py) | Complete |
 | Trim Trailing Vowels | python | [practice320.py](solutions/python/practice320.py) | Complete |
-| Two Characters | python | [practice359.py](solutions/python/practice359.py) | Incomplete Header (Note (missing)) |
+| Two Characters | python | [practice359.py](solutions/python/practice359.py) | Incomplete Header (Note or Topic (missing)) |
 | Uncommon Words from Two Sentences | python | [practice274.py](solutions/python/practice274.py) | Complete |
 | Unique Morse Code Words | python | [practice155.py](solutions/python/practice155.py) | Complete |
 | Unique Morse Code Words | python | [practice46.py](solutions/python/practice46.py) | Complete |
@@ -334,7 +334,7 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Valid Parentheses | java | [practice1.java](solutions/java/practice1.java) | Complete |
 | Valid Parentheses | javascript | [practice1.js](solutions/javascript/practice1.js) | Complete |
 | Valid Parentheses | typescript | [practice1.ts](solutions/typescript/practice1.ts) | Complete |
-| Valid Parentheses | python | [practice137.py](solutions/python/practice137.py) | Incomplete Header (Note (missing)) |
+| Valid Parentheses | python | [practice137.py](solutions/python/practice137.py) | Incomplete Header (Note or Topic (missing)) |
 | Valid Parentheses | python | [practice409.py](solutions/python/practice409.py) | Complete |
 | Valid Parentheses | python | [practice45.py](solutions/python/practice45.py) | Complete |
 | Valid Parentheses | python | [practice71.py](solutions/python/practice71.py) | Complete |
@@ -344,7 +344,7 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Weighted Word Mapping | python | [practice313.py](solutions/python/practice313.py) | Complete |
 | WeIrD StRiNg CaSe | python | [practice209.py](solutions/python/practice209.py) | Complete |
 | Word Ladder | python | [practice256.py](solutions/python/practice256.py) | Complete |
-| Word Ladder | python | [practice407.py](solutions/python/practice407.py) | Incomplete Header (Note (missing)) |
+| Word Ladder | python | [practice407.py](solutions/python/practice407.py) | Incomplete Header (Note or Topic (missing)) |
 | Word Order | python | [practice204.py](solutions/python/practice204.py) | Complete |
 | Word Pattern | python | [practice44.py](solutions/python/practice44.py) | Complete |
 | Words Score | python | [practice205.py](solutions/python/practice205.py) | Complete |
@@ -360,7 +360,7 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 
 | Problem | Language | File | Status |
 |---|---|---|---|
-| ACM ICPC Team | python | [practice358.py](solutions/python/practice358.py) | Incomplete Header (Note (missing)) |
+| ACM ICPC Team | python | [practice358.py](solutions/python/practice358.py) | Incomplete Header (Note or Topic (missing)) |
 | Add Fractions | python | [practice374.py](solutions/python/practice374.py) | Complete |
 | Angry Professor | python | [practice289.py](solutions/python/practice289.py) | Complete |
 | Append and Delete | python | [practice291.py](solutions/python/practice291.py) | Complete |
@@ -368,38 +368,38 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Average Without Min and Max | python | [practice54.py](solutions/python/practice54.py) | Incomplete Header (Source (blank)) |
 | Beautiful Days at the Movies | python | [practice97.py](solutions/python/practice97.py) | Complete |
 | Better Days | python | [practice39.py](solutions/python/practice39.py) | Complete |
-| Bigger is Greater | python | [practice333.py](solutions/python/practice333.py) | Incomplete Header (Note (missing)) |
+| Bigger is Greater | python | [practice333.py](solutions/python/practice333.py) | Incomplete Header (Note or Topic (missing)) |
 | Bigger Price | python | [practice63.py](solutions/python/practice63.py) | Complete |
 | Binary to Decimal | python | [practice346.py](solutions/python/practice346.py) | Complete |
 | Bouncing Balls | python | [practice195.py](solutions/python/practice195.py) | Complete |
 | Cable Connection Optimization | python | [practice3.py](solutions/python/practice3.py) | Incomplete Header (Source (blank)) |
-| Calculate H-Index | python | [practice99.py](solutions/python/practice99.py) | Incomplete Header (Note (missing)) |
+| Calculate H-Index | python | [practice99.py](solutions/python/practice99.py) | Incomplete Header (Note or Topic (missing)) |
 | Calendar Module | python | [practice278.py](solutions/python/practice278.py) | Complete |
 | Cancellable Item Transactions | python | [practice193.py](solutions/python/practice193.py) | Complete |
 | Chain me | python | [practice223.py](solutions/python/practice223.py) | Complete |
 | Changing direction | python | [practice62.py](solutions/python/practice62.py) | Complete |
 | Char Code Calculation | python | [practice138.py](solutions/python/practice138.py) | Complete |
-| Check If All A's Appears Before All B's | python | [practice114.py](solutions/python/practice114.py) | Incomplete Header (Note (missing)) |
+| Check If All A's Appears Before All B's | python | [practice114.py](solutions/python/practice114.py) | Incomplete Header (Note or Topic (missing)) |
 | Check if the Sentence Is Pangram | python | [practice277.py](solutions/python/practice277.py) | Complete |
-| Combinations | python | [practice363.py](solutions/python/practice363.py) | Incomplete Header (Note (missing)) |
+| Combinations | python | [practice363.py](solutions/python/practice363.py) | Incomplete Header (Note or Topic (missing)) |
 | Company Logo | python | [practice171.py](solutions/python/practice171.py) | Complete |
 | Container With Most Water | python | [practice412.py](solutions/python/practice412.py) | Complete |
 | Cookies | python | [practice395.py](solutions/python/practice395.py) | Complete |
 | Count and Say | python | [practice315.py](solutions/python/practice315.py) | Complete |
 | Count Asterisks | python | [practice150.py](solutions/python/practice150.py) | Complete |
 | Count Good Triplets | python | [practice188.py](solutions/python/practice188.py) | Complete |
-| Count IP Addresses | python | [practice390.py](solutions/python/practice390.py) | Incomplete Header (Note (missing)) |
+| Count IP Addresses | python | [practice390.py](solutions/python/practice390.py) | Incomplete Header (Note or Topic (missing)) |
 | Count Items Matching a Rule | python | [practice259.py](solutions/python/practice259.py) | Complete |
 | Count of Matches in Tournament | python | [practice257.py](solutions/python/practice257.py) | Complete |
 | Count Triplets | python | [practice408.py](solutions/python/practice408.py) | Complete |
-| Count Valid Pairs with Equal Values and Divisible Product of Indices | python | [practice91.py](solutions/python/practice91.py) | Incomplete Header (Note (missing)) |
+| Count Valid Pairs with Equal Values and Divisible Product of Indices | python | [practice91.py](solutions/python/practice91.py) | Incomplete Header (Note or Topic (missing)) |
 | Counting Bits | python | [practice347.py](solutions/python/practice347.py) | Complete |
-| Counting Valleys | python | [practice202.py](solutions/python/practice202.py) | Incomplete Header (Note (missing)) |
+| Counting Valleys | python | [practice202.py](solutions/python/practice202.py) | Incomplete Header (Note or Topic (missing)) |
 | Counting Valleys | python | [practice287.py](solutions/python/practice287.py) | Complete |
 | Cut the Sticks | python | [practice309.py](solutions/python/practice309.py) | Complete |
 | Daily Temperatures | python | [practice413.py](solutions/python/practice413.py) | Complete |
 | Day of the Programmer | python | [practice294.py](solutions/python/practice294.py) | Complete |
-| Days to Wait for a Luckier Day | python | [practice98.py](solutions/python/practice98.py) | Incomplete Header (Note (missing)) |
+| Days to Wait for a Luckier Day | python | [practice98.py](solutions/python/practice98.py) | Incomplete Header (Note or Topic (missing)) |
 | Decode the Message | python | [practice152.py](solutions/python/practice152.py) | Complete |
 | Decompress Run-Length Encoded List | python | [practice258.py](solutions/python/practice258.py) | Complete |
 | Decorators 2 - Name Directory | python | [practice174.py](solutions/python/practice174.py) | Complete |
@@ -410,14 +410,14 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Drawing Book | python | [practice307.py](solutions/python/practice307.py) | Complete |
 | Electronics Shop | python | [practice288.py](solutions/python/practice288.py) | Complete |
 | Equal and Divisible Pairs | python | [practice51.py](solutions/python/practice51.py) | Complete |
-| Fair Rations | python | [practice357.py](solutions/python/practice357.py) | Incomplete Header (Note (missing)) |
+| Fair Rations | python | [practice357.py](solutions/python/practice357.py) | Incomplete Header (Note or Topic (missing)) |
 | Find Closest Person | python | [practice161.py](solutions/python/practice161.py) | Complete |
 | Find Indices of Stable Mountains | python | [practice189.py](solutions/python/practice189.py) | Complete |
-| Find the Difference | python | [practice339.py](solutions/python/practice339.py) | Incomplete Header (Note (missing)) |
+| Find the Difference | python | [practice339.py](solutions/python/practice339.py) | Incomplete Header (Note or Topic (missing)) |
 | Find the Median | python | [practice290.py](solutions/python/practice290.py) | Complete |
-| FizzBuzz with Twist | python | [practice251.py](solutions/python/practice251.py) | Incomplete Header (Note (missing)) |
+| FizzBuzz with Twist | python | [practice251.py](solutions/python/practice251.py) | Incomplete Header (Note or Topic (missing)) |
 | FizzBuzz++ | python | [practice375.py](solutions/python/practice375.py) | Complete |
-| Flood Fill | python | [practice405.py](solutions/python/practice405.py) | Incomplete Header (Note (missing)) |
+| Flood Fill | python | [practice405.py](solutions/python/practice405.py) | Incomplete Header (Note or Topic (missing)) |
 | Furthest Point From Origin | python | [practice317.py](solutions/python/practice317.py) | Complete |
 | Gas Station | python | [practice414.py](solutions/python/practice414.py) | Complete |
 | Generate Permutations | python | [practice141.py](solutions/python/practice141.py) | Incomplete Header (Source (blank)) |
@@ -430,20 +430,20 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Human readable duration format | python | [practice243.py](solutions/python/practice243.py) | Complete |
 | Implement Atoi | python | [practice354.py](solutions/python/practice354.py) | Complete |
 | Insert Greatest Common Divisors in Linked List | python | [practice160.py](solutions/python/practice160.py) | Complete |
-| Insert Interval | python | [practice129.py](solutions/python/practice129.py) | Incomplete Header (Note (missing)) |
+| Insert Interval | python | [practice129.py](solutions/python/practice129.py) | Incomplete Header (Note or Topic (missing)) |
 | IP Validation | python | [practice211.py](solutions/python/practice211.py) | Complete |
-| Jumping on the Clouds | python | [practice332.py](solutions/python/practice332.py) | Incomplete Header (Note (missing)) |
+| Jumping on the Clouds | python | [practice332.py](solutions/python/practice332.py) | Incomplete Header (Note or Topic (missing)) |
 | Kadane's Algorithm | python | [practice264.py](solutions/python/practice264.py) | Complete |
 | Keyboard Row | python | [practice273.py](solutions/python/practice273.py) | Complete |
 | Kth Largest in a Stream | python | [practice344.py](solutions/python/practice344.py) | Complete |
-| Max Consecutive Ones | python | [practice328.py](solutions/python/practice328.py) | Incomplete Header (Note (missing)) |
+| Max Consecutive Ones | python | [practice328.py](solutions/python/practice328.py) | Incomplete Header (Note or Topic (missing)) |
 | Maximize It! | python | [practice172.py](solutions/python/practice172.py) | Complete |
 | Meeting | python | [practice270.py](solutions/python/practice270.py) | Complete |
 | Merge the Tools! | python | [practice173.py](solutions/python/practice173.py) | Complete |
 | Mexican Wave | python | [practice207.py](solutions/python/practice207.py) | Complete |
 | Migratory Birds | python | [practice286.py](solutions/python/practice286.py) | Complete |
-| Minimum Absolute Difference | python | [practice367.py](solutions/python/practice367.py) | Incomplete Header (Note (missing)) |
-| Minimum Distances | python | [practice356.py](solutions/python/practice356.py) | Incomplete Header (Note (missing)) |
+| Minimum Absolute Difference | python | [practice367.py](solutions/python/practice367.py) | Incomplete Header (Note or Topic (missing)) |
+| Minimum Distances | python | [practice356.py](solutions/python/practice356.py) | Incomplete Header (Note or Topic (missing)) |
 | Monkey Typing | python | [practice238.py](solutions/python/practice238.py) | Complete |
 | Multiplication table | python | [practice210.py](solutions/python/practice210.py) | Complete |
 | N-Queens | python | [practice84.py](solutions/python/practice84.py) | Complete |
@@ -453,7 +453,7 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Nearest Value | python | [practice74.py](solutions/python/practice74.py) | Complete |
 | Not In Place | python | [practice308.py](solutions/python/practice308.py) | Incomplete Header (Source (blank)) |
 | Pair of Gloves | python | [practice385.py](solutions/python/practice385.py) | Complete |
-| Permutation Sequence | python | [practice127.py](solutions/python/practice127.py) | Incomplete Header (Note (missing)) |
+| Permutation Sequence | python | [practice127.py](solutions/python/practice127.py) | Incomplete Header (Note or Topic (missing)) |
 | Permutation Sequence | python | [practice13.py](solutions/python/practice13.py) | Complete |
 | Persistent Bugger. | python | [practice75.py](solutions/python/practice75.py) | Complete |
 | Playing with Passphrases | python | [practice221.py](solutions/python/practice221.py) | Complete |
@@ -470,20 +470,20 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Singly Linked List Implementation | python | [practice49.py](solutions/python/practice49.py) | Incomplete Header (Source (blank)) |
 | Smallest Positive Missing | python | [practice351.py](solutions/python/practice351.py) | Complete |
 | So Many Permutations! | python | [practice402.py](solutions/python/practice402.py) | Complete |
-| Stressful Subject | python | [practice227.py](solutions/python/practice227.py) | Incomplete Header (Note (missing)) |
-| Strip Comments | python | [practice388.py](solutions/python/practice388.py) | Incomplete Header (Note (missing)) |
+| Stressful Subject | python | [practice227.py](solutions/python/practice227.py) | Incomplete Header (Note or Topic (missing)) |
+| Strip Comments | python | [practice388.py](solutions/python/practice388.py) | Incomplete Header (Note or Topic (missing)) |
 | The Highest Building | python | [practice394.py](solutions/python/practice394.py) | Complete |
 | The Hurdle Race | python | [practice292.py](solutions/python/practice292.py) | Complete |
 | The Minion Game | python | [practice280.py](solutions/python/practice280.py) | Complete |
 | The Solar System - Lost Moons | python | [practice228.py](solutions/python/practice228.py) | Complete |
 | The Supermarket Queue | python | [practice208.py](solutions/python/practice208.py) | Complete |
-| Tic-Tac-Toe Checker | python | [practice393.py](solutions/python/practice393.py) | Incomplete Header (Note (missing)) |
+| Tic-Tac-Toe Checker | python | [practice393.py](solutions/python/practice393.py) | Incomplete Header (Note or Topic (missing)) |
 | Time Delta | python | [practice203.py](solutions/python/practice203.py) | Complete |
 | Time Limit Validator | python | [practice77.py](solutions/python/practice77.py) | Incomplete Header (Source (blank)) |
 | Title Case | python | [practice215.py](solutions/python/practice215.py) | Complete |
 | Truncate Sentence | python | [practice179.py](solutions/python/practice179.py) | Complete |
 | Valid Braces | python | [practice197.py](solutions/python/practice197.py) | Complete |
-| Valid Sudoku | python | [practice362.py](solutions/python/practice362.py) | Incomplete Header (Note (missing)) |
+| Valid Sudoku | python | [practice362.py](solutions/python/practice362.py) | Incomplete Header (Note or Topic (missing)) |
 | Viral Advertising | python | [practice301.py](solutions/python/practice301.py) | Complete |
 | Water Bottles | python | [practice177.py](solutions/python/practice177.py) | Complete |
 | Wildcard Matching | python | [practice316.py](solutions/python/practice316.py) | Complete |
@@ -496,100 +496,100 @@ These solutions need headers, test cases, or implementation fixes. They are idea
 
 | Problem | Language | File | Needs |
 |---|---|---|---|
-| Two Sum | haskell | [practice1.hs](solutions/haskell/practice1.hs) | Incomplete Header (Note (missing)) |
-| A Number After a Double Reversal | python | [practice100.py](solutions/python/practice100.py) | Incomplete Header (Note (missing)) |
-| Calculate Alternating Digit Sum | python | [practice101.py](solutions/python/practice101.py) | Incomplete Header (Note (missing)) |
-| Calculate Percentage of Letter in String | python | [practice102.py](solutions/python/practice102.py) | Incomplete Header (Note (missing)) |
-| Count Numbers with Unique Digits | python | [practice103.py](solutions/python/practice103.py) | Incomplete Header (Note (missing)) |
-| Multiply Two Strings | python | [practice104.py](solutions/python/practice104.py) | Incomplete Header (Note (missing)) |
-| Rank Elements in an Array | python | [practice113.py](solutions/python/practice113.py) | Incomplete Header (Note (missing)) |
-| Check If All A's Appears Before All B's | python | [practice114.py](solutions/python/practice114.py) | Incomplete Header (Note (missing)) |
-| Most Frequent Even Element | python | [practice115.py](solutions/python/practice115.py) | Incomplete Header (Note (missing)) |
-| First Letter to Appear Twice | python | [practice116.py](solutions/python/practice116.py) | Incomplete Header (Note (missing)) |
-| Smallest Even Multiple | python | [practice117.py](solutions/python/practice117.py) | Incomplete Header (Note (missing)) |
-| Even Fibonacci Numbers Sum | python | [practice120.py](solutions/python/practice120.py) | Incomplete Header (Note (missing)) |
+| Two Sum | haskell | [practice1.hs](solutions/haskell/practice1.hs) | Incomplete Header (Note or Topic (missing)) |
+| A Number After a Double Reversal | python | [practice100.py](solutions/python/practice100.py) | Incomplete Header (Note or Topic (missing)) |
+| Calculate Alternating Digit Sum | python | [practice101.py](solutions/python/practice101.py) | Incomplete Header (Note or Topic (missing)) |
+| Calculate Percentage of Letter in String | python | [practice102.py](solutions/python/practice102.py) | Incomplete Header (Note or Topic (missing)) |
+| Count Numbers with Unique Digits | python | [practice103.py](solutions/python/practice103.py) | Incomplete Header (Note or Topic (missing)) |
+| Multiply Two Strings | python | [practice104.py](solutions/python/practice104.py) | Incomplete Header (Note or Topic (missing)) |
+| Rank Elements in an Array | python | [practice113.py](solutions/python/practice113.py) | Incomplete Header (Note or Topic (missing)) |
+| Check If All A's Appears Before All B's | python | [practice114.py](solutions/python/practice114.py) | Incomplete Header (Note or Topic (missing)) |
+| Most Frequent Even Element | python | [practice115.py](solutions/python/practice115.py) | Incomplete Header (Note or Topic (missing)) |
+| First Letter to Appear Twice | python | [practice116.py](solutions/python/practice116.py) | Incomplete Header (Note or Topic (missing)) |
+| Smallest Even Multiple | python | [practice117.py](solutions/python/practice117.py) | Incomplete Header (Note or Topic (missing)) |
+| Even Fibonacci Numbers Sum | python | [practice120.py](solutions/python/practice120.py) | Incomplete Header (Note or Topic (missing)) |
 | Keypad Phone Simulator | python | [practice122.py](solutions/python/practice122.py) | Incomplete Header (Source (blank)) |
-| 1000-digit Fibonacci Number | python | [practice123.py](solutions/python/practice123.py) | Incomplete Header (Note (missing)) |
-| Two Sum | python | [practice124.py](solutions/python/practice124.py) | Incomplete Header (Note (missing)) |
-| Spiral Matrix 2 | python | [practice126.py](solutions/python/practice126.py) | Incomplete Header (Note (missing)) |
-| Permutation Sequence | python | [practice127.py](solutions/python/practice127.py) | Incomplete Header (Note (missing)) |
-| Length of Last Word | python | [practice128.py](solutions/python/practice128.py) | Incomplete Header (Note (missing)) |
-| Insert Interval | python | [practice129.py](solutions/python/practice129.py) | Incomplete Header (Note (missing)) |
-| Merge Intervals | python | [practice130.py](solutions/python/practice130.py) | Incomplete Header (Note (missing)) |
-| Spiral Matrix | python | [practice131.py](solutions/python/practice131.py) | Incomplete Header (Note (missing)) |
-| Jump Game | python | [practice132.py](solutions/python/practice132.py) | Incomplete Header (Note (missing)) |
-| Longest Substring Without Repeating Characters | python | [practice133.py](solutions/python/practice133.py) | Incomplete Header (Note (missing)) |
-| 3Sum Closest | python | [practice134.py](solutions/python/practice134.py) | Incomplete Header (Note (missing)) |
-| Remove Duplicates from Sorted Array | python | [practice135.py](solutions/python/practice135.py) | Incomplete Header (Note (missing)) |
-| Valid Parentheses | python | [practice137.py](solutions/python/practice137.py) | Incomplete Header (Note (missing)) |
+| 1000-digit Fibonacci Number | python | [practice123.py](solutions/python/practice123.py) | Incomplete Header (Note or Topic (missing)) |
+| Two Sum | python | [practice124.py](solutions/python/practice124.py) | Incomplete Header (Note or Topic (missing)) |
+| Spiral Matrix 2 | python | [practice126.py](solutions/python/practice126.py) | Incomplete Header (Note or Topic (missing)) |
+| Permutation Sequence | python | [practice127.py](solutions/python/practice127.py) | Incomplete Header (Note or Topic (missing)) |
+| Length of Last Word | python | [practice128.py](solutions/python/practice128.py) | Incomplete Header (Note or Topic (missing)) |
+| Insert Interval | python | [practice129.py](solutions/python/practice129.py) | Incomplete Header (Note or Topic (missing)) |
+| Merge Intervals | python | [practice130.py](solutions/python/practice130.py) | Incomplete Header (Note or Topic (missing)) |
+| Spiral Matrix | python | [practice131.py](solutions/python/practice131.py) | Incomplete Header (Note or Topic (missing)) |
+| Jump Game | python | [practice132.py](solutions/python/practice132.py) | Incomplete Header (Note or Topic (missing)) |
+| Longest Substring Without Repeating Characters | python | [practice133.py](solutions/python/practice133.py) | Incomplete Header (Note or Topic (missing)) |
+| 3Sum Closest | python | [practice134.py](solutions/python/practice134.py) | Incomplete Header (Note or Topic (missing)) |
+| Remove Duplicates from Sorted Array | python | [practice135.py](solutions/python/practice135.py) | Incomplete Header (Note or Topic (missing)) |
+| Valid Parentheses | python | [practice137.py](solutions/python/practice137.py) | Incomplete Header (Note or Topic (missing)) |
 | Matrix Rotate 90deg Clockwise | python | [practice139.py](solutions/python/practice139.py) | Incomplete Header (Source (blank)) |
 | Longest Subarray With Sum Less Than or Equal to S | python | [practice140.py](solutions/python/practice140.py) | Incomplete Header (Source (blank)) |
 | Generate Permutations | python | [practice141.py](solutions/python/practice141.py) | Incomplete Header (Source (blank)) |
-| Next Greater Element I | python | [practice181.py](solutions/python/practice181.py) | Incomplete Header (Note (missing)) |
-| Number Complement | python | [practice182.py](solutions/python/practice182.py) | Incomplete Header (Note (missing)) |
-| Counting Valleys | python | [practice202.py](solutions/python/practice202.py) | Incomplete Header (Note (missing)) |
-| Pascal Triangle | python | [practice22.py](solutions/python/practice22.py) | Incomplete Header (Note (missing)) |
-| Stressful Subject | python | [practice227.py](solutions/python/practice227.py) | Incomplete Header (Note (missing)) |
+| Next Greater Element I | python | [practice181.py](solutions/python/practice181.py) | Incomplete Header (Note or Topic (missing)) |
+| Number Complement | python | [practice182.py](solutions/python/practice182.py) | Incomplete Header (Note or Topic (missing)) |
+| Counting Valleys | python | [practice202.py](solutions/python/practice202.py) | Incomplete Header (Note or Topic (missing)) |
+| Pascal Triangle | python | [practice22.py](solutions/python/practice22.py) | Incomplete Header (Note or Topic (missing)) |
+| Stressful Subject | python | [practice227.py](solutions/python/practice227.py) | Incomplete Header (Note or Topic (missing)) |
 | Character Year Count Mapping | python | [practice237.py](solutions/python/practice237.py) | Incomplete Header (Source (blank)) |
 | Sum of Ones in Binary | python | [practice25.py](solutions/python/practice25.py) | Incomplete Header (Source (blank)) |
-| FizzBuzz with Twist | python | [practice251.py](solutions/python/practice251.py) | Incomplete Header (Note (missing)) |
-| Coin Change (Minimum Coins) | python | [practice254.py](solutions/python/practice254.py) | Incomplete Header (Note (missing)) |
+| FizzBuzz with Twist | python | [practice251.py](solutions/python/practice251.py) | Incomplete Header (Note or Topic (missing)) |
+| Coin Change (Minimum Coins) | python | [practice254.py](solutions/python/practice254.py) | Incomplete Header (Note or Topic (missing)) |
 | Binary Palindrome | python | [practice27.py](solutions/python/practice27.py) | Incomplete Header (Source (blank)) |
 | Punctuation Score | python | [practice284.py](solutions/python/practice284.py) | Incomplete Header (Source (blank)) |
 | Cable Connection Optimization | python | [practice3.py](solutions/python/practice3.py) | Incomplete Header (Source (blank)) |
 | Not In Place | python | [practice308.py](solutions/python/practice308.py) | Incomplete Header (Source (blank)) |
 | Generate Palindrome ASCII | python | [practice31.py](solutions/python/practice31.py) | Incomplete Header (Source (blank)) |
-| Maximum 69 Number | python | [practice323.py](solutions/python/practice323.py) | Incomplete Header (Note (missing)) |
-| Sum of Values at Indices With K Set Bits | python | [practice324.py](solutions/python/practice324.py) | Incomplete Header (Note (missing)) |
-| Counting Words With a Given Prefix | python | [practice325.py](solutions/python/practice325.py) | Incomplete Header (Note (missing)) |
-| Minimum Sum of Four Digit Number After Splitting Digits | python | [practice326.py](solutions/python/practice326.py) | Incomplete Header (Note (missing)) |
-| Finding 3-Digit Even Numbers | python | [practice327.py](solutions/python/practice327.py) | Incomplete Header (Note (missing)) |
-| Max Consecutive Ones | python | [practice328.py](solutions/python/practice328.py) | Incomplete Header (Note (missing)) |
-| Print in Order | python | [practice329.py](solutions/python/practice329.py) | Incomplete Header (Note (missing)) |
-| Find the Difference of Two Arrays | python | [practice330.py](solutions/python/practice330.py) | Incomplete Header (Note (missing)) |
-| Jumping on the Clouds | python | [practice332.py](solutions/python/practice332.py) | Incomplete Header (Note (missing)) |
-| Bigger is Greater | python | [practice333.py](solutions/python/practice333.py) | Incomplete Header (Note (missing)) |
-| Jump Game II | python | [practice334.py](solutions/python/practice334.py) | Incomplete Header (Note (missing)) |
-| Sort an array of 0s, 1s and 2s without using any sorting algorithm. | python | [practice335.py](solutions/python/practice335.py) | Incomplete Header (Note (missing)) |
-| Happy Number | python | [practice336.py](solutions/python/practice336.py) | Incomplete Header (Note (missing)) |
-| Merge Intervals | python | [practice337.py](solutions/python/practice337.py) | Incomplete Header (Note (missing)) |
-| Maximum Subarray | python | [practice338.py](solutions/python/practice338.py) | Incomplete Header (Note (missing)) |
-| Find the Difference | python | [practice339.py](solutions/python/practice339.py) | Incomplete Header (Note (missing)) |
-| Spiral Matrix II | python | [practice340.py](solutions/python/practice340.py) | Incomplete Header (Note (missing)) |
-| Generate Parentheses | python | [practice341.py](solutions/python/practice341.py) | Incomplete Header (Note (missing)) |
+| Maximum 69 Number | python | [practice323.py](solutions/python/practice323.py) | Incomplete Header (Note or Topic (missing)) |
+| Sum of Values at Indices With K Set Bits | python | [practice324.py](solutions/python/practice324.py) | Incomplete Header (Note or Topic (missing)) |
+| Counting Words With a Given Prefix | python | [practice325.py](solutions/python/practice325.py) | Incomplete Header (Note or Topic (missing)) |
+| Minimum Sum of Four Digit Number After Splitting Digits | python | [practice326.py](solutions/python/practice326.py) | Incomplete Header (Note or Topic (missing)) |
+| Finding 3-Digit Even Numbers | python | [practice327.py](solutions/python/practice327.py) | Incomplete Header (Note or Topic (missing)) |
+| Max Consecutive Ones | python | [practice328.py](solutions/python/practice328.py) | Incomplete Header (Note or Topic (missing)) |
+| Print in Order | python | [practice329.py](solutions/python/practice329.py) | Incomplete Header (Note or Topic (missing)) |
+| Find the Difference of Two Arrays | python | [practice330.py](solutions/python/practice330.py) | Incomplete Header (Note or Topic (missing)) |
+| Jumping on the Clouds | python | [practice332.py](solutions/python/practice332.py) | Incomplete Header (Note or Topic (missing)) |
+| Bigger is Greater | python | [practice333.py](solutions/python/practice333.py) | Incomplete Header (Note or Topic (missing)) |
+| Jump Game II | python | [practice334.py](solutions/python/practice334.py) | Incomplete Header (Note or Topic (missing)) |
+| Sort an array of 0s, 1s and 2s without using any sorting algorithm. | python | [practice335.py](solutions/python/practice335.py) | Incomplete Header (Note or Topic (missing)) |
+| Happy Number | python | [practice336.py](solutions/python/practice336.py) | Incomplete Header (Note or Topic (missing)) |
+| Merge Intervals | python | [practice337.py](solutions/python/practice337.py) | Incomplete Header (Note or Topic (missing)) |
+| Maximum Subarray | python | [practice338.py](solutions/python/practice338.py) | Incomplete Header (Note or Topic (missing)) |
+| Find the Difference | python | [practice339.py](solutions/python/practice339.py) | Incomplete Header (Note or Topic (missing)) |
+| Spiral Matrix II | python | [practice340.py](solutions/python/practice340.py) | Incomplete Header (Note or Topic (missing)) |
+| Generate Parentheses | python | [practice341.py](solutions/python/practice341.py) | Incomplete Header (Note or Topic (missing)) |
 | Vowel and Consonant Counter | python | [practice355.py](solutions/python/practice355.py) | Incomplete Header (Source (blank)) |
-| Minimum Distances | python | [practice356.py](solutions/python/practice356.py) | Incomplete Header (Note (missing)) |
-| Fair Rations | python | [practice357.py](solutions/python/practice357.py) | Incomplete Header (Note (missing)) |
-| ACM ICPC Team | python | [practice358.py](solutions/python/practice358.py) | Incomplete Header (Note (missing)) |
-| Two Characters | python | [practice359.py](solutions/python/practice359.py) | Incomplete Header (Note (missing)) |
-| Alternating Characters | python | [practice360.py](solutions/python/practice360.py) | Incomplete Header (Note (missing)) |
-| Number of Islands | python | [practice361.py](solutions/python/practice361.py) | Incomplete Header (Note (missing)) |
-| Valid Sudoku | python | [practice362.py](solutions/python/practice362.py) | Incomplete Header (Note (missing)) |
-| Combinations | python | [practice363.py](solutions/python/practice363.py) | Incomplete Header (Note (missing)) |
-| Valid Number | python | [practice364.py](solutions/python/practice364.py) | Incomplete Header (Note (missing)) |
-| Remove Duplicates from Sorted List II | python | [practice365.py](solutions/python/practice365.py) | Incomplete Header (Note (missing)) |
-| Reverse Bits | python | [practice366.py](solutions/python/practice366.py) | Incomplete Header (Note (missing)) |
-| Minimum Absolute Difference | python | [practice367.py](solutions/python/practice367.py) | Incomplete Header (Note (missing)) |
-| Rotate List | python | [practice377.py](solutions/python/practice377.py) | Incomplete Header (Note (missing)) |
-| Find Pivot Index | python | [practice378.py](solutions/python/practice378.py) | Incomplete Header (Note (missing)) |
-| Spiral Matrix | python | [practice379.py](solutions/python/practice379.py) | Incomplete Header (Note (missing)) |
-| CamelCase | python | [practice382.py](solutions/python/practice382.py) | Incomplete Header (Note (missing)) |
-| Counting Sort 1 | python | [practice384.py](solutions/python/practice384.py) | Incomplete Header (Note (missing)) |
-| Strip Comments | python | [practice388.py](solutions/python/practice388.py) | Incomplete Header (Note (missing)) |
-| Next bigger number with the same digits | python | [practice389.py](solutions/python/practice389.py) | Incomplete Header (Note (missing)) |
-| Count IP Addresses | python | [practice390.py](solutions/python/practice390.py) | Incomplete Header (Note (missing)) |
-| Most frequently used words in a text | python | [practice391.py](solutions/python/practice391.py) | Incomplete Header (Note (missing)) |
-| Tic-Tac-Toe Checker | python | [practice393.py](solutions/python/practice393.py) | Incomplete Header (Note (missing)) |
-| Combination Sum | python | [practice397.py](solutions/python/practice397.py) | Incomplete Header (Note (missing)) |
-| Integer to Roman | python | [practice398.py](solutions/python/practice398.py) | Incomplete Header (Note (missing)) |
-| Sort Array by Increasing Frequency | python | [practice399.py](solutions/python/practice399.py) | Incomplete Header (Note (missing)) |
+| Minimum Distances | python | [practice356.py](solutions/python/practice356.py) | Incomplete Header (Note or Topic (missing)) |
+| Fair Rations | python | [practice357.py](solutions/python/practice357.py) | Incomplete Header (Note or Topic (missing)) |
+| ACM ICPC Team | python | [practice358.py](solutions/python/practice358.py) | Incomplete Header (Note or Topic (missing)) |
+| Two Characters | python | [practice359.py](solutions/python/practice359.py) | Incomplete Header (Note or Topic (missing)) |
+| Alternating Characters | python | [practice360.py](solutions/python/practice360.py) | Incomplete Header (Note or Topic (missing)) |
+| Number of Islands | python | [practice361.py](solutions/python/practice361.py) | Incomplete Header (Note or Topic (missing)) |
+| Valid Sudoku | python | [practice362.py](solutions/python/practice362.py) | Incomplete Header (Note or Topic (missing)) |
+| Combinations | python | [practice363.py](solutions/python/practice363.py) | Incomplete Header (Note or Topic (missing)) |
+| Valid Number | python | [practice364.py](solutions/python/practice364.py) | Incomplete Header (Note or Topic (missing)) |
+| Remove Duplicates from Sorted List II | python | [practice365.py](solutions/python/practice365.py) | Incomplete Header (Note or Topic (missing)) |
+| Reverse Bits | python | [practice366.py](solutions/python/practice366.py) | Incomplete Header (Note or Topic (missing)) |
+| Minimum Absolute Difference | python | [practice367.py](solutions/python/practice367.py) | Incomplete Header (Note or Topic (missing)) |
+| Rotate List | python | [practice377.py](solutions/python/practice377.py) | Incomplete Header (Note or Topic (missing)) |
+| Find Pivot Index | python | [practice378.py](solutions/python/practice378.py) | Incomplete Header (Note or Topic (missing)) |
+| Spiral Matrix | python | [practice379.py](solutions/python/practice379.py) | Incomplete Header (Note or Topic (missing)) |
+| CamelCase | python | [practice382.py](solutions/python/practice382.py) | Incomplete Header (Note or Topic (missing)) |
+| Counting Sort 1 | python | [practice384.py](solutions/python/practice384.py) | Incomplete Header (Note or Topic (missing)) |
+| Strip Comments | python | [practice388.py](solutions/python/practice388.py) | Incomplete Header (Note or Topic (missing)) |
+| Next bigger number with the same digits | python | [practice389.py](solutions/python/practice389.py) | Incomplete Header (Note or Topic (missing)) |
+| Count IP Addresses | python | [practice390.py](solutions/python/practice390.py) | Incomplete Header (Note or Topic (missing)) |
+| Most frequently used words in a text | python | [practice391.py](solutions/python/practice391.py) | Incomplete Header (Note or Topic (missing)) |
+| Tic-Tac-Toe Checker | python | [practice393.py](solutions/python/practice393.py) | Incomplete Header (Note or Topic (missing)) |
+| Combination Sum | python | [practice397.py](solutions/python/practice397.py) | Incomplete Header (Note or Topic (missing)) |
+| Integer to Roman | python | [practice398.py](solutions/python/practice398.py) | Incomplete Header (Note or Topic (missing)) |
+| Sort Array by Increasing Frequency | python | [practice399.py](solutions/python/practice399.py) | Incomplete Header (Note or Topic (missing)) |
 | Count Capital Letters in String | python | [practice4.py](solutions/python/practice4.py) | Incomplete Header (Source (blank)) |
 | Shortest Escape Path | python | [practice404.py](solutions/python/practice404.py) | Incomplete Header (Source (blank)) |
-| Flood Fill | python | [practice405.py](solutions/python/practice405.py) | Incomplete Header (Note (missing)) |
-| Word Ladder | python | [practice407.py](solutions/python/practice407.py) | Incomplete Header (Note (missing)) |
-| Character Frequency Counter | python | [practice415.py](solutions/python/practice415.py) | Incomplete Header (Note (missing)) |
-| Second Largest Distinct Number | python | [practice416.py](solutions/python/practice416.py) | Incomplete Header (Note (missing)) |
-| Palindrome Number | python | [practice417.py](solutions/python/practice417.py) | Incomplete Header (Note (missing)) |
+| Flood Fill | python | [practice405.py](solutions/python/practice405.py) | Incomplete Header (Note or Topic (missing)) |
+| Word Ladder | python | [practice407.py](solutions/python/practice407.py) | Incomplete Header (Note or Topic (missing)) |
+| Character Frequency Counter | python | [practice415.py](solutions/python/practice415.py) | Incomplete Header (Note or Topic (missing)) |
+| Second Largest Distinct Number | python | [practice416.py](solutions/python/practice416.py) | Incomplete Header (Note or Topic (missing)) |
+| Palindrome Number | python | [practice417.py](solutions/python/practice417.py) | Incomplete Header (Note or Topic (missing)) |
 | Rank Records | python | [practice418.py](solutions/python/practice418.py) | Incomplete Header (Source (blank)) |
 | Sum of Even and Odd Numbers | python | [practice419.py](solutions/python/practice419.py) | Incomplete Header (Source (blank)) |
 | Sum of Multiples of 3 and 5 | python | [practice42.py](solutions/python/practice42.py) | Incomplete Header (Source (blank)) |
@@ -608,16 +608,16 @@ These solutions need headers, test cases, or implementation fixes. They are idea
 | Time Limit Validator | python | [practice77.py](solutions/python/practice77.py) | Incomplete Header (Source (blank)) |
 | Character Triangle Pattern | python | [practice79.py](solutions/python/practice79.py) | Incomplete Header (Source (blank)) |
 | Check if All Arrays Have Same Elements | python | [practice80.py](solutions/python/practice80.py) | Incomplete Header (Source (blank)) |
-| Maximum Area of Longest Diagonal Rectangle | python | [practice85.py](solutions/python/practice85.py) | Incomplete Header (Note (missing)) |
-| Clear Digits | python | [practice86.py](solutions/python/practice86.py) | Incomplete Header (Note (missing)) |
-| Count Integers with Even Number of Digits | python | [practice87.py](solutions/python/practice87.py) | Incomplete Header (Note (missing)) |
-| Sum of Multiples of 3, 5, or 7 | python | [practice88.py](solutions/python/practice88.py) | Incomplete Header (Note (missing)) |
-| Find Strings Containing a Specific Character | python | [practice89.py](solutions/python/practice89.py) | Incomplete Header (Note (missing)) |
-| Count Valid Pairs with Equal Values and Divisible Product of Indices | python | [practice91.py](solutions/python/practice91.py) | Incomplete Header (Note (missing)) |
+| Maximum Area of Longest Diagonal Rectangle | python | [practice85.py](solutions/python/practice85.py) | Incomplete Header (Note or Topic (missing)) |
+| Clear Digits | python | [practice86.py](solutions/python/practice86.py) | Incomplete Header (Note or Topic (missing)) |
+| Count Integers with Even Number of Digits | python | [practice87.py](solutions/python/practice87.py) | Incomplete Header (Note or Topic (missing)) |
+| Sum of Multiples of 3, 5, or 7 | python | [practice88.py](solutions/python/practice88.py) | Incomplete Header (Note or Topic (missing)) |
+| Find Strings Containing a Specific Character | python | [practice89.py](solutions/python/practice89.py) | Incomplete Header (Note or Topic (missing)) |
+| Count Valid Pairs with Equal Values and Divisible Product of Indices | python | [practice91.py](solutions/python/practice91.py) | Incomplete Header (Note or Topic (missing)) |
 | Average of Array Excluding Minimum and Maximum | python | [practice92.py](solutions/python/practice92.py) | Incomplete Header (Source (blank)) |
-| Minimum Operations to Make Integers Divisible by 3 | python | [practice93.py](solutions/python/practice93.py) | Incomplete Header (Note (missing)) |
-| Running Sum of 1D Array | python | [practice94.py](solutions/python/practice94.py) | Incomplete Header (Note (missing)) |
-| Number of Steps to Reduce a Number to Zero | python | [practice95.py](solutions/python/practice95.py) | Incomplete Header (Note (missing)) |
-| Count Elements Smaller Than Current Element | python | [practice96.py](solutions/python/practice96.py) | Incomplete Header (Note (missing)) |
-| Days to Wait for a Luckier Day | python | [practice98.py](solutions/python/practice98.py) | Incomplete Header (Note (missing)) |
-| Calculate H-Index | python | [practice99.py](solutions/python/practice99.py) | Incomplete Header (Note (missing)) |
+| Minimum Operations to Make Integers Divisible by 3 | python | [practice93.py](solutions/python/practice93.py) | Incomplete Header (Note or Topic (missing)) |
+| Running Sum of 1D Array | python | [practice94.py](solutions/python/practice94.py) | Incomplete Header (Note or Topic (missing)) |
+| Number of Steps to Reduce a Number to Zero | python | [practice95.py](solutions/python/practice95.py) | Incomplete Header (Note or Topic (missing)) |
+| Count Elements Smaller Than Current Element | python | [practice96.py](solutions/python/practice96.py) | Incomplete Header (Note or Topic (missing)) |
+| Days to Wait for a Luckier Day | python | [practice98.py](solutions/python/practice98.py) | Incomplete Header (Note or Topic (missing)) |
+| Calculate H-Index | python | [practice99.py](solutions/python/practice99.py) | Incomplete Header (Note or Topic (missing)) |
