@@ -3,7 +3,7 @@
     "name": "practice1",
     "language": "python",
     "filename": "practice1.py",
-    "problem": "N-Queens II",
+    "problem": "N-Queens II (count solutions)",
     "source": "https://leetcode.com/problems/n-queens-ii/",
     "topics": [
       "Recursion",
