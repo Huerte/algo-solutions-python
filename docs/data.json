@@ -4052,6 +4052,114 @@
     "path": "solutions/python/practice420.py"
   },
   {
+    "name": "practice421",
+    "language": "python",
+    "filename": "practice421.py",
+    "problem": "Minimum Depth of Binary Tree",
+    "source": "https://leetcode.com/problems/minimum-depth-of-binary-tree/",
+    "topics": [
+      "Tree",
+      "BFS"
+    ],
+    "path": "solutions/python/practice421.py"
+  },
+  {
+    "name": "practice422",
+    "language": "python",
+    "filename": "practice422.py",
+    "problem": "Zigzag Conversion",
+    "source": "https://leetcode.com/problems/zigzag-conversion/",
+    "topics": [
+      "String"
+    ],
+    "path": "solutions/python/practice422.py"
+  },
+  {
+    "name": "practice423",
+    "language": "python",
+    "filename": "practice423.py",
+    "problem": "Trapping Rain Water",
+    "source": "https://leetcode.com/problems/trapping-rain-water/",
+    "topics": [
+      "Arrays",
+      "Two Pointers"
+    ],
+    "path": "solutions/python/practice423.py"
+  },
+  {
+    "name": "practice424",
+    "language": "python",
+    "filename": "practice424.py",
+    "problem": "Letter Combinations of a Phone Number",
+    "source": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/",
+    "topics": [
+      "Backtracking",
+      "String"
+    ],
+    "path": "solutions/python/practice424.py"
+  },
+  {
+    "name": "practice425",
+    "language": "python",
+    "filename": "practice425.py",
+    "problem": "Minimum Window Substring",
+    "source": "https://leetcode.com/problems/minimum-window-substring/",
+    "topics": [
+      "Sliding Window",
+      "Hash Map"
+    ],
+    "path": "solutions/python/practice425.py"
+  },
+  {
+    "name": "practice426",
+    "language": "python",
+    "filename": "practice426.py",
+    "problem": "Course Schedule",
+    "source": "https://leetcode.com/problems/course-schedule/",
+    "topics": [
+      "Graph",
+      "Topological Sort"
+    ],
+    "path": "solutions/python/practice426.py"
+  },
+  {
+    "name": "practice427",
+    "language": "python",
+    "filename": "practice427.py",
+    "problem": "Serialize and Deserialize Binary Tree",
+    "source": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/",
+    "topics": [
+      "Tree",
+      "BFS",
+      "String"
+    ],
+    "path": "solutions/python/practice427.py"
+  },
+  {
+    "name": "practice428",
+    "language": "python",
+    "filename": "practice428.py",
+    "problem": "Decode Ways",
+    "source": "https://leetcode.com/problems/decode-ways/",
+    "topics": [
+      "Dynamic Programming",
+      "String"
+    ],
+    "path": "solutions/python/practice428.py"
+  },
+  {
+    "name": "practice429",
+    "language": "python",
+    "filename": "practice429.py",
+    "problem": "Merge k Sorted Lists",
+    "source": "https://leetcode.com/problems/merge-k-sorted-lists/",
+    "topics": [
+      "Linked List",
+      "Heap"
+    ],
+    "path": "solutions/python/practice429.py"
+  },
+  {
     "name": "practice43",
     "language": "python",
     "filename": "practice43.py",
@@ -4063,6 +4171,125 @@
     "path": "solutions/python/practice43.py"
   },
   {
+    "name": "practice430",
+    "language": "python",
+    "filename": "practice430.py",
+    "problem": "Ice Cream Parlor",
+    "source": "https://www.hackerrank.com/challenges/icecream-parlor/problem",
+    "topics": [
+      "Search",
+      "Hash Table"
+    ],
+    "path": "solutions/python/practice430.py"
+  },
+  {
+    "name": "practice431",
+    "language": "python",
+    "filename": "practice431.py",
+    "problem": "Tribonacci Sequence",
+    "source": "https://www.codewars.com/kata/556deca17c460c907e00000a",
+    "topics": [
+      "Sequences",
+      "Math"
+    ],
+    "path": "solutions/python/practice431.py"
+  },
+  {
+    "name": "practice432",
+    "language": "python",
+    "filename": "practice432.py",
+    "problem": "Build Tower",
+    "source": "https://www.codewars.com/kata/576757b1df89ecf5bd00073b",
+    "topics": [
+      "String",
+      "Formatting"
+    ],
+    "path": "solutions/python/practice432.py"
+  },
+  {
+    "name": "practice433",
+    "language": "python",
+    "filename": "practice433.py",
+    "problem": "Minimum Number of Jumps",
+    "source": "https://www.geeksforgeeks.org/problems/minimum-number-of-jumps-1587115620/1",
+    "topics": [
+      "Dynamic Programming",
+      "Greedy"
+    ],
+    "path": "solutions/python/practice433.py"
+  },
+  {
+    "name": "practice434",
+    "language": "python",
+    "filename": "practice434.py",
+    "problem": "Sun Angle",
+    "source": "https://py.checkio.org/en/mission/sun-angle/",
+    "topics": [
+      "Math",
+      "String"
+    ],
+    "path": "solutions/python/practice434.py"
+  },
+  {
+    "name": "practice435",
+    "language": "python",
+    "filename": "practice435.py",
+    "problem": "Rotting Oranges",
+    "source": "https://leetcode.com/problems/rotting-oranges/",
+    "topics": [
+      "BFS",
+      "Matrix"
+    ],
+    "path": "solutions/python/practice435.py"
+  },
+  {
+    "name": "practice436",
+    "language": "python",
+    "filename": "practice436.py",
+    "problem": "Koko Eating Bananas",
+    "source": "https://leetcode.com/problems/koko-eating-bananas/",
+    "topics": [
+      "Binary Search",
+      "Arrays"
+    ],
+    "path": "solutions/python/practice436.py"
+  },
+  {
+    "name": "practice437",
+    "language": "python",
+    "filename": "practice437.py",
+    "problem": "Common Child",
+    "source": "https://www.hackerrank.com/challenges/common-child/problem",
+    "topics": [
+      "Dynamic Programming",
+      "String"
+    ],
+    "path": "solutions/python/practice437.py"
+  },
+  {
+    "name": "practice438",
+    "language": "python",
+    "filename": "practice438.py",
+    "problem": "Mumbling",
+    "source": "https://www.codewars.com/kata/5667e8f4e3f572a8f2000039",
+    "topics": [
+      "String"
+    ],
+    "path": "solutions/python/practice438.py"
+  },
+  {
+    "name": "practice439",
+    "language": "python",
+    "filename": "practice439.py",
+    "problem": "Largest Prime Factor",
+    "source": "https://projecteuler.net/problem=3",
+    "topics": [
+      "Math",
+      "Number Theory"
+    ],
+    "path": "solutions/python/practice439.py"
+  },
+  {
     "name": "practice44",
     "language": "python",
     "filename": "practice44.py",
@@ -4072,6 +4299,18 @@
       "Strings"
     ],
     "path": "solutions/python/practice44.py"
+  },
+  {
+    "name": "practice440",
+    "language": "python",
+    "filename": "practice440.py",
+    "problem": "Stock Span Problem",
+    "source": "https://www.geeksforgeeks.org/problems/stock-span-problem-1587115621/1",
+    "topics": [
+      "Stack",
+      "Arrays"
+    ],
+    "path": "solutions/python/practice440.py"
   },
   {
     "name": "practice45",
@@ -4770,6 +5009,66 @@
     "path": "solutions/javascript/practice2.js"
   },
   {
+    "name": "practice3",
+    "language": "javascript",
+    "filename": "practice3.js",
+    "problem": "Two Sum",
+    "source": "https://leetcode.com/problems/two-sum/",
+    "topics": [
+      "Hash Table",
+      "Arrays"
+    ],
+    "path": "solutions/javascript/practice3.js"
+  },
+  {
+    "name": "practice4",
+    "language": "javascript",
+    "filename": "practice4.js",
+    "problem": "Group Anagrams",
+    "source": "https://leetcode.com/problems/group-anagrams/",
+    "topics": [
+      "Hash Table",
+      "String"
+    ],
+    "path": "solutions/javascript/practice4.js"
+  },
+  {
+    "name": "practice5",
+    "language": "javascript",
+    "filename": "practice5.js",
+    "problem": "Maximum Subarray",
+    "source": "https://leetcode.com/problems/maximum-subarray/",
+    "topics": [
+      "Dynamic Programming",
+      "Arrays"
+    ],
+    "path": "solutions/javascript/practice5.js"
+  },
+  {
+    "name": "practice6",
+    "language": "javascript",
+    "filename": "practice6.js",
+    "problem": "Longest Common Subsequence",
+    "source": "https://leetcode.com/problems/longest-common-subsequence/",
+    "topics": [
+      "Dynamic Programming",
+      "String"
+    ],
+    "path": "solutions/javascript/practice6.js"
+  },
+  {
+    "name": "practice7",
+    "language": "javascript",
+    "filename": "practice7.js",
+    "problem": "Merge Intervals",
+    "source": "https://leetcode.com/problems/merge-intervals/",
+    "topics": [
+      "Arrays",
+      "Sorting"
+    ],
+    "path": "solutions/javascript/practice7.js"
+  },
+  {
     "name": "practice1",
     "language": "typescript",
     "filename": "practice1.ts",
@@ -4842,6 +5141,66 @@
     "path": "solutions/cpp/practice1.cpp"
   },
   {
+    "name": "practice2",
+    "language": "cpp",
+    "filename": "practice2.cpp",
+    "problem": "Valid Palindrome",
+    "source": "https://leetcode.com/problems/valid-palindrome/",
+    "topics": [
+      "Two Pointers",
+      "String"
+    ],
+    "path": "solutions/cpp/practice2.cpp"
+  },
+  {
+    "name": "practice3",
+    "language": "cpp",
+    "filename": "practice3.cpp",
+    "problem": "Move Zeroes",
+    "source": "https://leetcode.com/problems/move-zeroes/",
+    "topics": [
+      "Two Pointers",
+      "Arrays"
+    ],
+    "path": "solutions/cpp/practice3.cpp"
+  },
+  {
+    "name": "practice4",
+    "language": "cpp",
+    "filename": "practice4.cpp",
+    "problem": "Invert Binary Tree",
+    "source": "https://leetcode.com/problems/invert-binary-tree/",
+    "topics": [
+      "Tree",
+      "Recursion"
+    ],
+    "path": "solutions/cpp/practice4.cpp"
+  },
+  {
+    "name": "practice5",
+    "language": "cpp",
+    "filename": "practice5.cpp",
+    "problem": "Longest Consecutive Sequence",
+    "source": "https://leetcode.com/problems/longest-consecutive-sequence/",
+    "topics": [
+      "Hash Table",
+      "Arrays"
+    ],
+    "path": "solutions/cpp/practice5.cpp"
+  },
+  {
+    "name": "practice6",
+    "language": "cpp",
+    "filename": "practice6.cpp",
+    "problem": "Search in Rotated Sorted Array",
+    "source": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+    "topics": [
+      "Binary Search",
+      "Arrays"
+    ],
+    "path": "solutions/cpp/practice6.cpp"
+  },
+  {
     "name": "practice1",
     "language": "java",
     "filename": "practice1.java",
@@ -4875,5 +5234,64 @@
       "Greedy"
     ],
     "path": "solutions/java/practice3.java"
+  },
+  {
+    "name": "practice4",
+    "language": "java",
+    "filename": "practice4.java",
+    "problem": "Contains Duplicate",
+    "source": "https://leetcode.com/problems/contains-duplicate/",
+    "topics": [
+      "Hash Table",
+      "Arrays"
+    ],
+    "path": "solutions/java/practice4.java"
+  },
+  {
+    "name": "practice5",
+    "language": "java",
+    "filename": "practice5.java",
+    "problem": "Binary Search",
+    "source": "https://leetcode.com/problems/binary-search/",
+    "topics": [
+      "Binary Search",
+      "Arrays"
+    ],
+    "path": "solutions/java/practice5.java"
+  },
+  {
+    "name": "practice6",
+    "language": "java",
+    "filename": "practice6.java",
+    "problem": "Valid Anagram",
+    "source": "https://leetcode.com/problems/valid-anagram/",
+    "topics": [
+      "String",
+      "Hash Table"
+    ],
+    "path": "solutions/java/practice6.java"
+  },
+  {
+    "name": "practice7",
+    "language": "java",
+    "filename": "practice7.java",
+    "problem": "Merge Two Sorted Lists",
+    "source": "https://leetcode.com/problems/merge-two-sorted-lists/",
+    "topics": [
+      "Linked List"
+    ],
+    "path": "solutions/java/practice7.java"
+  },
+  {
+    "name": "practice8",
+    "language": "java",
+    "filename": "practice8.java",
+    "problem": "Maximum Product Subarray",
+    "source": "https://leetcode.com/problems/maximum-product-subarray/",
+    "topics": [
+      "Dynamic Programming",
+      "Arrays"
+    ],
+    "path": "solutions/java/practice8.java"
   }
 ]
