@@ -9,6 +9,11 @@ on:
       - "scripts/generate_topics_index.py"
   workflow_dispatch:
 
+# Guard: queue concurrent runs — never let two runs push at the same time.
+concurrency:
+  group: update-topics
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -16,9 +21,26 @@ jobs:
   update-topics:
     name: Regenerate TOPICS.md
     runs-on: ubuntu-latest
+    timeout-minutes: 10  # Guard: kill runaway jobs.
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          # Guard: full history required so git rebase works correctly.
+          fetch-depth: 0
+          ref: main
+
+      - name: Configure git and validate state
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name  "github-actions[bot]"
+
+          # Guard: abort if the remote is unreachable before doing any work.
+          if ! git ls-remote --exit-code origin > /dev/null 2>&1; then
+            echo "ERROR: Remote 'origin' is unreachable. Aborting."
+            exit 1
+          fi
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -26,15 +48,75 @@ jobs:
           python-version: "3.x"
 
       - name: Regenerate TOPICS.md catalog
-        run: python scripts/generate_topics_index.py
-
-      - name: Commit and push updated catalog
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
+          set -euo pipefail
+          python scripts/generate_topics_index.py
+
+      - name: Check for changes
+        id: changes
+        run: |
           git add TOPICS.md
-          if ! git diff --staged --quiet; then
-            git commit -m "docs: dynamically update TOPICS.md catalog and counts"
-            git push
+
+          # Guard: skip commit + push entirely when TOPICS.md is unchanged.
+          if git diff --cached --quiet; then
+            echo "TOPICS.md already up to date — nothing to commit."
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "Changes detected in TOPICS.md."
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Commit changes
+        if: steps.changes.outputs.has_changes == 'true'
+        run: |
+          git commit -m "docs: dynamically update TOPICS.md catalog and counts [skip ci]"
+
+      # Guard: pull-rebase retry loop handles the race condition where another
+      # commit lands on main between checkout and push.
+      - name: Push (with rebase retry on rejection)
+        if: steps.changes.outputs.has_changes == 'true'
+        run: |
+          set -euo pipefail
+
+          MAX_RETRIES=5
+          ATTEMPT=0
+          WAIT=5
+
+          while [ $ATTEMPT -lt $MAX_RETRIES ]; do
+            ATTEMPT=$((ATTEMPT + 1))
+            echo "Push attempt $ATTEMPT / $MAX_RETRIES..."
+
+            if git pull --rebase --autostash origin main; then
+              echo "Rebase succeeded."
+            else
+              # Guard: abort cleanly so repo is never left mid-rebase.
+              echo "WARNING: Rebase failed on attempt $ATTEMPT. Aborting rebase."
+              git rebase --abort 2>/dev/null || true
+              sleep $WAIT
+              WAIT=$((WAIT * 2))
+              continue
+            fi
+
+            if git push origin main; then
+              echo "Push succeeded on attempt $ATTEMPT."
+              exit 0
+            fi
+
+            echo "WARNING: Push rejected on attempt $ATTEMPT. Retrying after ${WAIT}s..."
+            sleep $WAIT
+            WAIT=$((WAIT * 2))
+          done
+
+          echo "ERROR: Push failed after $MAX_RETRIES attempts."
+          exit 1
+
+      - name: Write job summary
+        if: always()
+        run: |
+          if [ "${{ steps.changes.outputs.has_changes }}" = "true" ]; then
+            echo "### ✅ TOPICS.md Updated" >> "$GITHUB_STEP_SUMMARY"
+            echo "TOPICS.md was regenerated and pushed to \`main\`." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "### ℹ️ No Update Needed" >> "$GITHUB_STEP_SUMMARY"
+            echo "TOPICS.md is already up to date." >> "$GITHUB_STEP_SUMMARY"
+          fi

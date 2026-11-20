@@ -9,30 +9,108 @@ on:
       - '.github/scripts/generate-index.py'
   workflow_dispatch:
 
+# Guard: queue concurrent runs — never let two runs push at the same time.
+concurrency:
+  group: update-index
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
 jobs:
   update-index:
     runs-on: ubuntu-latest
+    timeout-minutes: 10  # Guard: kill runaway jobs.
 
     steps:
       - uses: actions/checkout@v4
         with:
+          # Guard: full history required so git rebase works correctly.
+          fetch-depth: 0
+          ref: main
           persist-credentials: true
 
-      - name: Generate solutions index
-        run: python3 .github/scripts/generate-index.py
-
-      - name: Commit and push if changed
+      - name: Configure git and validate state
         run: |
-          git config user.name "github-actions[bot]"
+          git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          if git diff --quiet -- docs/data.json; then
-            echo "No changes to index"
+          # Guard: abort if the remote is unreachable before doing any work.
+          if ! git ls-remote --exit-code origin > /dev/null 2>&1; then
+            echo "ERROR: Remote 'origin' is unreachable. Aborting."
+            exit 1
+          fi
+
+      - name: Generate solutions index
+        run: |
+          set -euo pipefail
+          python3 .github/scripts/generate-index.py
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git add docs/data.json
+
+          # Guard: skip commit + push entirely when data.json is unchanged.
+          if git diff --cached --quiet; then
+            echo "No changes to index."
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
           else
-            git add docs/data.json
-            git commit -m "chore: update solutions index [skip ci]"
-            git push
+            echo "Changes detected in docs/data.json."
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit changes
+        if: steps.changes.outputs.has_changes == 'true'
+        run: |
+          git commit -m "chore: update solutions index [skip ci]"
+
+      # Guard: pull-rebase retry loop handles the race condition where another
+      # commit lands on main between checkout and push.
+      - name: Push (with rebase retry on rejection)
+        if: steps.changes.outputs.has_changes == 'true'
+        run: |
+          set -euo pipefail
+
+          MAX_RETRIES=5
+          ATTEMPT=0
+          WAIT=5
+
+          while [ $ATTEMPT -lt $MAX_RETRIES ]; do
+            ATTEMPT=$((ATTEMPT + 1))
+            echo "Push attempt $ATTEMPT / $MAX_RETRIES..."
+
+            if git pull --rebase --autostash origin main; then
+              echo "Rebase succeeded."
+            else
+              # Guard: abort cleanly so repo is never left mid-rebase.
+              echo "WARNING: Rebase failed on attempt $ATTEMPT. Aborting rebase."
+              git rebase --abort 2>/dev/null || true
+              sleep $WAIT
+              WAIT=$((WAIT * 2))
+              continue
+            fi
+
+            if git push origin main; then
+              echo "Push succeeded on attempt $ATTEMPT."
+              exit 0
+            fi
+
+            echo "WARNING: Push rejected on attempt $ATTEMPT. Retrying after ${WAIT}s..."
+            sleep $WAIT
+            WAIT=$((WAIT * 2))
+          done
+
+          echo "ERROR: Push failed after $MAX_RETRIES attempts."
+          exit 1
+
+      - name: Write job summary
+        if: always()
+        run: |
+          if [ "${{ steps.changes.outputs.has_changes }}" = "true" ]; then
+            echo "### ✅ Solutions Index Updated" >> "$GITHUB_STEP_SUMMARY"
+            echo "docs/data.json was regenerated and pushed to \`main\`." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "### ℹ️ No Update Needed" >> "$GITHUB_STEP_SUMMARY"
+            echo "docs/data.json is already up to date." >> "$GITHUB_STEP_SUMMARY"
           fi
