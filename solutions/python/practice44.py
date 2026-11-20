@@ -1,5 +1,7 @@
 # Problem: Word Pattern
 # Source: https://leetcode.com/problems/word-pattern/
+# Note: Hash map from letter to word, rejecting a word already claimed by another letter, then rebuild the string from the pattern and compare
+# Complexity: O(n) time, O(n) space
 
 class Solution(object):
     def wordPattern(self, pattern, s):
