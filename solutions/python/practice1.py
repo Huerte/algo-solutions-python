@@ -1,59 +1,32 @@
-# Problem: N-Queens II
+# Problem: N-Queens II (count solutions)
 # Source: https://leetcode.com/problems/n-queens-ii/
-# Note: Backtracking, one queen per row, prune as soon as a placement is unsafe
-#
 # Topic: Recursion, Backtracking
 #
-# Why this solution?
-# Brute force checks many possible queen arrangements,
-# including invalid ones.
+# Goal:
+# Count how many ways N queens can be placed on an N x N chessboard
+# so that no two queens attack each other (no shared row, column, or diagonal).
+# We only need the number of ways, not the arrangements themselves.
 #
-# How does it solve the problem?
-# Backtracking places one queen in each row. Before placing
-# a queen, it checks whether the position is safe from attacks
-# in the same row, column, and diagonals.
-#
-# If a placement fails, it removes the queen and tries another
-# position. This allows the algorithm to explore valid
-# arrangements without keeping invalid placements.
+# Idea (in plain words):
+# Fill the board one row at a time. In each row, try every column and keep
+# only the spots that are safe from the queens already placed, then move on
+# to the next row. If no column in a row is safe, go back (backtrack) to the
+# previous row and try a different spot there. Every time we manage to place
+# a queen in the last row, we found one valid way, so we add 1 to the count.
 #
 # Why backtracking?
-# It stops exploring a path as soon as a placement is invalid.
-#
-# Note: Uses recursion and backtracking to count valid queen placements.
-#
-# Description:
-# The N-Queens problem asks us to place N queens on an N x N chessboard
-# so that no two queens can attack each other.
-#
-# This solution uses backtracking to find all valid arrangements.
-# It places one queen in each row and checks whether the selected position
-# is safe by examining its row, column, and diagonals.
-# If the position is safe, it places the queen and moves to the next row.
-# If a placement does not lead to a valid arrangement, it removes the queen
-# and tries another column.
-# Whenever queens are successfully placed in all N rows, the solution
-# counter is increased.
+# Instead of listing every possible layout and checking it afterwards, we
+# abandon a path as soon as it becomes invalid, which skips a lot of wasted work.
 #
 # Input:
-# - n: Size of the n x n chessboard (1 <= n <= 9)
+# - n: size of the board (1 <= n <= 9)
 #
 # Output:
-# - Number of distinct valid arrangements.
-# - An integer representing the total number of distinct valid arrangements.
-#
-# Approach:
-# - Use recursion to process the chessboard one row at a time.
-# - Check whether each position is safe before placing a queen.
-# - Use backtracking to undo placements and explore other possibilities.
-# - Count an arrangement when all rows have been filled successfully.
+# - The total number of distinct valid arrangements (an integer).
 #
 # Complexity:
-# - Time: Exponential in the worst case.
-# - Space: O(n²) for the board, plus recursion stack.
-#
-# Time Complexity: O(N! * N) — upper-bound estimate for exploring placements.
-# Space Complexity: O(N^2) — for storing the chessboard, excluding recursion.
+# - Time: O(N!) in the worst case, since we may try many placements per row.
+# - Space: O(N^2) for the board, plus the recursion stack.
 #
 # Status: SOLVED
 
