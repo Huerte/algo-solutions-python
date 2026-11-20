@@ -1,5 +1,7 @@
 # Problem: Valid Parentheses
 # Source: https://leetcode.com/problems/valid-parentheses/
+# Note: Stack; push brackets, pop when a closer matches the top, string is valid if the stack ends empty
+# Complexity: O(n) time, O(n) space
 
 class Solution(object):
     def isValid(self, s):
