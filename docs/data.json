@@ -4784,10 +4784,12 @@
     "name": "practice2",
     "language": "typescript",
     "filename": "practice2.ts",
-    "problem": "practice2",
+    "problem": "Two Sum",
     "source": "https://leetcode.com/problems/two-sum/",
     "topics": [
-      "General"
+      "Two Pointers",
+      "Hash Table",
+      "Math"
     ],
     "path": "solutions/typescript/practice2.ts"
   },
@@ -4795,10 +4797,10 @@
     "name": "practice3",
     "language": "typescript",
     "filename": "practice3.ts",
-    "problem": "practice3",
+    "problem": "Best Time to Buy and Sell Stock",
     "source": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
     "topics": [
-      "General"
+      "Greedy"
     ],
     "path": "solutions/typescript/practice3.ts"
   },
@@ -4830,10 +4832,12 @@
     "name": "practice1",
     "language": "cpp",
     "filename": "practice1.cpp",
-    "problem": "practice1",
+    "problem": "Two Sum",
     "source": "https://leetcode.com/problems/two-sum/",
     "topics": [
-      "General"
+      "Two Pointers",
+      "Hash Table",
+      "Math"
     ],
     "path": "solutions/cpp/practice1.cpp"
   },
