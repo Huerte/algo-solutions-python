@@ -28,8 +28,6 @@
 # - Time: O(N!) in the worst case, since we may try many placements per row.
 # - Space: O(N^2) for the board, plus the recursion stack.
 #
-# Status: SOLVED
-
 def totalNQueens(n):
     """Return the number of ways to place n non-attacking queens on an n x n board."""
     def is_safe(board, row, col):
