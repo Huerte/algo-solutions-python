@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Generate the searchable GitHub Pages index from solution headers."""
 
+from __future__ import annotations
+
 import json
 import re
 from pathlib import Path
@@ -42,42 +44,55 @@ TOPIC_RULES = [
     ("Simulation", r"\b(simulator|simulate|design parking|calendar|tic-tac-toe|bouncing balls|counting valleys|fizzbuzz|game|solar system)\b"),
 ]
 
-def extract_header_info(filepath):
+
+def extract_header_info(filepath: Path) -> tuple[str | None, str | None, list[str]]:
     problem = None
     source = None
-    topics = []
-    with filepath.open("r", encoding="utf-8", errors="ignore") as file:
-        for line in list(file)[:15]:
-            match = re.match(r"^\s*(?:#|//|/\*+|\*|<!--)\s*(Problem|Source|Topics?)\s*:\s*(.*?)\s*(?:\*/|-->)?\s*$", line, re.IGNORECASE)
-            if not match:
-                continue
-            key, value = match.group(1).lower(), match.group(2).strip()
-            if key == "problem":
-                problem = value
-            elif key == "source":
-                source = value
-            else:
-                topics.extend(item.strip() for item in re.split(r"[,;|]", value) if item.strip())
+    topics: list[str] = []
+    try:
+        with filepath.open("r", encoding="utf-8-sig", errors="replace") as file:
+            for line in list(file)[:25]:
+                match = re.match(r"^\s*(?:#|//|/\*+|\*|<!--)\s*(Problem|Source|Topics?)\s*:\s*(.*?)\s*(?:\*/|-->)?\s*$", line, re.IGNORECASE)
+                if not match:
+                    continue
+                key, value = match.group(1).lower(), match.group(2).strip()
+                if key == "problem" and not problem:
+                    problem = value
+                elif key == "source" and not source:
+                    source = value
+                elif key.startswith("topic"):
+                    topics.extend(item.strip() for item in re.split(r"[,;|]", value) if item.strip())
+    except (OSError, UnicodeError):
+        return None, None, []
     return problem, source, topics
 
-def infer_topics(problem):
+
+def infer_topics(problem: str) -> list[str]:
     normalized = problem.lower()
     matches = [topic for topic, pattern in TOPIC_RULES if re.search(pattern, normalized)]
     return matches or ["General"]
 
-def generate_index():
+
+def generate_index() -> None:
     repo_root = Path(__file__).resolve().parents[2]
     solutions_dir = repo_root / "solutions"
     output_path = repo_root / "docs" / "data.json"
-    solutions = []
+    solutions: list[dict] = []
+
+    if not solutions_dir.is_dir():
+        print(f"Warning: Solutions directory not found at {solutions_dir}")
+        return
 
     for language, extensions in LANGUAGE_EXTENSIONS.items():
         language_dir = solutions_dir / language
         if not language_dir.is_dir():
             continue
         for filepath in sorted(language_dir.iterdir()):
-            if not filepath.is_file() or filepath.suffix.lower() not in extensions:
+            if not filepath.is_file() or filepath.name.startswith(".") or filepath.suffix.lower() not in extensions:
                 continue
+            if "__pycache__" in filepath.parts:
+                continue
+
             problem, source, topics = extract_header_info(filepath)
             problem = problem or filepath.stem
             solutions.append({
@@ -91,12 +106,16 @@ def generate_index():
             })
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_text(json.dumps(solutions, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    temp_path = output_path.with_suffix(".tmp")
+    temp_path.write_text(json.dumps(solutions, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    temp_path.replace(output_path)
+
     counts = {language: sum(item["language"] == language for item in solutions) for language in LANGUAGE_EXTENSIONS}
     print(f"Generated {len(solutions)} solutions in {output_path}")
     for language, count in counts.items():
         if count:
             print(f"  {language}: {count}")
+
 
 if __name__ == "__main__":
     generate_index()

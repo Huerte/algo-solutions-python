@@ -8,6 +8,11 @@ on:
       - "solutions/**"
   workflow_dispatch:
 
+# Guard: prevent concurrent runs from creating duplicate issues
+concurrency:
+  group: auto-create-issue
+  cancel-in-progress: false
+
 permissions:
   issues: write
   contents: read
@@ -16,11 +21,14 @@ jobs:
   create-issue:
     name: Open issue for flagged solution files
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          # Full history so git diff can inspect merge commits and push ranges
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -31,4 +39,9 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
-        run: python3 .github/scripts/create_in_progress_issues.py
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          set -euo pipefail
+          python3 .github/scripts/create_in_progress_issues.py

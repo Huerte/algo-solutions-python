@@ -7,6 +7,10 @@ on:
     paths:
       - "solutions/**"
 
+concurrency:
+  group: celebrate-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: false
+
 permissions:
   pull-requests: write
 
@@ -14,14 +18,21 @@ jobs:
   celebrate:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
+    timeout-minutes: 5
 
     steps:
       - name: Post thank-you comment
         uses: actions/github-script@v7
         with:
           script: |
-            const author = context.payload.pull_request.user.login;
-            const pr = context.payload.pull_request.number;
+            const prObj = context.payload.pull_request;
+            if (!prObj || !prObj.user || !prObj.user.login) {
+              console.log("No valid pull request user found.");
+              return;
+            }
+
+            const author = prObj.user.login;
+            const pr = prObj.number;
             const { owner, repo } = context.repo;
 
             // Count merged PRs by this author in the repo.
@@ -30,18 +41,31 @@ jobs:
             // from FIRST_TIME_CONTRIBUTOR to CONTRIBUTOR before the check runs.
             let mergedCount = 0;
             let page = 1;
-            while (true) {
+            const maxPages = 20; // Guard against unbounded pagination
+
+            while (page <= maxPages) {
               const { data } = await github.rest.pulls.list({
                 owner, repo, state: 'closed', per_page: 100, page
               });
-              if (data.length === 0) break;
-              mergedCount += data.filter(p => p.user.login === author && p.merged_at).length;
-              if (data.length < 100) break;
+              if (!data || data.length === 0) break;
+
+              for (const p of data) {
+                if (p.user && p.user.login === author && p.merged_at) {
+                  mergedCount++;
+                  // Guard: if author already has more than 1 merged PR, stop early
+                  if (mergedCount > 1) break;
+                }
+              }
+
+              if (mergedCount > 1 || data.length < 100) break;
               page++;
             }
 
             // Only post for the author's very first merged PR
-            if (mergedCount !== 1) return;
+            if (mergedCount !== 1) {
+              console.log(`Author @${author} has ${mergedCount} merged PRs. Skipping thank-you comment.`);
+              return;
+            }
 
             await github.rest.issues.createComment({
               owner,
@@ -53,4 +77,3 @@ jobs:
                 `Your avatar is now in the [contributors section](https://github.com/${owner}/${repo}#contributors). The README updates automatically after every merge.`
               ].join('\n')
             });
-

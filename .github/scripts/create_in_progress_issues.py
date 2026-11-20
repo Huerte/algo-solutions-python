@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Automatically create a GitHub issue when a solution with Status: IN PROGRESS is merged."""
+"""Automatically create a GitHub issue when a solution with Status: IN PROGRESS is merged or pushed."""
 
 from __future__ import annotations
 
+import json
 import os
 import re
 import subprocess
@@ -10,84 +11,184 @@ import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+SOLUTIONS_DIR = REPO_ROOT / "solutions"
+
+IN_PROGRESS_PATTERN = re.compile(
+    r"""
+    ^\s*(?:#|//|--|/\*+|\*)\s*               # Comment indicator
+    (?:[^\w\s]\s*)?                          # Optional leading emoji (e.g. 🔄, 🚧, ⏳)
+    (?:status\s*[:\-—–]?\s*.*?)?             # Optional 'status:' prefix
+    \b(in[-_\s]?progress|wip|work[-_\s]in[-_\s]progress|needs[-_\s]work|incomplete|unfinished|unsolved|todo)\b
+    """,
+    re.IGNORECASE | re.VERBOSE,
+)
+
+SOLVED_PATTERN = re.compile(
+    r"\b(solved|done|complete|completed|passed|fixed)\b",
+    re.IGNORECASE,
+)
 
 
-def get_changed_solution_files() -> list[Path]:
-    """Get added or modified solution files from the latest commit."""
+def run_git(*args: str) -> list[str]:
+    """Execute git command safely and return stripped output lines."""
     try:
         result = subprocess.run(
-            ["git", "diff", "--name-only", "--diff-filter=AM", "HEAD~1", "HEAD", "--", "solutions/"],
+            ["git", *args],
             cwd=REPO_ROOT,
             capture_output=True,
             text=True,
             check=True,
         )
-        files = [REPO_ROOT / line.strip() for line in result.stdout.splitlines() if line.strip()]
-        return [f for f in files if f.is_file()]
+        return [line.strip() for line in result.stdout.splitlines() if line.strip()]
     except subprocess.CalledProcessError as e:
-        print(f"Git diff failed: {e}", file=sys.stderr)
+        print(f"Git command failed ('git {' '.join(args)}'): {e}", file=sys.stderr)
         return []
 
 
+def is_valid_commit(sha: str | None) -> bool:
+    """Check if a commit SHA exists locally and is not a zero-hash."""
+    if not sha or sha == "0" * 40:
+        return False
+    try:
+        subprocess.run(
+            ["git", "cat-file", "-e", f"{sha}^{{commit}}"],
+            cwd=REPO_ROOT,
+            capture_output=True,
+            check=True,
+        )
+        return True
+    except subprocess.CalledProcessError:
+        return False
+
+
+def get_changed_solution_files() -> list[Path]:
+    """
+    Get added or modified solution files reliably across push ranges,
+    merge commits, multi-commit pushes, or manual workflow dispatches.
+    """
+    event_name = os.environ.get("EVENT_NAME", "").lower()
+    before_sha = os.environ.get("BEFORE_SHA", "")
+    after_sha = os.environ.get("AFTER_SHA", "HEAD")
+
+    # If triggered manually via workflow_dispatch, scan all solution files
+    if event_name == "workflow_dispatch":
+        print("Manual workflow_dispatch detected. Scanning all solution files for in-progress status.")
+        return sorted(SOLUTIONS_DIR.rglob("practice*.*"))
+
+    changed_names: set[str] = set()
+
+    # 1. Try push range diff if before_sha is valid
+    if is_valid_commit(before_sha) and is_valid_commit(after_sha):
+        print(f"Inspecting commit range: {before_sha[:8]}..{after_sha[:8]}")
+        names = run_git("diff", "--name-only", "--diff-filter=AM", f"{before_sha}..{after_sha}", "--", "solutions/")
+        changed_names.update(names)
+
+    # 2. Check if HEAD is a merge commit
+    parents = run_git("rev-list", "--parents", "-n", "1", "HEAD")
+    is_merge = len(parents[0].split()) > 2 if parents else False
+
+    if is_merge:
+        print("HEAD is a merge commit. Checking diff against both merge parents.")
+        names_p1 = run_git("diff", "--name-only", "--diff-filter=AM", "HEAD^1", "HEAD", "--", "solutions/")
+        changed_names.update(names_p1)
+
+        names_p2 = run_git("diff", "--name-only", "--diff-filter=AM", "HEAD^2", "HEAD", "--", "solutions/")
+        changed_names.update(names_p2)
+
+    # 3. Fallback: standard HEAD~1 diff if nothing found yet
+    if not changed_names:
+        print("Falling back to HEAD~1..HEAD diff.")
+        names_head1 = run_git("diff", "--name-only", "--diff-filter=AM", "HEAD~1", "HEAD", "--", "solutions/")
+        changed_names.update(names_head1)
+
+    # 4. Final safety fallback: inspect changed files in HEAD commit metadata
+    if not changed_names:
+        names_log = run_git("show", "--name-only", "--diff-filter=AM", "--format=", "HEAD", "--", "solutions/")
+        changed_names.update(names_log)
+
+    files = [REPO_ROOT / p for p in changed_names]
+    valid_files = [f for f in files if f.is_file() and not f.name.startswith(".")]
+    return sorted(valid_files)
+
+
 def is_in_progress(path: Path) -> bool:
-    """Check if the solution file contains an IN PROGRESS status indicator."""
+    """
+    Check if the solution file contains an IN PROGRESS status indicator.
+    Case-insensitive, allows emojis, hyphens, underscores, or alternate phrasings.
+    """
     try:
         content = path.read_text(encoding="utf-8-sig", errors="replace")
     except OSError:
         return False
 
-    for line in content.splitlines()[:20]:
-        if re.search(r"^\s*(?:#|//|--|/\*+|\*)\s*Status:\s*.*in.?progress", line, re.IGNORECASE):
+    for line in content.splitlines()[:30]:
+        # If line explicitly says solved/done/complete, skip it
+        if SOLVED_PATTERN.search(line):
+            continue
+        if IN_PROGRESS_PATTERN.search(line):
             return True
     return False
 
 
 def extract_problem_name(path: Path) -> str:
-    """Extract problem title from header or fallback to filename."""
+    """Extract problem title from header or fallback to filename (case-insensitive)."""
     try:
         content = path.read_text(encoding="utf-8-sig", errors="replace")
     except OSError:
         return path.name
 
-    for line in content.splitlines()[:15]:
-        match = re.match(r"^\s*(?:#|//|--|/\*+|\*)\s*(?:📜\s*)?Problem(?:\s*[:\-—–]+\s*|\s+)(.*?)\s*(?:\*/)?$", line, re.IGNORECASE)
+    for line in content.splitlines()[:25]:
+        match = re.match(
+            r"^\s*(?:#|//|--|/\*+|\*)\s*(?:[^\w\s]\s*)?problem(?:\s*[:\-—–]+\s*|\s+)(.*?)\s*(?:\*/)?$",
+            line,
+            re.IGNORECASE,
+        )
         if match:
             cleaned = match.group(1).strip()
+            cleaned = re.sub(r"[\r\n\t]+", " ", cleaned).strip()
+            cleaned = re.sub(r"\s*(?:\*/|-->)\s*$", "", cleaned).strip()
             if cleaned:
                 return cleaned
     return path.name
 
 
 def issue_already_exists(repo: str, filename: str) -> bool:
-    """Check if an open issue already references this filename."""
+    """Check if an open issue already references this filename (case-insensitive)."""
     try:
         result = subprocess.run(
-            ["gh", "issue", "list", "--repo", repo, "--state", "open", "--search", filename, "--json", "number"],
+            ["gh", "issue", "list", "--repo", repo, "--state", "open", "--search", filename, "--json", "title,body"],
             capture_output=True,
             text=True,
             check=True,
         )
-        import json
         issues = json.loads(result.stdout)
-        return len(issues) > 0
+        target = filename.lower()
+        for issue in issues:
+            title = issue.get("title", "").lower()
+            body = issue.get("body", "").lower()
+            if target in title or target in body:
+                return True
+        return False
     except Exception as e:
-        print(f"Check existing issues failed: {e}", file=sys.stderr)
+        print(f"Warning: Issue existence check failed for {filename}: {e}", file=sys.stderr)
         return False
 
 
-def create_issue(path: Path, repo: str) -> None:
+def create_issue(path: Path, repo: str) -> bool:
     filename = path.name
     rel_path = path.relative_to(REPO_ROOT).as_posix()
     lang = path.parent.name
     problem = extract_problem_name(path)
 
+    # Sanitize title to prevent formatting or shell breakage
+    problem_clean = re.sub(r'["`]', "'", problem).strip()
+    title = f"Fix and complete the {problem_clean} solution ({filename})"
+
     if issue_already_exists(repo, filename):
         print(f"Issue already exists for {filename}. Skipping.")
-        return
+        return False
 
-    title = f"Fix and complete the {problem} solution ({filename})"
-
-    body = f"""## Fix and complete the `{problem}` solution
+    body = f"""## Fix and complete the `{problem_clean}` solution
 
 The file `{rel_path}` was merged with `# Status: 🔄 IN PROGRESS`, which means the implementation is unfinished or has known issues.
 
@@ -136,7 +237,12 @@ If this repo helps you or you like where it is going, a [star](https://github.co
         "--label", labels,
     ]
     print(f"Creating issue: {title}")
-    subprocess.run(cmd, check=True)
+    try:
+        subprocess.run(cmd, check=True)
+        return True
+    except subprocess.CalledProcessError as e:
+        print(f"Error creating issue for {filename}: {e}", file=sys.stderr)
+        return False
 
 
 def main() -> int:
@@ -145,16 +251,18 @@ def main() -> int:
 
     flagged = [f for f in changed_files if is_in_progress(f)]
     if not flagged:
-        print("No in-progress solution files detected in this commit.")
+        print("No in-progress solution files detected.")
         return 0
 
     print(f"Found {len(flagged)} in-progress file(s): {[f.name for f in flagged]}")
+    success_count = 0
     for file_path in flagged:
-        create_issue(file_path, repo)
+        if create_issue(file_path, repo):
+            success_count += 1
 
+    print(f"Completed processing in-progress solutions. Created {success_count} issue(s).")
     return 0
 
 
 if __name__ == "__main__":
     sys.exit(main())
-

@@ -193,6 +193,7 @@ def generate_topics_markdown() -> str:
     all_files = (
         path for path in SOLUTIONS_DIR.rglob("practice*.*")
         if path.is_file()
+        and not path.name.startswith(".")
         and "__pycache__" not in path.parts
         and path.suffix not in _SKIP_SUFFIXES
     )
@@ -260,7 +261,9 @@ def generate_topics_markdown() -> str:
 
 def main() -> int:
     markdown = generate_topics_markdown()
-    TOPICS_FILE.write_text(markdown, encoding="utf-8")
+    temp_file = TOPICS_FILE.with_suffix(".tmp")
+    temp_file.write_text(markdown, encoding="utf-8")
+    temp_file.replace(TOPICS_FILE)
     print(f"Generated {TOPICS_FILE} with updated classifications.")
     return 0
 
