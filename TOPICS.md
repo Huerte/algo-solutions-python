@@ -329,14 +329,14 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Two Characters | python | [practice359.py](solutions/python/practice359.py) | Incomplete Header (Note (missing)) |
 | Uncommon Words from Two Sentences | python | [practice274.py](solutions/python/practice274.py) | Complete |
 | Unique Morse Code Words | python | [practice155.py](solutions/python/practice155.py) | Complete |
-| Unique Morse Code Words | python | [practice46.py](solutions/python/practice46.py) | Incomplete Header (Note (missing)) |
+| Unique Morse Code Words | python | [practice46.py](solutions/python/practice46.py) | Complete |
 | Valid Palindrome | python | [practice249.py](solutions/python/practice249.py) | Complete |
 | Valid Parentheses | java | [practice1.java](solutions/java/practice1.java) | Complete |
 | Valid Parentheses | javascript | [practice1.js](solutions/javascript/practice1.js) | Complete |
 | Valid Parentheses | typescript | [practice1.ts](solutions/typescript/practice1.ts) | Complete |
 | Valid Parentheses | python | [practice137.py](solutions/python/practice137.py) | Incomplete Header (Note (missing)) |
 | Valid Parentheses | python | [practice409.py](solutions/python/practice409.py) | Complete |
-| Valid Parentheses | python | [practice45.py](solutions/python/practice45.py) | Incomplete Header (Note (missing)) |
+| Valid Parentheses | python | [practice45.py](solutions/python/practice45.py) | Complete |
 | Valid Parentheses | python | [practice71.py](solutions/python/practice71.py) | Complete |
 | Valid Phone Number | python | [practice380.py](solutions/python/practice380.py) | Complete |
 | Vowel and Consonant Counter | python | [practice355.py](solutions/python/practice355.py) | Incomplete Header (Source (blank)) |
@@ -346,7 +346,7 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 | Word Ladder | python | [practice256.py](solutions/python/practice256.py) | Complete |
 | Word Ladder | python | [practice407.py](solutions/python/practice407.py) | Incomplete Header (Note (missing)) |
 | Word Order | python | [practice204.py](solutions/python/practice204.py) | Complete |
-| Word Pattern | python | [practice44.py](solutions/python/practice44.py) | Incomplete Header (Note (missing)) |
+| Word Pattern | python | [practice44.py](solutions/python/practice44.py) | Complete |
 | Words Score | python | [practice205.py](solutions/python/practice205.py) | Complete |
 
 ## Tree
@@ -492,7 +492,7 @@ The folder structure remains language-based (`solutions/<language>/practice<n>.<
 ## Solutions Needing Attention
 
 These solutions need headers, test cases, or implementation fixes. They are ideal for contributor PRs.
-**Total needing attention:** 128
+**Total needing attention:** 125
 
 | Problem | Language | File | Needs |
 |---|---|---|---|
@@ -594,9 +594,6 @@ These solutions need headers, test cases, or implementation fixes. They are idea
 | Sum of Even and Odd Numbers | python | [practice419.py](solutions/python/practice419.py) | Incomplete Header (Source (blank)) |
 | Sum of Multiples of 3 and 5 | python | [practice42.py](solutions/python/practice42.py) | Incomplete Header (Source (blank)) |
 | Remove the parentheses | python | [practice420.py](solutions/python/practice420.py) | In Progress / Needs Work |
-| Word Pattern | python | [practice44.py](solutions/python/practice44.py) | Incomplete Header (Note (missing)) |
-| Valid Parentheses | python | [practice45.py](solutions/python/practice45.py) | Incomplete Header (Note (missing)) |
-| Unique Morse Code Words | python | [practice46.py](solutions/python/practice46.py) | Incomplete Header (Note (missing)) |
 | Rotate List by N Steps | python | [practice47.py](solutions/python/practice47.py) | Incomplete Header (Source (blank)) |
 | String Unscrambling | python | [practice48.py](solutions/python/practice48.py) | Incomplete Header (Source (blank)) |
 | Singly Linked List Implementation | python | [practice49.py](solutions/python/practice49.py) | Incomplete Header (Source (blank)) |
