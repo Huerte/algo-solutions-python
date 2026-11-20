@@ -8,7 +8,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](#license)
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](#how-to-contribute)
-[![Good First Issues](https://img.shields.io/badge/good%20first-issues-7057ff.svg)](https://github.com/Huerte/algo-solutions-python/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+[![Good First Issues](https://img.shields.io/badge/good%20first-issues-7057ff.svg)](https://github.com/Huerte/algo-solutions/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
 
 [![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?logo=LeetCode&logoColor=black)](https://leetcode.com)
 [![Codewars](https://img.shields.io/badge/Codewars-B1361E?logo=codewars&logoColor=white)](https://www.codewars.com)
@@ -38,7 +38,7 @@ Built by people like you. Every avatar below started with a first pull request.
 </p>
 <!-- CONTRIBUTORS:END -->
 
-**Want to see your face here?** Pick a [`good first issue`](https://github.com/Huerte/algo-solutions-python/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) and open a PR. No code needed for [`no-code-needed`](https://github.com/Huerte/algo-solutions-python/issues?q=is%3Aissue+is%3Aopen+label%3Ano-code-needed) issues.
+**Want to see your face here?** Pick a [`good first issue`](https://github.com/Huerte/algo-solutions/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) and open a PR. No code needed for [`no-code-needed`](https://github.com/Huerte/algo-solutions/issues?q=is%3Aissue+is%3Aopen+label%3Ano-code-needed) issues.
 
 ## How to contribute
 
@@ -52,7 +52,7 @@ Prefer video? Watch this: [How to contribute on GitHub (YouTube)](https://youtu.
 
 ### Quick steps
 
-1. Pick an [open issue](https://github.com/Huerte/algo-solutions-python/issues) and comment on it to claim it
+1. Pick an [open issue](https://github.com/Huerte/algo-solutions/issues) and comment on it to claim it
 2. Fork this repo
 3. Clone your fork and create a new branch
 4. Make your change
@@ -62,13 +62,13 @@ Prefer video? Watch this: [How to contribute on GitHub (YouTube)](https://youtu.
 
 | I want to... | Look for the label or resource |
 |---|---|
-| Make my first contribution | [`good first issue`](https://github.com/Huerte/algo-solutions-python/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) |
-| Help without writing code | [`no-code-needed`](https://github.com/Huerte/algo-solutions-python/issues?q=is%3Aissue+is%3Aopen+label%3Ano-code-needed) |
-| Add a solution in any language | [`any-language`](https://github.com/Huerte/algo-solutions-python/issues?q=is%3Aissue+is%3Aopen+label%3Aany-language) |
-| Improve docs or explanations | [`documentation`](https://github.com/Huerte/algo-solutions-python/issues?q=is%3Aissue+is%3Aopen+label%3Adocumentation) |
-| Spend only 5 minutes | [`5-minutes`](https://github.com/Huerte/algo-solutions-python/issues?q=is%3Aissue+is%3Aopen+label%3A5-minutes) |
-| Be mentored through my first PR | [`first-timers-only`](https://github.com/Huerte/algo-solutions-python/issues?q=is%3Aissue+is%3Aopen+label%3Afirst-timers-only) |
-| Help document existing Python solutions | [Solutions Needing Attention](https://github.com/Huerte/algo-solutions-python/blob/main/TOPICS.md#solutions-needing-attention) |
+| Make my first contribution | [`good first issue`](https://github.com/Huerte/algo-solutions/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) |
+| Help without writing code | [`no-code-needed`](https://github.com/Huerte/algo-solutions/issues?q=is%3Aissue+is%3Aopen+label%3Ano-code-needed) |
+| Add a solution in any language | [`any-language`](https://github.com/Huerte/algo-solutions/issues?q=is%3Aissue+is%3Aopen+label%3Aany-language) |
+| Improve docs or explanations | [`documentation`](https://github.com/Huerte/algo-solutions/issues?q=is%3Aissue+is%3Aopen+label%3Adocumentation) |
+| Spend only 5 minutes | [`5-minutes`](https://github.com/Huerte/algo-solutions/issues?q=is%3Aissue+is%3Aopen+label%3A5-minutes) |
+| Be mentored through my first PR | [`first-timers-only`](https://github.com/Huerte/algo-solutions/issues?q=is%3Aissue+is%3Aopen+label%3Afirst-timers-only) |
+| Help document existing Python solutions | [Solutions Needing Attention](https://github.com/Huerte/algo-solutions/blob/main/TOPICS.md#solutions-needing-attention) |
 
 ### Adding a solution
 
@@ -85,7 +85,7 @@ Don't see a folder for your language? Create it. You'll be the first contributor
 Solutions are organized by language. Each file is named `practice<n>` in the order it was solved within that language's folder.
 
 ```
-algo-solutions-python/
+algo-solutions/
 ├── solutions/
 │   ├── python/
 │   │   ├── practice1.py

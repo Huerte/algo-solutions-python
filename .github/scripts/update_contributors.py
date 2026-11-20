@@ -5,7 +5,7 @@ section in README.md between the CONTRIBUTORS:START / CONTRIBUTORS:END markers.
 
 Required env vars:
   GITHUB_TOKEN      - GitHub token with repo read access
-  GITHUB_REPOSITORY - e.g. "Huerte/algo-solutions-python"
+  GITHUB_REPOSITORY - e.g. "Huerte/algo-solutions"
   README_PATH       - path to README.md (default: README.md)
 """
 import os
@@ -15,7 +15,7 @@ import time
 
 import requests
 
-REPO = os.environ.get("GITHUB_REPOSITORY", "Huerte/algo-solutions-python")
+REPO = os.environ.get("GITHUB_REPOSITORY", "Huerte/algo-solutions")
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 README_PATH = os.environ.get("README_PATH", "README.md")
 

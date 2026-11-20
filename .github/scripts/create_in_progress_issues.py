@@ -243,7 +243,7 @@ If this repo helps you or you like where it is going, a [star](https://github.co
 
 
 def main() -> int:
-    repo = os.environ.get("GITHUB_REPOSITORY", "Huerte/algo-solutions-python")
+    repo = os.environ.get("GITHUB_REPOSITORY", "Huerte/algo-solutions")
     changed_files = get_changed_solution_files()
 
     flagged = [f for f in changed_files if is_in_progress(f)]
